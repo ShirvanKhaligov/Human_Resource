@@ -1,0 +1,111 @@
+﻿@model IEnumerable<DevicesType>
+@{
+    ViewData["Title"] = "AllDevice";
+}
+
+<div class="content-wrapper" style="padding:0px 0px 0px 250px">
+    <div class="container-fluid">
+        <br>
+        <div class="card">
+            <div class="row">
+                <div class="modal" tabindex="-1" id="confirmationModalForAll" role="dialog">
+                    <input type="hidden" id="hiddenModal" name="name" value="" />
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 style="color:black;font-size:1rem;" class="modal-title">Məlumatı sil</h5>
+                                <button type="button" onclick="closeConfirmationIdDeviceTypeForAll()" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style="padding-bottom: 0;">
+                                <p style="color:#2590d3 !important;;font-size: 1.3rem;">Məlumatı silməyə əminsinizmi?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" onclick="modalDeviceTypeDelete($('#hiddenModal').val())" class="btn btn-secondary" data-dismiss="modal">Bəli</button>
+                                <button type="button" onclick="closeConfirmationIdDeviceTypeForAll()" id="confirmationModalForAll" class="btn btn-primary">Xeyr</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mx-auto" id="deviceTypeTableDiv">
+                    <table style="color:blue" class="table table-hover table-responsive-md ">
+                        <thead style="text-align: center" class="thead-dark ">
+                            <tr>
+                                <th scope="col">Sıra №</th>
+                                <th scope="col">Qurğunun adı</th>
+                                <th scope="col">Redaktə et:</th>
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center">
+                            @{ var count = 1; }
+                            @if (Model.Count() != 0)
+                            {
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <th scope="row">@count</th>
+                                        <td>
+                                            @if (item.Name.Length > 50)
+                                            {@(item.Name.Substring(0, 50)+"...") }
+                                            else
+                                            {
+                                                @item.Name}
+                                        </td>
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary" title="Dəyiş"> <i class="fas fa-edit"></i></a>
+                                            <a onclick="confirmationIdDeviceTypeForAll(@item.Id)" class="btn btn-danger" title="Sil"> <i class="fas fa-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                    count++;
+                                } }
+                            else
+                            {
+                                <tr>
+                                    <th scope="row">0</th>
+                                    <td>Siyahı boşdur</td>
+                                    <td>Siyahı boşdur</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a asp-area="Admin" asp-controller="AddDevice" asp-action="Index" class="btn btn-primary col-md-12">Geri</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        function modalDeviceTypeDelete(id) {
+            $.ajax({
+                type: "post",
+                url:"@Url.Action("Delete","AddDevice")",
+                data: { DeviceTypeId:id},
+                success: function (res) {
+                    $("#confirmationModalForAll").hide();
+                    $("#deviceTypeTableDiv").html(res);
+                },
+                error: function (res) {
+                    console.error(res)
+                }
+            });
+        }
+
+        function confirmationIdDeviceTypeForAll(id) {
+            $("#confirmationModalForAll").show();
+            $("#hiddenModal").val(id)
+
+        };
+
+        function closeConfirmationIdDeviceTypeForAll() {
+            $("#confirmationModalForAll").hide();
+        }
+    </script>
+}
+

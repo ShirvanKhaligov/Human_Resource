@@ -1,0 +1,1661 @@
+﻿@model RecruitmentCandidateVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+
+<!--WRAPPER START -->
+<div class="content-wrapper" style="color:black; background-color: #fff;">
+    <br>
+    <div class="container-fluid">
+        <div class="bs-example">
+            <nav class="navbar navbar-expand-md navbar-light bg-gray-light">
+
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse col-md-12 mx-auto" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a onclick="myFunction1()" style="font-family: 'Roboto';" class="nav-link active"
+                           href="#step-one">Şəxsi məlumatlar</a>
+                        <a onclick="myFunction2()" style="font-family: 'Roboto';pointer-events:none" class="nav-link"
+                           href="#step-two">Təhsil haqqında</a>
+                        <a onclick="myFunction3()" style="font-family: 'Roboto';pointer-events:none" class="nav-link"
+                           href="#step-three">Dil bilikləri</a>
+                        <a onclick="myFunction4()" style="font-family: 'Roboto';pointer-events:none" class="nav-link"
+                           href="#step-four">Kompyuter bilikləri</a>
+                        <a onclick="myFunction5()" style="font-family: 'Roboto';pointer-events:none" class="nav-link"
+                           href="#step-five">Ailə üzvləri</a>
+                        <a onclick="myFunction6()" style="font-family: 'Roboto';pointer-events:none" class="nav-link"
+                           href="#step-six">Əlavə məlumatlar</a>
+                        <a onclick="myFunction7()" style="font-family: 'Roboto';" class="nav-link"
+                           href="#step-seven">Əmrlərin skan forması</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <div style="" class="col-md-12 ">
+            <br>
+            <form method="post" enctype="multipart/form-data">
+                <div class="siema">
+                    <div style="display: block" id="step-one">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="form-group row ml-md-5 ">
+                                    <label for="name" class="col-md-3 ">Adı:</label>
+                                    <div class="col-sm-5">
+                                        @foreach (var empName in Model.Emplooyees)
+                                        {
+                                            <input type="text" readonly style="height: 27px;" value="@empName.FirstName" class="form-control" id="name" name="name">
+                                        }
+                                    </div>
+                                </div>
+
+                                <div class="form-group row ml-md-5 ">
+                                    <label for="surname" class="col-md-3">Soyadı:</label>
+                                    <div class="col-sm-5">
+                                        @foreach (var empName in Model.Emplooyees)
+                                        {
+                                            <input type="text" readonly style="height: 27px;" value="@empName.Lastname" class="form-control" id="surname" name="surname">
+                                        }
+                                    </div>
+                                </div>
+                                <div class="form-group row ml-md-5 ">
+                                    <label for="fatherName" class="col-md-3">Ata adı:</label>
+                                    <div class="col-sm-5">
+                                        @foreach (var empName in Model.Emplooyees)
+                                        {
+                                            <input type="text" readonly style="height: 27px;" value="@empName.FatherName" class="form-control" id="fatherName" name="fatherName">
+                                        }
+                                    </div>
+                                </div>
+
+                                <div class="form-group row ml-md-5 ">
+                                    <label for="idCard" class="col-md-3">Ş\V:</label>
+                                    <div class="col-sm-5">
+                                        <input asp-for="@Model.IdCard" type="text" maxlength="13" style="height: 27px;text-transform:uppercase;" class="form-control" id="idCard">
+                                        <span asp-validation-for="@Model.IdCard" class="text-danger text-bold" style="font-size:14px;"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group row ml-md-5 ">
+                                    <label for="finCode" class="col-md-3">FİN:</label>
+                                    <div class="col-sm-5">
+                                        <input asp-for="@Model.FinCode" type="text" style="height: 27px;text-transform:uppercase;" maxlength="7" class="form-control" id="finCode">
+                                        <span asp-validation-for="@Model.FinCode" class="text-danger text-bold" style="font-size:14px;"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group  row ml-md-5 m-0">
+                                    <label class="col-md-3">Hərbi mükəlləfiyyəti:</label>
+                                    <div class="col-sm-2 ">
+                                        <label class="text-success">Var</label>
+                                        <input onclick="checkBox()" type="radio" value="yess" name="MilitaryStatus" id="yesMilitaryStatus">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label class="text-danger">Yoxdur</label>
+                                        <input onclick="checkBox1()" checked type="radio" value="noo" name="MilitaryStatus" id="noMilitaryStatus">
+                                    </div>
+                                </div>
+                                @if (ViewData["error_military"] != null)
+                                {
+                                    <span style="margin-left:245px" class="text-danger">@ViewData["error_military"]</span>
+                                }
+                                @if (ViewData["error_militaryRank"] != null)
+                                {
+                                    <span style="margin-left:245px" class="text-danger">@ViewData["error_militaryRank"]</span>
+                                }
+                                <div style="display: none" id="military">
+                                    <div class="form-group row ml-md-5">
+                                        <label class="col-md-3" for="militaryRank">Hərbi rütbəsi:</label>
+                                        <div class="col-sm-5">
+                                            <select style="padding: 0px" class="form-control input-height" name="military"
+                                                    id="militaryRank">
+                                                <option selected disabled>Seç</option>
+                                                @foreach (var rank in Model.MillitaryRanks)
+                                                {
+                                                    <option value="@rank.Id">@rank.Name</option>
+                                                }
+                                            </select>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-top: -51px;" class="col-md-3">
+                                <div class="avatar-upload">
+                                    @if (Model.AppUser.Image != null)
+                                    {
+                                        foreach (var em in Model.Emplooyees)
+                                        {
+                                            if (em.Id == Model.AppUser.EmplooyeeId)
+                                            {
+                                                <div class="avatar-edit">
+                                                    <input accept="image/*" asp-for="@Model.Photo" id="imageUpload" />
+                                                    <label for="imageUpload"></label>
+                                                </div>
+                                                <div class="avatar-preview">
+                                                    <div id="imagePreview" style="background-image: url(/allUserImg/@Model.AppUser.Image)">
+                                                    </div>
+                                                </div>
+                                                <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="@Model.Photo"></span>
+                                            }
+                                            else
+                                            {
+                                                <div class="avatar-edit">
+                                                    <input accept="image/*" asp-for="@Model.Photo" id="imageUpload" />
+                                                    <label for="imageUpload"></label>
+                                                </div>
+                                                <div class="avatar-preview">
+                                                    <div id="imagePreview" style="background-image: url(/dist/img/user.png)">
+                                                    </div>
+                                                </div>
+                                                <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="@Model.Photo"></span>
+                                            }
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        <div class="avatar-edit">
+                                            <input accept="image/*" asp-for="@Model.Photo" id="imageUpload" />
+                                            <label for="imageUpload"></label>
+                                        </div>
+                                        <div class="avatar-preview">
+                                            <div id="imagePreview" style="background-image: url(/dist/img/user.png)">
+                                            </div>
+                                        </div>
+                                        <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="@Model.Photo"></span>
+                                    }
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-11 mx-auto">
+                                <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="Word"></span>
+                                <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="Pdf"></span>
+                                <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="PhotoCertificate"></span>
+                            </div>
+                            <div class="col-md-11 mx-auto">
+                                <button style="float: right;width: 150px;margin-right: 35px;" id="next" onclick="myFunction2()" type="button"
+                                        class="btn btn-success">
+                                    İrəli
+                                </button>
+                                <button style="margin-top: 50px;" type="button" class="btn btn-danger">
+                                    <a asp-controller="Practitioner" asp-action="AllPractitioner" style="padding: 5px 100px;color:white;">İmtina</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--STEP TWO-->
+                    <div style="display: none" id="step-two" class="row">
+                        <!--Candidate Education Start-->
+                        <div class="property-fields__rows mb-5">
+                            @if (Model.School != null)
+                            {
+                                <div style="border:1px solid;color: black">
+                                    <div>
+                                        <div class="form-group row ml-md-5 mt-3">
+                                            <div class="col-md-2">
+                                                <label for="educationType">Orta təhsil:</label>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <input type='text' value="@Model.School.Name" readonly class="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            @if (Model.EducationsToEmployees.Count() != 0)
+                            {
+                                @foreach (var educType in Model.EducationsToEmployees.Where(e => e.Education.Status == true))
+                                {
+                                    <div>
+                                        <div style="border:1px solid;color: black">
+                                            <div>
+                                                <div class="form-group row ml-md-5 mt-3">
+                                                    <div class="col-md-2">
+                                                        <label for="educationType">Təhsilin dərəcəsi:</label>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <input type='text' value="@educType.Education.Profession.UniFaculty.EducationTypeToUniversity.EducationType.Name" readonly class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="line-item-property__field line-item-property__universityName">
+                                                <div class="form-group row ml-md-5">
+                                                    <div class="col-md-2">
+                                                        <label for="universityName">Təhsil ocağının adı:</label>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <input type='text' value="@educType.Education.Profession.UniFaculty.EducationTypeToUniversity.Universities.Name" readonly class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="line-item-property__field line-item-property__enteringTime">
+                                                        <div class="form-group row ml-md-5">
+                                                            <div class="col-sm-7">
+                                                                <label required for="enteringTime">Başlama tarixi:</label>
+                                                            </div>
+                                                            <div class="col-sm-5">
+                                                                <input type='text' value="@educType.Education.EnteringTime.ToString("dd/MM/yyyy")" readonly class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 ">
+                                                    <div class="line-item-property__field line-item-property__endTime">
+                                                        <div class="form-group row  ml-md-5 ">
+                                                            <div class="col-md-4">
+                                                                <label required for="endTime">Bitmə tarixi:</label>
+                                                            </div>
+                                                            <div class="col-sm-5">
+                                                                <input type='text' value="@educType.Education.FinishTime.ToString("dd/MM/yyyy")" readonly class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="line-item-property__field line-item-property__facultyName">
+                                                <div class="form-group row ml-md-5">
+                                                    <div class="col-md-2">
+                                                        <label for="facultyName">Fakültə:</label>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <input type='text' value="@educType.Education.Profession.UniFaculty.Name" readonly class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="line-item-property__field line-item-property__specialtyName">
+                                                <div class="form-group row ml-md-5">
+                                                    <div class="col-md-2">
+                                                        <label for="specialtyName">İxtisas:</label>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <input type='text' value="@educType.Education.Profession.Name" readonly class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="line-item-property__field line-item-property__AcceptHon">
+                                                <div class="form-group row ml-md-5">
+                                                    <div class="col-md-2">
+                                                        <label>Qəbul balı:</label>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <input type='text' value="@educType.Education.AcceptHoney" readonly class="form-control" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                        </div><br><br>
+                                    </div>
+                                }
+                            }
+                        </div>
+                        <div class="property-fields__rows">
+                            <div id="educationTable" class="educTableDiv">
+                                @if (Model.EducationsToEmployeesForFalse != null)
+                                {
+                                    @foreach (var educType in Model.EducationsToEmployeesForFalse)
+                                    {
+                                        <div>
+                                            <div style="border:1px solid;color: black ">
+                                                <div>
+                                                    <div class="form-group row ml-md-5 mt-3">
+                                                        <div class="col-md-2">
+                                                            <label for="educationType">Təhsilin dərəcəsi:</label>
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <input type='text' value="@educType.Education.Profession.UniFaculty.EducationTypeToUniversity.EducationType.Name" readonly class="form-control" />
+                                                        </div>
+                                                        <div class='col-sm-4' style='text-align:end;'>
+                                                            <button type='button' onclick='modalEducationDelete(@educType.Emplooyee.Id,@educType.Education.Id)' style='padding:6px 70px;' class='btn btn-danger'>Sil</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="line-item-property__field line-item-property__universityName">
+                                                    <div class="form-group row ml-md-5">
+                                                        <div class="col-md-2">
+                                                            <label for="universityName">Təhsil ocağının adı:</label>
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <input type='text' value="@educType.Education.Profession.UniFaculty.EducationTypeToUniversity.Universities.Name" readonly class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="line-item-property__field line-item-property__enteringTime">
+                                                            <div class="form-group row ml-md-5">
+                                                                <div class="col-sm-7">
+                                                                    <label required for="enteringTime">Başlama tarixi:</label>
+                                                                </div>
+                                                                <div class="col-sm-5">
+                                                                    <input type='text' value="@educType.Education.EnteringTime.ToString("yyyy-MM-dd")" readonly class="form-control" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 ">
+                                                        <div class="line-item-property__field line-item-property__endTime">
+                                                            <div class="form-group row  ml-md-5 ">
+                                                                <div class="col-md-4">
+                                                                    <label required for="endTime">Bitmə tarixi:</label>
+                                                                </div>
+                                                                <div class="col-sm-5">
+                                                                    <input type='text' value="@educType.Education.FinishTime.ToString("yyyy-MM-dd")" readonly class="form-control" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="line-item-property__field line-item-property__facultyName">
+                                                    <div class="form-group row ml-md-5">
+                                                        <div class="col-md-2">
+                                                            <label for="facultyName">Fakültə:</label>
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <input type='text' value="@educType.Education.Profession.UniFaculty.Name" readonly class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="line-item-property__field line-item-property__specialtyName">
+                                                    <div class="form-group row ml-md-5">
+                                                        <div class="col-md-2">
+                                                            <label for="specialtyName">İxtisas:</label>
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <input type='text' value="@educType.Education.Profession.Name" readonly class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class='line-item-property__field line-item-property__AcceptHon'>
+                                                    <div class='form-group row ml-md-5'>
+                                                        <div class='col-md-2'>
+                                                            <label>Qəbul balı:</label>
+                                                        </div>
+                                                        <div class='col-sm-5'>
+                                                            <input type='number' value="@educType.Education.AcceptHoney" readonly class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                            </div><br><br>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                        <!--Candidate Education End-->
+                        <!----------------------------------------------------------Education New------------------------------------------------------------------------->
+
+                        <div class="property-fields__rows">
+                            <div id="property-fields__row-1" class="property-fields__row property-fields__row-item">
+                                <div style="border:1px solid;color: black ">
+                                    <div class="line-item-property__field line-item-property__educationType">
+                                        <div class="form-group row ml-md-5 mt-3">
+                                            <div class="col-md-2">
+                                                <label for="educationTypeId">Təhsilin dərəcəsi:</label>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <select onchange="getUniversityRecruitment()" required style="padding: 0px" class="form-control input-height"
+                                                        id="educationTypeId">
+                                                    <option value="">Seçin</option>
+                                                    @foreach (var newEducType in Model.EducationTypes)
+                                                    {
+                                                        if (newEducType.Name == "Orta")
+                                                        {
+                                                            <option value="@newEducType.Id" style="display:none">@newEducType.Name</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="@newEducType.Id">@newEducType.Name</option>
+                                                        }
+
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="line-item-property__field line-item-property__universityName">
+                                        <div class="form-group row ml-md-5">
+                                            <div class="col-md-2">
+                                                <label for="universityId">Təhsil ocağının adı:</label>
+                                            </div>
+                                            <div class="col-sm-5" id="uniResponseDiv">
+                                                <select required style="padding: 0px" class="form-control input-height"
+                                                        id="universityId_0">
+                                                    <option selected disabled value="">Seçin</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="line-item-property__field line-item-property__time">
+                                        <div class="form-group row ml-md-5">
+                                            <div class="col-md-4">
+                                                <div class="form-group row">
+                                                    <div class="col-sm-6">
+                                                        <label for="startTimeEducation">Başlama tarixi:</label>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input type="date" name="startTimeEducation" id="startTimeEducation"
+                                                               class="form-control input-height" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 ">
+                                                <div class="form-group row">
+                                                    <div class="col-md-3">
+                                                        <label for="endTimeEducation">Bitmə tarixi:</label>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input type="date" name="endTimeEducation" id="endTimeEducation"
+                                                               class="form-control input-height" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="line-item-property__field line-item-property__facultyName">
+                                        <div class="form-group row ml-md-5">
+                                            <div class="col-md-2">
+                                                <label for="facultyId">Fakültə:</label>
+                                            </div>
+                                            <div class="col-sm-5" id="facResponseDiv">
+                                                <select required style="padding: 0px" class="form-control input-height"
+                                                        id="facultyId_0">
+                                                    <option value="">Seçin</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="line-item-property__field line-item-property__specialtyName">
+                                        <div class="form-group row ml-md-5">
+                                            <div class="col-md-2">
+                                                <label for="professionId">İxtisas:</label>
+                                            </div>
+                                            <div class="col-sm-5" id="proResponseDiv">
+                                                <select required style="padding: 0px" class="form-control input-height"
+                                                        id="professionId_0">
+                                                    <option value="">Seç</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="line-item-property__field line-item-property__AcceptHon">
+                                        <div class="form-group row ml-md-5">
+                                            <div class="col-md-2">
+                                                <label for="accepthoney">Qəbul balı:</label>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <input required type='number' class="form-control input-height" id="accepthoney" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                </div><br><br>
+                            </div>
+                        </div>
+                        <!----------------------------------------------------------Education New------------------------------------------------------------------------->
+
+                        <div class="line-item-property__actions">
+                            <div class="row ">
+
+                                <div class="col-md-10 mx-auto text-center ">
+                                    @foreach (var empid in Model.Emplooyees)
+                                    {
+                                        <input class="btn btn-success col-sm-4" type="button"
+                                               onclick="addEduc(@empid.Id)"
+                                               value="Yüklə" />
+                                    }
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <br><br>
+                        <div class="row">
+                            <div class="col-md-10 mx-auto mb-5">
+                                <button style="float: right;width: 150px" id="next" onclick="myFunction3()" type="button"
+                                        class="btn btn-success">
+                                    İrəli
+                                </button>
+                                <button style="float: left;width: 150px" id="prev" onclick="myFunction1()" type="button"
+                                        class="btn btn-danger">
+                                    Geri
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--STEP THREE-->
+                    <div style="display: none" id="step-three" class="row">
+                        <div class="property-fields___rows">
+                            <div id="property-fields___row-1" class="property-fields___row property-fields___row-item">
+                                <div class="line-item-property___field line-item-property___language">
+                                    <div id="languageTable" class="langTableDiv">
+                                        <!---->
+                                        @if (Model.LanguageToEmployeesForFalse != null)
+                                        {
+                                            @foreach (var lg in Model.LanguageToEmployeesForFalse)
+                                            {
+                                                <div class="form-group row">
+                                                    <div class="col-md-3 offset-3">
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <label for="language">Dilin adı:</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <input type='text' value='@lg.LanguageToLanguageLevel.Language.Name' readonly class='form-control input-height' />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="row">
+                                                            <div class="col-md-5">
+                                                                <label for="languageLevel">Bilik səviyyəsi:</label>
+                                                            </div>
+                                                            <div class="col-md-7">
+                                                                <input type='text' value='@lg.LanguageToLanguageLevel.LanguageLevel.Name' readonly class='form-control input-height' />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class='col-md-2 offset-1'>
+                                                        <div class='row'>
+                                                            <button type='button' onclick='modalLanguageDelete(@lg.Emplooyee.Id,@lg.LanguageToLanguageLevel.Id)' class='btn btn-danger' style='padding: 0px 12px;'>Sil</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="property-fields___row-1" class="property-fields___row property-fields___row-item">
+                                <div class="line-item-property___field line-item-property___language">
+                                    <div class="form-group row">
+                                        <div class="col-md-3 offset-3">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <label for="language">Dilin adı:</label>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <select style="padding: 0px" class="form-control input-height"
+                                                            id="language" asp-for="@Model.LanguageId">
+                                                        <option value="">Seçin</option>
+                                                        @foreach (var lang in Model.Languages)
+                                                        {
+                                                            <option value="@lang.Id">@lang.Name</option>
+                                                        }
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <label for="languageLevel">Bilik səviyyəsi:</label>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <select id="languageLevel" style="padding: 0px"
+                                                            class="form-control input-height" asp-for="@Model.LanguageLevelId">
+                                                        <option value="">Seçin</option>
+                                                        @foreach (var langLevel in Model.LanguageLevels)
+                                                        {
+                                                            <option value="@langLevel.Id">@langLevel.Name</option>
+                                                        }
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="line-item-property___actions">
+                                <div class="row">
+                                    <div class="col-md-4 mx-auto text-center">
+                                        @foreach (var empid in Model.Emplooyees)
+                                        {
+                                            <input class="btn btn-success col-sm-4" type="button" id=""
+                                                   onclick="addLang(@empid.Id)"
+                                                   value="Yüklə" />
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br><br>
+
+                        <div class="row">
+                            <div class="col-md-10 mx-auto">
+                                <button style="float: right;width: 150px" id="next" onclick="myFunction4()" type="button"
+                                        class="btn btn-success">
+                                    İrəli
+                                </button>
+                                <button style="float: left;width: 150px" id="prev" onclick="myFunction2()" type="button"
+                                        class="btn btn-danger">
+                                    Geri
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--STEP FOUR-->
+                    <div style="display:none;" id="step-four">
+                        <div class="property-fields_____rows">
+                            <div id="property-fields_____row-1" class="property-fields_____row property-fields_____row-item">
+                                <div id="computerTable" class="row compTableDiv">
+                                    <!---->
+                                    @if (Model.ComputerToEmployeesForFalse != null)
+                                    {
+                                        @foreach (var cm in Model.ComputerToEmployeesForFalse)
+                                        {
+                                            <div class="col-md-6">
+                                                <div class="line-item-property_____field line-item-property_____computerSkill">
+                                                    <div class="form-group row ml-md-5">
+                                                        <div class="col-md-4">
+                                                            <label for="computerSkill">Kompyuter bilikləri:</label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input type='text' value='@cm.ComputerSkillToLevels.ComputerSkillsName.Name' readonly class='form-control input-height' />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="line-item-property_____field line-item-property_____level">
+                                                    <div class="form-group row ml-md-5">
+                                                        <div class="col-md-3">
+                                                            <label for="computerLevel">Bilik səviyyəsi:</label>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <input type='text' value='@cm.ComputerSkillToLevels.ComputerLevels.Name' readonly class='form-control input-height' />
+                                                        </div>
+                                                        <div class='col-md-2 offset-1'>
+                                                            <button type='button' onclick='modalComputerDelete(@cm.Emplooyee.Id,@cm.ComputerSkillToLevels.ComputerSkillsName.Id)' class='btn btn-danger' style='padding: 0px 12px;'>Sil</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                            <div id="property-fields_____row-1" class="property-fields_____row property-fields_____row-item">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="line-item-property_____field line-item-property_____computerSkill">
+                                            <div class="form-group row ml-md-5">
+                                                <div class="col-md-4">
+                                                    <label for="computerSkill">Kompyuter bilikləri:</label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <input id="computerSkill" class="form-control input-height"
+                                                           type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="line-item-property_____field line-item-property_____level">
+                                            <div class="form-group row ml-md-5">
+                                                <div class="col-md-3">
+                                                    <label for="computerLevel">Bilik səviyyəsi:</label>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <select id="computerLevel" style="padding: 0px"
+                                                            class="form-control input-height">
+                                                        <option value="">Seçin</option>
+                                                        @foreach (var cmptLevel in Model.ComputerLevels)
+                                                        {
+                                                            <option value="@cmptLevel.Id">@cmptLevel.Name</option>
+                                                        }
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="line-item-property_____actions">
+                                <div class="row">
+
+                                    <div class="col-md-6 mx-auto text-center">
+                                        @foreach (var empid in Model.Emplooyees)
+                                        {
+                                            <input class="btn btn-success col-sm-4" type="button" id=""
+                                                   onclick="addComp(@empid.Id)"
+                                                   value="Yüklə" />
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-10 mx-auto">
+                                <button style="float: right;width: 150px" id="next" onclick="myFunction5()" type="button"
+                                        class="btn btn-success">
+                                    İrəli
+                                </button>
+                                <button style="float: left;width: 150px" id="prev" onclick="myFunction3()" type="button"
+                                        class="btn btn-danger">
+                                    Geri
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!--STEP FIVE-->
+                    <div style="display: none" id="step-five" class="row">
+                        <div class="property-fields____rows">
+                            <div id="property-fields____row-1" class="property-fields____row property-fields____row-item">
+                                <div id="familyTable" class="famTableDiv" @*style="border: 1px solid darkgray;"*@>
+                                    <!---->
+                                    @if (Model.RelationsForFalsee != null)
+                                    {
+                                        @foreach (var fm in Model.RelationsForFalsee)
+                                        {
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="line-item-property____field line-item-property____kinship">
+                                                        <div class="form-group ml-md-5">
+                                                            <div class="col-lg-12 ml-md-4">
+                                                                <label style="font-size: 15px" for="kinship">Qohumluluq dərəcəsi</label>
+                                                            </div>
+                                                            <div class="col-sm-12">
+                                                                <input type='text' value='@fm.Relation.RelationType.Name' readonly class='form-control input-height' />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="line-item-property____field line-item-property____relativeName">
+                                                        <div class="form-group">
+                                                            <div class="col-md-2 ml-md-5">
+                                                                <label style="font-size: 15px;" for="relationName">Adı</label>
+                                                            </div>
+                                                            <div class="col-sm-12">
+                                                                <input type='text' id='relCreateName_@fm.Id' value='@fm.Relation.Name' class='form-control input-height' />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="line-item-property____field line-item-property____relativeSurname">
+                                                        <div class="form-group   ">
+                                                            <div class="col-md-2 ml-md-5">
+                                                                <label style="font-size: 15px;text-align: center" for="relationSurname">Soyadı</label>
+                                                            </div>
+                                                            <div class="col-sm-12 ml-md-2">
+                                                                <input type='text' id='relCreateSurname_@fm.Id' value='@fm.Relation.Surname' class='form-control input-height' />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="line-item-property____field line-item-property____relativeFName">
+                                                        <div class="form-group   ">
+                                                            <div class="col-md-5 ml-md-5">
+                                                                <label style="font-size: 15px;text-align: center" for="relationFatherName">Ata adı</label>
+                                                            </div>
+                                                            <div class="col-sm-12 ml-md-2">
+                                                                <input type='text' id='relCreateFName_@fm.Id' value='@fm.Relation.FatherName' class='form-control input-height' />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="line-item-property____field line-item-property____relativeNumber">
+                                                        <div class="form-group   ">
+                                                            <div class="col-md-8 ml-md-4">
+                                                                <label style="font-size: 15px;text-align: center" for="relationNumber">Mobil nömrə</label>
+                                                            </div>
+
+                                                            <div class="col-sm-12">
+                                                                <input type='text' id='relCreateNumber_@fm.Id' placeholder="XXX-XXX-XXXX" value='@fm.Relation.Number' class='relationNumm form-control input-height' />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <div class="line-item-property____field line-item-property____address">
+                                                        <div class="form-group ml-md-5">
+                                                            <div class="col-md-4 ml-md-1">
+                                                                <label style="font-size: 15px;text-align: center" for="relationAddress">Ünvan</label>
+                                                            </div>
+                                                            <div class="col-md-10">
+                                                                <input type='text' id='relCreateAddress_@fm.Id' value='@fm.Relation.Adress' class='form-control input-height' />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class='col-md-6'>
+                                                    <div class='line-item-property____field line-item-property____workplace'>
+                                                        <div class='row'>
+                                                            <div class='col-5'>
+                                                                <div class='form-group'>
+                                                                    <div class='col-md-6 ml-md-1'>
+                                                                        <label style='font-size: 15px;text-align: center' for='relationWorkplace'>İş yerinin adı</label>
+                                                                    </div>
+                                                                    <div class='col-md-12'>
+                                                                        <input id='relCreateWorkplace_@fm.Id' value='@fm.Relation.WorkPlaceName' type='text' class='form-control input-height'>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class='col-5'>
+                                                                <div class='form-group'>
+                                                                    <div class='col-md-5 ml-md-1'>
+                                                                        <label style='font-size: 15px;text-align: center' for='relationWorkplacePositionName'>Vəzifə adı</label>
+                                                                    </div>
+                                                                    <div class='col-md-12'>
+                                                                        <input id='relCreateWorkPosName_@fm.Id' value='@fm.Relation.WorkPlacePositionName' type='text' class='form-control input-height'>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class='col-2'>
+                                                                <div class='form-group'>
+                                                                    <div class=''>
+                                                                        <button type='button' onclick='modalFamilyDelete(@fm.Emplooyee.Id,@fm.Relation.Id)' class='btn btn-danger' style='padding: 0px 28px;height:26px;'>Sil</button>
+                                                                    </div>
+                                                                    <div class='mt-2'>
+                                                                        <button type='button' onclick='editF(@fm.RelationId,@fm.Id,@fm.Emplooyee.Id)' class='btn btn-warning' style='padding: 0px 17px;height:30px;'>Yenilə</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        }
+                                    }
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="line-item-property____field line-item-property____kinship">
+                                            <div class="form-group ml-md-5">
+                                                <div class="col-lg-12 ml-md-1">
+                                                    <label style="font-size: 15px" for="kinship">Qohumluluq dərəcəsi</label>
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <select required style="padding: 0px" class="form-control input-height"
+                                                            id="kinship">
+                                                        <option value="">Seç</option>
+                                                        @foreach (var relType in Model.RelationTypes)
+                                                        {
+                                                            <option value="@relType.Id">@relType.Name</option>
+                                                        }
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="line-item-property____field line-item-property____relativeName">
+                                            <div class="form-group">
+                                                <div class="col-md-2 ml-md-1">
+                                                    <label style="font-size: 15px;" for="relationName">Adı</label>
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <input id="relationName" type="text"
+                                                           class="form-control input-height">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="line-item-property____field line-item-property____relativeSurname">
+                                            <div class="form-group   ">
+                                                <div class="col-md-2 ml-md-2">
+                                                    <label style="font-size: 15px;text-align: center" for="relationSurname">Soyadı</label>
+                                                </div>
+                                                <div class="col-sm-12 ml-md-2">
+                                                    <input id="relationSurname" type="text"
+                                                           class="form-control input-height">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="line-item-property____field line-item-property____relativeFName">
+                                            <div class="form-group   ">
+                                                <div class="col-md-5 ml-md-2">
+                                                    <label style="font-size: 15px;text-align: center" for="relationFatherName">Ata adı</label>
+                                                </div>
+                                                <div class="col-sm-12 ml-md-2">
+                                                    <input id="relationFatherName" type="text"
+                                                           class="form-control input-height">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="line-item-property____field line-item-property____relativeNumber">
+                                            <div class="form-group">
+                                                <div class="col-md-8 ml-md-1">
+                                                    <label style="font-size: 15px;text-align: center" for="relationNumber">Mobil nömrə</label>
+                                                </div>
+
+                                                <div class="col-sm-12">
+                                                    <input id="relationNumber" type="text" placeholder="XXX-XXX-XXXX"
+                                                           class="form-control input-height relationNumm">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="line-item-property____field line-item-property____address">
+                                            <div class="form-group ml-md-5">
+                                                <div class="col-md-4 ml-md-1">
+                                                    <label style="font-size: 15px;text-align: center" for="relationAddress">Ünvan</label>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <input id="relationAddress" type="text"
+                                                           class="form-control input-height">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="line-item-property____field line-item-property____workplace">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <div class="col-md-5 ml-md-1">
+                                                            <label style="font-size: 15px;text-align: center" for="relationWorkplace">İş yerinin adı</label>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <input id="relationWorkplace" type="text"
+                                                                   class="form-control input-height">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <div class="col-md-4 ml-md-1">
+                                                            <label style="font-size: 15px;text-align: center" for="relationWorkplacePositionName">Vəzifə adı</label>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <input id="relationWorkplacePositionName" type="text"
+                                                                   class="form-control input-height">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br><br>
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class="line-item-property____actions">
+                            <div class="row ">
+
+                                <div class="col-md-6 mx-auto text-center ">
+                                    @foreach (var empid in Model.Emplooyees)
+                                    {
+                                        <input class="btn btn-success col-sm-4" type="button" id=""
+                                               onclick="addFamily(@empid.Id)" value="Yüklə" />
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <br><br><br>
+                        <div class="row">
+                            <div class="col-md-10 mx-auto">
+                                <button style="float: right;width: 150px" id="next" onclick="myFunction6()" type="button"
+                                        class="btn btn-success">
+                                    İrəli
+                                </button>
+                                <button style="float: left;width: 150px" id="prev" onclick="myFunction4()" type="button"
+                                        class="btn btn-danger">
+                                    Geri
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--STEP SIX -->
+                    <div style="display: none" id="step-six">
+                        <div class="row">
+                            <div class="col-md-2 mx-auto ">
+                                <img class="img-fluid" accept="" src="~/dist/img/microsoft-word.png" alt="Microsoft-Word">
+                                Word
+                            </div>
+                            <div class="col-md-2 mx-auto ">
+                                <img class="img-fluid" src="~/dist/img/pdf.png" alt="AdobePdf">
+                                Pdf
+                            </div>
+                            <div class="col-md-2 mx-auto ">
+                                <img class="img-fluid" src="~/dist/img/photo.png" alt="ImgCertificate">
+                                Şəkil
+                            </div>
+                        </div>
+                        <br><br>
+
+                        <div class="row">
+                            <div class="col-md-2 mx-auto">
+                                <input asp-for="@Model.Word" accept=".doc,.dot,.docx,.dotx,.docm,.dotm,.xls,.xlsx" id="documentFile" type="file">
+
+                            </div>
+                            <div class="col-md-2 mx-auto">
+                                <input asp-for="@Model.Pdf" id="pdfFole" type="file" accept=".pdf">
+                            </div>
+                            <div class="col-md-2 mx-auto">
+                                <input asp-for="@Model.PhotoCertificate" id="pngFile" type="file" accept="image/*">
+                            </div>
+                        </div>
+                        <br><br><br><br><br><br>
+
+                        <div class="row">
+                            <div class="col-md-10 mx-auto">
+                                <button style="float: right;width: 150px" id="next" onclick="myFunction7()" type="button" class="btn btn-success">
+                                    İrəli
+                                </button>
+                                <button style="float: left;width: 150px" id="prev" onclick="myFunction5()" type="button"
+                                        class="btn btn-danger">
+                                    Geri
+                                </button>
+                            </div>
+                        </div>
+                        <br><br><br>
+                    </div>
+
+                    <!--STEP SEVEN -->
+                    <div style="display: none" id="step-seven">
+                        <div class="row">
+                            <div class="col-md-2 mx-auto ">
+                                <img class="img-fluid" src="~/dist/img/pdf.png" alt="AdobePdf">
+                                Skan
+                            </div>
+                        </div>
+                        <br><br>
+
+                        <div class="row">
+                            <div class="col-md-2 mx-auto">
+                                <input asp-for="@Model.ScanCommandPhoto" id="pdfScanFole" type="file" accept=".pdf">
+                            </div>
+                        </div>
+                        <br><br><br><br><br><br>
+
+                        <div class="row">
+                            <div class="col-md-10 mx-auto">
+                                <button style="float: left;width: 150px" id="prev" onclick="myFunction6()" type="button"
+                                        class="btn btn-danger">
+                                    Geri
+                                </button>
+                            </div>
+                        </div>
+                        <br><br><br>
+                        <div class="row">
+                            <button style="float:left;" id="removeBtn" class="btn btn-danger col-md-3 mx-auto" type="submit">
+                                İmtina
+                            </button>
+                            <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">Yadda saxla</button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+
+        </div>
+        <!--CONTAINER FLUID END-->
+    </div>
+    <!--CONTAINER WRAPPER END-->
+</div>
+<!--WRAPPER END-->
+
+@section scripts{
+    <script>
+
+
+ 
+
+
+
+        function getUniversityRecruitment() {
+            var eU = document.getElementById("educationTypeId");
+            var selectedEduc = eU.options[eU.selectedIndex].value;
+              $.ajax({
+                type: "get",
+                url: "@Url.Action("GetUniversity", "Recruitment")",
+                  data: { id: selectedEduc },
+                success: function (respoonse) {
+                    $("#uniResponseDiv").html(respoonse)
+                },
+                error: function (respoonse) {
+                }
+            })
+        };
+
+        function getFacultyRecruitment() {
+            var eF = document.getElementById("universityId_"+0);
+            var selectedUni = eF.options[eF.selectedIndex].value;
+              $.ajax({
+                type: "get",
+                url: "@Url.Action("GetFaculty", "Recruitment")",
+                  data: { id: selectedUni },
+                success: function (respoonse) {
+                    $("#facResponseDiv").html(respoonse)
+                },
+                error: function (respoonse) {
+                }
+            })
+        };
+
+        function getProfessionRecruitment() {
+            var eP = document.getElementById("facultyId_"+0);
+            var selectedPro = eP.options[eP.selectedIndex].value;
+              $.ajax({
+                type: "get",
+                url: "@Url.Action("GetProfession", "Recruitment")",
+                  data: { id: selectedPro },
+                success: function (respoonse) {
+                    $("#proResponseDiv").html(respoonse)
+                },
+                error: function (respoonse) {
+                }
+            })
+        };
+        //Education in Recruitment Controller
+        function addEduc(empId) {
+            var eAddEdu = document.getElementById("educationTypeId");
+            var selectEdu = eAddEdu.options[eAddEdu.selectedIndex].value;
+            var eAddUni = document.getElementById("universityId_0");
+            var selectUni = eAddUni.options[eAddUni.selectedIndex].value;
+            var eAddFac = document.getElementById("facultyId_0");
+            var selectFac = eAddFac.options[eAddFac.selectedIndex].value;
+            var eAddPro = document.getElementById("professionId_0");
+            var selectPro = eAddPro.options[eAddPro.selectedIndex].value;
+            var startEduc = document.getElementById("startTimeEducation").value;
+            var endEduc = document.getElementById("endTimeEducation").value;
+            var accepthon = document.getElementById("accepthoney").value;
+            var accepthon2 = document.getElementById("accepthoney");
+            $.ajax({
+                type: "post",
+                url: "@Url.Action("AddEducation", "Recruitment")",
+                data: {
+                    eduId: selectEdu,
+                    uniId: selectUni,
+                    facId: selectFac,
+                    proId: selectPro,
+                    startEdu: startEduc,
+                    endEdu: endEduc,
+                    accepthoneyy: accepthon,
+                    id: empId
+                },
+                success: function (res) {
+                    if (res == 'null edu') {
+                        toastNull("Zəhmət olmasa təhsil növünü seçin")
+                    }
+                    else if (res == 'null uni') {
+                        toastNull("Zəhmət olmasa təhsil ocağını seçin")
+                    }
+                    else if (res == 'null fac') {
+                        toastNull("Zəhmət olmasa fakultəni seçin")
+                    }
+                    else if (res == 'null pro') {
+                        toastNull("Zəhmət olmasa ixtisası seçin")
+                    }
+                    else if (res == 'null Edu') {
+                        toastNull("Zəhmət olmasa tarixi qeyd edin")
+                    }
+                    else if (res == 'null accpt') {
+                        toastNull("Zəhmət olmasa qəbul balını qeyd edin")
+                    }
+                    else{
+                        $("#educationTable").html(res)
+                            toastSuccess()
+                            eAddEdu.value = "";
+                            document.getElementById("startTimeEducation").value = "";
+                            document.getElementById("endTimeEducation").value = "";
+                            eAddUni.value = "";
+                            eAddFac.value = "";
+                            eAddPro.value = "";
+                            accepthon2.value = "";
+                         }
+
+                },
+                error: function (res) {
+                }
+            });
+        }
+
+        //Language in Recruitment Controller
+        function addLang(empId) {
+            var eAddLang = document.getElementById("language");
+            var selectLang = eAddLang.options[eAddLang.selectedIndex].value;
+            var eAddALangLev = document.getElementById("languageLevel");
+            var selectLangLev = eAddALangLev.options[eAddALangLev.selectedIndex].value;
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("AddLanguage", "Recruitment")",
+                data: {
+                    idLang: selectLang,
+                    idLangLev: selectLangLev,
+                    id:empId
+                },
+                success: function (res) {
+                    if (res == 'null lang') {
+                        toastNull("Zəhmət olmasa dil seçin")
+                    }
+                    else if (res == 'null langLevel') {
+                        toastNull("Zəhmət olmasa səviyyəni seçin")
+                    }
+                    else {
+                        $("#languageTable").html(res)
+                            toastSuccess()
+                            eAddLang.value = "";
+                            eAddALangLev.value = "";
+                         }
+                },
+                error: function (res) {
+                }
+            });
+        }
+
+        //Computer in Recruitment Controller
+        function addComp(empId) {
+            var eAddCSk = document.getElementById("computerSkill");
+            var eAddCompSkill = document.getElementById("computerSkill").value;
+            var eAddCompLevel = document.getElementById("computerLevel");
+            var selectCmpLv = eAddCompLevel.options[eAddCompLevel.selectedIndex].value;
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("AddComputerSkill","Recruitment")",
+                data: {
+                    txtComp: eAddCompSkill,
+                    idCompLev: selectCmpLv,
+                    id:empId
+                },
+                success: function (res) {
+                    if (res == 'null comp') {
+                        toastNull("Zəhmət olmasa xananı boş buraxmayın")
+                    }
+                    else if (res == 'null compLevel') {
+                        toastNull("Zəhmət olmasa səviyyəni seçin")
+                    }
+                    else {
+                        $('#computerTable').html(res)
+                        toastSuccess()
+                        eAddCSk.value = " ";
+                        eAddCompLevel.value = "";
+                    }
+
+                },
+                error: function (res) {
+                }
+            })
+        }
+
+        //Family in Recruitment Controller
+        function addFamily(empId) {
+            var eAddFamSelect = document.getElementById("kinship");
+            var selectCmpLv = eAddFamSelect.options[eAddFamSelect.selectedIndex].value;
+
+            var eAddFamNam = document.getElementById("relationName");
+            var eAddFamSurnam = document.getElementById("relationSurname");
+            var eAddFamFatNam = document.getElementById("relationFatherName");
+            var eAddFamNumbe = document.getElementById("relationNumber");
+            var eAddFamAddres = document.getElementById("relationAddress");
+            var eAddFamWorkP = document.getElementById("relationWorkplace");
+            var eAddFamWorkPosName = document.getElementById("relationWorkplacePositionName");
+
+            var eAddFamName = document.getElementById("relationName").value;
+            var eAddFamSurname = document.getElementById("relationSurname").value;
+            var eAddFamFatName = document.getElementById("relationFatherName").value;
+            var eAddFamNumber = document.getElementById("relationNumber").value;
+            var eAddFamAddress = document.getElementById("relationAddress").value;
+            var eAddFamWorkPl = document.getElementById("relationWorkplace").value;
+            var eAddFamWorkPosNamee = document.getElementById("relationWorkplacePositionName").value;
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("AddFamily","Recruitment")",
+                data: {
+                    idSlct: selectCmpLv,
+                    txtName: eAddFamName,
+                    txtSurname: eAddFamSurname,
+                    txtFatherName: eAddFamFatName,
+                    txtNumber: eAddFamNumber,
+                    txtAddress: eAddFamAddress,
+                    txtWork: eAddFamWorkPl,
+                    txtWorkPosName: eAddFamWorkPosNamee,
+                    id:empId
+                },
+                success: function (res) {
+                    if (res == 'null slct') {
+                        toastNull("Zəhmət olmasa qohumluluq dərəcəsi seçin")
+                    }
+                    else if (res == 'null name') {
+                        toastNull("Zəhmət olmasa adı daxil edin")
+                    }
+                    else if (res == 'null surname') {
+                        toastNull("Zəhmət olmasa soyadı daxil edin")
+                    }
+                    else if (res == 'null fathername') {
+                        toastNull("Zəhmət olmasa ata adını daxil edin")
+                    }
+                    else if (res == 'null num') {
+                        toastNull("Zəhmət olmasa nömrəni daxil edin")
+                    }
+                    else if (res == 'null add') {
+                        toastNull("Zəhmət olmasa ünvanı daxil edin")
+                    }
+                    else if (res == 'null work') {
+                        toastNull("Zəhmət olmasa iş yeri adını daxil edin")
+                    }
+                    else if (res == 'null workPosName') {
+                        toastNull("Zəhmət olmasa vəzifəni daxil edin")
+                    }
+                    else {
+                        $("#familyTable").html(res)
+                        toastSuccess()
+                        eAddFamSelect.value = "";
+                        eAddFamNam.value = " ";
+                        eAddFamSurnam.value = " ";
+                        eAddFamFatNam.value = " ";
+                        eAddFamNumbe.value = " ";
+                        eAddFamAddres.value = " ";
+                        eAddFamWorkP.value = " ";
+                        eAddFamWorkPosName.value = " ";
+                    }
+
+                },
+                error: function (res) {
+                }
+            })
+        }
+
+        //Family in Recruitment Controller Create
+        function editF(clickidd,famId,empid) {
+            var eAddFamName = document.getElementById("relCreateName_" + famId).value;
+            var eAddFamSurname = document.getElementById("relCreateSurname_" + famId).value;
+            var eAddFamFatName = document.getElementById("relCreateFName_" + famId).value;
+            var eAddFamNumber = document.getElementById("relCreateNumber_" + famId).value;
+            var eAddFamAddress = document.getElementById("relCreateAddress_" + famId).value;
+            var eAddFamWorkPl = document.getElementById("relCreateWorkplace_" + famId).value;
+            var eAddFamWorkPosName = document.getElementById("relCreateWorkPosName_" + famId).value;
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("EditFamily","Recruitment")",
+                data: {
+                    clickid: clickidd,
+                    EmpId:empid,
+                    //idSlct: selectCmpLv,
+                    txtName: eAddFamName,
+                    txtSurname: eAddFamSurname,
+                    txtFatherName: eAddFamFatName,
+                    txtNumber: eAddFamNumber,
+                    txtAddress: eAddFamAddress,
+                    txtWork: eAddFamWorkPl,
+                    txtWorkPosName: eAddFamWorkPosName
+                },
+                success: function (res) {
+                    if (res == 'null name') {
+                        toastNull("Zəhmət olmasa adı daxil edin")
+                    }
+                    else if (res == 'null surname') {
+                        toastNull("Zəhmət olmasa soyadı daxil edin")
+                    }
+                    else if (res == 'null fathername') {
+                        toastNull("Zəhmət olmasa ata adını daxil edin")
+                    }
+                    else if (res == 'null num') {
+                        toastNull("Zəhmət olmasa nömrəni daxil edin")
+                    }
+                    else if (res == 'null add') {
+                        toastNull("Zəhmət olmasa ünvanı daxil edin")
+                    }
+                    else if (res == 'null work') {
+                        toastNull("Zəhmət olmasa iş yerini daxil edin")
+                    }
+                    else if (res == 'null workPosName') {
+                        toastNull("Zəhmət olmasa vəzifəni daxil edin")
+                    }
+                    else {
+                        toastSuccess()
+                    }
+
+                },
+                error: function (res) {
+                }
+            })
+        }
+
+        //Ajax Delete Educ
+        function modalEducationDelete(empId, id) {
+            $.ajax({
+                type: "post",
+                url:"@Url.Action("DeleteEduc","Recruitment")",
+                data: {
+                    EducId: id,
+                    EmpId:empId},
+                success: function (res) {
+                    $(".educTableDiv").html(res);
+                    toastDelete()
+                },
+                error: function (res) {
+                }
+            });
+        }
+
+        //Ajax Delete Lang
+        function modalLanguageDelete(empId,id) {
+            $.ajax({
+                type: "post",
+                url:"@Url.Action("DeleteLang","Recruitment")",
+                data: {
+                    LangId: id,
+                    EmpId: empId},
+                success: function (res) {
+                    $(".langTableDiv").html(res);
+                    toastDelete()
+                },
+                error: function (res) {
+                }
+            });
+        }
+
+        //Ajax Delete Comp
+        function modalComputerDelete(empId,id) {
+            $.ajax({
+                type: "post",
+                url:"@Url.Action("DeleteComp","Recruitment")",
+                data: {
+                    CompId: id,
+                    EmpId:empId},
+                success: function (res) {
+                    $(".compTableDiv").html(res);
+                    toastDelete()
+                },
+                error: function (res) {
+                }
+            });
+        }
+
+        //Ajax Delete Fam
+        function modalFamilyDelete(empId,id) {
+            $.ajax({
+                type: "post",
+                url:"@Url.Action("DeleteFamily","Recruitment")",
+                data: {
+                    FamId: id,
+                    EmpId:empId},
+                success: function (res) {
+                    $(".famTableDiv").html(res);
+                    toastDelete()
+                },
+                error: function (res) {
+                }
+            });
+        }
+
+        //Function Toaster Success
+        function toastSuccess() {
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "2000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr["success"]("Müvəffəqiyyətlə əlavə olundu");
+        }
+        //Function Toaster Delete
+        function toastDelete() {
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "2000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr["success"]("Müvəffəqiyyətlə silindi");
+        }
+        //Function Toaster Null
+        function toastNull(word) {
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "2000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr["error"](word)
+        }
+
+        //check mobile
+        $(".relationNumm").keypress(function (e) {
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                return false;
+            }
+            var curchr = this.value.length;
+            var curval = $(this).val();
+            if (curchr == 3 && curval.indexOf("(") <= -1) {
+                $(this).val("(" + curval + ")" + "-");
+            } else if (curchr == 4 && curval.indexOf("(") > -1) {
+                $(this).val(curval + ")-");
+            } else if (curchr == 5 && curval.indexOf(")") > -1) {
+                $(this).val(curval + "-");
+            } else if (curchr == 9) {
+                $(this).val(curval + "-");
+                $(this).attr('maxlength', '14');
+                $(this).attr('minlength', '14');
+
+            }
+        });
+
+        //Function Img Upload
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
+                    $('#imagePreview').hide();
+                    $('#imagePreview').fadeIn(650);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#imageUpload").change(function () {
+            readURL(this);
+        });
+    </script>
+}
+
+

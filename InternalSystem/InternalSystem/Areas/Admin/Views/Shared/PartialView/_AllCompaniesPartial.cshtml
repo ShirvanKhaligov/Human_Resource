@@ -1,0 +1,59 @@
+﻿@model CompanyVM
+<table style="width:1500px" class="table table-bordered table-responsive-md  ">
+    <thead class=" table-dark">
+        <tr>
+            <th scope="col">Sıra №</th>
+            <th scope="col">Şirkətin adı</th>
+            <th scope="col">VÖEN</th>
+            <th scope="col">Qeydiyyat nömrəsi</th>
+            <th scope="col">Ünvan</th>
+            <th scope="col">İnternet səhifəsi</th>
+            <th scope="col">Poçt ünvanı</th>
+            <th scope="col">Şəhər</th>
+            <th scope="col">Ölkə</th>
+            <th scope="col">Redaktə et</th>
+        </tr>
+    </thead>
+    <tbody class="table-hover">
+        @if (Model.Companies.Count() != 0)
+        {
+            int count = 1;
+            @foreach (var item in Model.Companies)
+            {
+                <tr>
+                    <th scope="row">@count</th>
+                    <th>@item.Name</th>
+                    <td>@item.TaxId</td>
+                    <td>@item.RegistrationNumber</td>
+                    <td>@item.Address</td>
+                    <td><a href="www.@item.Website">@item.Website</a></td>
+                    <td>@item.ZipCode</td>
+                    <td>@item.City.Name</td>
+                    <td>@item.City.Countries.Name</td>
+                    <th class="text-white">
+                        <div class="d-flex w-100 justify-content-center">
+                            <a asp-action="Edit" asp-controller="Company" asp-route-Id="@item.Id" class="btn btn-primary" title="Dəyiş"> <i class="fas fa-edit"></i></a>
+                            <a onclick="confirmationIdForCompany(@item.Id)" class="btn btn-danger ml-1" title="Sil"> <i class="fas fa-trash"></i></a>
+                        </div>
+                    </th>
+                </tr>
+                count++;
+            }
+        }
+        else
+        {
+            <tr class="text-danger text-center">
+                <th scope="row">0</th>
+                <th>Boş</th>
+                <th>Boş</th>
+                <th>Boş</th>
+                <th>Boş</th>
+                <th>Boş</th>
+                <th>Boş</th>
+                <th>Boş</th>
+                <th>Boş</th>
+                <th>Boş</th>
+            </tr>
+        }
+    </tbody>
+</table>

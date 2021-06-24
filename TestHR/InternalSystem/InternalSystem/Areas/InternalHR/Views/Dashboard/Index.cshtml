@@ -1,0 +1,245 @@
+﻿@model AllModelVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- / Widget -->
+<div class="row">
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+        <div class="card dash-widget ctm-border-radius shadow-sm grow">
+            <a asp-area="InternalHR" asp-controller="Employee" asp-action="AllEmployee" class="card-text">
+
+                <div class="card-body">
+                    <div class="card-icon bg-primary">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                    </div>
+                    <div class="card-right">
+                        <h4 class="card-title">İşçilərin sayı</h4>
+                        <p class="card-text">@Model.EmpCount</p>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+        <div class="card dash-widget ctm-border-radius shadow-sm grow">
+            <a asp-area="InternalHR" asp-controller="Dashboard" asp-action="PositionList" class="card-text">
+
+                <div class="card-body">
+                    <div class="card-icon bg-danger">
+                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                    </div>
+                    <div class="card-right">
+                        <h4 class="card-title">Ümumi vəzifələrin sayı</h4>
+                        <p class="card-text">@Model.PositionCount</p>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+        <div class="card dash-widget ctm-border-radius shadow-sm grow">
+            <a asp-area="InternalHR" asp-controller="Employee" asp-action="AllEmployeeMen" class="card-text">
+
+                <div class="card-body">
+                    <div class="card-icon bg-success">
+                        <i class="fa fa-user " aria-hidden="true"></i>
+                    </div>
+                    <div class="card-right">
+                        <h4 class="card-title">Kişilərin sayı</h4>
+                        <p class="card-text">@Model.MenCount</p>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+        <div class="card dash-widget ctm-border-radius shadow-sm grow">
+            <a asp-area="InternalHR" asp-controller="Employee" asp-action="AllEmployeeWomans" class="card-text">
+
+                <div class="card-body">
+                    <div class="card-icon bg-warning">
+                        <i class="fa fa-user " aria-hidden="true"></i>
+                    </div>
+                    <div class="card-right">
+                        <h4 class="card-title">Qadınların sayı</h4>
+                        <p class="card-text">@Model.WomenCount</p>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+        <div class="card dash-widget ctm-border-radius shadow-sm grow">
+            <a asp-area="InternalHR" asp-controller="Dashboard" asp-action="Departamentlər" class="card-text">
+
+                <div class="card-body">
+                    <div class="card-icon bg-info">
+                        <i class="fa fa-building" aria-hidden="true"></i>
+                    </div>
+                    <div class="card-right">
+                        <h4 class="card-title">Ümumi departament sayı</h4>
+                        <p class="card-text">@Model.DepCount</p>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+        <div class="card dash-widget ctm-border-radius shadow-sm grow">
+            <a asp-area="InternalHR" asp-controller="Employee" asp-action="AllEmployee" class="card-text">
+
+                <div class="card-body">
+                    <div class="card-icon bg-dark">
+                        <i class="fa fa-glass" aria-hidden="true"></i>
+                    </div>
+                    <div class="card-right">
+                        <h4 class="card-title">Unique Visitors</h4>
+                        <p class="card-text">@Model.EmpCount</p>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+        <div class="card dash-widget ctm-border-radius shadow-sm grow">
+            <a href="#" class="card-text">
+
+                <div class="card-body">
+                    <div class="card-icon bg-secondary">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                    </div>
+                    <div class="card-right">
+                        <h4 class="card-title">İşə vaxtında gəlmə</h4>
+                        <p class="card-text">87%</p>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+        <div class="card dash-widget ctm-border-radius shadow-sm grow">
+            <a href="#" class="card-text">
+
+                <div class="card-body">
+                    <div class="card-icon bg-danger">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                    </div>
+                    <div class="card-right">
+                        <h4 class="card-title">Məzuniyyətdəkilər</h4>
+                        <p class="card-text">8</p>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card ctm-border-radius shadow-sm grow">
+            <div class="card-header">
+                <h4 class="card-title mb-0 d-inline-block">Bu gün</h4>
+                <a href="javascript:void(0)" class="d-inline-block float-right text-primary"><i class="lnr lnr-sync"></i></a>
+            </div>
+
+            @{
+                var today = DateTime.Now;
+                var dayoftoday = today.Day;
+                var montoftoday = today.Month;
+                //Console.WriteLine(dayoftoday + " " + montoftoday);
+                var thismonth = today.Month;
+            }
+
+
+            <div class="card-body recent-activ">
+                <div class="recent-comment">
+                    <a href="javascript:void(0)" class="dash-card text-dark">
+                        @foreach (var item in Model.Emplooyees)
+                        {
+                            if (item.Birthday.Day == dayoftoday && item.Birthday.Month == montoftoday)
+                            {
+                                //var totaldays = ((DateTime.Now - item.Birthday).TotalDays);
+                                <div class="dash-card-container">
+                                    <div class="dash-card-icon text-primary">
+                                        <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="dash-card-content">
+                                        <h5 class="mb-0">@("Bu gün " + item.FirstName + " " + item.Lastname + " - doğum günüdür." + (today.Year - item.Birthday.Year) + " yaşı olur")</h5>
+                                    </div>
+                                </div>
+                            }
+
+
+                        }
+
+                    </a>
+                    <hr>
+                    <h2 style="text-align:center"> Bu ay doğum günü olanlar</h2>
+                    @foreach (var item in Model.Emplooyees)
+                    {
+                        @if (item.Birthday.Month == thismonth)
+                        {
+                            <a href="javascript:void(0)" class="dash-card text-dark">
+                                <div class="dash-card-container">
+                                    <div class="dash-card-icon text-warning">
+                                        <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="dash-card-content">
+                                        <h6 class="mb-0">@(item.FirstName+" "+item.Lastname+"  "+((item.Birthday.Day + "-" + item.Birthday.Month + "-" + today.Year))+" də " + (today.Year - item.Birthday.Year) + " yaşı olur.")</h6>
+                                    </div>
+                                    <div class="dash-card-avatars">
+                                        <div class="e-avatar"><img class="img-fluid" src="~/allUserImg/@(item.Image !=null ?item.Image:"")" alt="Avatar"></div>
+                                    </div>
+                                    @*<div class="dash-card-avatars">
+                                        <div class="e-avatar"><img class="img-fluid" src="~/logo4 - Copy.png" alt="Avatar"></div>
+                                    </div>*@
+                                </div>
+                            </a>
+                            <hr>
+                        }
+
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-12 d-flex">
+
+        <!-- Team Leads List -->
+        <div class="card flex-fill team-lead shadow-sm grow">
+            <div class="card-header">
+                <h4 class="card-title mb-0 d-inline-block">Departament Müdirləri </h4>
+            </div>
+            <div class="card-body">
+                @*@if(De)*@
+                @foreach (var item in Model.DepartmentBoss)
+                {
+                <div class="media mb-3" style="border:0px !important">
+                     <div class="e-avatar avatar-online mr-3"><img src="~/allUserImg/@(item.Meneger.Image!=null?  item.Meneger.Image:"")" alt="null" class="img-fluid"></div>
+                    @*<div class="e-avatar avatar-online mr-3"><img src="~/logo4 - Copy.png" class="img-fluid"></div>*@ 
+
+                    <div class="media-body">
+                        <h6 class="m-0">@(item.Meneger.FirstName + " " + item.Meneger.Lastname)</h6>
+                        <p class="mb-0 ctm-text-sm">@item.Department.Name</p>
+                    </div>
+                </div>
+
+                }
+            </div>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,283 @@
+﻿@model AllLastWorksLeftButtonVM
+@{
+    ViewData["Title"] = "AllLastWorks";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+<div class="content-wrapper" style="color:black;background-color: #fff;">
+    <div class="container-fluid pb-5">
+        <br>
+        <br>
+        @if (Model.Emplooyees.IdCard == null)
+        {
+            <a asp-area="InternalHR" asp-controller="Practitioner" asp-action="AllPractitioner" class="col-md-2 btn btn-primary "><i class="fas fa-long-arrow-alt-left"></i> Geri</a>
+        }
+        else
+        {
+            <a asp-area="InternalHR" asp-controller="Dashboard" asp-action="Index" class="col-md-2 btn btn-primary "><i class="fas fa-long-arrow-alt-left"></i> Geri</a>
+        }
+        <a asp-action="CreateLastWork" asp-controller="Practitioner" asp-route-id="@ViewData["employeeId"]" asp-area="InternalHR" class="btn btn-success mr-md-1" style="width: 200px;float: right"> <i class="fa fa-plus-circle" aria-hidden="true"></i>  Iş yeri əlavə et</a>
+        <div class="">
+            <br><br>
+            <form>
+                <div class="row">
+                    <div class="col-lg-12">
+                        @if (Model.LastWorkPlaces.Count() != 0)
+                        {
+                            <h5 class="text-danger text-center text-bold">Iş yerləri</h5>
+                        }
+                        else
+                        {
+                            <h4 class="text-danger text-center text-bold">İş yeri yoxdur</h4>
+                        }
+                        @if (ViewData["fillInputs"] != null)
+                        {
+                            <h6 class="text-danger text-center text-bold">@ViewData["fillInputs"]</h6>
+                        }
+                        <div class="">
+                            <br><br>
+                            <div class="property-fields__rows" id="LastWorkListTableDiv">
+                                @foreach (var item in Model.LastWorkPlaces)
+                                {
+                                    <div id="property-fields__row-1" class="property-fields__row property-fields__row-item">
+                                        <div class="row">
+                                            <div class="col-md-6 ml-md-4">
+                                                <div class="line-item-property__field line-item-property__companyName">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-4">
+                                                            <label for="workType">İşin növü:</label>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input style="height: 27px" readonly disabled class="form-control" type="text" value="@if (Model != null){@item.WorkType}" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="line-item-property__field line-item-property__companyName">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-4">
+                                                            <label for="companyName">Şirkətin adı:</label>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input readonly disabled id="companyName" name="CompanyName" type="text" value="@if (Model != null){@item.CompanyName}"
+                                                                   style="height: 27px" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="line-item-property__field line-item-property__position">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-4">
+                                                            <label for="position">Vəzifəsi:</label>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input readonly disabled id="position" name="PositionName" type="text" value="@if (Model != null){@item.PositionName}"
+                                                                   style="height: 27px" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="line-item-property__field line-item-property__salary">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-4">
+                                                            <label for="salary">Maaş:</label>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input readonly disabled id="salary" name="Salary" type="text" value="@if (Model != null){@item.Salary}"
+                                                                   style="height: 27px" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--first col-md-6 end-->
+                                            </div>
+                                            <!--second col-md-5 start-->
+                                            <div class="col-md-5 ml-md-4 ">
+                                                <div class="line-item-property__field line-item-property__enteringTime">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-5">
+                                                            <label for="enteringTime">Giriş tarixi:</label>
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <input readonly disabled id="enteringTime" name="WhenStarted" type="text" value="@if (Model != null){@item.WhenStarted.ToString("dd-MMM-yyyy")}"
+                                                                   style="height: 27px" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="line-item-property__field line-item-property__exitTime">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-5">
+                                                            <label for="exitTime">Çıxış tarixi:</label>
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <input readonly disabled id="exitTime" name="WhenLeft" type="text" value="@if (Model != null){@item.WhenLeft.ToString("dd-MMM-yyyy")}"
+                                                                   style="height: 27px" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="line-item-property__field line-item-property__reason">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-5">
+                                                            <label for="exitTime"></label>
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <input readonly disabled id="reasontype" type="text" value="@if (Model != null){@item.ReasonType}"
+                                                                   style="height: 27px" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <div class="col-md-5">
+                                                            <label for="exitTime">Səbəb:</label>
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <textarea readonly disabled cols="2" rows="2" id="reason"
+                                                                      type="text" name="Reason"
+                                                                      class="form-control">@if (Model != null){@item.Reason}</textarea>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="row d-flex justify-content-center pb-3">
+                                                    <div class="col-6">
+                                                        <a onclick="confirmationDeleteForLastWork(@item.Id,@item.EmplooyeeId)" class="btn btn-sm btn-danger">Sil</a>
+                                                        <a onclick="editWork(@item.Id,@item.EmplooyeeId)" class="btn btn-sm btn-success">Redaktə et</a>
+                                                    </div>
+                                                </div>
+                                                <!--second col-md-5 end-->
+                                            </div>
+                                            <!--row end-->
+                                        </div>
+                                    </div>
+                                }
+                                <br><br>
+                            </div>
+                            <!--dropdown content end-->
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!--FORM END-->
+            </form>
+
+            <!--conatiner fluid end-->
+        </div>
+    </div>
+</div>
+
+<section class="modalClass">
+    <div class="modal" tabindex="-1" role="dialog" id="confirmationModalForLastWork">
+        <input type="hidden" id="hiddenLastWorkId" value="" />
+        <input type="hidden" id="hiddenEmployeeId" value="" />
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger">Silməyə əminsiniz?</h5>
+                    <button type="button" class="close" data-dismiss="modal" onclick="closeConfirmationForLastWork()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <a onclick="deleteWork($('#hiddenLastWorkId').val(),$('#hiddenEmployeeId').val())" class="btn btn-primary">Sil</a>
+                    <a onclick="closeConfirmationForLastWork()" class="btn btn-secondary text-white" data-dismiss="modal">Ləvğ et</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="editModal">
+        <form id="lastWorkForm" asp-action="SaveEditedWork" asp-controller="Practitioner" method="post">
+
+            <input type="hidden" name="id" id="hiddenLastWorkIdForModal" value="" />
+            <input type="hidden" name="empId" id="hiddenEmployeeIdForModal" value="" />
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-danger">Redaktə et</h5>
+                        <button type="button" class="close" data-dismiss="modal" onclick="closeEditModal()" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-dark" id="modalBody">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Yadda saxla</button>
+                        <a onclick="closeEditModal()" class="btn btn-secondary text-white" data-dismiss="modal">Ləvğ et</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+@section scripts{
+    <script>
+        function deleteWork(Id,EmployeeId) {
+               $.ajax({
+                   type: 'post',
+                   url: '@Url.Action("DeleteLastWord", "Practitioner")',
+                   data: { id: Id, Employeeid: EmployeeId},
+                   success: function (response) {
+                       console.log("success")
+                       $("#confirmationModalForLastWork").hide()
+                       $("#LastWorkListTableDiv").html(response)
+                   },
+                   error: function (response) {
+                   }
+               })
+        }
+
+        //////////////open modul
+        function confirmationDeleteForLastWork(Id,EmployeeId) {
+            $("#confirmationModalForLastWork").show()
+            $("#hiddenLastWorkId").val(Id)
+            $("#hiddenEmployeeId").val(EmployeeId)
+        }
+        //close modul//
+        function closeConfirmationForLastWork() {
+            $("#confirmationModalForLastWork").hide()
+        }
+
+        function editWork(Id, EmployeeId) {
+            $.ajax({
+                   type: 'get',
+                   url: '@Url.Action("SingleWorkInfo", "Practitioner")',
+                   data: { LastWorkId: Id, empId: EmployeeId },
+                   success: function (response) {
+                       $("#modalBody").html(response)
+                       $("#editModal").show()
+                       $("#hiddenLastWorkIdForModal").val(Id)
+                       $("#hiddenEmployeeIdForModal").val(EmployeeId)
+                   },
+                   error: function (response) {
+                   }
+            })
+        };
+
+        function closeEditModal() {
+            $("#editModal").hide()
+        }
+    </script>
+}
+

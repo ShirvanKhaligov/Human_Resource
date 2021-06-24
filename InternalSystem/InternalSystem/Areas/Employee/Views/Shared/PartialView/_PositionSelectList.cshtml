@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Position>
+<select style="padding: 0px" class="form-control input-height" name="PositionId" id="positionName">
+    <option selected disabled>Seçin</option>
+    @foreach (var position in Model)
+    {
+        <option value="@position.Id">@position.Name</option>
+    }
+</select>

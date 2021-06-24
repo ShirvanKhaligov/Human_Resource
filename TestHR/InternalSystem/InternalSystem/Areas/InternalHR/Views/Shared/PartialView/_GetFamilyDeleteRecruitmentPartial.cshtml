@@ -1,0 +1,163 @@
+﻿@model RecruitmentCandidateVM
+@foreach (var fm in Model.RelationToEmployees)
+{
+    <div class="row">
+        <div class="col-md-3">
+            <div class="line-item-property____field line-item-property____kinship">
+                <div class="form-group ml-md-5">
+                    <div class="col-lg-12 ml-md-4">
+                        <label style="font-size: 15px" for="kinship">Qohumluluq dərəcəsi</label>
+                    </div>
+                    <div class="col-sm-12">
+                        <input type='text' value='@fm.Relation.RelationType.Name' readonly class='form-control input-height' />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="line-item-property____field line-item-property____relativeName">
+                <div class="form-group">
+                    <div class="col-md-2 ml-md-5">
+                        <label style="font-size: 15px;" for="relationName">Adı</label>
+                    </div>
+                    <div class="col-sm-12">
+                        <input type='text' id='relCreateName_@fm.Id' value='@fm.Relation.Name' class='form-control input-height' />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="line-item-property____field line-item-property____relativeSurname">
+                <div class="form-group   ">
+                    <div class="col-md-2 ml-md-5">
+                        <label style="font-size: 15px;text-align: center" for="relationSurname">Soyadı</label>
+                    </div>
+                    <div class="col-sm-12 ml-md-2">
+                        <input type='text' id='relCreateSurname_@fm.Id' value='@fm.Relation.Surname' class='form-control input-height' />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="line-item-property____field line-item-property____relativeFName">
+                <div class="form-group   ">
+                    <div class="col-md-5 ml-md-5">
+                        <label style="font-size: 15px;text-align: center" for="relationFatherName">Ata adı</label>
+                    </div>
+                    <div class="col-sm-12 ml-md-2">
+                        <input type='text' id='relCreateFName_@fm.Id' value='@fm.Relation.FatherName' class='form-control input-height' />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div class="line-item-property____field line-item-property____relativeNumber">
+                <div class="form-group   ">
+                    <div class="col-md-8 ml-md-4">
+                        <label style="font-size: 15px;text-align: center" for="relationNumber">Mobil nömrə</label>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <input type='text' id='relCreateNumber_@fm.Id' placeholder="XXX-XXX-XXXX"  value='@fm.Relation.Number' class='relationNumm form-control input-height' />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="line-item-property____field line-item-property____address">
+                <div class="form-group ml-md-5">
+                    <div class="col-md-4 ml-md-1">
+                        <label style="font-size: 15px;text-align: center" for="relationAddress">Ünvan</label>
+                    </div>
+                    <div class="col-md-10">
+                        <input type='text' id='relCreateAddress_@fm.Id' value='@fm.Relation.Adress' class='form-control input-height' />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='col-md-6'>
+            <div class='line-item-property____field line-item-property____workplace'>
+                <div class='row'>
+                    <div class='col-5'>
+                        <div class='form-group'>
+                            <div class='col-md-6 ml-md-1'>
+                                <label style='font-size: 15px;text-align: center' for='relationWorkplace'>İş yerinin adı</label>
+                            </div>
+                            <div class='col-md-12'>
+                                <input id='relCreateWorkplace_@fm.Id' value='@fm.Relation.WorkPlaceName' type='text' class='form-control input-height'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-5'>
+                        <div class='form-group'>
+                           <div class='col-md-5 ml-md-1'>
+                                <label style='font-size: 15px;text-align: center' for='relationWorkplacePositionName'>Vəzifə adı</label>
+                            </div>
+                             <div class='col-md-12'>
+                               <input id='relCreateWorkPosName_@fm.Id' value='@fm.Relation.WorkPlacePositionName' type='text' class='form-control input-height'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-2'>
+                        <div class='form-group'>
+                            <div class=''>
+                                <button type='button' onclick='modalFamilyDelete(@fm.Emplooyee.Id,@fm.Relation.Id)' class='btn btn-danger' style='padding: 0px 28px;height:26px;'>Sil</button>
+                            </div>
+                             <div class='mt-2'>
+                                <button type='button' onclick='editF(@fm.RelationId,@fm.Id)' class='btn btn-warning' style='padding: 0px 17px;height:30px;'>Yenilə</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<div class="col-md-6">
+        <div class="line-item-property____field line-item-property____workplace">
+            <div class="form-group ">*@
+        @*<div class="row justify-content-around d-flex">
+             <div class="col-md-4">
+                 <label style="font-size: 15px;text-align: center" for="relationWorkplace">İş yerinin adı</label>
+             </div>
+             <div class="col-md-6 justify-content-end d-flex">
+                 <button type='button' onclick='modalFamilyDelete(@fm.Relation.Id)' class='btn btn-danger' style='padding: 0px 12px;'>Sil</button>
+             </div>
+         </div>
+        <div class='col-md-10'>
+            <input type='text' id='relDeleteWorkplace_@fm.Id' value='@fm.Relation.WorkPlaceName' readonly class='form-control input-height' />
+         </div>*@
+
+        @*<div class='col-md-12'>
+           <div class='row justify-content-around d-flex'>
+              <div class='col-md-10'>
+                <label style='font-size:15px;text-align: center' for='relationWorkplace'>İş yerinin adı</label>
+              </div>
+              <div class='col-md-2'>
+                <button type='button' onclick='modalFamilyDelete(@fm.Relation.Id)' class='btn btn-danger' style='padding: 0px 17px;height:26px;'>Sil</button>
+                </div>
+            </div>
+        </div>
+
+        <div class='col-md-12'>
+           <div class='row justify-content-around d-flex'>
+             <div class='col-md-10'>
+               <input type='text' value='@fm.Relation.WorkPlaceName' class='form-control input-height' id='relDeleteWorkplace_@fm.Id' />
+             </div>
+              <div class='col-md-2 d-flex align-items-center'>
+                  <button type='button' onclick='editFamilyRecruitmentDelete(@fm.RelationId,@fm.Id)' class='btn btn-warning' style='padding: 0px 5px;height:30px;'>Yenilə</button>
+                </div>
+            </div>
+        </div>*@
+
+        @*</div>
+            </div>
+        </div>*@
+    </div>
+}

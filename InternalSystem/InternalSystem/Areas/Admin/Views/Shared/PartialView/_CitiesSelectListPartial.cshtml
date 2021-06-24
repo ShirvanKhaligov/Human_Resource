@@ -1,0 +1,8 @@
+﻿@model CompanyVM
+<select asp-for="Company.CityId" style="height: 27px;padding: 0px" class="form-control" name="CityId" id="cityId">
+    <option disabled>Seç</option>
+    @foreach (var item in Model.Cities)
+    {
+        <option value="@item.Id">@item.Name</option>
+    }
+</select>

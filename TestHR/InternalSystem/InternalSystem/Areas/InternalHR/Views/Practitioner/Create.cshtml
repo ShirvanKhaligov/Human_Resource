@@ -1,0 +1,336 @@
+﻿@model PractitionerVM
+@{
+    ViewData["Title"] = "Create";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #f6822d !important;
+        border-color: #f6822d !important;
+    }
+
+    .btn-primary {
+        background-color: #f6822d !important;
+        border-color: #f6822d !important;
+    }
+
+    .btn-warning {
+        background-color: #f6822d !important;
+        border-color: #f6822d !important;
+    }
+
+    .btn-danger {
+        background-color: #f6822d !important;
+        border-color: #f6822d !important;
+    }
+
+    .btn-info {
+        background-color: #f6822d !important;
+        border-color: #f6822d !important;
+    }
+</style>
+<div class="content-wrapper" style="color:black; background-color: #fff;height:750px;">
+    <div class="container-fluid">
+        <div style="height: 20px"></div>
+        <form method="post">
+            <div class="row">
+                <!--first col-md-5 start-->
+                <div class="col-md-6 ml-md-4">
+                    <div class="form-group row ">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="name" class="col-md-4">Adı:</label>
+                        <div class="col-md-6">
+                            <input required type="text" asp-for="Emplooyee.FirstName" class="form-control input-height">
+                            <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="Emplooyee.FirstName"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="surname" class="col-md-4 ">Soyadı:</label>
+                        <div class="col-md-6">
+                            <input required type="text" asp-for="Emplooyee.Lastname" class="form-control input-height">
+                            <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="Emplooyee.Lastname"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="fatherName" class="col-md-4 ">Ata adı:</label>
+                        <div class="col-md-6">
+                            <input required type="text" asp-for="Emplooyee.FatherName" class="form-control input-height">
+                            <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="Emplooyee.FatherName"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="education" class="col-md-4 ">Təhsilin dərəcəsi:</label>
+                        <div class="col-md-6">
+                            <select onchange="getUniversity()" required style="padding: 0px;" class="form-control input-height" id="EducationTypeId" asp-for="EduTypeId">
+                                <option selected disabled>Seç</option>
+                                @foreach (var item in Model.EducationTypes)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                            <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="EduTypeId"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row" id="schoolDiv" style="display:none">
+                        <!--School-->
+                    </div>
+
+                    <div class="form-group row uni_D-none">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="universityName" class="col-md-4 ">Universitetin adı:</label>
+                        <div class="col-md-6" id="universitySelecListtDiv">
+                            <select onchange="getFaculties()" style="padding: 0" class="form-control input-height" id="universityId" asp-for="UniId">
+                                <option>Seç</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row uni_D-none">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="facultyName" class="col-md-4 ">Fakültənin adı:</label>
+                        <div class="col-md-6" id="facultySelecListtDiv">
+                            <select onchange="getProfession()" style="padding: 0" class="form-control input-height" id="facultyId" asp-for="FacId">
+                                <option>Seç</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row uni_D-none">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="professionName" class="col-md-4 ">İxtisasın adı:</label>
+                        <div class="col-md-6" id="professionSelectListDiv">
+                            <select style="padding: 0" class="form-control input-height" asp-for="ProfId">
+                                <option>Seç</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row uni_D-none">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="accepthoneyy" class="col-md-4 ">Qəbul balı:</label>
+                        <div class="col-md-6">
+                            <input type="number" required class="form-control input-height" asp-for="Education.AcceptHoney">
+                        </div>
+                    </div>
+
+                    <div class="form-group row uni_D-none">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="dateOfIssue" class="col-md-4 ">Başlama tarixi:</label>
+                        <div class="col-md-6">
+                            <input type="date" class="form-control input-height" asp-for="Education.EnteringTime">
+                        </div>
+                    </div>
+
+                    <div class="form-group row uni_D-none">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="endDate" class="col-sm-4 ">Bitmə tarixi:</label>
+                        <div class="col-sm-6">
+                            <input type="date" class="form-control input-height" asp-for="Education.FinishTime">
+                        </div>
+                    </div>
+
+                    <!--first col-md-5 end-->
+                </div>
+                <!--second col-md-5 start-->
+                <div class="col-md-5 ml-md-4">
+                    <div class="form-group row">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="maritalStatus" class="col-md-4">Ailə vəziyyəti:</label>
+                        <div class="col-md-7">
+                            <select style="padding: 0px;" class="form-control input-height" asp-for="MarialStatusId">
+                                @foreach (var item in Model.MarialStatuses)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="gender" class="col-md-4">Cinsi:</label>
+                        <div class="col-sm-7">
+                            <select style="padding: 0px;" class="form-control input-height" asp-for="GenderId">
+                                @foreach (var item in Model.Genders)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label asp-for="Emplooyee.Birthday" class="col-md-4">Doğum günü:</label>
+                        <div class="col-sm-7">
+                            <input type="date" class="form-control input-height" asp-for="Emplooyee.Birthday">
+                            <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="Emplooyee.Birthday"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span style="visibility:hidden;color:#2590d3 !important;;">*</span>
+                        <label for="homeTelephone" class="col-md-4">Ev telefonu:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control input-height" id="homeTelephone" asp-for="PhoneNumbers.HomeNumber" placeholder="XXX-XXX-XX-XX">
+                            <i class="fas fa-info-circle" style="font-size:11px;color:blue;"></i>
+                            <span style="font-size:11px;">Qeyd edilməyə bilər</span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="numberType" class="col-md-4">Mobil(şəxsi):</label>
+                        <div class="col-md-7">
+                            <input type="text" required class="form-control input-height" id="mobileNumber" asp-for="PhoneNumbers.PhoneNumber" placeholder="XXX-XXX-XX-XX">
+                            <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="PhoneNumbers.PhoneNumber"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="email" class="col-md-4">Email:</label>
+                        <div class="col-sm-7">
+                            <input required type="text" asp-for="Emplooyee.Email" class="form-control input-height" style="text-transform:lowercase;" value="@if (Model.Emplooyee!=null&&Model.Emplooyee.Email!=null){@Model.Emplooyee.Email}">
+                            <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="Emplooyee.Email"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="username" class="col-md-4">İstifadəçi adı:</label>
+                        <div class="col-sm-7">
+                            <input required type="text" class="form-control input-height" id="username" name="UserName">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="registrationAddress" class="col-md-4">Qeydiyyat ünvanı:</label>
+                        <div class="col-sm-7">
+                            <input required type="text" asp-for="Emplooyee.BirthPlace" class="form-control input-height">
+                            <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="Emplooyee.BirthPlace"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <span style="color:#2590d3 !important;;">*</span>
+                        <label for="actualAddress" class="col-md-4">Faktiki ünvanı:</label>
+                        <div class="col-sm-7">
+                            <input required type="text" asp-for="Emplooyee.LivingAdress" class="form-control input-height">
+                            <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="Emplooyee.LivingAdress"></span>
+                        </div>
+                    </div>
+                    <!--second col-md-5 end-->
+                </div>
+                <!--row end-->
+            </div>
+            <br>
+            <div class="row">
+                <button style="float:left;" id="removeBtn" class="btn btn-danger col-md-3 mx-auto">
+                    <a asp-controller="Practitioner" asp-action="Index" style="padding: 5px 100px;color:white;">İmtina</a>
+                </button>
+                <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">Yadda saxla</button>
+            </div>
+
+            <!--FORM END-->
+        </form>
+        <!--conatiner fluid end-->
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        function getUniversity() {
+            var eU = document.getElementById("EducationTypeId");
+            var selectedEduc = eU.options[eU.selectedIndex].value;
+                  $.ajax({
+                    type: "get",
+                    url: "@Url.Action("GetUniversities", "Practitioner")",
+                      data: { id: selectedEduc },
+                    success: function (respoonse) {
+                        if (selectedEduc == 5) {
+                            $("#schoolDiv").html(respoonse)
+                            $(".uni_D-none").css("display", "none")
+                            $("#schoolDiv").css("display","flex")
+                        } else {
+                            $("#universitySelecListtDiv").html(respoonse)
+                            $("#schoolDiv").css("display", "none")
+                            $(".uni_D-none").css("display", "flex")
+                        }
+                    },
+                    error: function (respoonse) {
+                    }
+                  })
+        };
+
+        function getFaculties() {
+            var eF = document.getElementById("universityId");
+            var selectedUni = eF.options[eF.selectedIndex].value;
+              $.ajax({
+                type: "get",
+                url: "@Url.Action("GetFaculties", "Practitioner")",
+                  data: { id: selectedUni },
+                success: function (respoonse) {
+                    $("#facultySelecListtDiv").html(respoonse)
+                },
+                error: function (respoonse) {
+                }
+            })
+        }
+
+        function getProfession() {
+            var eP = document.getElementById("facultyId");
+            var selectedPro = eP.options[eP.selectedIndex].value;
+              $.ajax({
+                type: "get",
+                url: "@Url.Action("GetProfessions", "Practitioner")",
+                  data: { id: selectedPro },
+                success: function (respoonse) {
+                    $("#professionSelectListDiv").html(respoonse)
+                },
+                error: function (respoonse) {
+                }
+            })
+        }
+
+       //Checked PhoneNumber
+            $("#homeTelephone").keypress(function (e) {
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    return false;
+                }
+                var curchr = this.value.length;
+                var curval = $(this).val();
+                if (curchr == 3 && curval.indexOf("(") <= -1) {
+                    $(this).val("(" + curval + ")" + "-");
+                } else if (curchr == 4 && curval.indexOf("(") > -1) {
+                    $(this).val(curval + ")-");
+                } else if (curchr == 5 && curval.indexOf(")") > -1) {
+                    $(this).val(curval + "-");
+                } else if (curchr == 9) {
+                    $(this).val(curval + "-");
+                    $(this).attr('maxlength', '14');
+                    $(this).attr('minlength', '14');
+
+                }
+            });
+
+        //Checked HomeNumber
+        $("#mobileNumber").keypress(function (e) {
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                return false;
+            }
+            var curchr = this.value.length;
+            var curval = $(this).val();
+            if (curchr == 3 && curval.indexOf("(") <= -1) {
+                $(this).val("(" + curval + ")" + "-");
+            } else if (curchr == 4 && curval.indexOf("(") > -1) {
+                $(this).val(curval + ")-");
+            } else if (curchr == 5 && curval.indexOf(")") > -1) {
+                $(this).val(curval + "-");
+            } else if (curchr == 9) {
+                $(this).val(curval + "-");
+                $(this).attr('maxlength', '14');
+                $(this).attr('minlength', '14');
+
+            }
+        });
+    </script>
+}
+

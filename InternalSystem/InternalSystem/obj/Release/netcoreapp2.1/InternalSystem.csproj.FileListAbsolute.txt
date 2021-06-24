@@ -1,0 +1,1110 @@
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\appsettings.json
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.deps.json
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.runtimeconfig.json
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.runtimeconfig.dev.json
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.dll
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.pdb
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.Views.dll
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.Views.pdb
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.csprojAssemblyReference.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.AssemblyInfoInputs.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.AssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.csproj.CoreCompileInputs.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorAssemblyInfo.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorAssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.TagHelpers.input.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.TagHelpers.output.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorCoreGenerate.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\AllComand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\AllDepartmant.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\AllDevice.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\AllFaculties.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\EditFaculty.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\AllPosition.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\AllProfessions.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\EditProfession.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\AllSubDepartmant.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\AllUniversities.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\EditUniversity.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\AllAdminList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\AllCompanies.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_AllAdminPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_AllCompaniesPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_CitiesSelectListPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_CommanPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_DepartmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_DeviceTypeDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_Facultiespartiol.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_FacultiesSelectList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetDepartmentEditPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetDepartmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetPositionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetSubDeptPositionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_PositionDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_ProfessionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_SubDepartmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_UniversitiesPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Account\ChangePassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Account\Information.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Hr\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Hr\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Hr\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Account\ChangePassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossQuitWork\CommandDepBossQuitWorkk.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossRecruitment\CreateDepBossRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossRecruitment\DetailDepBossRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossRecruitment\UpdateDepBossRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpQuitWork\CommandEmpQuitWorkk.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpQuitWork\CommandEmpVacation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpRecruitment\CreateEmpRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpRecruitment\DetailEmpRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpRecruitment\UpdateEmpRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\DepartmentContact\Inbox.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\DepartmentContact\SentedMessage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\DepartmentContact\SentMessage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Home\Information.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\MonthlySalary\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\AllPermitions.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\AllPermitionsForHR.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\AllVacation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\GetPermission.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\EmployeeReawrd.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Sanke\Game.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\Components\Header\Default.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetScanPdfToEmployee.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_inboxMessagePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_intoInboxModal.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_PositionSelectList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_sendedMessagePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_SubDepartmentSelectList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Auth\ChangePassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Auth\Information.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Command\DetailCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\AllEmpDevice.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\AllLastWorks.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\AllPractitioner.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\CreateLastWork.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\Editt.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Recruitment\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\Components\Header\Default.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_CandidatePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_EmployeeDeviceDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_EmployeeListForSearch.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetCompDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetEducDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetFacultyPractitionerPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetFacultyRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetFamilyDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetLangDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetProfessionPractitionerPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetProfessionRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetSchoolCandidatePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetUniversityPractitionerPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetUniversityRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_LastworkPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_SingleLastWorkForModal.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\VerifyEmail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Error\ErrorPage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Error\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorTargetAssemblyInfo.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorTargetAssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.Views.pdb
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.dll
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.pdb
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.genruntimeconfig.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.csproj.CopyComplete
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddYear\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\EmployeeDevice\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\EmployeeDevice\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Payment\Attendance.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_EmployeeDeviceDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permision\AllPermitions.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permision\AllVacation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permision\GetPermission.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\appsettings.json
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.deps.json
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.runtimeconfig.json
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.runtimeconfig.dev.json
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.dll
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.pdb
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.Views.dll
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.Views.pdb
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.csprojAssemblyReference.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.AssemblyInfoInputs.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.AssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.csproj.CoreCompileInputs.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorAssemblyInfo.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorAssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.TagHelpers.input.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.TagHelpers.output.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorCoreGenerate.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\AllComand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\AllDepartmant.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\AllDevice.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\AllFaculties.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\EditFaculty.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\AllPosition.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\AllProfessions.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\EditProfession.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\AllSubDepartmant.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\AllUniversities.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\EditUniversity.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddYear\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\AllAdminList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\AllCompanies.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_AllAdminPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_AllCompaniesPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_CitiesSelectListPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_CommanPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_DepartmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_DeviceTypeDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_Facultiespartiol.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_FacultiesSelectList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetDepartmentEditPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetDepartmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetDeptPositionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetPositionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetSubDeptPositionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_PositionDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_ProfessionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_SubDepartmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_UniversitiesPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Account\ChangePassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Account\Information.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Hr\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Hr\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Hr\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Account\ChangePassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossQuitWork\CommandDepBossQuitWorkk.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossRecruitment\CreateDepBossRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossRecruitment\DetailDepBossRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossRecruitment\UpdateDepBossRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpQuitWork\CommandEmpQuitWorkk.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpQuitWork\CommandEmpVacation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpRecruitment\CreateEmpRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpRecruitment\DetailEmpRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpRecruitment\UpdateEmpRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\DepartmentContact\Inbox.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\DepartmentContact\SentedMessage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\DepartmentContact\SentMessage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Director\CreateDirector.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Director\DetailDirector.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\EmployeeDevice\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\EmployeeDevice\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\ExplanationFoLate\CreateExplanation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Home\Information.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\MonthlySalary\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Payment\Attendance.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permision\AllPermitions.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permision\AllVacation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permision\GetPermission.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\AllPermitions.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\AllPermitionsForHR.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\AllVacation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\GetPermission.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\PositionChange\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\PositionChange\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\PositionChange\Update.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\EmployeeReawrd.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Sanke\Game.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\Components\Header\Default.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_EmployeeDeviceDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetScanCommands.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetScanPdfToEmployee.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_inboxMessagePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_intoInboxModal.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_PositionSelectList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_sendedMessagePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_SubDepartmentSelectList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Auth\ChangePassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Auth\Information.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Command\DetailCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\AllEmpDevice.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\PermissionForHr\AllPermitionsForHR.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\PermissionForHr\CreateExplanation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\PermissionForHr\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\AllLastWorks.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\AllPractitioner.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\CreateLastWork.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\Editt.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Recruitment\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\Components\Header\Default.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_CandidatePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_EmployeeDeviceDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_EmployeeListForSearch.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetCompDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetEducDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetFacultyPractitionerPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetFacultyRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetFamilyDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetLangDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetProfessionPractitionerPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetProfessionRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetSchoolCandidatePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetUniversityPractitionerPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetUniversityRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_LastworkPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_SingleLastWorkForModal.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\VerifyEmail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Error\ErrorPage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Error\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorTargetAssemblyInfo.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorTargetAssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.Views.pdb
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.dll
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.pdb
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.genruntimeconfig.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.csproj.CopyComplete
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\IncreaseSalary\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\IncreaseSalary\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\PermissionForHr\AllExplanationForHr.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\AllEmployee.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\appsettings.json
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.deps.json
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.runtimeconfig.json
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.runtimeconfig.dev.json
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.dll
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.pdb
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.Views.dll
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.Views.pdb
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.csprojAssemblyReference.cache
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.AssemblyInfoInputs.cache
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.AssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.csproj.CoreCompileInputs.cache
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorAssemblyInfo.cache
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorAssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.TagHelpers.input.cache
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.TagHelpers.output.cache
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorCoreGenerate.cache
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\AllComand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\AllDepartmant.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\AllDevice.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\AllFaculties.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\EditFaculty.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\AllPosition.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\AllProfessions.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\EditProfession.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\AllSubDepartmant.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\AllUniversities.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\EditUniversity.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddYear\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\AllAdminList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\AllCompanies.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_AllAdminPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_AllCompaniesPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_CitiesSelectListPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_CommanPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_DepartmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_DeviceTypeDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_Facultiespartiol.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_FacultiesSelectList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetDepartmentEditPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetDepartmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetDeptPositionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetPositionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetSubDeptPositionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_PositionDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_ProfessionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_SubDepartmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_UniversitiesPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Account\ChangePassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Account\Information.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Hr\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Hr\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Hr\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Account\ChangePassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossQuitWork\CommandDepBossQuitWorkk.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossRecruitment\CreateDepBossRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossRecruitment\DetailDepBossRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossRecruitment\UpdateDepBossRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpQuitWork\CommandEmpQuitWorkk.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpQuitWork\CommandEmpVacation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpRecruitment\CreateEmpRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpRecruitment\DetailEmpRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpRecruitment\UpdateEmpRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\DepartmentContact\Inbox.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\DepartmentContact\SentedMessage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\DepartmentContact\SentMessage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Director\CreateDirector.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Director\DetailDirector.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\EmployeeDevice\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\EmployeeDevice\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\ExplanationFoLate\CreateExplanation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Home\Information.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\IncreaseSalary\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\IncreaseSalary\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\MonthlySalary\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Payment\Attendance.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permision\AllPermitions.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permision\AllVacation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permision\GetPermission.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\AllPermitions.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\AllPermitionsForHR.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\AllVacation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\GetPermission.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\PositionChange\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\PositionChange\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\PositionChange\Update.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\EmployeeReawrd.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Sanke\Game.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\Components\Header\Default.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_EmployeeDeviceDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetScanCommands.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetScanPdfToEmployee.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_inboxMessagePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_intoInboxModal.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_PositionSelectList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_sendedMessagePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_SubDepartmentSelectList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Auth\ChangePassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Auth\Information.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Command\DetailCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\AllEmpDevice.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\AllEmployee.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\AllEmployeeMen.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\AllEmployeeWomans.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\PermissionForHr\AllExplanationForHr.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\PermissionForHr\AllPermitionsForHR.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\PermissionForHr\CreateExplanation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\PermissionForHr\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\AllLastWorks.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\AllPractitioner.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\CreateLastWork.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\Editt.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Recruitment\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\Components\Header\Default.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_CandidatePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_EmployeeDeviceDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_EmployeeListForSearch.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetCompDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetEducDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetFacultyPractitionerPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetFacultyRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetFamilyDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetLangDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetProfessionPractitionerPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetProfessionRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetSchoolCandidatePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetUniversityPractitionerPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetUniversityRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_LastworkPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_SingleLastWorkForModal.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\VerifyEmail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Error\ErrorPage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Error\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorTargetAssemblyInfo.cache
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorTargetAssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.Views.pdb
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.dll
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.pdb
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.genruntimeconfig.cache
+C:\Users\shirvan.khaligov\Desktop\LastHr\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.csproj.CopyComplete
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\AllEmployeeMen.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\AllEmployeeWomans.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_ExplanationPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_PermissionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Dashboard\Departamentlər.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2)\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Dashboard\PositionList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.AssemblyInfoInputs.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.AssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorAssemblyInfo.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorAssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.TagHelpers.input.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.TagHelpers.output.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorCoreGenerate.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\AllComand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\AllDepartmant.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\AllDevice.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\AllFaculties.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\EditFaculty.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\AllPosition.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\AllProfessions.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\EditProfession.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\AllSubDepartmant.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\AllUniversities.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\EditUniversity.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddYear\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\AllAdminList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\AllCompanies.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_AllAdminPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_AllCompaniesPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_CitiesSelectListPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_CommanPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_DepartmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_DeviceTypeDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_Facultiespartiol.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_FacultiesSelectList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetDepartmentEditPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetDepartmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetDeptPositionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetPositionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetSubDeptPositionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_PositionDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_ProfessionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_SubDepartmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_UniversitiesPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Account\ChangePassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Account\Information.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Hr\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Hr\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Hr\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Account\ChangePassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossQuitWork\CommandDepBossQuitWorkk.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossRecruitment\CreateDepBossRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossRecruitment\DetailDepBossRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossRecruitment\UpdateDepBossRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpQuitWork\CommandEmpQuitWorkk.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpQuitWork\CommandEmpVacation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpRecruitment\CreateEmpRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpRecruitment\DetailEmpRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpRecruitment\UpdateEmpRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\DepartmentContact\Inbox.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\DepartmentContact\SentedMessage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\DepartmentContact\SentMessage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Director\CreateDirector.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Director\DetailDirector.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\EmployeeDevice\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\EmployeeDevice\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\ExplanationFoLate\CreateExplanation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Home\Information.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\IncreaseSalary\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\IncreaseSalary\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\MonthlySalary\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Payment\Attendance.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permision\AllPermitions.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permision\AllVacation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permision\GetPermission.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\AllPermitions.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\AllPermitionsForHR.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\AllVacation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\GetPermission.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\PositionChange\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\PositionChange\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\PositionChange\Update.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\EmployeeReawrd.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Sanke\Game.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\Components\Header\Default.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_EmployeeDeviceDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_ExplanationPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetScanCommands.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetScanPdfToEmployee.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_inboxMessagePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_intoInboxModal.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_PermissionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_PositionSelectList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_sendedMessagePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_SubDepartmentSelectList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Auth\ChangePassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Auth\Information.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Command\DetailCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Dashboard\Departamentlər.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Dashboard\PositionList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\AllEmpDevice.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\AllEmployee.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\AllEmployeeMen.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\AllEmployeeWomans.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\PermissionForHr\AllExplanationForHr.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\PermissionForHr\AllPermitionsForHR.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\PermissionForHr\CreateExplanation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\PermissionForHr\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\AllLastWorks.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\AllPractitioner.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\CreateLastWork.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\Editt.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Recruitment\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\Components\Header\Default.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_CandidatePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_EmployeeDeviceDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_EmployeeListForSearch.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetCompDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetEducDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetFacultyPractitionerPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetFacultyRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetFamilyDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetLangDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetProfessionPractitionerPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetProfessionRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetSchoolCandidatePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetUniversityPractitionerPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetUniversityRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_LastworkPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_SingleLastWorkForModal.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\VerifyEmail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Error\ErrorPage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Error\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorTargetAssemblyInfo.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorTargetAssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.dll
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.pdb
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\appsettings.json
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.deps.json
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.runtimeconfig.json
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.runtimeconfig.dev.json
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.dll
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.pdb
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.Views.dll
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.Views.pdb
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.Views.pdb
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.genruntimeconfig.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.csproj.CopyComplete
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Emails\EmailMessage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Emails\GetEmails.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Emails\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\MessagesForAlluser\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.csproj.CoreCompileInputs.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Emails\Login.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Choices\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Choices\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Choices\Details.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Choices\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Choices\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Questions\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Questions\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Questions\Details.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Questions\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Questions\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quizs\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quizs\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quizs\Details.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quizs\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quizs\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quiz\GetExamResult.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quiz\GetQuizQestion.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quiz\SelectQuizz.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quizs\SelectQuizz.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quizs\Demo.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.csprojAssemblyReference.cache
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeMessage\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeMessage\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeMessage\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeMessage\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\EmployeeMessage\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\BaseHRNov - Copy (2) - Copy\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\EmployeeMessage\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\appsettings.json
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.deps.json
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.runtimeconfig.json
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.runtimeconfig.dev.json
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.dll
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.pdb
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.Views.dll
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\bin\Release\netcoreapp2.1\InternalSystem.Views.pdb
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.csprojAssemblyReference.cache
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.AssemblyInfoInputs.cache
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.AssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.csproj.CoreCompileInputs.cache
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorAssemblyInfo.cache
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorAssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.TagHelpers.input.cache
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.TagHelpers.output.cache
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorCoreGenerate.cache
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\AllComand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddCommand\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\AllDepartmant.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDepartmant\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\AllDevice.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddDevice\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\AllFaculties.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\EditFaculty.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddFaculty\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\AllPosition.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddPosition\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\AllProfessions.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\EditProfession.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddProfession\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\AllSubDepartmant.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddSubDep\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\AllUniversities.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\EditUniversity.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddUni\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\AddYear\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\AllAdminList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Adminn\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\AllCompanies.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Company\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_AllAdminPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_AllCompaniesPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_CitiesSelectListPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_CommanPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_DepartmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_DeviceTypeDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_Facultiespartiol.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_FacultiesSelectList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetDepartmentEditPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetDepartmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetDeptPositionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetPositionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_GetSubDeptPositionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_PositionDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_ProfessionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_SubDepartmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\PartialView\_UniversitiesPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Account\ChangePassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Account\Information.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Hr\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Hr\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Hr\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\CompanyAdmin\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Account\ChangePassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Choices\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Choices\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Choices\Details.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Choices\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Choices\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossQuitWork\CommandDepBossQuitWorkk.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossRecruitment\CreateDepBossRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossRecruitment\DetailDepBossRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandDepBossRecruitment\UpdateDepBossRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpQuitWork\CommandEmpQuitWorkk.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpQuitWork\CommandEmpVacation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpRecruitment\CreateEmpRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpRecruitment\DetailEmpRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\CommandEmpRecruitment\UpdateEmpRecruitmentCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\DepartmentContact\Inbox.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\DepartmentContact\SentedMessage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\DepartmentContact\SentMessage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Director\CreateDirector.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Director\DetailDirector.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Emails\EmailMessage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Emails\GetEmails.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Emails\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Emails\Login.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\EmployeeDevice\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\EmployeeDevice\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\EmployeeMessage\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\EmployeeMessage\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\ExplanationFoLate\CreateExplanation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Home\Information.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\IncreaseSalary\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\IncreaseSalary\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\MessagesForAlluser\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\MonthlySalary\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Payment\Attendance.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permision\AllPermitions.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permision\AllVacation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permision\GetPermission.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\AllPermitions.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\AllPermitionsForHR.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\AllVacation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Permission\GetPermission.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\PositionChange\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\PositionChange\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\PositionChange\Update.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Questions\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Questions\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Questions\Details.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Questions\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Questions\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quizs\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quizs\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quizs\Demo.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quizs\Details.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quizs\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quizs\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quizs\SelectQuizz.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quiz\GetExamResult.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quiz\GetQuizQestion.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Quiz\SelectQuizz.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\EmployeeReawrd.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reaward\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Sanke\Game.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\Components\Header\Default.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_EmployeeDeviceDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_ExplanationPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetScanCommands.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetScanPdfToEmployee.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_inboxMessagePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_intoInboxModal.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_PermissionPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_PositionSelectList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_sendedMessagePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_SubDepartmentSelectList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Auth\ChangePassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Auth\Information.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Command\DetailCommand.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Dashboard\Departamentlər.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Dashboard\PositionList.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\AllEmpDevice.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeDevice\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeMessage\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeMessage\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeMessage\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\EmployeeMessage\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\AllEmployee.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\AllEmployeeMen.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\AllEmployeeWomans.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Employee\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\PermissionForHr\AllExplanationForHr.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\PermissionForHr\AllPermitionsForHR.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\PermissionForHr\CreateExplanation.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\PermissionForHr\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\AllLastWorks.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\AllPractitioner.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\CreateLastWork.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\Editt.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Practitioner\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Recruitment\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\Components\Header\Default.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_CandidatePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_EmployeeDeviceDeletePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_EmployeeListForSearch.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetCompDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetEducDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetFacultyPractitionerPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetFacultyRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetFamilyDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetLangDeleteRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetProfessionPractitionerPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetProfessionRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetSchoolCandidatePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetUniversityPractitionerPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_GetUniversityRecruitmentPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_LastworkPartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_SingleLastWorkForModal.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\VerifyEmail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Error\ErrorPage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Error\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorTargetAssemblyInfo.cache
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.RazorTargetAssemblyInfo.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.Views.pdb
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.dll
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.pdb
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.genruntimeconfig.cache
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\InternalSystem.csproj.CopyComplete
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\InternalHR\Views\Shared\PartialView\_EmployeeMessagePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Notification\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Notification\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\QuitWork70item\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\QuitWork70item\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reprimand\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Reprimand\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\SurnameChange\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\SurnameChange\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\WrittenWarning\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\WrittenWarning\Edit.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Admin\Views\ITPermission\GetAllPers.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Email\DetailInbox.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Email\DetailSend.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Email\Drafts.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Email\EmailMessage.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Email\Inbox.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Email\InboxMessages.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Email\LoginPassword.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Email\Send.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Email\Trash.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\EmployeeDevice\Detail.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetEmailReceiveDrafts.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetEmailReceiveInbox.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetEmailReceiveSend.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetEmailReceiveTrash.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetHeadPhoneDevicePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetIPPhoneDevicePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetKeyboardDevicePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetMkrFlashDevicePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetMobPhoneDevicePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetMobPhoneNumberDevicePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetMonitorDevicePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetMouseDevicePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetNotebookDevicePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\PartialView\_GetPadDevicePartial.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Vacation\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\ReminderVacation\Update.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\ReminderVacation\UpdateVacationDay.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\BusinessTrip\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\BusinessTrip\Delete.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\BusinessTrip\Index.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\LoginSec.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Views\Account\ForgotPasswordSec.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\_Layout2.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Dashboard\IndexSec.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\Shared\Components\Header2\Default.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\AddHolidays\Create.cshtml.g.cs
+C:\Users\shirvan.khaligov\Desktop\InternalSystem\InternalSystem\obj\Release\netcoreapp2.1\Razor\Areas\Employee\Views\AddHolidays\CreateHolidays.cshtml.g.cs

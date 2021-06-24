@@ -1,0 +1,70 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<ContactBetweenDepartmentsInbox>
+<table class="table table-responsive-md ">
+    <thead style="text-align: center" class="All_Index_View_Change_Thead">
+        <tr class="All_Index_View_Change_Tr">
+            <th scope="col">Sıra №</th>
+            <th scope="col">Kimdən</th>
+            <th scope="col"> Mövzu</th>
+            <th scope="col"> Mesaj</th>
+            <th scope="col"> Tarix</th>
+            <th scope="col"> Status</th>
+            <th scope="col"> Sil</th>
+        </tr>
+    </thead>
+    <tbody style="text-align: center;background: white;">
+        @if (Model.Count() != 0)
+        {
+            int count = 1;
+            foreach (var inbox in Model)
+            {
+
+                @if (inbox.isRead != false)
+                {
+                    <tr>
+                        <th onclick="openAnswerModal(@inbox.Id)" scope="row">@count</th>
+                        <td onclick="openAnswerModal(@inbox.Id)">@inbox.From</td>
+                        <td onclick="openAnswerModal(@inbox.Id)">@inbox.Subject</td>
+                        <td onclick="openAnswerModal(@inbox.Id)">@inbox.Message</td>
+                        <td onclick="openAnswerModal(@inbox.Id)">@inbox.CreatedDate</td>
+                        <td class="text-white">◉</td>
+                        <td>
+                            <a onclick="deleteConfirmation(@inbox.Id)" class="btn btn-danger">Sil</a>
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    <tr style="font-weight:bold">
+                        <th onclick="openAnswerModal(@inbox.Id)" scope="row">@count</th>
+                        <td onclick="openAnswerModal(@inbox.Id)">@inbox.From</td>
+                        <td onclick="openAnswerModal(@inbox.Id)">@inbox.Subject</td>
+                        <td onclick="openAnswerModal(@inbox.Id)">@inbox.Message</td>
+                        <td onclick="openAnswerModal(@inbox.Id)">@inbox.CreatedDate</td>
+                        <td class="text-green">◉</td>
+                        <td>
+                            <a onclick="deleteConfirmation(@inbox.Id)" class="btn btn-danger">Sil</a>
+                        </td>
+                    </tr>
+                }
+
+                count++;
+            }
+        }
+        else
+        {
+
+            <tr>
+                <th>Boş</th>
+                <td>Boş</td>
+                <td>Boş</td>
+                <td>Boş</td>
+                <td>Boş</td>
+                <td>Boş</td>
+            </tr>
+
+        }
+    </tbody>
+    </table>

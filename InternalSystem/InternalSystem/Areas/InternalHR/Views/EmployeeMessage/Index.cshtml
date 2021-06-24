@@ -1,0 +1,165 @@
+﻿
+
+@model IEnumerable<MessageForEmployee>
+@{
+    ViewData["Title"] = "Index";
+    int count = 0;
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-info {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+<div class="content-wrapper">
+    <div class="container">
+        <div class="card">
+            <div class="card-header All_Index_View_Change_Card_Header">
+                <p class="All_Index_View_Change_P">Mesaj</p>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+                <div class="col-md-2 offset-md-10 mb-3">
+                    <a asp-controller="EmployeeMessage" asp-action="Create" class="btn btn-block btn-success btn-sm" style="color:white;"><i class="fa fa-plus-circle" aria-hidden="true"></i> Əlavə et</a>
+                </div>
+                <div id="messageTableDiv">
+                    <table id="dataAllSearch" class="table table-bordered table-striped text-center">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Şəkil</th>
+                                <th>Məzmun</th>
+                                <th style="width:200px;">Vaxt</th>
+                                <th style="width:200px;">Redaktə et</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@count</td>
+                                    @if (item.Image != null)
+                                    {
+                                        <td>
+                                            <img src="~/allUserImg/@item.Image" style="width:150px;" alt="Şəkil yoxdur" />
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            <p>Şəkil seçilməyib</p>
+                                        </td>
+                                    }
+                                    <td>@item.TimeExecution.ToString("dd/MM/yyyy")</td>
+                                    @if (item.Description.Length > 60)
+                                    {
+                                        <td>
+                                            @Html.Raw(item.Description.Substring(0, 40) + "...")
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            @Html.Raw(item.Description)
+                                        </td>
+
+                                    }
+                                    <td>
+                                        <a asp-controller="EmployeeMessage" asp-action="Detail" asp-route-id="@item.Id" class="btn btn-primary" style="padding:6px 17px;">
+                                            <i class="fas fa-info"></i>
+                                        </a>
+                                        <a asp-controller="EmployeeMessage" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </a>
+                                        <a onclick="confirmationDeleteForMessage(@item.Id)" class="btn btn-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                count++;
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <!-- /.card-body -->
+        </div>
+    </div>
+</div>
+
+<section class="modalForCandidate">
+    <div class="modal" tabindex="-1" role="dialog" id="confirmationModalForMessage">
+        <input type="hidden" id="hiddenMessageId" value="" />
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger">Silməyə əminsiniz?</h5>
+                    <button type="button" class="close" data-dismiss="modal" onclick="closeMeesageToEmployee()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <a onclick="deleteMeesageToEmployee($('#hiddenMessageId').val())" class="btn btn-primary">Sil</a>
+                    <a onclick="closeMeesageToEmployee()" class="btn btn-secondary text-white" data-dismiss="modal">Ləvğ et</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts{
+
+    <script>
+            //////////////
+        function deleteMeesageToEmployee(Id) {
+            console.log(Id)
+               $.ajax({
+                   type: 'post',
+                   url: '@Url.Action("Delete", "EmployeeMessage")',
+                   data: { messageId: Id},
+                   success: function (response) {
+                       console.log("success")
+                       $("#confirmationModalForMessage").hide()
+                       $("#messageTableDiv").html(response)
+                   },
+                   error: function (response) {
+                       console.error(response)
+                   }
+               })
+        }
+        //////////////open modul
+        function confirmationDeleteForMessage(Id) {
+            $("#confirmationModalForMessage").show()
+            $("#hiddenMessageId").val(Id)
+        }
+        //close modul//
+        function closeMeesageToEmployee() {
+            $("#confirmationModalForMessage").hide()
+        }
+    </script>
+}

@@ -1,0 +1,103 @@
+﻿@model IEnumerable<LastWorkPlace>
+@foreach (var item in Model)
+{
+    <div id="property-fields__row-1" class="property-fields__row property-fields__row-item">
+        <div class="row">
+            <div class="col-md-6 ml-md-4">
+                <div class="line-item-property__field line-item-property__companyName">
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label for="companyName">Şirkətin adı:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input readonly disabled id="WorkType" name="WorkType" type="text" value="@if (Model != null){@item.WorkType}"
+                                   style="height: 27px" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line-item-property__field line-item-property__companyName">
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label for="companyName">Şirkətin adı:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input readonly disabled id="companyName" name="CompanyName" type="text" value="@if (Model != null){@item.CompanyName}"
+                                   style="height: 27px" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line-item-property__field line-item-property__position">
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label for="position">Vəzifəsi:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input readonly disabled id="position" name="PositionName" type="text" value="@if (Model != null){@item.PositionName}"
+                                   style="height: 27px" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="line-item-property__field line-item-property__salary">
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label for="salary">Maaş:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input readonly disabled id="salary" name="Salary" type="text" value="@if (Model != null){@item.Salary}"
+                                   style="height: 27px" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <!--first col-md-6 end-->
+            </div>
+            <!--second col-md-5 start-->
+            <div class="col-md-5 ml-md-4 ">
+                <div class="line-item-property__field line-item-property__enteringTime">
+                    <div class="form-group row">
+                        <div class="col-md-5">
+                            <label for="enteringTime">Giriş tarixi:</label>
+                        </div>
+                        <div class="col-md-7">
+                            <input readonly disabled id="enteringTime" name="WhenStarted" type="text" value="@if (Model != null){@item.WhenStarted.ToString("dd-MMM-yyyy")}"
+                                   style="height: 27px" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="line-item-property__field line-item-property__exitTime">
+                    <div class="form-group row">
+                        <div class="col-md-5">
+                            <label for="exitTime">Çıxış tarixi:</label>
+                        </div>
+                        <div class="col-md-7">
+                            <input readonly disabled id="exitTime" name="WhenLeft" type="text" value="@if (Model != null){@item.WhenLeft.ToString("dd-MMM-yyyy")}"
+                                   style="height: 27px" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="line-item-property__field line-item-property__reason">
+                    <div class="form-group row">
+                        <div class="col-md-5">
+                            <label for="reason">İşdən çıxma səbəbi:</label>
+                        </div>
+                        <div class="col-md-7">
+                            <textarea readonly disabled cols="2" rows="2" id="reason"
+                                      type="text" name="Reason"
+                                      class="form-control">@if (Model != null){@item.Reason}</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row d-flex justify-content-center pb-3">
+                    <div class="col-6">
+                        <a onclick="confirmationDeleteForLastWork(@item.Id,@item.EmplooyeeId)" class="btn btn-sm btn-danger">Sil</a>
+                        <a onclick="editWork(@item.Id,@item.EmplooyeeId)" class="btn btn-sm btn-success">Redaktə et</a>
+                    </div>
+                </div>
+                <!--second col-md-5 end-->
+            </div>
+            <!--row end-->
+        </div>
+    </div>
+}

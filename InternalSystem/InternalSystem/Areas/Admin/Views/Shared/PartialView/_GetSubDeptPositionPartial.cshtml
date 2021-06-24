@@ -1,0 +1,8 @@
+﻿@model IEnumerable<SubDepartment>
+<select class="form-control" name="SubDepartmentId">
+    <option selected disabled>Seç</option>
+    @foreach (var subD in Model)
+    {
+        <option value="@subD.Id">@subD.Name</option>
+    }
+</select>

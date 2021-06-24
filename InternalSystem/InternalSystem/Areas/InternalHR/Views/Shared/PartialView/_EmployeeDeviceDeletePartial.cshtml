@@ -1,0 +1,148 @@
+﻿@model EmployeeDeviceVm 
+<table style="color:blue;width:1250px" class="table table-hover table-responsive-md ">
+    <thead style="text-align: center" class="All_Index_View_Change_Thead">
+        <tr class="All_Index_View_Change_Tr">
+            <th scope="col">Sıra №</th>
+            <th scope="col">Soyadı,Adı,Ata adı</th>
+            <th scope="col"> Ş\V seriyası</th>
+            <th scope="col"> Vəzifəsi</th>
+            <th scope="col"> Qurğunun növü</th>
+            <th scope="col"> Qurğunun kodu</th>
+            <th scope="col"> Verilmə tarixi</th>
+            <th scope="col"> Qaytarılma tarixi</th>
+            <th scope="col"> Redaktə et</th>
+        </tr>
+    </thead>
+    <tbody style="text-align: center;background:#efefef;" class="All_Index_View_Change_Tbody">
+        @{
+            int count = 1;
+        }
+        @if (Model.DeviceToEmployees.Count() != 0)
+        {
+            @foreach (var dvc in Model.DeviceToEmployees)
+            {
+                <tr>
+                    <td scope="row">@count</td>
+                    <td>@dvc.Device.DevicesType.Name</td>
+                    @if (dvc.Device.Count == null)
+                    {
+                        <td>1</td>
+                    }
+                    else
+                    {
+                        <td>@dvc.Device.Count</td>
+                    }
+                    @if (dvc.Device.Parametr == null)
+                    {
+                        <td>------</td>
+                    }
+                    else
+                    {
+                        <td>@dvc.Device.Parametr</td>
+                    }
+                    @if (dvc.Device.InventorCode == null)
+                    {
+                        <td>------</td>
+                    }
+                    else
+                    {
+                        <td>@dvc.Device.InventorCode</td>
+                    }
+                    @if (dvc.Device.SerialNumber == null)
+                    {
+                        <td>------</td>
+                    }
+                    else
+                    {
+                        <td>@dvc.Device.SerialNumber</td>
+                    }
+                    @if (dvc.Device.PhoneNumber == null)
+                    {
+                        <td>------</td>
+                    }
+                    else
+                    {
+                        <td>@dvc.Device.PhoneNumber</td>
+                    }
+                    @if (dvc.Device.InternalPhoneNumber == null)
+                    {
+                        <td>------</td>
+                    }
+                    else
+                    {
+                        <td>@dvc.Device.InternalPhoneNumber</td>
+                    }
+                    <td>@dvc.Device.GivingTime.ToString().Substring(0, 10)</td>
+                    @if (dvc.Device.ReturnDate != null)
+                    {
+                        <td>@dvc.Device.ReturnDate.ToString().Substring(0, 10)</td>
+                    }
+                    else
+                    {
+                        <td>------</td>
+                    }
+                    @if (dvc.Device.Reason != null)
+                    {
+                        if (dvc.Device.Reason.Length > 20)
+                        {
+                            <td>@(dvc.Device.Reason.Substring(0,20)+"...")</td>
+                        }
+                        else
+                        {
+                            <td>@dvc.Device.Reason</td>
+                        }
+
+                    }
+                    else
+                    {
+                        <td>------</td>
+                    }
+                    <td>
+                        @if (dvc.Device.Status != false)
+                        {
+                            <a asp-controller="EmployeeDevice" asp-action="Edit" asp-route-id="@dvc.Id" class="btn btn-warning" style="color:white;padding: 5px 28px;" title="Dəyiş">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                        }
+                        else
+                        {
+                            <a class="btn btn-warning" style="color:white;padding: 5px 28px;pointer-events:none;" title="Dəyiş">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                        }
+                        @if (dvc.Device.Status != false)
+                        {
+                            <a onclick="confirmationDeleteForDevice('@dvc.DeviceId','@dvc.EmplooyeeId')" class="badge badge-info" title="Qaytar" style="color:white;font-size: 11px;padding: 14px 12px;cursor:pointer;margin-top: 5px;">TƏHVİL AL</a>
+                        }
+                        else
+                        {
+                            <a style="color:white;pointer-events:none;font-size: 11px;padding: 13px 2px;margin-top: 5px;" class="badge badge-danger" title="Qaytar">TƏHVİL ALINDI</a>
+                        }
+
+                    </td>
+                </tr>
+                count++;
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="11">Boş</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    $(function () {
+        $('#dataAllSearch').DataTable({
+            "paging": true,
+            "lengthChange": true,
+            "searching": true,
+            "ordering": false,
+            "info": false,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+</script>

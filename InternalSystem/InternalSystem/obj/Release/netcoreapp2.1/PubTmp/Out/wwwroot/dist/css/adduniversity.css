@@ -1,0 +1,16 @@
+.newCommand{
+
+  width: 200px;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+}
+.dropdown-content {
+  display: none;
+}
+
+
+.input-height{
+  height: 27px;
+}

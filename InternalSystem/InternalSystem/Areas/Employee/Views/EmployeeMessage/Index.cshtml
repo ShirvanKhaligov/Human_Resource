@@ -1,0 +1,148 @@
+﻿@model IEnumerable<MessageForEmployee>
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+@section css{
+    <style>
+        #dataAllSearc_wrapper {
+            width: 100%;
+        }
+
+        .myghostclass {
+            background-color: #f5f6fa;
+            border-top: 6px solid #FFC312;
+        }
+
+        .sortable-drag {
+            opacity: 0.0;
+        }
+    </style>
+}
+
+<div class="content-wrapper" style="background: #e0e0e0 !important">
+    <div class="col-md-12">
+        <div style="background-color:#e0e0e0;">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-dark"></h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a asp-area="Employee" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+                                <li class="breadcrumb-item active">Bildiriş</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <table id="dataAllSearc" class="table table-responsive-md" style="background: white;">
+                            <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                                <tr class="All_Index_View_Change_Tr">
+                                    <th scope="col">Sıra №</th>
+                                    <th scope="col">Admin</th>
+                                    <th scope="col">Məzmun</th>
+                                    <th scope="col">Vaxt</th>
+                                    <th scope="col">#</th>
+                                </tr>
+                            </thead>
+                            <tbody id="items" style="text-align: center;" class="All_Index_View_Change_Tbody">
+                                @if (Model.Count() != 0)
+                                {
+                                    int count = 1;
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td scope="row">@count</td>
+                                            <td>@item.Emplooyee.FirstName @item.Emplooyee.Lastname</td>
+                                            @if (item.Description.Length > 60)
+                                            {
+                                                <td>
+                                                    @Html.Raw(item.Description.Substring(0, 40) + "...")
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td>
+                                                    @Html.Raw(item.Description)
+                                                </td>
+
+                                            }
+                                            <td>@item.TimeExecution.ToString("dd/MM/yyyy")</td>
+                                            <td>
+                                                <a asp-area="Employee" asp-controller="EmployeeMessage" asp-action="Detail" asp-route-id="@item.Id" class="btn btn-primary" style="padding:6px 17px;" title="Detail">
+                                                    <i class="fas fa-info"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        count++;
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td>Boş</td>
+                                        <td>Boş</td>
+                                        <td>Boş</td>
+                                        <td>Boş</td>
+                                        <td>Boş</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    @*<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>*@
+
+    <script>
+         
+        $(function () {
+            $('#dataAllSearc').DataTable({
+                "paging": true,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+    </script>
+}
+@*@section scripts{
+        <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+    }*@

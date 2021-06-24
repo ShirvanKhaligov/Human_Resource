@@ -1,0 +1,373 @@
+﻿@model CommandEmployeeVM
+@{
+    ViewData["Title"] = "CreateEmpRecruitmentCommand";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+        <h1>İşçinin Qəbulu</h1>
+        <form method="post">
+            <div style="height: 30px"></div>
+            <div class="form-group row ml-md-5">
+                <div class="col-sm-7" style="display:grid;">
+                    <div class="text-danger text-bold" asp-validation-summary="ModelOnly"></div>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="EmplooyeeId">İşçinin adı:</label>
+                </div>
+                <div class="col-sm-7">
+                    <select onchange="getEmpScan()" style="padding: 0px" class="form-control input-height" asp-for="EmplooyeeId" id="employeeName">
+                        <option selected disabled>Seçin</option>
+                        @foreach (var emp in Model.Emplooyees)
+                        {
+                            <option value="@emp.Id">@(emp.FirstName+" "+emp.Lastname+" "+emp.FatherName+" ") @((emp.GenderId ==1) ? "oğlu" : "qızı") @("Ş/V("+emp.IdCard+")")</option>
+                        }
+                    </select>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="EmplooyeeId"></span>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Sənədin adı:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" value="İşə qəbul" class="form-control input-height" readonly />
+                </div>
+            </div>
+
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Qəbul vaxtı:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="date" class="form-control input-height"
+                           asp-for="CreatedDate">
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="CreatedDate"></span>
+                </div>
+            </div>
+
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2 ">
+                    <label style="color:black;">Əmrin skan forması:</label>
+                </div>
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img class="img-fluid" src="~/dist/img/pdf.png" alt="AdobePdf" />
+                        </div>
+                        <div class="col-md-10">
+                            <div id="showScanPdf"></div>
+                            <!--Partial view scan-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="workType">İş vaxtı növü:</label>
+                </div>
+                <div class="col-sm-7" id="">
+                    <select asp-for="WorkTimeOfTypeId" style="padding: 0px" class="form-control input-height">
+                        <option disabled>Seçin</option>
+                        @foreach (var type in Model.WorkTimeOfTypes)
+                        {
+                            <option value="@type.Id">@type.Name</option>
+                        }
+                    </select>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="WorkTimeOfTypeId"></span>
+                </div>
+            </div>
+
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="workType">İşin növü:</label>
+                </div>
+                <div class="col-sm-7" id="">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label style="color:#353030;">Əsas iş yeri</label>
+                            <input type="checkbox" checked name="WorkPlace" value="1" style="cursor:pointer" class="slectOne" />
+                        </div>
+                        <div class="offset-3 col-sm-2">
+                            <label style="color:#353030;">Əlavə iş yeri</label>
+                            <input type="checkbox" name="WorkPlace" value="2" style="cursor:pointer" class="slectOne" />
+                        </div>
+                    </div>
+                    @if (ViewData["error_WorkPlace"] != null)
+                    {
+                        <span class="text-danger text-bold" style="font-size:14px;">@ViewData["error_WorkPlace"]</span>
+                    }
+                </div>
+            </div>
+
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="departmentName">Vergi güzəşti:</label>
+                </div>
+                <div class="col-sm-7">
+                    <select asp-for="TaxBreakId" style="padding: 0px" class="form-control input-height">
+                        <option>Seçin</option>
+                        @foreach (var taxBreak in Model.TaxBreaks)
+                        {
+                            <option value="@taxBreak.Id">@taxBreak.Name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="workBookNumber">Əmək kitabçası(№):</label>
+                </div>
+                <div class="col-sm-7">
+                    <input type="text" asp-for="WorkBookAddition.WorkbookNumber" style="height: 27px;" class="form-control" id="workBookNumber">
+                    <span class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="contractNumber">Müqavilə(№):</label>
+                </div>
+                <div class="col-sm-7">
+                    <input type="text" asp-for="WorkBookAddition.ContractNumber" style="height: 27px;" class="form-control" id="contractNumber">
+                    <span class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="ssnNumber">SSN:</label>
+                </div>
+                <div class="col-sm-7">
+                    <input type="text" asp-for="WorkBookAddition.SSNNumber" style="height: 27px;" class="form-control" id="ssnNumber">
+                    <span class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="departmentName">Şöbənin adı:</label>
+                </div>
+                <div class="col-sm-7">
+                    <select onchange="getSubDepartment()" id="departmentName" style="padding: 0px" class="form-control input-height">
+                        <option selected disabled>Seçin</option>
+                        @foreach (var company in Model.DepartmentToCompanies)
+                        {
+                            <option value="@company.DepartmentId">@company.Department.Name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="departmentName">Alt şöbənin adı:</label>
+                </div>
+                <div class="col-sm-7" id="subDepartmentListDiv">
+                    <select style="padding: 0px" class="form-control input-height">
+                        <option selected disabled>Seçin</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="positionName">Vəzifənin adı:</label>
+                </div>
+                <div class="col-sm-7" id="positionListDiv">
+                    <select style="padding: 0px" class="form-control input-height" asp-for="PositionId">
+                        <option selected disabled>Seçin</option>
+                    </select>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="PositionId"></span>
+                </div>
+            </div>
+
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="salary">Maaş:</label>
+                </div>
+                <div class="col-sm-7">
+                    <input asp-for="Salary" id="salary" maxlength="8" class="form-control input-height" type="text">
+                    <span class="text-danger text-bold" style="font-size:14px; " asp-validation-for="Salary"></span>
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <button style="float:left;" id="removeBtn" class="btn btn-danger col-md-3 mx-auto">
+                    <a asp-controller="Dashboard" asp-action="Index" style="padding: 5px 100px;color:white;">İmtina</a>
+                </button>
+                <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">Yadda saxla</button>
+            </div>
+        </form>
+        <br><br><br>
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <div>
+                    <table id="dataAllSearch" class="table table-hover table-responsive-md">
+                        <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                            <tr class="All_Index_View_Change_Tr">
+                                <th scope="col">Sıra №</th>
+                                <th scope="col">Soyadı,Adı,Ata adı</th>
+                                <th scope="col"> Verilmə tarixi</th>
+                                <th scope="col"> Əmrin növu</th>
+                                <th scope="col"> Redaktə et</th>
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center;background:#efefef;" class="All_Index_View_Change_Tbody">
+
+                            @{
+                                int count = 1;
+                            }
+                            @if (Model.CommandsToEmployees != null)
+                            {
+                                @foreach (var command in Model.CommandsToEmployees)
+                                {
+                                    <tr>
+                                        <td scope="row">@count</td>
+                                        <td>@(command.Emplooyee.Lastname+" "+command.Emplooyee.FirstName+" "+command.Emplooyee.FatherName) @(command.Emplooyee.GenderId==1 ? "oğlu" : "qızı")</td>
+                                        <td>@command.CreatedDate.ToString("dd/MM/yyyy")</td>
+                                        <td>@command.Command.Title</td>
+                                        <td>
+                                            <a asp-area="Employee" asp-controller="CommandEmpRecruitment" asp-action="DetailEmpRecruitmentCommand" asp-route-id="@command.Id" class="btn btn-primary" style="padding:6px 18px;color:white;" title="Detal">
+                                                <i class="fas fa-info"></i>
+                                            </a>
+                                            <a  asp-area="Employee" asp-controller="CommandEmpRecruitment" asp-action="UpdateEmpRecruitmentCommand" asp-route-id="@command.Id" class="btn btn-warning" style="color:white;" title="Dəyiş">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    count++;
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--content-wrapper-->
+</div>
+
+@section scripts{
+    <script>
+        function getEmpScan() {
+            var emplName = document.getElementById("employeeName");
+            var selectedEmployeePdf = emplName.options[emplName.selectedIndex].value;
+            $.ajax({
+                type: "get",
+                url: "@Url.Action("GetScanPdf", "CommandEmpRecruitment")",
+                data: {
+                    empId: selectedEmployeePdf
+                },
+                success: function (respoonse) {
+                    $("#showScanPdf").html(respoonse)
+                },
+                error: function (respoonse) {
+                }
+            })
+        };
+
+        function getSubDepartment() {
+            var e = document.getElementById("departmentName");
+            var depId = e.options[e.selectedIndex].value;
+            $.ajax({
+                type: "get",
+                url: "@Url.Action("GetSubDepartments", "CommandEmpRecruitment")",
+                data: { id: depId },
+                success: function (respoonse) {
+                    $("#subDepartmentListDiv").html(respoonse)
+                    console.log("success")
+                    $("#positionListDiv").html
+                        (
+                            '<select style="padding: 0px" class="form-control input-height"><option> Seçin</option ></select>'
+                        )
+                },
+                error: function (respoonse) {
+                    console.error("error - suceess")
+                    console.error(respoonse)
+                }
+            })
+        };
+
+        function getPosition() {
+                var e = document.getElementById("SubdepartmentName");
+                var subDepId = e.options[e.selectedIndex].value;
+                $.ajax({
+                    type: "get",
+                    url: "@Url.Action("GetPositions", "CommandEmpRecruitment")",
+                    data: { id: subDepId },
+                    success: function (respoonse) {
+                        $("#positionListDiv").html(respoonse)
+                        console.log("success")
+                        console.log(respoonse)
+                    },
+                    error: function (respoonse) {
+                        console.error("error - suceess")
+                        console.error(respoonse)
+                    }
+                })
+        };
+
+        $(document).on('change', ":checkbox", function () {
+            $('.slectOne').not(this).prop('checked', false);
+        });
+
+        //Function Toaster Success
+        function toastSuccessCommand(word) {
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "2000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr["success"](word);
+        }
+
+        @*$(document).ready(function () {
+            if ('@ViewData["msg"]' != null) {
+                toastSuccessCommand("Müvəffəqiyyətlə əlavə olundu")
+            }
+        });*@
+        @*$(function () {
+            var a = '@ViewData["msg"]';
+            if (a != '')
+                toastSuccessCommand("Müvəffəqiyyətlə əlavə olundu");
+        });*@
+    </script>
+}
+

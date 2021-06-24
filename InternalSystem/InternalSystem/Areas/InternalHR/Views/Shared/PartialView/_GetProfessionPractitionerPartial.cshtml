@@ -1,0 +1,9 @@
+﻿@model PractitionerVM
+<select required style="padding: 0px" class="form-control input-height"
+        id="ProfessionId" asp-for="ProfId">
+    <option selected disabled>Seçin</option>
+    @foreach (var pro in Model.Professions)
+    {
+        <option value="@pro.Id">@pro.Name</option>
+    }
+</select>

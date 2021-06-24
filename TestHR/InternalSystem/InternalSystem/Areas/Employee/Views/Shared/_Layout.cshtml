@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>User</title>
+    @*<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="~/plugins2/plugins/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="~/plugins2/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+        <link rel="stylesheet" href="~/plugins2/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+        <link rel="stylesheet" href="~/plugins2/plugins/select2/css/select2.min.css">
+        <link rel="stylesheet" href="~/dist2/dist/css/adminlte.min.css">
+        <link rel="stylesheet" href="~/plugins2/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+        <link rel="stylesheet" href="~/plugins2/plugins/daterangepicker/daterangepicker.css">
+        <link rel="stylesheet" href="~/plugins2/plugins/summernote/summernote-bs4.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+        <link rel="stylesheet" href="~/dist/css/addspeciality.css">
+        <link href="~/dist2/dist/css/index.css" rel="stylesheet">
+        <link href="~/dist2/dist/css/index2.css" rel="stylesheet">
+        <link href="~/dist2/dist/css/index3.css" rel="stylesheet">
+        <link rel="stylesheet" href="~/dist/css/datatable/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="~/dist/css/datatable/responsive.bootstrap4.min.css">
+        <link rel="stylesheet" href="~/toaster/toastr.min.css">*@
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="~/assest2/assets/img/favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/assest2/assets/css/bootstrap.min.css">
+
+    <!-- Linearicon Font -->
+    <link rel="stylesheet" href="~/assest2/assets/css/lnr-icon.css">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="~/assest2/assets/css/font-awesome.min.css">
+    <!-- Datetimepicker CSS -->
+    <link rel="stylesheet" href="~/assest2/assets/css/bootstrap-datetimepicker.min.css">
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="~/assest2/assets/plugins/select2/select2.min.css">
+
+    <!-- Full Calander CSS -->
+    <link rel="stylesheet" href="~/assest2/assets/plugins/fullcalendar/fullcalendar.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/assest2/assets/css/style.css">
+
+
+
+
+
+    <!--Employee-->
+    @*<style>
+            body {
+                overflow-x: hidden;
+            }
+
+            aside .os-scrollbar-handle {
+                background-color: #2590d3 !important;
+            }
+
+            #dataAllSearch_wrapper label {
+                color: black;
+            }
+
+            .All_Index_View_Change_P {
+                text-align: center;
+                font-size: 25px;
+                font-family: emoji;
+                color: whitesmoke;
+                padding: 17px;
+                background-color: rgba(0, 0, 0, 0.03);
+            }
+
+            .All_Index_View_Change_Card_Header {
+                border-bottom: 0px solid transparent;
+            }
+
+            .All_Index_View_Change_Card {
+                border-radius: inherit;
+                background-color: #343a40;
+            }
+
+            .All_Index_View_Change_Tr th {
+                font-weight: 500;
+                color: white;
+            }
+
+            .All_Index_View_Change_Thead {
+                background: #2590d3;
+            }
+
+            .All_Index_View_Change_Tbody {
+                color: black !important;
+            }
+
+            .All_Index_View_Change_Cart_Footer_A {
+                background-color: #2590d3;
+                border-color: #2590d3;
+                color: #fff;
+            }
+
+            .imagePrevieww {
+                width: 150px;
+                height: 150px;
+                border-radius: 100%;
+                border: 6px solid #F8F8F8;
+            }
+
+            .detailEmpRecruit {
+                font-family: auto;
+                font-weight: 700;
+                font-size: 19px;
+                text-decoration: underline;
+            }
+
+            .detailEmpRecruitLabel {
+                color: black;
+                font-size: 17px;
+            }
+        </style>*@
+    @RenderSection("css", required: false)
+
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+        @await Component.InvokeAsync("Header")
+
+        @RenderBody()
+
+
+    </div>
+    </div>
+    </div>
+    </div>
+    <!--/Content-->
+    </div>
+    <div class="sidebar-overlay" id="sidebar_overlay"></div>
+
+
+    </div>
+    @*<script src="~/plugins2/plugins/jquery/jquery.min.js"></script>
+        <script src="~/plugins2/plugins/jquery-ui/jquery-ui.min.js"></script>
+        <script>
+            $.widget.bridge('uibutton', $.ui.button)
+        </script>
+        <script src="~/plugins2/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="~/plugins2/plugins/chart.js/Chart.min.js"></script>
+        <script src="~/plugins2/plugins/select2/js/select2.full.min.js"></script>
+        <script src="~/plugins2/plugins/jquery-knob/jquery.knob.min.js"></script>
+        <script src="~/plugins2/plugins/moment/moment.min.js"></script>
+        <script src="~/plugins2/plugins/daterangepicker/daterangepicker.js"></script>
+        <script src="~/plugins2/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="~/plugins2/plugins/summernote/summernote-bs4.min.js"></script>
+        <script src="~/plugins2/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+        <script src="~/dist2/dist/js/adminlte.js"></script>
+        <script src="~/dist/js/datatable/jquery.dataTables.min.js"></script>
+        <script src="~/dist/js/datatable/dataTables.bootstrap4.min.js"></script>
+        <script src="~/dist/js/datatable/dataTables.responsive.min.js"></script>
+        <script src="~/dist2/dist/js/pages/dashboard.js"></script>
+        <script src="~/dist2/dist/js/demo.js"></script>
+        <script src="~/dist2/dist/js/index.js"></script>
+        <script src="~/dist2/dist/js/index2.js"></script>*@
+
+
+    <script src="~/assest2/assets/js/jquery-3.2.1.min.js"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="~/assest2/assets/js/popper.min.js"></script>
+    <script src="~/assest2/assets/js/bootstrap.min.js"></script>
+
+    <!-- Datetimepicker JS -->
+    <script src="~/assest2/assets/plugins/select2/moment.min.js"></script>
+    <script src="~/assest2/assets/js/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- Select2 JS -->
+    <script src="~/assest2/assets/plugins/select2/select2.min.js"></script>
+
+    <!-- Full Calendar JS -->
+    <script src="~/assest2/assets/js/jquery-ui.min.js"></script>
+    <script src="~/assest2/assets/plugins/fullcalendar/fullcalendar.min.js"></script>
+    <script src="~/assest2/assets/plugins/fullcalendar/jquery.fullcalendar.js"></script>
+
+    <!-- Sticky sidebar JS -->
+    <script src="~/assest2/assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+    <script src="~/assest2/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
+
+    <!-- Custom Js -->
+    <script src="~/assest2/assets/js/script.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="~/toaster/toastr.min.js"></script>
+
+    @RenderSection("scripts", required: false)
+    <script>
+
+
+
+        //$(function () {
+        //    $('#dataAllSearch').DataTable({
+        //        "paging": true,
+        //        "lengthChange": true,
+        //        "searching": true,
+        //        "ordering": false,
+        //        "info": false,
+        //        "autoWidth": false,
+        //        "responsive": true,
+        //    });
+        //});
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,140 @@
+﻿@model LastWorkPlace
+<div id="property-fields__row-1" class="property-fields__row property-fields__row-item">
+    <div class="row">
+        <div class="col-md-12 ml-md-12">
+            <div class="line-item-property__field line-item-property__companyName">
+                <div class="form-group row">
+                    <div class="col-md-5">
+                        <label for="companyName">İşin növü:</label>
+                    </div>
+                    <div class="col-md-7">
+                        <select class="form-control" name="WorkType">
+                            @if (ViewData["worktype_edit"] != null)
+                            {
+                                <option selected>@ViewData["worktype_edit"]</option>
+                            }
+                            @if (ViewData["worktype_edit"].ToString() == "Əmək müqaviləsi ilə işləyən")
+                            {
+                                <option>Əmək müqaviləsi ilə işləməyən</option>
+                            }
+                            else
+                            {
+                                <option>Əmək müqaviləsi ilə işləyən</option>
+                            }
+                            @*@if (Model.WorkType != null)
+                            {
+                                <option selected>@ViewData["worktype_edit"]</option>
+                            }*@
+                        </select>
+                        @*<span class="text-danger text-bold" style="font-size:13px" asp-validation-for="WorkType"></span>*@
+                    </div>
+                </div>
+            </div>
+
+            <div class="line-item-property__field line-item-property__companyName">
+                <div class="form-group row">
+                    <div class="col-md-5">
+                        <label for="companyName">Şirkətin adı:</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="hidden" name="@Model.EmplooyeeId" value="" />
+                        <input name="CompanyName" type="text" value="@Model.CompanyName"
+                               style="height: 27px" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div class="line-item-property__field line-item-property__position">
+                <div class="form-group row">
+                    <div class="col-md-5">
+                        <label for="position">Vəzifəsi:</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input name="Position" type="text" value="@Model.PositionName"
+                               style="height: 27px" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="line-item-property__field line-item-property__salary">
+                <div class="form-group row">
+                    <div class="col-md-5">
+                        <label for="salary">Maaş:</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input name="Salary" type="text" value="@Model.Salary" pattern="[0-9]+([.][0-9]+)?"
+                               style="height: 27px" class="form-control">
+                        <i class="fas fa-info-circle" style="font-size:11px;color:blue;"></i>
+                        <span style="font-size:11px;">Qeyd edilməyə bilər</span>
+                        @*<span class="text-danger text-bold" style="font-size:13px" asp-validation-for="Salary"></span>*@
+                    </div>
+                </div>
+            </div>
+            <!--first col-md-6 end-->
+        </div>
+            <!--second col-md-5 start-->
+        <div class="col-md-12 ml-md-12 ">
+            <div class="line-item-property__field line-item-property__enteringTime">
+                <div class="form-group row">
+                    <div class="col-md-5">
+                        <label for="enteringTime">Giriş tarixi:</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input name="WhenStarted" type="date" value="@Model.WhenStarted.ToString("yyyy-MM-dd")"
+                               style="height: 27px;" class="form-control">
+                        @*<span class="text-danger text-bold" style="font-size:13px" asp-validation-for="WhenStarted"></span>*@
+                    </div>
+                </div>
+            </div>
+            <div class="line-item-property__field line-item-property__exitTime">
+                <div class="form-group row">
+                    <div class="col-md-5">
+                        <label for="exitTime">Çıxış tarixi:</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input name="WhenLeft" type="date" value="@Model.WhenLeft.ToString("yyyy-MM-dd")"
+                               style="height: 27px" class="form-control">
+                        @*<span class="text-danger text-bold" style="font-size:13px" asp-validation-for="WhenLeft"></span>*@
+                    </div>
+                </div>
+            </div>
+            <div class="line-item-property__field line-item-property__reason">
+                <div class="form-group row">
+                    <div class="col-md-5">
+                        <label for="reasonType"></label>
+                    </div>
+                    <div class="col-md-7">
+                        <select class="form-control" name="ReasonType">
+                            @if (ViewData["reasontype_edit"] != null)
+                            {
+                                <option selected>@ViewData["reasontype_edit"]</option>
+                            }
+                            @if (ViewData["reasontype_edit"].ToString() == "İşdən çıxma")
+                            {
+                                <option>Vəzifə dəyişikliyi</option>
+                            }
+                            else
+                            {
+                                <option>İşdən çıxma</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="line-item-property__field line-item-property__reason">
+                <div class="form-group row">
+                    <div class="col-md-5">
+                        <label for="reason">Səbəb:</label>
+                    </div>
+                    <div class="col-md-7">
+                        <textarea cols="2" rows="2" name="Reason" type="text"
+                                  class="form-control">@Model.Reason</textarea>
+                        @*<span class="text-danger text-bold" style="font-size:13px" asp-validation-for="Reason"></span>*@
+                    </div>
+                </div>
+            </div>
+
+            <!--second col-md-5 end-->
+        </div>
+        <!--row end-->
+    </div>
+</div>

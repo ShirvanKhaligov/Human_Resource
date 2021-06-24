@@ -1,0 +1,1449 @@
+﻿@model RecruitmentCandidateVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<style type="text/css">
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 99;
+        opacity: 0.8;
+        filter: alpha(opacity=80);
+        min-height: 100%;
+        width: 100%;
+    }
+
+    .btn-success {
+        background-color: #f6822d !important;
+        border-color: #f6822d !important;
+    }
+
+    .btn-primary {
+        background-color: #f6822d !important;
+        border-color: #f6822d !important;
+    }
+
+    .btn-warning {
+        background-color: #f6822d !important;
+        border-color: #f6822d !important;
+    }
+
+    .btn-danger {
+        background-color: #f6822d !important;
+        border-color: #f6822d !important;
+    }
+
+    .btn-info {
+        background-color: #f6822d !important;
+        border-color: #f6822d !important;
+    }
+
+    .loading {
+        display: none;
+        position: fixed;
+        background-color: White;
+        z-index: 999;
+    }
+</style>
+<div class="content-wrapper" style="color:black; background-color: #fff;">
+    <div class="loading" align="center">
+
+        <img src="~/b6e0b072897469.5bf6e79950d23.gif" alt="" />
+    </div>
+    <br>
+    <div class="container-fluid">
+        <div class="bs-example">
+            <nav class="navbar navbar-expand-md navbar-light bg-gray-light">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse col-md-12 mx-auto" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a onclick="myFunction1()" style="font-family: 'Roboto';" class="nav-link active"
+                           href="#">Şəxsi məlumatlar</a>
+                        <a onclick="myFunction2()" style="font-family: 'Roboto'; " class="nav-link"
+                           href="#">Təhsil haqqında</a>
+                        <a onclick="myFunction3()" style="font-family: 'Roboto'; " class="nav-link"
+                           href="#">Dil bilikləri</a>
+                        <a onclick="myFunction4()" style="font-family: 'Roboto'; " class="nav-link"
+                           href="#">Kompyuter bilikləri</a>
+                        <a onclick="myFunction5()" style="font-family: 'Roboto'; " class="nav-link"
+                           href="#">Ailə üzvləri</a>
+                        <a onclick="myFunction6()" style="font-family: 'Roboto'; " class="nav-item nav-link"
+                           href="#">Əlavə məlumatlar</a>
+                        <a onclick="myFunction7()" style="font-family: 'Roboto';" class="nav-item nav-link"
+                           href="#">Əmrlərin skan forması</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div style="" class="col-md-12 ">
+            <br>
+            <form method="post" enctype="multipart/form-data">
+                <div class="siema">
+                    <div style="display: block" id="step-one">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="form-group row ml-md-5 ">
+                                    <label for="name" class="col-md-3 ">Adı:</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" value="@Model.Emplooyee.FirstName" asp-for="@Model.FirstName" style="height: 27px;" class="form-control" id="name">
+                                        <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="@Model.FirstName"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row ml-md-5 ">
+                                    <label for="surname" class="col-md-3">Soyadı:</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" value="@Model.Emplooyee.Lastname" asp-for="@Model.Lastname" style="height: 27px;" class="form-control" id="surname">
+                                        <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="@Model.Lastname"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group row ml-md-5 ">
+                                    <label for="fatherName" class="col-md-3">Ata adı:</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" value="@Model.Emplooyee.FatherName" asp-for="@Model.FatherName" style="height: 27px;" class="form-control" id="fatherName">
+                                        <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="@Model.FatherName"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group row ml-md-5 ">
+                                    <label for="idCard" class="col-md-3">Ş\V:</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" value="@Model.Emplooyee.IdCard" asp-for="@Model.IdCard" style="height: 27px;" class="form-control" id="idCard">
+                                        <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="@Model.IdCard"></span>
+                                        @if (ViewData["error_idcard_same"] != null)
+                                        {
+                                            <span class="text-danger text-bold" style="font-size:14px;">@ViewData["error_idcard_same"]</span>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="form-group row ml-md-5 ">
+                                    <label for="finCode" class="col-md-3">FİN:</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" value="@Model.Emplooyee.FinCode" asp-for="@Model.FinCode" maxlength="7" style="height: 27px;" class="form-control" id="finCode">
+                                        <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="@Model.FinCode"></span>
+                                        @if (ViewData["error_fincard_same"] != null)
+                                        {
+                                            <span class="text-danger text-bold" style="font-size:14px;">@ViewData["error_fincard_same"]</span>
+                                        }
+                                    </div>
+                                </div>
+                                <div class="form-group  row ml-md-5 ">
+                                    <label class="col-md-3">Hərbi mükəlləfiyyəti:</label>
+                                    <div class="col-sm-2">
+                                        <label class="text-success">Var</label>
+                                        @if (Model.Emplooyee.MillitaryStatus.Name == "Yes")
+                                        {
+                                            <input onclick="checkBox()" checked type="radio" value="yess" name="militaryStatus" id="yesMilitaryStatus">
+                                        }
+                                        else
+                                        {
+                                            <input onclick="checkBox()" type="radio" value="yess" name="militaryStatus" id="yesMilitaryStatus">
+                                        }
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label class="text-danger">Yoxdur</label>
+                                        @if (Model.Emplooyee.MillitaryStatus.Name == "No")
+                                        {
+                                            <input onclick="checkBox1()" checked value="noo" type="radio" name="militaryStatus" id="noMilitaryStatus">
+                                        }
+                                        else
+                                        {
+                                            <input onclick="checkBox1()" type="radio" value="noo" name="militaryStatus" id="noMilitaryStatus">
+                                        }
+                                    </div>
+                                </div>
+                                @if (ViewData["error_military"] != null)
+                                {
+                                    <span style="margin-left:245px;" class="text-danger">@ViewData["error_military"]</span>
+                                }
+                                @if (ViewData["error_militaryRank"] != null)
+                                {
+                                    <span style="margin-left:245px;" class="text-danger">@ViewData["error_militaryRank"]</span>
+                                }
+                                @if (Model.Emplooyee.MillitaryStatus.Name != "No")
+                                {
+                                    <div style="display: block" id="military">
+                                        <div class="form-group row ml-md-5">
+                                            <label class="col-md-3" for="militaryRank">Hərbi rütbəsi:</label>
+                                            <div class="col-sm-5">
+                                                <select style="padding: 0px" class="form-control input-height" name="mltRank"
+                                                        id="militaryRank">
+                                                    @foreach (var mltRank in Model.MillitaryRanks)
+                                                    {
+                                                        if (Model.Emplooyee.MillitaryStatus.MillitaryRankId == mltRank.Id)
+                                                        {
+                                                            <option selected value="@mltRank.Id">@mltRank.Name</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="@mltRank.Id">@mltRank.Name</option>
+                                                        }
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                <div style="display: none" id="military">
+                                    <div class="form-group row ml-md-5">
+                                        <label class="col-md-3" for="militaryRank">Hərbi rütbəsi:</label>
+                                        <div class="col-sm-5">
+                                            <select style="padding: 0px" class="form-control input-height" name="mltRank"
+                                                    id="militaryRankNew">
+                                                <option selected disabled>Seç</option>
+                                                @foreach (var rank in Model.MillitaryRanks)
+                                                {
+                                                    <option value="@rank.Id">@rank.Name</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: -51px;" class="col-md-3">
+                                <div class="avatar-upload">
+                                    <div class="avatar-edit">
+                                        <input type='file' asp-for="@Model.PhotoUpd" id="imageUpload" accept="image/*" />
+                                        <label for="imageUpload"></label>
+
+                                    </div>
+                                    <div class="avatar-preview">
+                                        <div id="imagePreview" style="background-image: url(/allUserImg/@Model.Emplooyee.Image)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-9"></div>
+                            <div class="col-md-3">
+                                @if (Model.Emplooyee.Image != null)
+                                {
+                                    <div class="image_size" style="width:200px;height:240px;margin-left:47px;">
+                                        <img src="~/allUserImg/@Model.Emplooyee.Image" style="width:100%;height:100%" alt="Alternate Text" />
+                                    </div> }
+                                else
+                                {
+                                    <div class="image_size" style="width:225px;height:250px;margin-left:90px;">
+                                        <img src="~/allUserImg/" style="width:100%;height:100%" alt="Alternate Text" />
+                                    </div>}
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-11 mx-auto">
+                                <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="WordUpd"></span>
+                                <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="PdfUpd"></span>
+                                <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="PhotoCertificateUpd"></span>
+                                <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="ScanCommandPhotoUpdate"></span>
+                            </div>
+                            <div class="col-md-11 mx-auto">
+                                <button style="float: right;width: 150px;margin-right: 35px;" id="next" onclick="myFunction2()" type="button"
+                                        class="btn btn-success ">
+                                    İrəli
+                                </button>
+                                <button style="margin-top: 50px;" type="button" class="btn btn-danger">
+                                    <a asp-controller="Employee" asp-action="Index" asp-route-Id="@Model.DepartmentId" style="padding: 5px 100px;color:white;">İmtina</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--STEP TWO-->
+                    <div style="display: none" id="step-two" class="row">
+                        <div class="property-fields__rows">
+                            @if (Model.EducationsToEmployees.Count() != 0)
+                            {
+                                @foreach (var ed in Model.EducationsToEmployees)
+                                {
+                                    <div>
+                                        <div style="border:1px solid;color: black ">
+                                            <div>
+                                                <div class="form-group row ml-md-5 mt-3">
+                                                    <div class="col-md-2">
+                                                        <label for="educationTypeId">Təhsilin dərəcəsi:</label>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <select onchange="getUniversityRecruitment(@ed.Id)" style="padding: 0px" class="form-control input-height"
+                                                                id="educationTypeId_@ed.Id">
+                                                            @foreach (var edType in Model.EducationTypes)
+                                                            {
+                                                                if (edType.Id == ed.Education.Profession.UniFaculty.EducationTypeToUniversity.EducationType.Id)
+                                                                {
+                                                                    <option selected value="@edType.Id">@edType.Name</option>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <option value="@edType.Id">@edType.Name</option>
+                                                                }
+                                                            }
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="line-item-property__field line-item-property__universityName">
+                                                <div class="form-group row ml-md-5">
+                                                    <div class="col-md-2">
+                                                        <label for="universityId">Təhsil ocağının adı:</label>
+                                                    </div>
+                                                    <div class="col-sm-5" id="uniResponseDiv_@ed.Id">
+                                                        <select onchange="getFacultyRecruitment(@ed.Id)" style="padding: 0px" class="form-control input-height"
+                                                                id="universityId_@ed.Id">
+                                                            @foreach (var un in Model.EducationTypeToUnivercities.Where(w => w.EducationTypeId == ed.Education.Profession.UniFaculty.EducationTypeToUniversity.EducationTypeId).ToList())
+                                                            {
+                                                                if (un.Id == ed.Education.Profession.UniFaculty.EducationTypeToUniversity.Universities.Id)
+                                                                {
+                                                                    <option selected value="@un.Universities.Id">@un.Universities.Name</option>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <option value="@un.Universities.Id">@un.Universities.Name</option>
+                                                                }
+                                                            }
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="line-item-property__field line-item-property__time">
+                                                <div class="form-group row ml-md-5">
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-6">
+                                                                <label for="enteringTime">Başlama tarixi:</label>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <input type='date' value="@ed.Education.EnteringTime.ToString("yyyy-MM-dd")" name="startTimeEducation_@ed.Id"
+                                                                       id="startTimeEducation_@ed.Id" class="form-control input-height" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-3">
+                                                                <label for="endTime">Bitmə tarixi:</label>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <input type='date' value="@ed.Education.FinishTime.ToString("yyyy-MM-dd")" name="endTimeEducation_@ed.Id"
+                                                                       id="endTimeEducation_@ed.Id" class="form-control input-height" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="line-item-property__field line-item-property__facultyName">
+                                                <div class="form-group row ml-md-5">
+                                                    <div class="col-md-2">
+                                                        <label for="facultyId">Fakültə:</label>
+                                                    </div>
+                                                    <div class="col-sm-5" id="facResponseDiv_@ed.Id">
+                                                        <select onchange="getProfessionRecruitment(@ed.Id)" style="padding: 0px" class="form-control input-height"
+                                                                id="facultyId_@ed.Id">
+                                                            @foreach (var fac in Model.UniFaculties.Where(w => w.EducationTypeToUniversity.UniversitiesId == ed.Education.Profession.UniFaculty.EducationTypeToUniversity.UniversitiesId).ToList())
+                                                            {
+                                                                if (fac.Id == ed.Education.Profession.UniFacultyId)
+                                                                {
+                                                                    <option selected value="@fac.Id">@fac.Name</option>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <option value="@fac.Id">@fac.Name</option>
+                                                                }
+                                                            }
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="line-item-property__field line-item-property__specialtyName">
+                                                <div class="form-group row ml-md-5">
+                                                    <div class="col-md-2">
+                                                        <label for="professionId">İxtisas:</label>
+                                                    </div>
+                                                    <div class="col-sm-5" id="proResponseDiv_@ed.Id">
+                                                        <select required style="padding: 0px" class="form-control input-height"
+                                                                id="professionId_@ed.Id">
+                                                            @foreach (var pr in Model.Professions.Where(w => w.UniFaculty.Id == ed.Education.Profession.UniFacultyId).ToList())
+                                                            {
+                                                                if (pr.Id == ed.Education.ProfessionId)
+                                                                {
+                                                                    <option selected value="@pr.Id">@pr.Name</option>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <option value="@pr.Id">@pr.Name</option>
+                                                                }
+                                                            }
+                                                        </select>
+                                                    </div>
+                                                    @*<div class="col-md-3 offset-1">
+                                                            <input class="btn btn-warning col-sm-4 p-0" type="button" id="" onclick="editEduc(@ed.Education.Id,@ed.Id)"
+                                                                   value="Yenilə" />
+                                                        </div>*@
+                                                </div>
+                                            </div>
+
+                                            <div class="line-item-property__field line-item-property__specialtyName">
+                                                <div class="form-group row ml-md-5">
+                                                    <div class="col-md-2">
+                                                        <label for="accepthoneyId">Qəbul balı:</label>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <input type='number' value="@ed.Education.AcceptHoney"
+                                                               id="acceptHoneyResponseDiv_@ed.Id" class="form-control input-height" />
+                                                    </div>
+                                                    <div class="col-md-3 offset-1">
+                                                        <input class="btn btn-warning col-sm-4 p-0" type="button" id="" onclick="editEduc(@ed.Education.Id,@ed.Id)"
+                                                               value="Yenilə" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <br>
+                                        </div><br><br>
+                                    </div>
+                                }
+
+                            }
+                            else
+                            {
+                                <div class="col-md-2 mx-auto">
+                                    <span>Boşdur</span>
+                                </div>
+                            }
+                        </div>
+
+                        <br><br>
+                        <div class="row">
+                            <div class="col-md-10 mx-auto">
+                                <button style="float: right;width: 150px" id="next" onclick="myFunction3()" type="button"
+                                        class="btn btn-success">
+                                    İrəli
+                                </button>
+                                <button style="float: left;width: 150px" id="prev" onclick="myFunction1()" type="button"
+                                        class="btn btn-danger">
+                                    Geri
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--STEP THREE-->
+                    <div style="display: none" id="step-three" class="row">
+                        <div class="property-fields___rows">
+                            <div id="property-fields___row-1" class="property-fields___row property-fields___row-item">
+
+                                <div class="line-item-property___field line-item-property___language">
+                                    @if (Model.LanguageToEmployees.Count() != 0)
+                                    {
+                                        @foreach (var emplang in Model.LanguageToEmployees)
+                                        {
+                                            <div class="form-group row mb-5">
+                                                <div class="col-md-3 offset-2">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <label for="language">Dilin adı:</label>
+                                                        </div>
+                                                        <div class="col-sm-8">
+                                                            <select style="padding: 0px" class="form-control input-height"
+                                                                    id="language_@emplang.Id">
+                                                                @foreach (var lg in Model.Languages)
+                                                                {
+                                                                    if (lg.Id == emplang.LanguageToLanguageLevel.LanguageId)
+                                                                    {
+                                                                        <option selected value="@lg.Id">@lg.Name</option>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <option value="@lg.Id">@lg.Name</option>
+                                                                    }
+
+                                                                }
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-3 offset-1">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label for="languageLevel">Bilik səviyyəsi:</label>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <select id="languageLevel_@emplang.Id" style="padding: 0px"
+                                                                    class="form-control input-height">
+                                                                @foreach (var lgl in Model.LanguageLevels)
+                                                                {
+                                                                    if (lgl.Id == emplang.LanguageToLanguageLevel.LanguageLevelId)
+                                                                    {
+                                                                        <option selected value="@lgl.Id">@lgl.Name</option>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <option value="@lgl.Id">@lgl.Name</option>
+                                                                    }
+
+                                                                }
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2 offset-1">
+                                                    <input class="btn btn-warning col-sm-4 p-0" type="button" onclick="editLang(@emplang.LanguageToLanguageLevelId,@emplang.Id)"
+                                                           value="Yenilə" />
+                                                </div>
+                                            </div>
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        <div class="col-md-2 mx-auto">
+                                            <span>Boşdur</span>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                            <br>
+
+                        </div>
+                        <br><br>
+
+                        <div class="row">
+                            <div class="col-md-10 mx-auto">
+                                <button style="float: right;width: 150px" id="next" onclick="myFunction4()" type="button"
+                                        class="btn btn-success">
+                                    İrəli
+                                </button>
+                                <button style="float: left;width: 150px" id="prev" onclick="myFunction2()" type="button"
+                                        class="btn btn-danger">
+                                    Geri
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--STEP FOUR-->
+                    <div style="display:none;" id="step-four">
+                        <div class="property-fields_____rows">
+                            <div id="property-fields_____row-1" class="property-fields_____row property-fields_____row-item">
+                                <div class="row mb-3">
+                                    @if (Model.ComputerToEmployees.Count() != 0)
+                                    {
+                                        @foreach (var compemp in Model.ComputerToEmployees)
+                                        {
+                                            <div class="col-md-6">
+                                                <div class="line-item-property_____field line-item-property_____computerSkill">
+                                                    <div class="form-group row ml-md-5">
+                                                        <div class="col-md-4">
+                                                            <label for="computerSkill">Kompyuter bilikləri:</label>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <input name="computerSkill" id="computerSkill_@compemp.Id" value="@compemp.ComputerSkillToLevels.ComputerSkillsName.Name" class="form-control input-height"
+                                                                   type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="line-item-property_____field line-item-property_____level">
+                                                    <div class="form-group row ml-md-5">
+                                                        <div class="col-md-3">
+                                                            <label for="level">Bilik səviyyəsi:</label>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <select name="computerLevel" id="computerLevel_@compemp.Id" style="padding: 0px"
+                                                                    class="form-control input-height">
+                                                                @foreach (var lvl in Model.ComputerLevels)
+                                                                {
+                                                                    if (lvl.Id == compemp.ComputerSkillToLevels.ComputerLevelsId)
+                                                                    {
+                                                                        <option selected value="@lvl.Id">@lvl.Name</option>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <option value="@lvl.Id">@lvl.Name</option>
+                                                                    }
+                                                                }
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-2 offset-1">
+                                                            <input class="btn btn-warning" style="padding:0px 8px" type="button" onclick="editComp(@compemp.ComputerSkillToLevelsId,@compemp.Id)"
+                                                                   value="Yenilə" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        <div class="col-md-2 mx-auto">
+                                            <span>Boşdur</span>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                            <br>
+
+                        </div>
+                        <br>
+
+                        <div class="row">
+                            <div class="col-md-10 mx-auto">
+                                <button style="float: right;width: 150px" id="next" onclick="myFunction5()" type="button"
+                                        class="btn btn-success">
+                                    İrəli
+                                </button>
+                                <button style="float: left;width: 150px" id="prev" onclick="myFunction3()" type="button"
+                                        class="btn btn-danger">
+                                    Geri
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!--STEP-FIVE-->
+
+                    <div style="display: none" id="step-five" class="row">
+                        <div class="property-fields____rows">
+                            <div id="property-fields____row-1" class="property-fields____row property-fields____row-item">
+                                @if (Model.RelationToEmployees.Count() != 0)
+                                {
+                                    @foreach (var famemp in Model.RelationToEmployees)
+                                    {
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="line-item-property____field line-item-property____kinship">
+                                                    <div class="form-group ml-md-5">
+                                                        <div class="col-lg-12 ml-md-4">
+                                                            <label style="font-size: 15px" for="kinship">Qohumluluq dərəcəsi</label>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <select style="padding: 0px" class="form-control input-height"
+                                                                    id="kinship_@famemp.Id">
+                                                                @foreach (var relType in Model.RelationTypes)
+                                                                {
+                                                                    if (relType.Id == famemp.Relation.RelationTypeId)
+                                                                    {
+                                                                        <option selected value="@relType.Id">@relType.Name</option>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <option value="@relType.Id">@relType.Name</option>
+                                                                    }
+                                                                }
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="line-item-property____field line-item-property____relativeName">
+                                                    <div class="form-group   ">
+                                                        <div class="col-md-2 ml-md-5">
+                                                            <label style="font-size: 15px;" for="relativeName">Adı</label>
+                                                        </div>
+                                                        <div class="col-sm-12">
+                                                            <input id="relationName_@famemp.Id" type="text" value="@famemp.Relation.Name"
+                                                                   class="form-control input-height">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="line-item-property____field line-item-property____relativeSurname">
+                                                    <div class="form-group   ">
+                                                        <div class="col-md-2 ml-md-5">
+                                                            <label style="font-size: 15px;text-align: center" for="relativeSurname">Soyadı</label>
+                                                        </div>
+                                                        <div class="col-sm-12 ml-md-2">
+                                                            <input id="relationSurname_@famemp.Id" value="@famemp.Relation.Surname" type="text"
+                                                                   class="form-control input-height">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="line-item-property____field line-item-property____relativeFName">
+                                                    <div class="form-group   ">
+                                                        <div class="col-md-5 ml-md-5">
+                                                            <label style="font-size: 15px;text-align: center" for="relativeFName">Ata adı</label>
+                                                        </div>
+                                                        <div class="col-sm-12 ml-md-2">
+                                                            <input id="relationFName_@famemp.Id" value="@famemp.Relation.FatherName" type="text"
+                                                                   class="form-control input-height">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <div class="line-item-property____field line-item-property____relativeNumber">
+                                                    <div class="form-group   ">
+                                                        <div class="col-md-8 ml-md-4">
+                                                            <label style="font-size: 15px;text-align: center" for="relativeNumber">Mobil nömrə</label>
+                                                        </div>
+
+                                                        <div class="col-sm-12">
+                                                            <input id="relationNumber_@famemp.Id" value="@famemp.Relation.Number" type="text" placeholder="XXX-XXX-XXXX"
+                                                                   class="relationNummEdit form-control input-height">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-4">
+                                            <div class="col-md-5">
+                                                <div class="line-item-property____field line-item-property____address">
+                                                    <div class="form-group ml-md-5">
+                                                        <div class="col-md-4 ml-md-1">
+                                                            <label style="font-size: 15px;text-align: center" for="address">Ünvan</label>
+                                                        </div>
+
+                                                        <div class="col-md-10">
+                                                            <input id="relationAddress_@famemp.Id" value="@famemp.Relation.Adress" type="text"
+                                                                   class="form-control input-height">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class='col-md-6'>
+                                                <div class='line-item-property____field line-item-property____workplace'>
+                                                    <div class='row'>
+                                                        <div class='col-5'>
+                                                            <div class='form-group'>
+                                                                <div class='col-md-6 ml-md-1'>
+                                                                    <label style='font-size: 15px;text-align: center' for='relationWorkplace'>İş yerinin adı</label>
+                                                                </div>
+                                                                <div class='col-md-12'>
+                                                                    <input id='relationWorkplace_@famemp.Id' value='@famemp.Relation.WorkPlaceName' type='text' class='form-control input-height'>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class='col-5'>
+                                                            <div class='form-group'>
+                                                                <div class='col-md-5 ml-md-1'>
+                                                                    <label style='font-size: 15px;text-align: center' for='relationWorkplacePositionName'>Vəzifə adı</label>
+                                                                </div>
+                                                                <div class='col-md-12'>
+                                                                    <input id='relationWorkPosName_@famemp.Id' value='@famemp.Relation.WorkPlacePositionName' type='text' class='form-control input-height'>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class='col-2'>
+                                                            <div class='form-group'>
+                                                                <div class='' style="margin-top:34px;">
+                                                                    <button type='button' onclick='editFamily(@famemp.RelationId,@famemp.Id)' class='btn btn-warning' style='padding: 0px 17px;height:30px;'>Yenilə</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            @*<div class="col-md-6">
+                                                    <div class="line-item-property____field line-item-property____workplace">
+                                                        <div class="form-group ">
+                                                            <div class='row justify-content-around d-flex'>
+                                                                <div class='col-md-4'>
+                                                                    <label style='font-size:15px;text-align: center' for='relationWorkplace'>İş yerinin adı</label>
+                                                                </div>
+                                                                <div class='col-md-6 justify-content-end d-flex'>
+                                                                    <input type='button' onclick='editFamily(@famemp.RelationId,@famemp.Id)' class='btn btn-warning' style='padding: 0px 6px;' value="Yenilə" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-10">
+                                                                <input id="relationWorkplace_@famemp.Id" value="@famemp.Relation.WorkPlaceName" type="text"
+                                                                       class="form-control input-height">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>*@
+                                        </div>
+                                    }
+
+                                }
+                                else
+                                {
+                                    <div class="col-md-2 mx-auto">
+                                        <span>Boşdur</span>
+                                    </div>
+                                }
+                                <br><br>
+                            </div>
+                        </div>
+                        <br>
+                        <br><br><br>
+                        <div class="row">
+                            <div class="col-md-10 mx-auto">
+                                <button style="float: right;width: 150px" id="next" onclick="myFunction6()" type="button"
+                                        class="btn btn-success">
+                                    İrəli
+                                </button>
+                                <button style="float: left;width: 150px" id="prev" onclick="myFunction4()" type="button"
+                                        class="btn btn-danger">
+                                    Geri
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--STEP SIX -->
+                    <div style="display: none" id="step-six">
+                        <div class="row">
+                            <div class="col-md-2 mx-auto ">
+                                <button class="btn">
+                                    <img class="img-fluid" src="~/dist/img/microsoft-word.png" alt="Microsoft-Word">
+                                    Word
+                                </button>
+                            </div>
+                            <div class="col-md-2 mx-auto ">
+                                <button class="btn">
+                                    <img class="img-fluid" src="~/dist/img/pdf.png" alt="Pdf">
+                                    Pdf
+                                </button>
+                            </div>
+                            <div class="col-md-2 mx-auto ">
+                                <button class="btn">
+                                    <img class="img-fluid" src="~/dist/img/photo.png" alt="Photo">
+                                    Şəkil
+                                </button>
+                            </div>
+                        </div>
+                        <br><br>
+
+                        <div class="row">
+                            <div class="col-md-2 mx-auto">
+                                <input asp-for="@Model.WordUpd" accept=".doc,.dot,.docx,.dotx,.docm,.dotm,.xls,.xlsx" id="documentFile" type="file">
+                            </div>
+                            <div class="col-md-2 mx-auto">
+                                <input asp-for="@Model.PdfUpd" id="pdfFole" type="file" accept=".pdf">
+                            </div>
+                            <div class="col-md-2 mx-auto">
+                                <input asp-for="@Model.PhotoCertificateUpd" id="pngFile" type="file" accept="image/*">
+                            </div>
+                        </div>
+                        <br><br><br><br><br><br>
+                        <div class="row">
+                            <div class="col-md-10 mx-auto">
+                                <button style="float: right;width: 150px" id="next" onclick="myFunction7()" type="button" class="btn btn-success">
+                                    İrəli
+                                </button>
+                                <button style="float: left;width: 150px" id="prev" onclick="myFunction5()" type="button"
+                                        class="btn btn-danger">
+                                    Geri
+                                </button>
+                            </div>
+                        </div>
+                        <br><br><br>
+
+                        @*<div class="row">
+                                <button style="float:left;" id="removeBtn" class="btn btn-danger col-md-3 mx-auto" type="submit">
+                                    İmtina
+                                </button>
+                                <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">Yadda saxla</button>
+                            </div>*@
+                    </div>
+
+                    <!--STEP SEVEN -->
+                    <div style="display: none" id="step-seven">
+                        <div class="row">
+                            <div class="col-md-2 mx-auto ">
+                                <img class="img-fluid" src="~/dist/img/pdf.png" alt="AdobePdf">
+                                Skan
+                            </div>
+                        </div>
+                        <br><br>
+
+                        <div class="row">
+                            <div class="col-md-2 mx-auto">
+                                <input asp-for="@Model.ScanCommandPhotoUpdate" id="pdfScanFole" type="file" accept=".pdf">
+                            </div>
+                        </div>
+                        <br><br><br><br><br><br>
+
+                        <div class="row">
+                            <div class="col-md-10 mx-auto">
+                                <button style="float: left;width: 150px" id="prev" onclick="myFunction6()" type="button"
+                                        class="btn btn-danger">
+                                    Geri
+                                </button>
+                            </div>
+                        </div>
+                        <br><br><br>
+                        <div class="row">
+                            <button style="float:left;" class="btn btn-danger col-md-3 mx-auto" type="button">
+                                <a asp-controller="Employee" asp-action="Index" asp-route-Id="@Model.DepartmentId" style="padding: 5px 100px;color:white;">İmtina</a>
+                            </button>
+                            <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">Yadda saxla</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </form>
+
+
+        </div>
+        <!--CONTAINER FLUID END-->
+    </div>
+    <!--CONTAINER WRAPPER END-->
+</div>
+
+@section scripts{
+    <script>
+
+        function myFunction1() {
+            var a = document.getElementById('step-one')
+            var b = document.getElementById('step-two')
+            var c = document.getElementById('step-three')
+            var d = document.getElementById('step-four')
+            var e = document.getElementById('step-five')
+            var f = document.getElementById('step-six')
+            var g = document.getElementById('step-seven')
+            //var h=document.getElementById('step-eight')
+
+            if (a.style.display === 'none') {
+                a.style.display = 'block'
+                b.style.display = 'none'
+                c.style.display = 'none'
+                d.style.display = 'none'
+                e.style.display = 'none'
+                f.style.display = 'none'
+                g.style.display = 'none'
+                //h.style.display='none'
+            } else {
+                a.style.display = 'none'
+            }
+        }
+
+
+            function myFunction2() {
+            var a = document.getElementById('step-two')
+            var b = document.getElementById('step-one')
+            var c = document.getElementById('step-three')
+            var d = document.getElementById('step-four')
+            var e = document.getElementById('step-five')
+            var f = document.getElementById('step-six')
+            var g = document.getElementById('step-seven')
+            //var h=document.getElementById('step-eight')
+
+                if (a.style.display === 'none')
+                {
+                a.style.display = 'block'
+                b.style.display = 'none'
+                c.style.display = 'none'
+                d.style.display = 'none'
+                e.style.display = 'none'
+                f.style.display = 'none'
+                g.style.display = 'none'
+                //h.style.display='none'
+            } else {
+                a.style.display = 'none'
+            }
+        }
+
+        function myFunction3() {
+            var a = document.getElementById('step-three')
+            var b = document.getElementById('step-one')
+            var c = document.getElementById('step-two')
+            var d = document.getElementById('step-four')
+            var e = document.getElementById('step-five')
+            var f = document.getElementById('step-six')
+            var g = document.getElementById('step-seven')
+            //var h=document.getElementById('step-eight')
+
+            if (a.style.display === 'none') {
+                a.style.display = 'block'
+                b.style.display = 'none'
+                c.style.display = 'none'
+                d.style.display = 'none'
+                e.style.display = 'none'
+                f.style.display = 'none'
+                g.style.display = 'none'
+                //h.style.display='none'
+            } else {
+                a.style.display = 'none'
+            }
+        }
+        function myFunction4() {
+            var a = document.getElementById('step-four')
+            var b = document.getElementById('step-one')
+            var c = document.getElementById('step-two')
+            var d = document.getElementById('step-three')
+            var e = document.getElementById('step-five')
+            var f = document.getElementById('step-six')
+            var g = document.getElementById('step-seven')
+            //var h=document.getElementById('step-eight')
+
+            if (a.style.display === 'none') {
+                a.style.display = 'block'
+                b.style.display = 'none'
+                c.style.display = 'none'
+                d.style.display = 'none'
+                e.style.display = 'none'
+                f.style.display = 'none'
+                g.style.display = 'none'
+                //h.style.display='none'
+            } else {
+                a.style.display = 'none'
+            }
+        }
+
+
+
+        function myFunction5() {
+            var a = document.getElementById('step-five')
+            var b = document.getElementById('step-one')
+            var c = document.getElementById('step-two')
+            var d = document.getElementById('step-three')
+            var e = document.getElementById('step-four')
+            var f = document.getElementById('step-six')
+            var g = document.getElementById('step-seven')
+            //var h=document.getElementById('step-eight')
+            if (a.style.display === 'none') {
+                a.style.display = 'block'
+                b.style.display = 'none'
+                c.style.display = 'none'
+                d.style.display = 'none'
+                e.style.display = 'none'
+                f.style.display = 'none'
+                g.style.display = 'none'
+                //h.style.display='none'
+
+            } else {
+                a.style.display = 'none'
+            }
+        }
+
+        function myFunction6() {
+            var a = document.getElementById('step-six')
+            var b = document.getElementById('step-one')
+            var c = document.getElementById('step-two')
+            var d = document.getElementById('step-three')
+            var e = document.getElementById('step-four')
+            var f = document.getElementById('step-five')
+            var g = document.getElementById('step-seven')
+            //var h=document.getElementById('step-eight')
+            if (a.style.display === 'none') {
+                a.style.display = 'block'
+                b.style.display = 'none'
+                c.style.display = 'none'
+                d.style.display = 'none'
+                e.style.display = 'none'
+                f.style.display = 'none'
+                g.style.display = 'none'
+                //h.style.display='none'
+            } else {
+                a.style.display = 'none'
+            }
+        }
+
+        function myFunction7() {
+            var a = document.getElementById('step-seven')
+            var b = document.getElementById('step-one')
+            var c = document.getElementById('step-two')
+            var d = document.getElementById('step-three')
+            var e = document.getElementById('step-four')
+            var f = document.getElementById('step-five')
+            var g = document.getElementById('step-six')
+            //var h=document.getElementById('step-eight')
+
+            if (a.style.display === 'none') {
+                a.style.display = 'block'
+                b.style.display = 'none'
+                c.style.display = 'none'
+                d.style.display = 'none'
+                e.style.display = 'none'
+                f.style.display = 'none'
+                g.style.display = 'none'
+                //h.style.display='none'
+            } else {
+                a.style.display = 'none'
+            }
+        }
+
+        function checkBox() {
+            var a = document.getElementById('military')
+
+            if (a.style.display === 'none') {
+                a.style.display = 'block'
+            } else {
+                a.style.display = 'none'
+            }
+        }
+
+        function checkBox1() {
+            var a = document.getElementById('military')
+
+            if (a.style.display === 'block') {
+                a.style.display = 'none'
+            } else {
+                a.style.display = 'none'
+            }
+        }
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
+                    $('#imagePreview').hide();
+                    $('#imagePreview').fadeIn(650);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#imageUpload").change(function () {
+            readURL(this);
+        });
+
+          @*function getMilitaryRankId() {
+            var eM = document.getElementById("militaryRank");
+              var selectMil = eM.options[eM.selectedIndex].value;
+            console.log(selectMil)
+            console
+            $.ajax({
+                type: "get",
+                url: "@Url.Action("Createe", "Employee")",
+                data: {milRankId: selectMil},
+                success: function (respoonse) {
+                   console.log("success_military")
+                },
+                error: function (respoonse) {
+                    console.log("error_military")
+                }
+            })
+        }*@
+
+        @*function getMilitaryRankId() {
+            var eMR = document.getElementById("militaryRankSelect");
+              var selectMilR = eMR.options[eMR.selectedIndex].value;
+            console.log(selectMil)
+            console
+            $.ajax({
+                type: "get",
+                url: "@Url.Action("CreateeR", "Employee")",
+                data: { milRankSelectId: selectMilR},
+                success: function (respoonse) {
+                   console.log("success_military")
+                },
+                error: function (respoonse) {
+                    console.log("error_military")
+                }
+            })
+        }*@
+
+        //Function Get University
+         function getUniversityRecruitment(id) {
+             var eU = document.getElementById("educationTypeId_" + id);
+             var selectedEduc = eU.options[eU.selectedIndex].value;
+             console.log(selectedEduc + " sasas")
+              $.ajax({
+                type: "get",
+                url: "@Url.Action("GetUniversity", "Recruitment")",
+                  data: { id: selectedEduc , keepId:id},
+                success: function (respoonse) {
+                    $("#uniResponseDiv_"+id).html(respoonse)
+                },
+                  error: function (respoonse) {
+                }
+            })
+        }
+
+        //Function Get Faculty
+         function getFacultyRecruitment(id) {
+            var eF = document.getElementById("universityId_"+id);
+            var selectedUni = eF.options[eF.selectedIndex].value;
+              $.ajax({
+                type: "get",
+                url: "@Url.Action("GetFaculty", "Recruitment")",
+                  data: { id: selectedUni, keepId: id},
+                success: function (respoonse) {
+                    $("#facResponseDiv_"+id).html(respoonse)
+                },
+                error: function (respoonse) {
+                }
+            })
+        }
+
+        //Function Get Profession
+         function getProfessionRecruitment(id) {
+            var eP = document.getElementById("facultyId_"+id);
+            var selectedPro = eP.options[eP.selectedIndex].value;
+              $.ajax({
+                type: "get",
+                url: "@Url.Action("GetProfession", "Recruitment")",
+                data: { id: selectedPro,keepId:id },
+                success: function (respoonse) {
+                    $("#proResponseDiv_"+id).html(respoonse)
+                },
+                error: function (respoonse) {
+                }
+            })
+        }
+
+          //Education in Employee Controller
+        function editEduc(clickidd, edId) {
+            var eAddEdu = document.getElementById("educationTypeId_"+edId);
+            var selectEdu = eAddEdu.options[eAddEdu.selectedIndex].value;
+            var eAddUni = document.getElementById("universityId_" + edId);
+            var selectUni = eAddUni.options[eAddUni.selectedIndex].value;
+            var eAddFac = document.getElementById("facultyId_" + edId);
+            var selectFac = eAddFac.options[eAddFac.selectedIndex].value;
+            var eAddPro = document.getElementById("professionId_" + edId);
+            var selectPro = eAddPro.options[eAddPro.selectedIndex].value;
+            var startEduc = document.getElementById("startTimeEducation_"+edId).value;
+            var endEduc = document.getElementById("endTimeEducation_" + edId).value;
+            var accphon = document.getElementById("acceptHoneyResponseDiv_" + edId).value;
+            $.ajax({
+                type: "post",
+                url: "@Url.Action("EditEducation", "Employee")",
+                data: {
+                    clickid:clickidd,
+                    eduId: selectEdu,
+                    uniId: selectUni,
+                    facId: selectFac,
+                    proId: selectPro,
+                    startEdu: startEduc,
+                    endEdu: endEduc,
+                    accpHoney: accphon
+                },
+                success: function (res) {
+                    if (res == 'null edu') {
+                        toastNull("Zəhmət olmasa təhsil növünü seçin")
+                    }
+                    else if (res == 'null uni') {
+                        toastNull("Zəhmət olmasa təhsil ocağını seçin")
+                    }
+                    else if (res == 'null fac') {
+                        toastNull("Zəhmət olmasa fakultəni seçin")
+                    }
+                    else if (res == 'null pro') {
+                        toastNull("Zəhmət olmasa ixtisası seçin")
+                    }
+                    else if (res == 'null Edu') {
+                        toastNull("Zəhmət olmasa tarixi qeyd edin")
+                    }
+                    else if (res == 'null Accpt') {
+                        toastNull("Zəhmət olmasa tarixi qeyd edin")
+                    }
+                    else{
+                            toastSuccess()
+                         }
+
+                },
+                error: function (res) {
+                }
+            });
+        }
+
+         //Language in Employee Controller
+        function editLang(clickidd,lgId) {
+            var eAddLang = document.getElementById("language_"+lgId);
+            var selectLang = eAddLang.options[eAddLang.selectedIndex].value;
+            var eAddALangLev = document.getElementById("languageLevel_"+lgId);
+            var selectLangLev = eAddALangLev.options[eAddALangLev.selectedIndex].value;
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("EditLanguage", "Employee")",
+                data: {
+                    clickid: clickidd,
+                    idLang: selectLang,
+                    idLangLev: selectLangLev
+                },
+                success: function (res) {
+                    if (res == 'null lang') {
+                        toastNull("Zəhmət olmasa dil seçin")
+                    }
+                    else if (res == 'null langLevel') {
+                        toastNull("Zəhmət olmasa səviyyəni seçin")
+                    }
+                    else {
+                            toastSuccess()
+                         }
+                },
+                error: function (res) {
+                }
+            });
+        }
+
+        //Computer in Employee Controller
+        function editComp(clickidd,cmId) {
+            var eAddCompSkill = document.getElementById("computerSkill_"+cmId).value;
+            var eAddCompLevel = document.getElementById("computerLevel_"+ cmId);
+            var selectCmpLv = eAddCompLevel.options[eAddCompLevel.selectedIndex].value;
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("EditComputerSkill","Employee")",
+                data: {
+                    clickid: clickidd,
+                    txtComp: eAddCompSkill,
+                    idCompLev: selectCmpLv
+                },
+                success: function (res) {
+                    if (res == 'null comp') {
+                        toastNull("Zəhmət olmasa xananı boş buraxmayın")
+                    }
+                    else if (res == 'null compLevel') {
+                        toastNull("Zəhmət olmasa səviyyəni seçin")
+                    }
+                    else {
+                        toastSuccess()
+                    }
+
+                },
+                error: function (res) {
+                }
+            })
+        }
+
+        //Family in Employee Controller
+        function editFamily(clickidd,famId) {
+            var eAddFamSelect = document.getElementById("kinship_" + famId);
+            var selectCmpLv = eAddFamSelect.options[eAddFamSelect.selectedIndex].value;
+            var eAddFamName = document.getElementById("relationName_" + famId).value;
+            var eAddFamSurname = document.getElementById("relationSurname_" + famId).value;
+            var eAddFamFatName = document.getElementById("relationFName_" + famId).value;
+            var eAddFamNumber = document.getElementById("relationNumber_" + famId).value;
+            var eAddFamAddress = document.getElementById("relationAddress_" + famId).value;
+            var eAddFamWorkPl = document.getElementById("relationWorkplace_" + famId).value;
+            var eAddFamWorkPsName = document.getElementById("relationWorkPosName_" + famId).value;
+
+            $.ajax({
+                type: "Post",
+                url: "@Url.Action("EditFamily","Employee")",
+                data: {
+                    clickid: clickidd,
+                    idSlct: selectCmpLv,
+                    txtName: eAddFamName,
+                    txtSurname: eAddFamSurname,
+                    txtFatherName: eAddFamFatName,
+                    txtNumber: eAddFamNumber,
+                    txtAddress: eAddFamAddress,
+                    txtWork: eAddFamWorkPl,
+                    txtWordkPsNam: eAddFamWorkPsName
+                },
+                success: function (res) {
+                    if (res == 'null slct') {
+                        toastNull("Zəhmət olmasa qohumluluq dərəcəsi seçin")
+                    }
+                    else if (res == 'null name') {
+                        toastNull("Zəhmət olmasa adı daxil edin")
+                    }
+                    else if (res == 'null surname') {
+                        toastNull("Zəhmət olmasa soyadı daxil edin")
+                    }
+                    else if (res == 'null fathername') {
+                        toastNull("Zəhmət olmasa ata adını daxil edin")
+                    }
+                    else if (res == 'null num') {
+                        toastNull("Zəhmət olmasa nömrəni daxil edin")
+                    }
+                    else if (res == 'null add') {
+                        toastNull("Zəhmət olmasa ünvanı daxil edin")
+                    }
+                    else if (res == 'null work') {
+                        toastNull("Zəhmət olmasa iş yerini daxil edin")
+                    }
+                    else if (res == 'null workPsN') {
+                        toastNull("Zəhmət olmasa iş yerini daxil edin")
+                    }
+                    else {
+                        toastSuccess()
+                    }
+
+                },
+                error: function (res) {
+                }
+            })
+        }
+
+        //Function Toaster Success
+        function toastSuccess() {
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "2000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr["success"]("Müvəffəqiyyətlə yeniləndi");
+        }
+
+        //Function Toaster Null
+        function toastNull(word) {
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "2000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr["error"](word)
+        }
+
+        //check mobile
+        $(".relationNummEdit").keypress(function (e) {
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                return false;
+            }
+            var curchr = this.value.length;
+            var curval = $(this).val();
+            if (curchr == 3 && curval.indexOf("(") <= -1) {
+                $(this).val("(" + curval + ")" + "-");
+            } else if (curchr == 4 && curval.indexOf("(") > -1) {
+                $(this).val(curval + ")-");
+            } else if (curchr == 5 && curval.indexOf(")") > -1) {
+                $(this).val(curval + "-");
+            } else if (curchr == 9) {
+                $(this).val(curval + "-");
+                $(this).attr('maxlength', '14');
+                $(this).attr('minlength', '14');
+
+            }
+        });
+    </script>
+}
+

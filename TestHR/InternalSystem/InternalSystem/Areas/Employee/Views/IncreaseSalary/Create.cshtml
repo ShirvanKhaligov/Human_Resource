@@ -1,0 +1,115 @@
+﻿@model CommandsSalaryIncrease
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+        <form method="post">
+            <div style="height: 30px"></div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="EmplooyeeId">İşçinin adı:</label>
+                </div>
+                <div class="col-sm-7">
+                    <select style="padding: 0px" class="form-control input-height" asp-for="EmplooyeeId">
+                        <option selected disabled>Seçin</option>
+                        @foreach (var emp in Model.Emplooyees)
+                        {
+                            <option value="@emp.Id">@(emp.FirstName+" "+emp.Lastname+" "+emp.FatherName+" ") @((emp.GenderId ==1) ? "oğlu" : "qızı") @("Ş/V("+emp.IdCard+")")</option>
+                        }
+                    </select>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="EmplooyeeId"></span>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Sənədin adı:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" value="Maaş artımı" class="form-control input-height" readonly />
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Vaxt:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="date" class="form-control input-height" asp-for="CreateDate">
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="CreateDate"></span>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Məzmun:</label>
+                </div>
+                <div class="col-md-7">
+                    <textarea class="form-control input-height" asp-for="@Model.Commands.Description" rows="10" style="color:black;"></textarea>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="salary">Maaş:</label>
+                </div>
+                <div class="col-sm-7">
+                    <input asp-for="NewSalary" id="salary" maxlength="8" class="form-control input-height" type="text">
+                    <span class="text-danger text-bold" style="font-size:14px; " asp-validation-for="NewSalary"></span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <button style="float:left;" id="removeBtn" class="btn btn-danger col-md-3 mx-auto">
+                    <a asp-controller="Dashboard" asp-action="Index" style="padding: 5px 100px;color:white;">İmtina</a>
+                </button>
+                <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">Yadda saxla</button>
+            </div>
+        </form>
+        <br><br><br>
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <div id="deviceTableDiv">
+                    <table id="dataAllSearch" class="table table-hover table-responsive-md">
+                        <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                            <tr class="All_Index_View_Change_Tr">
+                                <th scope="col">Sıra №</th>
+                                <th scope="col">Soyadı,Adı,Ata adı</th>
+                                <th scope="col">Dəyişilmə tarixi</th>
+                                <th scope="col">Yeni maaş</th>
+                                <th scope="col">Redaktə et</th>
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center;background:#efefef;" class="All_Index_View_Change_Tbody">
+                            @{
+                                int count = 1;
+                            }
+                            @if (Model.CommandsToEmployees != null)
+                            {
+                                @foreach (var dvc in Model.CommandsToEmployees)
+                                {
+                                    <tr>
+                                        <td scope="row">@count</td>
+                                        <td>@(dvc.Emplooyee.Lastname+" "+ dvc.Emplooyee.FirstName+" "+ dvc.Emplooyee.FatherName) @(dvc.Emplooyee.GenderId==1 ? "oğlu" : "qızı")</td>
+                                        <td>@dvc.CreatedDate.ToString("dd-MMM-yyyy")</td>
+                                        <td>@dvc.Emplooyee.Salary</td>
+                                        <td>
+                                            <a asp-area="Employee" asp-controller="IncreaseSalary" asp-action="Detail" asp-route-id="@dvc.Id" class="btn btn-primary" style="padding:6px 18px;color:white;" title="Detal">
+                                                <i class="fas fa-info"></i>
+                                            </a>
+                                            <a asp-area="Employee" asp-controller="IncreaseSalary" asp-action="Edit" asp-route-id="@dvc.Id" class="btn btn-warning" style="color:white;" title="Dəyiş">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                           
+                                        </td>
+                                    </tr>
+                                    count++;
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--content-wrapper-->
+</div>
+

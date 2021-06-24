@@ -1,0 +1,176 @@
+﻿@model BusinessTripVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+        <form method="post">
+            <div style="height: 30px"></div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="EmplooyeeId">İşçinin adı:</label>
+                </div>
+                <div class="col-sm-7">
+                    <select style="padding: 0px" class="form-control input-height select2" asp-for="EmplooyeeId">
+                        <option selected disabled>Seçin</option>
+
+                        @foreach (var emp in Model.Emplooyees)
+                        {
+                            <option value="@emp.Id">@(emp.FirstName+" "+emp.Lastname+" "+emp.FatherName+" ") @((emp.GenderId ==1) ? "oğlu" : "qızı") @("Ş/V("+emp.IdCard+")") @emp.Positions.SubDepartment.DepartmentToCompany.Company.Name</option>
+                        }
+                    </select>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="EmplooyeeId"></span>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="EmplooyeeId">Rayon:</label>
+                </div>
+                <div class="col-sm-7">
+                    <select style="padding: 0px" class="form-control input-height select2" asp-for="DistricId">
+                        <option selected disabled>Seçin</option>
+
+                        @foreach (var disc in Model.Districs)
+                        {
+                            <option value="@disc.Id">@disc.DistricName</option>
+                        }
+                    </select>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="EmplooyeeId"></span>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Sənədin adı:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" value="Ezamiyyə" class="form-control input-height" readonly />
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Tarixdən (daxil olmaqla):</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="date" value="" class="form-control input-height"
+                           asp-for="FromDate">
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="FromDate"></span>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Tarixədək (daxil olmaqla):</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="date" value="" class="form-control input-height"
+                           asp-for="ToDate">
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="ToDate"></span>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Izah:</label>
+                </div>
+                <div class="col-md-7">
+                    <textarea cols="2" rows="2"
+                              type="text" asp-for="Commet"
+                              class="form-control"></textarea>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="Commet"></span>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Mağaza adı :</label>
+                </div>
+                <div class="col-md-7">
+                    <textarea cols="2" rows="2"
+                              type="text" asp-for="PartnorName"
+                              class="form-control"></textarea>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="PartnorName"></span>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <button style="float:left;" class="btn btn-danger col-md-3 mx-auto">
+                    <a href="#" style="padding: 5px 100px;color:white;">İmtina</a>
+                </button>
+                <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">Yadda saxla</button>
+            </div>
+        </form>
+        <br><br><br>
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <div>
+
+                    <table id="dataAllSearch" class="table table-hover table-responsive-md">
+                        <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                            <tr class="All_Index_View_Change_Tr">
+                                <th scope="col">Sıra №</th>
+                                <th scope="col">Soyadı,Adı,Ata adı</th>
+                                <th scope="col"> Tarixdən</th>
+                                <th scope="col">Tarixədək</th>
+                                <th scope="col">Getdiyi Region</th>
+                                <th scope="col">#</th>
+
+
+                                @*  <th scope="col">Növ</th>*@
+
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center;background:#efefef;" class="All_Index_View_Change_Tbody">
+                            @{ int count = 1; }
+                            @if (Model.BusinessTripEmps != null)
+                            {
+                                @foreach (var command in Model.BusinessTripEmps)
+                                {
+                                    <tr>
+                                        <td scope="row">@count</td>
+                                        <td>@(command.Emplooyee.Lastname+" "+command.Emplooyee.FirstName+" "+command.Emplooyee.FatherName) @(command.Emplooyee.GenderId==1 ? "oğlu" : "qızı")</td>
+                                        <td>@command.FromDate</td>
+                                        <td>@command.ToDate</td>
+                                        <td>@command.Distric.DistricName</td>
+
+                                        <td>
+                                            <a asp-controller="Businesstrip" asp-action="Index" asp-route-id="@command.Id" class="btn btn-danger"><i class="fas fa-info"> </i></a>
+                                            <a asp-controller="BusinessTrip" asp-action="Delete" asp-area="Employee" asp-route-id="@command.Id" class="btn btn-primary"><i class="fas fa-trash"> </i></a>
+
+                                        </td>
+
+
+
+                                    </tr>
+                                    count++;
+                                }}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section scripts{
+    <script>
+        $('.select2').select2();
+        @*function changeDeviceTyp() {
+            var DeviceTypeId = document.getElementById("DeviceTypeId");
+            var selectedEduc = DeviceTypeId.options[DeviceTypeId.selectedIndex].value;
+                  $.ajax({
+                    type: "get",
+                    url: "@Url.Action("GetDeviceType", "EmployeeDevice")",
+                      data: { id: selectedEduc },
+                      success: function (respoonse) {
+                              $('#changeBodyDeviceType').html(respoonse);
+                    },
+                    error: function (respoonse) {
+                    }
+                  })
+        };*@
+
+
+    </script>
+}

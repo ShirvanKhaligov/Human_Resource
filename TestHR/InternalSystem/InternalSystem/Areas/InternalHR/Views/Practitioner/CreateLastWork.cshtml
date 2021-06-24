@@ -1,0 +1,189 @@
+﻿@model LastWorkPlace
+@{
+    ViewData["Title"] = "CreateLastWork";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+
+<div class="content-wrapper" style="color:black;background-color: #fff;">
+    <div class="container-fluid pb-5">
+        <br>
+        <br>
+        @if (ViewData["employeeIdBackButton"] != null)
+        {
+            <a asp-area="InternalHR" asp-controller="Employee" asp-action="AllLastWorks" asp-route-id="@ViewData["employeeId"]" class="col-md-2 btn btn-primary "><i class="fas fa-long-arrow-alt-left"></i> Geri</a>
+        }
+        else
+        {
+            <a asp-area="InternalHR" asp-controller="Practitioner" asp-action="AllLastWorks" asp-route-id="@ViewData["employeeId"]" class="col-md-2 btn btn-primary "><i class="fas fa-long-arrow-alt-left"></i> Geri</a>
+        }
+        <div class="">
+            <br><br>
+            <form asp-action="CreateLastWork" asp-controller="Practitioner" method="post" asp-route-EmployeeId="@ViewData["employeeId"]">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h5 class="text-danger text-center text-bold">Iş yeri əlavə et</h5>
+                        <div class="">
+                            <br><br>
+                            <div class="property-fields__rows">
+                                <div id="property-fields__row-1" class="property-fields__row property-fields__row-item">
+                                    <div class="row">
+                                        <div class="col-md-6 ml-md-4">
+                                            <div class="line-item-property__field line-item-property__companyName">
+                                                <div class="form-group row">
+                                                    <div class="col-md-4">
+                                                        <label for="companyName">İşin növü:</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <select class="form-control" asp-for="WorkType">
+                                                            <option>Əmək müqaviləsi ilə işləyən</option>
+                                                            <option>Əmək müqaviləsi ilə işləməyən</option>
+                                                        </select>
+                                                        <span class="text-danger text-bold" style="font-size:13px" asp-validation-for="WorkType"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="line-item-property__field line-item-property__companyName">
+                                                <div class="form-group row">
+                                                    <div class="col-md-4">
+                                                        <label for="companyName">Şirkətin adı:</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="hidden" name="EmplooyeeId" value="@Model.EmplooyeeId" />
+                                                        <input id="companyName" asp-for="CompanyName" type="text" value="@if (Model != null){@Model.CompanyName}"
+                                                               style="height: 27px" class="form-control">
+                                                        <span class="text-danger text-bold" style="font-size:13px" asp-validation-for="CompanyName"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="line-item-property__field line-item-property__position">
+                                                <div class="form-group row">
+                                                    <div class="col-md-4">
+                                                        <label for="position">Vəzifəsi:</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input id="position" asp-for="PositionName" type="text" value="@if (Model != null){@Model.PositionName}"
+                                                               style="height: 27px" class="form-control">
+                                                        <span class="text-danger text-bold" style="font-size:13px" asp-validation-for="PositionName"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="line-item-property__field line-item-property__salary">
+                                                <div class="form-group row">
+                                                    <div class="col-md-4">
+                                                        <label for="salary">Maaş:</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input asp-for="Salary" type="text" value="@if (Model != null){@Model.Salary}"
+                                                               style="height: 27px" class="form-control">
+                                                        <i class="fas fa-info-circle" style="font-size:11px;color:blue;"></i>
+                                                        <p style="font-size:11px;">Qeyd edilməyə bilər</p>
+                                                        <span class="text-danger text-bold" style="font-size:13px" asp-validation-for="Salary"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--first col-md-6 end-->
+                                        </div>
+                                        <!--second col-md-5 start-->
+                                        <div class="col-md-5 ml-md-4 ">
+                                            <div class="line-item-property__field line-item-property__enteringTime">
+                                                <div class="form-group row">
+                                                    <div class="col-md-5">
+                                                        <label for="enteringTime">Giriş tarixi:</label>
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <input asp-for="WhenStarted" type="date" value="@if (Model != null){@Model.WhenStarted}" class="form-control"
+                                                               style="height: 27px;">
+                                                        <span class="text-danger text-bold" style="font-size:13px" asp-validation-for="WhenStarted"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="line-item-property__field line-item-property__exitTime">
+                                                <div class="form-group row">
+                                                    <div class="col-md-5">
+                                                        <label for="exitTime">Çıxış tarixi:</label>
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <input asp-for="WhenLeft" type="date" value="@if (Model != null){@Model.WhenLeft}" class="form-control"
+                                                               style="height: 27px;">
+                                                        <span class="text-danger text-bold" style="font-size:13px" asp-validation-for="WhenLeft"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="line-item-property__field line-item-property__reasonType">
+                                                <div class="form-group row ">
+                                                    <div class="col-md-5">
+                                                        <label for="reasonType"></label>
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <select class="form-control" asp-for="ReasonType">
+                                                            <option>İşdən çıxma </option>
+                                                            <option>Vəzifə dəyişikliyi</option>
+                                                        </select>
+                                                        <span class="text-danger text-bold" style="font-size:13px" asp-validation-for="ReasonType"></span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="line-item-property__field line-item-property__reason">
+                                                <div class="form-group row ">
+                                                    <div class="col-md-5">
+                                                        <label for="reason">Səbəb:</label>
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <textarea cols="2" rows="2" id="reason"
+                                                                  type="text" asp-for="Reason"
+                                                                  class="form-control"></textarea>
+                                                        <span class="text-danger text-bold" style="font-size:13px" asp-validation-for="Reason"></span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <!--second col-md-5 end-->
+                                        </div>
+                                        <!--row end-->
+                                    </div>
+                                    <div class="row d-flex justify-content-center">
+                                        <button class="btn btn-md btn-success" type="submit">Əlavə et</button>
+                                    </div>
+                                </div>
+                                <br><br>
+                            </div>
+                            <!--dropdown content end-->
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!--FORM END-->
+            </form>
+
+            <!--conatiner fluid end-->
+        </div>
+    </div>
+</div>
+
+
+

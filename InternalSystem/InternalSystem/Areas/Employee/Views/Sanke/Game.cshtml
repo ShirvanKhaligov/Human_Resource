@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Oyun</title>
+    <!-- Link our styles from snake_game.css -->
+    <link rel="stylesheet" href="~/plugins2/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/snake/snake.css" />
+
+</head>
+<body>
+    
+    <!-- #gameContainer is the main game board-->
+    <div id="gameContainer"></div>
+
+    <!-- #scoreContainer contains the scores  -->
+    <div id="scoreContainer">
+        <div class="scoreBoard">Qida: <span id="pointsEarned">0</span></div>
+        <div class="scoreBoard">Blok: <span id="blocksTravelled">0</span></div>
+    </div>
+
+    <!-- #onScreenControllers contains the navigation buttons for mobile screens -->
+    <div id="onScreenControllers">
+        <button id="leftButton">◀️</button>
+        <div>
+            <button id="upButton">🔼</button>
+            <button id="downButton">🔽</button>
+        </div>
+        <button id="rightButton">▶️</button>
+    </div>
+    <script src="~/snake/snake.js"></script>
+</body>
+
+</html>

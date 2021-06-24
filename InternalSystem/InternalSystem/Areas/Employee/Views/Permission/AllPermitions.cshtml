@@ -1,0 +1,167 @@
+﻿@model PermissionVM
+@{
+    ViewData["Title"] = "AllPermitions";
+}
+
+@section css{
+    <style>
+        #dataAllSearc_wrapper {
+            width: 100%;
+        }
+    </style>
+}
+<div style="background: #e0e0e0;" class="content-wrapper">
+    <!-- Main content -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark"></h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-area="Employee" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+                        <li class="breadcrumb-item active">İcazə istəyənlər</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <section class="content" style="padding-top:15px">
+        <div class="container-fluid">
+            <div class="row">
+                <table id="dataAllSearc" class="table table-responsive-md" style="background: white;">
+                    <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                        <tr class="All_Index_View_Change_Tr">
+                            <th scope="col">Sıra №</th>
+                            <th scope="col">Soyadı,Adı,Ata adı</th>
+                            <th scope="col">Icazənin növü</th>
+                            <th scope="col">Verilmə tarixi</th>
+                            <th scope="col">Bitmə tarixi</th>
+                            <th scope="col">Səbəb</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody style="text-align: center;" class="All_Index_View_Change_Tbody">
+                        @if (Model.Permissions.Count() != 0)
+                        {
+                            int count = 1;
+                            @foreach (var item in Model.Permissions)
+                            {
+                                <tr>
+                                    <th >@count</th>
+                                    <td >@item.Emplooyee.FirstName @item.Emplooyee.Lastname @item.Emplooyee.FatherName</td>
+                                    <td >@item.Permission.PermissionType.Name</td>
+                                    <td >
+                                        @if (item.Permission.PermissionType.Name == "Günlük")
+                                        {
+                                            <p>@item.Permission.FromDate.Day / @item.Permission.FromDate.Month / @item.Permission.FromDate.Year</p>
+                                        }
+                                        else
+                                        {
+                                            //saatliq
+                                            @if (item.Permission.FromDateForHour.Minute < 10 && item.Permission.FromDateForHour.Minute > 0)
+                                            {
+                                                <span>
+                                                    @item.Permission.FromDateForHour.Hour :0@(item.Permission.FromDateForHour.Minute)
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <span>
+                                                    @item.Permission.FromDateForHour.Hour : @item.Permission.FromDateForHour.Minute
+                                                </span>
+                                            }
+                                            <span>
+                                                (@item.Permission.FromDate.Day / @item.Permission.FromDate.Month / @item.Permission.FromDate.Year)
+                                            </span>
+                                            //saatliq
+                                        }
+                                    </td>
+                                    <td  >
+                                        @if (item.Permission.PermissionType.Name == "Günlük")
+                                        {
+                                            <p>@item.Permission.ToDate.Day / @item.Permission.ToDate.Month / @item.Permission.ToDate.Year</p>
+                                        }
+                                        else
+                                        {
+                                            //saatliq
+                                            @if (item.Permission.ToDate.Minute < 10 && item.Permission.ToDate.Minute > 0)
+                                            {
+                                                <span>
+                                                    @item.Permission.ToDate.Hour :0@(item.Permission.ToDate.Minute)
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <span>
+                                                    @item.Permission.ToDate.Hour : @item.Permission.ToDate.Minute
+                                                </span>
+                                            }
+                                            <span>
+                                                (@item.Permission.FromDate.Day / @item.Permission.FromDate.Month / @item.Permission.FromDate.Year)
+                                            </span>
+                                            //saatliq
+                                        }
+                                    </td>
+                                    @if (item.Permission.Reason.Length > 20)
+                                    {
+                                        <td>@(item.Permission.Reason.Substring(0,20)+"...")</td>
+                                    }
+                                    else
+                                    {
+                                        <td style="width: 100px;">@item.Permission.Reason</td>
+                                    }
+                                    <td style="width: 188px;">
+                                        @if (item.Permission.Confirm == true)
+                                        {
+                                            <p class="text-bold text-success">Təsdiq olunub</p>
+                                        }
+                                        @if (item.Permission.Cancel == true && item.Permission.Confirm != true)
+                                        {
+                                            <p class="text-bold text-success">İmtina Edildi</p>
+                                        }
+                                        @if (item.Permission.Cancel == false && item.Permission.Confirm == false)
+                                        {
+                                            <a asp-action="CondirmPermissionByDep" asp-controller="Permission" asp-area="Employee" asp-route-perId="@item.PermissionId" class="btn btn-danger text-bold">Təsdiq Et</a>
+                                            <a asp-action="CancelermissionByDep" asp-controller="Permission" asp-area="Employee" asp-route-perId="@item.PermissionId" class="btn btn-danger text-bold">İmtina Et</a>
+                                        }
+                                    </td>
+                                </tr>
+                                count++;
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td>Boş</td>
+                                <td>Boş</td>
+                                <td>Boş</td>
+                                <td>Boş</td>
+                                <td>Boş</td>
+                                <td>Boş</td>
+                                <td>Boş</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section scripts{
+    <script>
+        $(function () {
+            $('#dataAllSearc').DataTable({
+                "paging": true,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+    </script>
+}

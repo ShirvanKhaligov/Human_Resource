@@ -1,0 +1,80 @@
+﻿
+@{ ViewData["Title"] = "VerifyEmail";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="icon" type="image/x-icon" href="~/assest2/assets/img/favicon.png">
+
+
+    <link rel="stylesheet" href="~/assest2/assets/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="~/assest2/assets/css/lnr-icon.css">
+
+
+    <link rel="stylesheet" href="~/assest2/assets/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/assest2/assets/css/style.css">
+
+
+
+
+
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader-wrapper">
+
+        <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <!-- Main Wrapper -->
+    <div class="inner-wrapper login-body">
+        <div class="login-wrapper">
+            <div class="container">
+                <div class="loginbox shadow-sm grow">
+                    <div class="login-left" style="background:#2f3d80">
+                        <img class="img-fluid" src="~/allUserImg/company/7d264040-f89e-4bfc-a7ad-f7435d7af1f8ferrumC.jpg" alt="Logo">
+                    </div>
+                    <div class="login-right">
+                        <div class="login-right-wrap">
+                            <h1>Daxil ol</h1>
+                            <p class="account-subtitle">Mail ünvanınıza təstiq mesajı göndərildi.</p>
+                                <div class="col-12">
+                                    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                                </div>
+                                <div class="form-group">
+                                    <a class="btn btn-theme button-1 text-white ctm-border-radius btn-block" asp-controller="Account" asp-action="LoginSec">Daxil ol</a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/assest2/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="~/assest2/assets/js/popper.min.js"></script>
+    <script src="~/assest2/assets/js/bootstrap.min.js"></script>
+    <script src="~/assest2/assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+    <script src="~/assest2/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
+    <script src="~/assest2/assets/js/script.js"></script>
+</body>
+</html>

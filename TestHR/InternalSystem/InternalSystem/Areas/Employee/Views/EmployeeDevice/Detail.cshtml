@@ -1,0 +1,301 @@
+﻿@model EmployeeDeviceVm
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+        <div class="row mt-5">
+            <div class="col-md-12 justify-content-end d-flex">
+                <a style="background-color:#17a2b8" asp-controller="EmployeeDevice" asp-action="Create" class="btn   col-md-2 btn-block mb-3"><i class="fas fa-long-arrow-alt-left"></i> Geri</a>
+            </div>
+            
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-12 mx-auto">
+                <div id="deviceTableDiv">
+                    <table id="dataAllSearchDevice" class="table table-hover table-responsive-md">
+                        <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                            <tr class="All_Index_View_Change_Tr">
+                                <th scope="col">№</th>
+                                <th scope="col">Əməkdaş</th>
+
+                                <th scope="col">Qurğu</th>
+                                <th scope="col">Say</th>
+                                <th scope="col">Parametr</th>
+                                <th scope="col">Inventor</th>
+                                <th scope="col">Serial №.</th>
+                                <th scope="col">Telefon №.</th>
+                                <th scope="col">Daxili №</th>
+                                <th scope="col">Təhvil verilən tarix</th>
+                                <th scope="col">Təhvil alınan tarix</th>
+                                <th scope="col">Təhvil alınma səbəbi</th>
+                                <th scope="col">Redaktə et</th>
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center;background:#efefef;" class="All_Index_View_Change_Tbody">
+                            @{
+                                int count = 1;
+                            }
+                            @if (Model.DeviceToEmployees.Count() != 0)
+                            {
+                                @foreach (var dvc in Model.DeviceToEmployees)
+                                {
+                                    <tr>
+                                        <td scope="row">@count</td>
+                                        <td> @(dvc.Emplooyee.FirstName + " "+dvc.Emplooyee.Lastname) </td>
+                                        <td>@dvc.Device.DevicesType.Name</td>
+                                        
+                                        @if (dvc.Device.Count == null)
+                                        {
+                                            <td>1</td>
+                                        }
+                                        else
+                                        {
+                                            <td>@dvc.Device.Count</td>
+                                        }
+                                        @if (dvc.Device.Parametr == null)
+                                        {
+                                            <td>------</td>
+                                        }
+                                        else
+                                        {
+                                            <td>@dvc.Device.Parametr</td>
+                                        }
+                                        @if (dvc.Device.InventorCode == null)
+                                        {
+                                            <td>------</td>
+                                        }
+                                        else
+                                        {
+                                            <td>@dvc.Device.InventorCode</td>
+                                        }
+                                        @if (dvc.Device.SerialNumber == null)
+                                        {
+                                            <td>------</td>
+                                        }
+                                        else
+                                        {
+                                            <td>@dvc.Device.SerialNumber</td>
+                                        }
+                                        @if (dvc.Device.PhoneNumber == null)
+                                        {
+                                            <td>------</td>
+                                        }
+                                        else
+                                        {
+                                            <td>@dvc.Device.PhoneNumber</td>
+                                        }
+                                        @if (dvc.Device.InternalPhoneNumber == null)
+                                        {
+                                            <td>------</td>
+                                        }
+                                        else
+                                        {
+                                            <td>@dvc.Device.InternalPhoneNumber</td>
+                                        }
+                                        <td>@dvc.Device.GivingTime.ToString().Substring(0, 10)</td>
+                                        @if (dvc.Device.ReturnDate != null)
+                                        {
+                                            <td>@dvc.Device.ReturnDate.ToString().Substring(0, 10)</td>
+                                        }
+                                        else
+                                        {
+                                            <td>------</td>
+                                        }
+                                        @if (dvc.Device.Reason != null)
+                                        {
+                                            if (dvc.Device.Reason.Length > 20)
+                                            {
+                                                <td>@(dvc.Device.Reason.Substring(0,20)+"...")</td>
+                                            }
+                                            else
+                                            {
+                                                <td>@dvc.Device.Reason</td>
+                                            }
+
+                                        }
+                                        else
+                                        {
+                                            <td>------</td>
+                                        }
+                                    <td>
+                                        @if (dvc.Device.Status != false)
+                                        {
+                                            <a asp-controller="EmployeeDevice" asp-action="Edit" asp-route-id="@dvc.Id" class="btn btn-warning" style="color:white;padding: 5px 28px;" title="Dəyiş">
+                                                <i  >Dəyiş</i>
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a class="btn btn-warning" style="color:white;padding: 5px 28px;pointer-events:none;" title="Dəyiş">
+                                                <i>Dəyiş</i>
+                                            </a>
+                                        }
+                                        @if (dvc.Device.Status != false)
+                                        {
+                                            <a onclick="confirmationDeleteForDevice('@dvc.DeviceId','@dvc.EmplooyeeId')" class="badge badge-info" title="Qaytar" style="color:white;font-size: 13px;padding: 14px 12px;cursor:pointer;margin-top: 5px;">TƏHVİL AL</a>
+                                        }
+                                        else
+                                        {
+                                            <a style="color:white;pointer-events:none;font-size: 11px;padding: 13px 2px;margin-top: 5px;" class="badge badge-danger" title="Qaytar">TƏHVİL ALINDI</a>
+                                        }
+
+                                    </td>
+                                    </tr>
+                                    count++;
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="11">Boş</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Confirmation Modal Delete-->
+<div class="modal" tabindex="-1" id="confirmationModalForDevice" role="dialog">
+    <input type="hidden" id="hiddenModal" name="name" value="" />
+    <input type="hidden" id="hiddenModalEmp" name="name" value="" />
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="height:150px;">
+            <div class="modal-header" style=" padding-top: 5px;padding-bottom:5px;">
+                <h5 style="color:black;font-size:1rem;" class="modal-title">Qurğunu qaytar</h5>
+                <button type="button" onclick="closeConfirmationIdDeviceForAll()" class="close" data-dismiss="modal" aria-label="Close" style="padding:0px;margin-top:0px;margin-right:0px;">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="padding: 17px;">
+                <p style="color:red;font-size: 18px;margin:0;">Qaytarılmasına əminsiniz?</p>
+            </div>
+            <div class="modal-footer" style="padding:3px;">
+                <button type="button" onclick="DeleteForDeviceModal($('#hiddenModal').val(),$('#hiddenModalEmp').val())" class="btn btn-success" data-dismiss="modal">Bəli</button>
+                <button type="button" onclick="closeConfirmationIdDeviceForAll()" id="confirmationModalForPosition" class="btn btn-primary">Xeyr</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal Device Delete-->
+<div class="modal" id="DeleteForDeviceModall" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <input type="hidden" id="hiddenModalDelete" name="name" value="" />
+        <input type="hidden" id="hiddenModalDeleteEmp" name="name" value="" />
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Qaytarılma zamanı</h5>
+                <button type="button" onclick="closeDeviceForAll()" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group row">
+                    <label style="color:black;">Qaytarılma vaxtı: </label>
+                    <input type="date" asp-for="Device.ReturnDate" required class="form-control input-height inputDateDevice" />
+                    @if (ViewData["error_time_device"] != null)
+                    {
+                        <span class="text-danger text-bold" style="font-size:14px;font-weight:700;">@ViewData["error_time_device"]</span>
+                    }
+                    <span asp-validation-for="Device.ReturnDate" class="text-danger text-bold" style="font-size:14px;font-weight:700;"></span>
+                </div>
+                <div class="form-group row">
+                    <label style="color:black;">Səbəb: </label>
+                    <textarea type="text" asp-for="Device.Reason" required class="form-control input-height reasonDevice" rows="3" style="resize:none;"></textarea>
+                    @if (ViewData["error_reason_device"] != null)
+                    {
+                        <span class="text-danger text-bold" style="font-size:14px;font-weight:700;">@ViewData["error_reason_device"]</span>
+                    }
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="deleteDevice($('#hiddenModalDelete').val(),$('#hiddenModalDeleteEmp').val(),$('#Device_ReturnDate').val(),$('#Device_Reason').val())" class="btn btn-success preve" data-dismiss="modal">Yadda saxla</button>
+                <button type="button" onclick="closeDeviceForAll()" class="btn btn-danger">İmtina</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts{
+    <script>
+        $(function () {
+            $('#dataAllSearchDevice').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+
+        function deleteDevice(Id, Empid, ReturnDate, Reason) {
+            var returnDate = $(".inputDateDevice");
+            var reason = $(".reasonDevice");
+            if (ReturnDate == '') {
+                return;
+            }
+            if (Reason == '') {
+                return;
+            }
+            else {
+                     $.ajax({
+                       type: 'POST',
+                       url: '@Url.Action("Delete", "EmployeeDevice")',
+                       data: {
+                           DeviceId: Id,
+                           returnD: ReturnDate,
+                           reason: Reason,
+                           EmpId:Empid
+                       },
+                       success: function (response) {
+                           $("#DeleteForDeviceModall").hide()
+                           $("#deviceTableDiv").html(response)
+                           returnDate.text('');
+                           reason.text('');
+                           console.log("success")
+                       },
+                       error: function (response) {
+                           console.error(response)
+                       }
+                   })
+            }
+
+            }
+
+        //////////////open modul
+        function confirmationDeleteForDevice(DeviceId,EmpId) {
+            $("#confirmationModalForDevice").show()
+            $("#hiddenModal").val(DeviceId);
+            $("#hiddenModalEmp").val(EmpId);
+            //console.log("confirm " + DeviceId, EmpId);
+        }
+        //close modul
+        function closeConfirmationIdDeviceForAll() {
+            $("#confirmationModalForDevice").hide()
+        }
+
+
+        //////////////////open Delete Device
+        function DeleteForDeviceModal(DeviceId,EmpId) {
+            $("#DeleteForDeviceModall").show()
+            $("#confirmationModalForDevice").hide()
+            $("#hiddenModalDelete").val(DeviceId);
+            $("#hiddenModalDeleteEmp").val(EmpId);
+            //console.log("delete " + DeviceId, EmpId);
+        }
+         //close Delete Device
+        function closeDeviceForAll() {
+            $("#DeleteForDeviceModall").hide()
+        }
+    </script>
+}

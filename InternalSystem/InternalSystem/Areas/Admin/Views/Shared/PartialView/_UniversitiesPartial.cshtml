@@ -1,0 +1,34 @@
+﻿@model IEnumerable<EducationTypeToUnivercity>
+<table style="color:blue" class="table table-hover table-responsive-md ">
+
+    <thead style="text-align: center" class="thead-dark ">
+        <tr>
+            <th scope="col">Sıra №</th>
+            <th scope="col">Universitetiin adı</th>
+            <th scope="col">Təhsilin növü</th>
+            <th scope="col">Redaktə et:</th>
+        </tr>
+    </thead>
+    <tbody style="text-align: center">
+        @{
+            int count = 1;
+        }
+        @if (Model.Count() != 0)
+        {
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@count</th>
+                    <td>@item.Universities.Name</td>
+                    <td>@item.EducationType.Name</td>
+                    <td>
+                        <a asp-action="EditUniversity" asp-controller="University" asp-route-Id="@item.Universities.Id" class="btn btn-primary" title="Dəyiş"> <i class="fas fa-edit"></i></a>
+                        <a onclick="confirmationIdForAll(@item.Universities.Id)" class="btn btn-danger" title="Sil" href="#"> <i class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+                count++;
+            }
+        }
+    </tbody>
+</table>

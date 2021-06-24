@@ -1,0 +1,116 @@
+﻿@model DeptAndSubDeptVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="content-wrapper">
+    <div class="container-fluid" style="padding:0px 0px 0px 250px">
+        <br>
+        <br>
+        <a asp-area="Admin" asp-controller="AddPosition" asp-action="Index" class="col-md-2 btn btn-primary "><i class="fas fa-long-arrow-alt-left"></i>  Geri</a>
+        <div class=" ">
+            <br><br>
+            <form method="post">
+                <div class="form-group row ml-md-4">
+                    <label for="CompanyName" class="col-md-2">Şirkət adı:</label>
+                    <div class="form-group col-md-5">
+                        <select onchange="getDepartment()" class="form-control" id="companySelectId" name="CompanyId">
+                            <option disabled selected>Seç</option>
+                            @foreach (var company in Model.Companiess)
+                            {
+                                <option value="@company.Id">@company.Name</option>
+                             }
+                        </select>
+                        @if (ViewData["companyNull"] != null)
+                        {
+                            <span class="text-danger">@ViewData["companyNull"]</span>
+                        }
+                    </div>
+                </div>
+                <div class="form-group row ml-md-4">
+                    <label for="DepartmentName" class="col-md-2">Şöbə adı:</label>
+                    <div class="form-group col-md-5" id="DepartmentDiv">
+                        <select onchange="getSubDepartment()" class="form-control" id="departmentSelectId" name="DepartmentId">
+                            <option disabled selected>Seç</option>
+                        </select>
+                        @if (ViewData["DepartmentNull"] != null)
+                        {
+                            <span class="text-danger">@ViewData["DepartmentNull"]</span>}
+                    </div>
+                </div>
+                <div class="form-group row ml-md-4">
+                    <label for="SubDepartmentName" class="col-md-2">Alt şöbə adı:</label>
+                    <div class="form-group col-md-5" id="subDepartmentDiv">
+                        <select class="form-control" name="SubDepartmentId">
+                            <option selected disabled>Seç</option>
+                        </select>
+                        @if (ViewData["SubdepartmentNull"] != null)
+                        {
+                            <span class="text-danger">@ViewData["SubdepartmentNull"]</span>}
+                    </div>
+                </div>
+                <div class="form-group row ml-md-4">
+                    <label asp-for="@Model.Position.Name" for="PositionName" class="col-md-2">Vəzifə adı:</label>
+                    <div class="col-md-5">
+                        <input asp-for="@Model.Position.Name" type="text" style="height: 35px;" class="form-control" id="PositionName">
+                        <span asp-validation-for="@Model.Position.Name" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mx-auto">
+                        <input style="width: 300px;" class="btn btn-success" type="submit" value="Əlavə et" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--content-wrapper-->
+</div>
+@section scripts{
+    <script>
+        //Create Action.Department load in ajax
+        function getDepartment() {
+                var e = document.getElementById("companySelectId");
+                var selectedCompany = e.options[e.selectedIndex].value;
+                console.log(selectedCompany)
+                $.ajax({
+                type: "get",
+                url: "@Url.Action("CreateDeptLoad", "AddPosition")",
+                data: { id: selectedCompany },
+                success: function (respoonse) {
+
+                    $("#DepartmentDiv").html(respoonse)
+                    console.log("success")
+                    console.log(respoonse)
+                },
+                error: function (respoonse) {
+                    console.error("error - suceess")
+                    console.error(respoonse)
+                }
+            })
+        }
+
+           //Create Action.SubDepartment load in ajax
+         function getSubDepartment() {
+                var e = document.getElementById("departmentSelectId");
+                var selectedSubDepartment = e.options[e.selectedIndex].value;
+             console.log(selectedSubDepartment)
+                $.ajax({
+                type: "get",
+                url: "@Url.Action("CreateSubDLoad", "AddPosition")",
+                    data: { id: selectedSubDepartment },
+                success: function (respoonse) {
+                    $("#subDepartmentDiv").html(respoonse)
+                    console.log("success")
+                    console.log(respoonse)
+                },
+                error: function (respoonse) {
+                    console.error("error - suceess")
+                    console.error(respoonse)
+                }
+            })
+        }
+
+    </script>
+}
+

@@ -1,0 +1,99 @@
+﻿@model IEnumerable<UniFaculty>
+@{
+    ViewData["Title"] = "AllFaculties";
+}
+
+<div class="content-wrapper" style="padding:0px 0px 0px 250px">
+    <div class="container-fluid">
+        <br>
+        <div class="card">
+            <div class="row">
+                <div class="col-md-12" id="tableForFaculty">
+                    <table class="table table-hover table-responsive-md ">
+                        <thead style="text-align: center" class="thead-dark ">
+                            <tr>
+                                <th scope="col"> Sıra№</th>
+                                <th scope="col">Fakültənin adı</th>
+                                <th scope="col">Universitetin adı</th>
+                                <th scope="col">Redaktə et</th>
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center; color:blue">
+                            @{ int count = 1; }
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <th scope="row">@count</th>
+                                    <td>@item.Name</td>
+                                    <td>@item.EducationTypeToUniversity.Universities.Name (@item.EducationTypeToUniversity.EducationType.Name)</td>
+                                    <td>
+                                        <a asp-action="EditFaculty" asp-controller="AddFaculty" asp-route-id="@item.Id" class="btn btn-primary" title="Dəyiş"> <i class="fas fa-edit"></i></a>
+                                        <a onclick="confirmationDeleteForFacatulty(@item.Id)" class="btn btn-danger" title="Sil"> <i class="fas fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                count++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <a asp-area="Admin" asp-controller="AddFaculty" asp-action="Index" class="btn btn-primary col-md-12">Geri</a>
+            </div>
+        </div>
+    </div>
+    <!--content-wrapper-->
+</div>
+
+<section class="modalDiv">
+    <div class="modal" tabindex="-1" role="dialog" id="confirmationModalForFaculty">
+        <input type="hidden" id="hiddenfacultyId" value="" />
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger">Silməyə əminsiniz?</h5>
+                    <button type="button" class="close" data-dismiss="modal" onclick="closeConfirmationForFacatulty()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <a onclick="deleteFacultyInFaculty($('#hiddenfacultyId').val())" class="btn btn-primary">Sil</a>
+                    <a onclick="closeConfirmationForFacatulty()" class="btn btn-secondary" data-dismiss="modal">Ləvğ et</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts{
+    <script>
+        function deleteFacultyInFaculty(Id) {
+               $.ajax({
+                   type: 'post',
+                   url: '@Url.Action("DeleteFaculty", "AddFaculty")',
+                   data: { FacultyId: Id},
+                   success: function (response) {
+                       console.log("success")
+                       $("#confirmationModalForFaculty").hide()
+                       $("#tableForFaculty").html(response)
+                   },
+                   error: function (response) {
+                       console.error(response)
+                   }
+               })
+        }
+            //////////////
+
+            //////////////open modul
+            function confirmationDeleteForFacatulty(Id) {
+                $("#confirmationModalForFaculty").show()
+                $("#hiddenfacultyId").val(Id)
+            }
+            //close modul//
+            function closeConfirmationForFacatulty() {
+                $("#confirmationModalForFaculty").hide()
+            }
+    </script>
+}
+

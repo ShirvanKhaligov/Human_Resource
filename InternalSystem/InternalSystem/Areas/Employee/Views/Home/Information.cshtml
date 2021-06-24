@@ -1,0 +1,319 @@
+﻿@model InformationVM
+@{ ViewData["Title"] = "Information"; }
+
+<div class="content-wrapper" style="background: rgb(224, 224, 224);">
+
+    <div class="">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div style="background-color:#e0e0e0;">
+
+                    <div class="content-header">
+                        <div class="container-fluid">
+                            <div class="row mb-2">
+                                <div class="col-sm-6">
+                                    <h1 class="m-0 text-dark"></h1>
+                                </div><!-- /.col -->
+                                <div class="col-sm-6">
+                                    <ol class="breadcrumb float-sm-right">
+                                        <li class="breadcrumb-item"><a asp-area="Employee" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+                                        <li class="breadcrumb-item active">Məlumatlarım</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div style="margin-top: -55px" class="row ">
+                            <div class="col-md-4 mx-auto">
+                                <div style="margin-left: 87px" class="avatar-upload" id="mainImageDiv">
+                                    <div class="avatar-edit">
+
+
+                                    </div>
+                                    <div class="">
+
+                                        <img style="object-fit:cover;border-radius:10%;width:140px;" class="imagePrevieww" src="~/allUserImg/@if(Model.AppUser.Emplooyee.Image != null){@Model.AppUser.Emplooyee.Image}" alt="Alternate Text" />
+                                    </div>
+                                </div>
+                                @if (ViewData["error_image"] != null)
+                                {
+                    <p style="margin-left: 25px;" class="text-danger text-bold text-center">@ViewData["error_image"]</p>}
+                                @if (ViewData["error_image_size"] != null)
+                                {
+                    <p style="margin-left: 25px;" class="text-danger text-bold">@ViewData["error_image_size"]</p>}
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <div class="col-md-5">
+                                        <label for="companyName" style="color:#343a40;font-family:'Segoe UI Emoji';">Şirkətin adı</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        @if (Model.AppUser.Emplooyee.Positions != null)
+                                        {
+                            <input asp-for="AppUser.Emplooyee.Positions.SubDepartment.DepartmentToCompany.Company.Name" readonly class="form-control input-height" name="companyName" id="companyName" type="text"> }
+                        else
+                        {
+            <input asp-for="DepartmentToCompanyy.Company.Name" readonly class="form-control input-height" name="companyName" id="companyName" type="text">}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <div class="col-md-5">
+                                        <label for="username" style="color:#343a40;font-family:'Segoe UI Emoji';">İstifadəçi adı</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input readonly asp-for="AppUser.Emplooyee.FirstName" class="form-control input-height" name="username" id="username" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <div class="col-md-5">
+                                        <label for="email" style="color:#343a40;font-family:'Segoe UI Emoji';">Email ünvanı</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input readonly asp-for="AppUser.Emplooyee.Email" class="form-control input-height" name="email" id="email" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <div class="col-md-5">
+                                        <label for="name" style="color:#343a40;font-family:'Segoe UI Emoji';">Adınız</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input readonly asp-for="AppUser.Emplooyee.FirstName" class="form-control input-height" name="name" id="name" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <div class="col-md-5">
+                                        <label for="surname" style="color:#343a40;font-family:'Segoe UI Emoji';">Soyadınız</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input readonly asp-for="AppUser.Emplooyee.Lastname" class="form-control input-height" name="surname" id="surname" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <div class="col-md-5">
+                                        <label for="fatherName" style="color:#343a40;font-family:'Segoe UI Emoji';">Atanızın adı</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input readonly asp-for="AppUser.Emplooyee.FatherName" class="form-control input-height" name="fatherName" id="fatherName" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <div class="col-md-5">
+                                        <label for="dateOfBirth" style="color:#343a40;font-family:'Segoe UI Emoji';">Doğum tarixiniz</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input readonly value="@Model.AppUser.Emplooyee.Birthday.ToString("dd/MM/yyyy")" class="form-control input-height" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <div class="col-md-5">
+                                        <label for="gender" style="color:#343a40;font-family:'Segoe UI Emoji';">Cinsiniz</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input readonly asp-for="AppUser.Emplooyee.Gender.Name" class="form-control input-height" name="gender" id="gender" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group ">
+                                    <div class="col-md-6">
+                                        <label for="birthPlace" style="color:#343a40;font-family:'Segoe UI Emoji';">Doğulduğunuz yer</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input readonly asp-for="AppUser.Emplooyee.BirthPlace" class="form-control input-height" name="birthPlace" id="birthPlace" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <div class="form-group ">
+                                    <div class="col-md-5">
+                                        <label for="address" style="color:#343a40;font-family:'Segoe UI Emoji';">Ünvanınız</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input readonly asp-for="AppUser.Emplooyee.LivingAdress" class="form-control input-height" name="address" id="address" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+                        @if (Model.EducationsToEmployee != null)
+                        {
+                            foreach (var item in Model.EducationsToEmployee)
+                            {
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="form-group ">
+                        <div class="col-md-5">
+                            <label for="university" style="color:#343a40;font-family:'Segoe UI Emoji';">Universitet</label>
+                        </div>
+                        <div class="col-md-12">
+                            <input readonly value="@item.Education.Profession.UniFaculty.EducationTypeToUniversity.Universities.Name" class="form-control input-height" name="university"
+                                   id="university" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group ">
+                        <div class="col-md-5">
+                            <label for="faculty" style="color:#343a40;font-family:'Segoe UI Emoji';">Fakültə</label>
+                        </div>
+                        <div class="col-md-12">
+                            <input readonly value="@item.Education.Profession.UniFaculty.Name" class="form-control input-height" name="faculty" id="faculty" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group ">
+                        <div class="col-md-5">
+                            <label for="speciality" style="color:#343a40;font-family:'Segoe UI Emoji';">İxtisas</label>
+                        </div>
+                        <div class="col-md-12">
+                            <input readonly value="@item.Education.Profession.Name" class="form-control input-height" name="speciality"
+                                   id="speciality" type="text">
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
+            }
+    }
+                        @if (Model.AppUser != null)
+                        {
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group ">
+                        <div class="col-md-5">
+                            <label for="department" style="color:#343a40;font-family:'Segoe UI Emoji';">Şöbə</label>
+                        </div>
+                         <div class="col-md-12">
+                            @if (Model.AppUser.Emplooyee.Positions != null)
+                            {
+                             <input readonly asp-for="AppUser.Emplooyee.Positions.SubDepartment.DepartmentToCompany.Department.Name" class="form-control input-height" name="department"
+                                         id="department" type="text"> 
+                            }
+                            else
+                            {
+                                        <input readonly asp-for="DepartmentToCompanyy.Department.Name" class="form-control input-height" name="department"
+                                                             id="department" type="text">
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group ">
+                        <div class="col-md-5">
+                            <label for="position" style="color:#343a40;font-family:'Segoe UI Emoji';">Vəzifə</label>
+                        </div>
+                        <div class="col-md-12">
+                            @if (Model.AppUser.Emplooyee.Positions != null)
+                            {
+                                                                 <input readonly asp-for="AppUser.Emplooyee.Positions.Name" class="form-control input-height" name="position" id="position" type="text">
+                            }
+                              
+                            else
+                                         
+                            {
+                                        <input readonly value="Şöbə Müdiri" class="form-control input-height" name="position" id="position" type="text">
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group ">
+                        <div class="col-md-5">
+                            <label for="salary" style="color:#343a40;font-family:'Segoe UI Emoji';">Maaş</label>
+                        </div>
+                        <div class="col-md-12">
+                            <input readonly value="@((Model.AppUser.Emplooyee.Salary)+" ₼")" type="text" class="form-control input-height">
+                        </div>
+                    </div>
+                </div>
+
+            </div>}
+
+                        <h3 style="text-align:center;">Cihazlarım</h3>
+                        @if (Model.DeviceToEmployees != null)
+                        {
+                           @foreach (var item in Model.DeviceToEmployees)
+                           {
+                            <div class="col-md-">
+                                <div class="form-group ">
+                                    <div class="col-md-12">
+                                        <label for="university" style="color:#343a40;font-family:'Segoe UI Emoji';">@item.Device.DevicesType.Name</label>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                           }
+                        }
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imagePrevieww').css('background-image', 'url(' + e.target.result + ')');
+                    $('#imagePrevieww').hide();
+                    $('#imagePrevieww').fadeIn(650);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+
+    </script>
+
+}
+

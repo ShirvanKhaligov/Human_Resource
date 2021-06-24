@@ -1,0 +1,265 @@
+﻿@model CommandEmpPositionChVM
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid" id="divForCommand">
+        <form method="post">
+            <div style="height: 30px"></div>
+            <div class="form-group row ml-md-5">
+                <div class="col-sm-7" style="display:grid;">
+                    <div class="text-danger text-bold" asp-validation-summary="ModelOnly"></div>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="EmplooyeeId">İşçinin adı:</label>
+                </div>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control input-height" readonly value="@(Model.CommandsToEmployee.Emplooyee.FirstName+" "+Model.CommandsToEmployee.Emplooyee.Lastname+" "+Model.CommandsToEmployee.Emplooyee.FatherName) @((Model.CommandsToEmployee.Emplooyee.GenderId==1) ? "oğlu" : "qızı")" />
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Sənədin adı</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" value="vəzifə dəyişikliyi" class="form-control input-height" readonly />
+                </div>
+            </div>
+
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Qəbul vaxtı</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="date" class="form-control input-height" value="@Model.CommandsToEmployee.CreatedDate.ToString("yyyy-MM-dd")"
+                           asp-for="CreatedDate">
+                    <span class="text-danger text-bold" asp-validation-for="CreatedDate" style="font-size:14px;"></span>
+                </div>
+            </div>
+
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="workType">İş vaxtı növü:</label>
+                </div>
+                <div class="col-sm-7" id="">
+                    <select asp-for="WorkTimeOfTypeId" style="padding: 0px" class="form-control input-height">
+                        <option disabled>Seçin</option>
+                        @foreach (var type in Model.WorkTimeOfTypes)
+                        {
+                            if (Model.CommandsToEmployee.Emplooyee.WorkTimeOfTypeId == type.Id)
+                            {
+                                <option selected value="@type.Id">@type.Name</option>
+                            }
+                            else
+                            {
+                                <option value="@type.Id">@type.Name</option>
+                            }
+                        }
+                    </select>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="WorkTimeOfTypeId"></span>
+                </div>
+            </div>
+
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="workType">İşin növü:</label>
+                </div>
+                <div class="col-sm-7" id="">
+                    <div class="row">
+                        @if (Model.CommandsToEmployee.Emplooyee.WorkPlaceAddition.Name == "Əsas iş yeri")
+                        {
+                            <div class="col-sm-2">
+                                <label style="color:#353030;">Əsas iş yeri</label>
+                                <input type="checkbox" checked name="WorkPlace" value="1" style="cursor:pointer" class="slectOne" />
+                            </div>
+                            <div class="offset-3 col-sm-2">
+                                <label style="color:#353030;">Əlavə iş yeri</label>
+                                <input type="checkbox" name="WorkPlace" value="2" style="cursor:pointer" class="slectOne" />
+                            </div>
+                        }
+                        else if (Model.CommandsToEmployee.Emplooyee.WorkPlaceAddition.Name == "Əlavə iş yeri")
+                        {
+                            <div class="col-sm-2">
+                                <label style="color:#353030;">Əsas iş yeri</label>
+                                <input type="checkbox" name="WorkPlace" value="1" style="cursor:pointer" class="slectOne" />
+                            </div>
+                            <div class="offset-3 col-sm-2">
+                                <label style="color:#353030;">Əlavə iş yeri</label>
+                                <input type="checkbox" checked name="WorkPlace" value="2" style="cursor:pointer" class="slectOne" />
+                            </div>
+                        }
+                    </div>
+                    <span class="text-danger text-bold" asp-validation-for="WorkPlace" style="font-size:14px;"></span>
+                </div>
+            </div>
+
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="departmentName">Şöbənin adı:</label>
+                </div>
+                <div class="col-sm-7">
+                    <select onchange="getSubDepartment()" id="departmentName" style="padding: 0px" class="form-control input-height">
+                        <option selected disabled>Seçin</option>
+                        @foreach (var company in Model.DepartmentToCompanies)
+                        {
+                            if (Model.CommandsToEmployee.Emplooyee.Positions.SubDepartment.DepartmentToCompany.DepartmentId == company.Department.Id)
+                            {
+                                <option selected value="@company.DepartmentId">@company.Department.Name</option>
+                            }
+                            else
+                            {
+                                <option value="@company.DepartmentId">@company.Department.Name</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="departmentName">Alt şöbənin adı:</label>
+                </div>
+                <div class="col-sm-7" id="subDepartmentListDiv">
+                    <select onchange="getPosition()" style="padding: 0px" class="form-control input-height">
+                        <option selected disabled>Seçin</option>
+                        @foreach (var subd in Model.SubDepartments)
+                        {
+                            if (Model.CommandsToEmployee.Emplooyee.Positions.SubDepartmentId == subd.Id)
+                            {
+                                <option selected value="@subd.Id">@subd.Name</option>
+                            }
+                            else
+                            {
+                                if (subd.DepartmentToCompany.DepartmentId == Model.CommandsToEmployee.Emplooyee.Positions.SubDepartment.DepartmentToCompany.DepartmentId)
+                                {
+                                    <option value="@subd.Id">@subd.Name</option>
+                                }
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="positionName">Vəzifənin adı:</label>
+                </div>
+                <div class="col-sm-7" id="positionListDiv">
+                    <select style="padding: 0px" class="form-control input-height" asp-for="PositionId">
+                        <option selected disabled>Seçin</option>
+                        @foreach (var pos in Model.Positions)
+                        {
+                            if (Model.CommandsToEmployee.Emplooyee.PositionsId == pos.Id)
+                            {
+                                <option selected value="@pos.Id">@pos.Name</option>
+                            }
+                            else
+                            {
+                                if (pos.SubDepartmentId == Model.CommandsToEmployee.Emplooyee.Positions.SubDepartment.Id)
+                                {
+                                    <option selected value="@pos.Id">@pos.Name</option>
+                                }
+                            }
+                        }
+                    </select>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="PositionId"></span>
+                </div>
+            </div>
+
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="salary">Maaş:</label>
+                </div>
+                <div class="col-sm-7">
+                    <input asp-for="Salary" id="salary" maxlength="8" value="@Model.CommandsToEmployee.Emplooyee.Salary.ToString().Replace(',','.')" class="form-control input-height" type="text">
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="Salary"></span>
+                </div>
+            </div>
+
+            <br>
+            <div class="row mb-5">
+                <button style="float:left;" class="btn btn-danger col-md-3 mx-auto">
+                    <a asp-controller="CommandEmpRecruitment" asp-action="CreateEmpRecruitmentCommand" style="padding: 5px 100px;color:white;">İmtina</a>
+                </button>
+                <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">Yadda saxla</button>
+            </div>
+        </form>
+
+
+    </div>
+    <!--content-wrapper-->
+</div>
+
+@section scripts{
+    <script>
+        function getSubDepartment() {
+            var e = document.getElementById("departmentName");
+            var depId = e.options[e.selectedIndex].value;
+            $.ajax({
+                type: "get",
+                url: "@Url.Action("GetSubDepartments", "CommandEmpRecruitment")",
+                data: { id: depId },
+                success: function (respoonse) {
+                    $("#subDepartmentListDiv").html(respoonse)
+                    $("#positionListDiv").html
+                        (
+                            '<select style="padding: 0px" class="form-control input-height"><option> Seçin</option></select>'
+                        )
+                },
+                error: function (respoonse) {
+                }
+            })
+        };
+
+        function getPosition() {
+                var e = document.getElementById("SubdepartmentName");
+                var subDepId = e.options[e.selectedIndex].value;
+                $.ajax({
+                    type: "get",
+                    url: "@Url.Action("GetPositions", "CommandEmpRecruitment")",
+                    data: { id: subDepId },
+                    success: function (respoonse) {
+                        $("#positionListDiv").html(respoonse)
+                    },
+                    error: function (respoonse) {
+                    }
+                })
+        };
+
+        $(document).on('change', ":checkbox", function () {
+            $('.slectOne').not(this).prop('checked', false);
+        });
+
+        //Function Toaster Success
+        function toastSuccessCommand(word) {
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "2000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr["success"](word);
+        }
+         $(function () {
+            var a = '@TempData["msg"]';
+             if (a != '')
+                 toastSuccessCommand("Müvəffəqiyyətlə yeniləndi");
+         })
+
+    </script>
+}
+
+
+

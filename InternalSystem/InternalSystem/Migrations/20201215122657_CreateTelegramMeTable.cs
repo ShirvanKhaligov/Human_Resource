@@ -1,0 +1,65 @@
+﻿using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
+
+namespace InternalSystem.Migrations
+{
+    public partial class CreateTelegramMeTable : Migration
+    {
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropColumn(
+                name: "IsArchive",
+                table: "Permissions");
+
+            migrationBuilder.DropColumn(
+                name: "IsArchive",
+                table: "Explanations");
+
+            migrationBuilder.CreateTable(
+                name: "TelMes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Message = table.Column<string>(nullable: false),
+                    Image = table.Column<string>(nullable: true),
+                    IsDelete = table.Column<bool>(nullable: false),
+                    Status = table.Column<bool>(nullable: false),
+                    EmployeeId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TelMes", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_TelMes_Emplooyeees_EmployeeId",
+                        column: x => x.EmployeeId,
+                        principalTable: "Emplooyeees",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TelMes_EmployeeId",
+                table: "TelMes",
+                column: "EmployeeId");
+        }
+
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropTable(
+                name: "TelMes");
+
+            migrationBuilder.AddColumn<bool>(
+                name: "IsArchive",
+                table: "Permissions",
+                nullable: false,
+                defaultValue: false);
+
+            migrationBuilder.AddColumn<bool>(
+                name: "IsArchive",
+                table: "Explanations",
+                nullable: false,
+                defaultValue: false);
+        }
+    }
+}

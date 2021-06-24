@@ -1,0 +1,306 @@
+﻿@model AttendanceVM
+@{
+    ViewData["Title"] = "Attendance";
+    Layout = "~/Areas/Employee/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+
+    th.rotate {
+        height: 110px;
+        white-space: nowrap;
+        position: relative;
+    }
+
+        th.rotate > div {
+            transform: translate(25px, 51px) rotate(90deg);
+            position: absolute;
+            width: 0px;
+            top: -52px;
+            left: -10px;
+        }
+
+            th.rotate > div > span {
+                padding: 7px 7px;
+            }
+
+    th {
+        color: blue;
+        font-weight: 100;
+        font-weight: bold;
+    }
+
+    .saturdey {
+        background-color: yellow;
+    }
+
+    .sunday {
+        background-color: green
+    }
+
+    .holiday {
+        background-color: blue
+    }
+
+    .Mezuniyyet {
+        background-color: darkmagenta
+    }
+
+    .table td {
+        padding: 0;
+    }
+
+    .table-responsive {
+        overflow-x: hidden;
+    }
+</style>
+
+
+<!-- Content Wrapper. Contains page content -->
+
+
+<div class="content-wrapper">
+
+    <div class="container-fluid ">
+        <br>
+
+        <div class="row">
+
+            <div class="card bg-gray-light">
+                <div class="card-header">
+                    <p style="text-align: center;font-size: 23px;color: green">Tabel</p>
+                    @{
+                        var mydayofweek = DateTime.Now.DayOfWeek;
+                    }
+                    <p>@mydayofweek</p>
+                    <ul>
+                        <li>ÖM - Ödənişsiz Məzuniyyət</li>
+                        <li>M  - Əsas Məzuniyyət</li>
+                        <li>E  - Ezamiyyə </li>
+                        <li>D</li>
+                        <li>E</li>
+                    </ul>
+                </div>
+
+                <div class="card-body">
+
+                    <table class="table table-responsive  table-bordered ">
+                        <thead>
+                            <tr>
+                                <th class="rotate">№</th>
+                                <th class="rotate">ASA</th>
+                                @*<th class="rotate"><div><span>Finkod</span></div></th>*@
+
+                                <th class="rotate"><div><span>Vəzifə</span></div></th>
+                                <th class="rotate"><div><span>İşləmə növü</span></div></th>
+                                <th class="rotate"><div><span>Işə qəbul</span></div></th>
+
+
+                                <th class="rotate"><div><span>Gün norma</span></div></th>
+
+
+
+                                @foreach (var item in ViewBag.mydates)
+                                {
+                                    <th class="rotate"><div><span>@item</span></div></th>
+                                }
+                                <th class="rotate"><div><span>Saat</span></div></th>
+
+                                @*@foreach (var item in (List<string>)ViewBag.mydates)
+                                    {
+                                        var str = item.Split('/');
+
+                                        <th class="rotate"><div><span>@str[0].ToString()</span></div></th>
+                                    }*@
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{ int count = 1;}
+                            @if (Model.CommandsToEmployees.Count() != 0)
+                            {
+                                @foreach (var worker in Model.CommandsToEmployees)
+                                {
+
+                                    var vacation = Model.Vacations.Where(i => i.EmplooyeeId == worker.EmplooyeeId).ToList();
+                                    var businesstrip = Model.BusinessTripEmps.Where(o => o.EmplooyeeId == worker.EmplooyeeId).ToList();
+                                    var freevac = Model.FreeVacations.Where(t => t.EmplooyeeId == worker.EmplooyeeId).ToList();
+                                    <tr>
+
+                                        <td>@count</td>
+                                        <td>@(worker.Emplooyee.FirstName+ " " +worker.Emplooyee.Lastname+ " " +worker.Emplooyee.FatherName) @((worker.Emplooyee.GenderId==1) ? "oğlu": "qızı") @("Ş/V("+worker.Emplooyee.IdCard+")")</td>
+                                        @*<td>@(worker.Emplooyee.FinCode)</td>*@
+
+                                        @if (worker.Emplooyee.Positions == null)
+                                        {
+                                            <td>Şöbə Müdiri</td>
+                                        }
+                                        else
+                                        {
+                                            <td>@(worker.Emplooyee.Positions.Name)</td>
+
+                                        }
+
+
+                                        <td>@worker.Emplooyee.WorkTimeOfType.Name</td>
+                                        @*@foreach (var item in Model.CommandsToEmployees)
+                                            {
+                                                                @item.CreatedDate
+                                            }*@
+                                        <td class="rotate">@worker.CreatedDate.ToString("dd/MM/yyyy")</td>
+                                        @if (@worker.Emplooyee.WorkTimeOfTypeId == 1)
+                                        {
+                                            <td>160</td>
+                                        }
+                                        @if (@worker.Emplooyee.WorkTimeOfTypeId == 2)
+                                        {
+                                            <td>80</td>
+                                        }
+                                        @if (@worker.Emplooyee.WorkTimeOfTypeId == 3)
+                                        {
+                                            <td>53</td>
+                                        }
+
+                                        @*<td>@worker.Calendar.GeneralWorkHour.</td>*@
+
+                                        <td>24</td>
+                                        @{ double sumHour = 0;}
+                                        @foreach (var item in (List<string>)ViewBag.mydates)
+                                        {
+                                            var cdate = Convert.ToDateTime(item);
+
+                                            if (vacation != null && businesstrip != null && freevac != null)
+                                            {
+                                                var exist = vacation.Where(i => i.FromDate <= cdate && i.ToDate >= cdate).Count();
+                                                var exbus = businesstrip.Where(o => o.FromDate <= cdate && o.ToDate >= cdate).Count();
+                                                var exfrvac = freevac.Where(t => t.FromDate <= cdate && t.ToDate >= cdate).Count();
+                                                if (exfrvac > 0)
+                                                {
+                                                    <td style="background-color:green">ÖM</td>
+
+                                                }
+                                                else if (exbus > 0)
+                                                {
+                                                    <td style="background-color:red">E</td>
+                                                }
+                                                else if(exist > 0)
+                                                {
+                                                    <td style="background-color: yellow">M</td>
+                                                }
+                                                else
+                                                {
+                                                    if (worker.Emplooyee.WorkTimeOfTypeId == 1)
+                                                    {
+                                                        var date = new DateTime(0001, 01, 01);
+                                                        var findcurrentday = cdate.DayOfWeek;
+
+                                                        if (findcurrentday == DayOfWeek.Saturday)
+                                                        {
+                                                            sumHour += 5;
+                                                            <td>5</td>
+                                                        }
+                                                        else
+                                                        {
+                                                            sumHour += 7;
+                                                            <td>7</td>
+                                                        }
+
+                                                    }
+                                                    if (worker.Emplooyee.WorkTimeOfTypeId == 2)
+                                                    {
+                                                        sumHour += 3.5;
+                                                        <td>3.5</td>
+                                                    }
+                                                    if (worker.Emplooyee.WorkTimeOfTypeId == 3)
+                                                    {
+                                                        sumHour += 1.75;
+                                                        <td>1.75</td>
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (worker.Emplooyee.WorkTimeOfTypeId == 1)
+                                                {
+                                                    var date = new DateTime(0001, 01, 01);
+                                                    var findcurrentday = cdate.DayOfWeek;
+
+                                                    if (findcurrentday == DayOfWeek.Saturday)
+                                                    {
+                                                        sumHour += 5;
+                                                        <td>5</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        sumHour += 7;
+                                                        <td>7</td>
+                                                    }
+
+                                                }
+                                                if (worker.Emplooyee.WorkTimeOfTypeId == 2)
+                                                {
+                                                    sumHour += 3.5;
+                                                    <td>3.5</td>
+                                                }
+                                                if (worker.Emplooyee.WorkTimeOfTypeId == 3)
+                                                {
+                                                    sumHour += 1.75;
+                                                    <td>1.75</td>
+                                                }
+                                            }
+
+
+
+
+                                        }
+                                        <td>@sumHour</td>
+                                    </tr>
+                                    count++;
+                                }
+                            }
+                            else
+                            {
+
+                                <tr>
+                                    <th style="width: 100px;">Boş</th>
+                                    <th style="width: 110px;">Boş</th>
+                                    <th style="width: 240px;">Boş</th>
+                                    <th style="width: 110px;">Boş</th>
+                                    <th style="width: 110px;">Boş</th>
+                                    <th style="width: 110px;">Boş</th>
+                                    <th style="width: 110px;">Boş</th>
+                                </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!--content-wrapper-->
+    </div>
+
+    <!--Wrapper end-->
+</div>
+
+
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+</aside>
+
+@section scripts{
+    @*<script>
+            setInterval(function () { alert("Refresh it"); }, 9000);
+        </script>*@
+
+}

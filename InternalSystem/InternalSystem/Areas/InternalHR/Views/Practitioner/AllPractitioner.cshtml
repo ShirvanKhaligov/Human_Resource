@@ -1,0 +1,152 @@
+﻿@model IEnumerable<PhoneNumberToEmployee>
+@{
+    ViewData["Title"] = "AllPractitioner";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+<div class="content-wrapper">
+    <div class="">
+        <div style="background-color: #f4f6f9;padding:7px" class="card All_Index_View_Change_Card">
+            <div class="card-header All_Index_View_Change_Card_Header">
+                <p style="color:#2590d3" class="All_Index_View_Change_P">Namizədlərin siyahısı</p>
+            </div>
+            <div class="card-body ">
+                <div class="row">
+                    <div class="col-md-12 mx-auto">
+                        <div class="table-responsive" id="canidateTableDiv">
+                            <table id="dataAllSearch" class="table table-hover table-responsive-md" style="color:blue;">
+                                <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                                    <tr class="All_Index_View_Change_Tr">
+                                        <th scope="col">Sıra №</th>
+                                        <th scope="col">Soyadı,Adı,Ata adı</th>
+                                        <th scope="col"> Email</th>
+                                        <th scope="col"> Mobil nömrə</th>
+                                        <th scope="col"> Redaktə et</th>
+                                        <th scope="col">Köhnə İş yerləri</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="text-align: center" class="All_Index_View_Change_Tbody">
+                                    @if (Model.Count() != 0)
+                                    {
+                                        int count = 1;
+                                        @foreach (var candidatesAndNumber in Model)
+                                        {
+                                            <tr>
+                                                <td scope="row">@count</td>
+                                                <td>@(candidatesAndNumber.Emplooyee.Lastname+" "+candidatesAndNumber.Emplooyee.FirstName+" "+candidatesAndNumber.Emplooyee.FatherName)</td>
+                                                @if (candidatesAndNumber.Emplooyee.Email.Length > 22)
+                                                {
+                                                    <td>@(candidatesAndNumber.Emplooyee.Email.Substring(0,20)+"...")</td>
+                                                }
+                                                else
+                                                {
+                                                    <td>@candidatesAndNumber.Emplooyee.Email</td>
+                                                }
+                                                <td>@candidatesAndNumber.PhoneNumber.PhoneNumber</td>
+                                                <td>
+                                                    <a asp-area="InternalHR" asp-controller="Recruitment" asp-action="Create" asp-route-id="@candidatesAndNumber.Emplooyee.Id" class="btn btn-success">
+                                                        İşə qəbul
+                                                    </a>
+                                                    <a asp-action="Editt" asp-controller="Practitioner" asp-route-id="@candidatesAndNumber.EmplooyeeID" class="btn btn-primary" title="Dəyiş"> <i class="fas fa-edit"></i></a>
+                                                    <a onclick="confirmationDeleteForCandidate(@candidatesAndNumber.EmplooyeeID)" class="btn btn-danger text-white" title="Sil"> <i class="fas fa-trash"></i></a>
+                                                </td>
+                                                <td>
+                                                    <a asp-action="AllLastWorks" asp-controller="Practitioner" asp-route-id="@candidatesAndNumber.EmplooyeeID" class="btn btn-warning" title=""><i class="fas fa-briefcase"></i></a>
+                                                </td>
+                                            </tr>
+                                            count++;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <th scope="row">0</th>
+                                            <td>Boş</td>
+                                            <td>Boş</td>
+                                            <td>Boş</td>
+                                            <td>Boş</td>
+                                            <td>Boş</td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a asp-area="InternalHR" asp-controller="Practitioner" asp-action="Index" class="btn All_Index_View_Change_Cart_Footer_A col-md-12">Geri</a>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="modalForCandidate">
+    <div class="modal" tabindex="-1" role="dialog" id="confirmationModalForCandidate">
+        <input type="hidden" id="hiddenCandidateId" value="" />
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger">Silməyə əminsiniz?</h5>
+                    <button type="button" class="close" data-dismiss="modal" onclick="closeConfirmationForCandidate()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <a onclick="deleteCandidate($('#hiddenCandidateId').val())" class="btn btn-primary">Sil</a>
+                    <a onclick="closeConfirmationForCandidate()" class="btn btn-secondary text-white" data-dismiss="modal">Ləvğ et</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section scripts{
+
+    <script>
+            //////////////
+        function deleteCandidate(Id) {
+            console.log(Id)
+               $.ajax({
+                   type: 'post',
+                   url: '@Url.Action("Delete", "Practitioner")',
+                   data: { CandidateId: Id},
+                   success: function (response) {
+                       console.log("success")
+                       $("#confirmationModalForCandidate").hide()
+                       $("#canidateTableDiv").html(response)
+                   },
+                   error: function (response) {
+                       console.error(response)
+                   }
+               })
+        }
+        //////////////open modul
+        function confirmationDeleteForCandidate(Id) {
+            $("#confirmationModalForCandidate").show()
+            $("#hiddenCandidateId").val(Id)
+        }
+        //close modul//
+        function closeConfirmationForCandidate() {
+            $("#confirmationModalForCandidate").hide()
+        }
+    </script>
+}
+

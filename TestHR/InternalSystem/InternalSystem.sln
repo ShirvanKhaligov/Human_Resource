@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InternalSystem", "InternalSystem\InternalSystem.csproj", "{1D5D3CDF-D78D-4DC7-892B-A6F7358CA255}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D5D3CDF-D78D-4DC7-892B-A6F7358CA255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D5D3CDF-D78D-4DC7-892B-A6F7358CA255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D5D3CDF-D78D-4DC7-892B-A6F7358CA255}.Debug|x64.ActiveCfg = Debug|x64
+		{1D5D3CDF-D78D-4DC7-892B-A6F7358CA255}.Debug|x64.Build.0 = Debug|x64
+		{1D5D3CDF-D78D-4DC7-892B-A6F7358CA255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D5D3CDF-D78D-4DC7-892B-A6F7358CA255}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D5D3CDF-D78D-4DC7-892B-A6F7358CA255}.Release|x64.ActiveCfg = Release|x64
+		{1D5D3CDF-D78D-4DC7-892B-A6F7358CA255}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {845023FA-81EC-4A34-B995-2D2227AD193F}
+	EndGlobalSection
+EndGlobal

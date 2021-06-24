@@ -1,0 +1,143 @@
+﻿
+@model LoginVM
+@{ ViewData["Title"] = "İnsan Resursları"; }
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="icon" type="image/x-icon" href="~/assest2/assets/img/favicon.png">
+
+
+    <link rel="stylesheet" href="~/assest2/assets/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="~/assest2/assets/css/lnr-icon.css">
+
+
+    <link rel="stylesheet" href="~/assest2/assets/css/font-awesome.min.css">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/assest2/assets/css/style.css">
+
+
+
+
+
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader-wrapper">
+
+        <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <!-- Main Wrapper -->
+    <div class="inner-wrapper login-body">
+        <div class="login-wrapper" >
+            <div class="container">
+                <div class="loginbox shadow-sm grow" >
+                    <div class="login-left" style="background:#dbecec">
+                        <img class="img-fluid" src="~/allUserImg/company/7f1763e3-4415-4747-ad50-a1f0a8992e0dcity-finance.jpg" @*style="border:1px solid #565555"*@ alt="Logo">
+                    </div>
+                    <div class="login-right">
+                        <div class="login-right-wrap">
+                            <h1>Daxil ol</h1>
+                            <p class="account-subtitle">Şəxsi səhifəyə keçid</p>
+
+                            <!-- Form -->
+                            <form method="post">
+                                <div class="col-12">
+                                    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input class="form-control" asp-for="Email" required type="email"   placeholder="İstifadəçi adı" id="username">
+                                </div>
+
+                                <div class="form-group">
+                                    <input style="position:relative" class="form-control" asp-for="Password" type="password" placeholder="Şifrə" id="password">
+                                    @*<i style="position: absolute; " id="eyeq" class="fas fa-eye p-icon-password-eye" onclick="showpwq();"></i>*@
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-theme button-1 text-white ctm-border-radius btn-block" type="submit">Daxil ol</button>
+                                </div>
+                            </form>
+                            <!-- /Form -->
+
+                            <div class="login-or">
+                                <span class="or-line"></span>
+                            </div>
+                            <div class="text-center forgotpass"><a asp-controller="Account" asp-action="ForgotPasswordSec">Parolu unutmusunuz?</a></div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Main Wrapper -->
+    <!-- jQuery -->
+    <script src="~/assest2/assets/js/jquery-3.2.1.min.js"></script>
+    <script>
+
+
+
+        var input = document.getElementById("password");
+        var text = document.getElementById("text");
+
+        input.addEventListener("keyup", function (event) {
+
+            if (event.getModifierState("CapsLock")) {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none"
+            }
+        });
+    </script>
+
+    <script>
+
+        var eyeq = document.getElementById("eyeq");
+        function showpwq() {
+            var pw = document.getElementById('password');
+            if (pw.type == "password") {
+                pw.type = "text";
+                eyeq.className = "fas fa-eye-slash p-icon-password-eye";
+            }
+            else {
+                pw.type = "password";
+                eyeq.className = "fas fa-eye p-icon-password-eye";
+            }
+        }
+    </script>
+    <!-- Bootstrap Core JS -->
+    <script src="~/assest2/assets/js/popper.min.js"></script>
+    <script src="~/assest2/assets/js/bootstrap.min.js"></script>
+
+    <!-- Sticky sidebar JS -->
+    <script src="~/assest2/assets/plugins/theia-sticky-sidebar/ResizeSensor.js"></script>
+    <script src="~/assest2/assets/plugins/theia-sticky-sidebar/theia-sticky-sidebar.js"></script>
+
+    <!-- Custom Js -->
+    <script src="~/assest2/assets/js/script.js"></script>
+
+</body>
+
+<!-- Mirrored from dleohr.dreamguystech.com/template-2/dleohr-vertical/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Feb 2021 05:45:00 GMT -->
+</html>

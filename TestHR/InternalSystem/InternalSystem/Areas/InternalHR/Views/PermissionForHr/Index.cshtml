@@ -1,0 +1,196 @@
+﻿@model ExplanationHRVm
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+
+
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+        <div class="row ml-md-3 mb-4">
+            <button class="btn btn-primary col-md-2">
+                <a asp-area="InternalHR" asp-controller="PermissionForHr" asp-action="AllExplanationForHr" style="padding: 5px 60px;color:white;">Geri</a>
+            </button>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="form-group row ml-md-2">
+                            <div class="col-md-2">
+                                <label style="color:black;">İşçinin adı:</label>
+                            </div>
+                            <div class="col-sm-10">
+                                <input type="hidden" value="@Model.ExplanationToEmploy.EmplooyeeId" />
+                                <input type="text" value="@(Model.ExplanationToEmploy.Emplooyee.FirstName+" "+Model.ExplanationToEmploy.Emplooyee.Lastname+" "+Model.ExplanationToEmploy.Emplooyee.FatherName) @(Model.ExplanationToEmploy.Emplooyee.GenderId==1 ? "oğlu" : "qızı")" class="form-control input-height" readonly />
+                            </div>
+                        </div>
+
+                        @if (Model.ExplanationToEmploy.Explanation.PermissionTypeId == 1)
+                        {
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Səbəb</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" value="@Model.ExplanationToEmploy.Explanation.Reason" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">İzah</label>
+                                </div>
+
+                                <div class="col-md-10">
+                                    <textarea disabled  rows="5" cols="107"> @Model.ExplanationToEmploy.Explanation.Description </textarea>
+                                    @*<input type="text" value="@Model.ExplanationToEmploy.Explanation.Description" class="form-control input-height" readonly />*@
+                                </div>
+                            </div>
+
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Yazıldığı vaxt</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" value="@Model.ExplanationToEmploy.Explanation.CreatingTime" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Tarixdə</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" value="@Model.ExplanationToEmploy.Explanation.FromDate.ToString("dd-MM-yyyy")" class="form-control input-height" readonly />
+
+                                </div>
+                            </div>
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Saatdan</label>
+                                </div>
+                                <div class="col-md-10">
+
+
+                                    <input type="text" value="@Model.ExplanationToEmploy.Explanation.FromDateForHour.ToString("HH:mm")" class="form-control input-height" readonly />
+
+
+                                </div>
+                            </div>
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Saata qədər</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" value="@Model.ExplanationToEmploy.Explanation.ToDate.ToString("HH:mm")" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Izahatın Növ</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" value="@Model.ExplanationToEmploy.Explanation.PermissionType.Name" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+
+                        }
+                        else
+                        {
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Səbəb</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" value="@Model.ExplanationToEmploy.Explanation.Reason" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">İzah</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" value="@Model.ExplanationToEmploy.Explanation.Description" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Yazıldığı vaxt</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" value="@Model.ExplanationToEmploy.Explanation.CreatingTime" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Tarixdən</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" value="@Model.ExplanationToEmploy.Explanation.FromDate.ToString("dd-MM-yyyy")" class="form-control input-height" readonly />
+
+                                </div>
+                            </div>
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Tarixə</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" value="@Model.ExplanationToEmploy.Explanation.ToDate.ToString("dd-MM-yyyy")" class="form-control input-height" readonly />
+
+                                </div>
+                            </div>
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Izahatın Növ</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" value="@Model.ExplanationToEmploy.Explanation.PermissionType.Name" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+
+                        }
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

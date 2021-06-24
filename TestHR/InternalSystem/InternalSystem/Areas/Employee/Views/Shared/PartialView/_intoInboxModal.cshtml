@@ -1,0 +1,38 @@
+﻿
+@model DepContactVM
+<div class="modal-header">
+    <h5 class="modal-title">Mesaj</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <form method="post" asp-action="AnswerMessage" asp-controller="Employee" asp-area="Employee">
+                <div class="form-group row">
+                    <label class="col-xl-2 col-lg-2 col-md-12 text-black-50" for="departmentBoss">Kimdən</label>
+                    <input readonly asp-for="From" class="form-control col-xl-10 col-lg-10  col-md-12" id="fromId" />
+                    <input readonly type="hidden" asp-for="Id" class="form-control col-xl-10 col-lg-10  col-md-12" id="fromId" />
+                </div>
+                <div class="form-group row">
+                    <label class="col-xl-2 col-lg-2 col-md-12 text-black-50" for="departmentBoss">Mövzu</label>
+                    <input readonly asp-for="Subject"  class="form-control col-xl-10  col-lg-10  col-md-12" id="subjectId" />
+                </div>
+                <div class="input-group row">
+                    <label class="col-xl-2 col-lg-2 col-md-12 text-black-50" for="departmentBoss">Mesaj</label>
+                    <textarea readonly asp-for="Message" class="form-control col-xl-10  col-lg-10  col-md-12" id="mesajId"></textarea>
+                </div>
+                <div class="input-group row mt-2">
+                    <label class="col-xl-2 col-lg-2 col-md-12 text-black-50" for="departmentBoss">Cavab</label>
+                    <textarea required asp-for="Answer" class="form-control col-xl-10 col-lg-10 col-md-12" id="answerMesajId" placeholder="Cavab yazın"></textarea>
+                    <span class="text-danger text-bold col-xl-12 col-lg-12 col-md-12" asp-validation-for="Answer"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="sentAnswerMessage(@Model.Id)">Göndər</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Bağla</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

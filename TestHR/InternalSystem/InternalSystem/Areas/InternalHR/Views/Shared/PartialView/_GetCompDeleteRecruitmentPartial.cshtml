@@ -1,0 +1,35 @@
+﻿@model RecruitmentCandidateVM
+@foreach (var cm in Model.ComputerToEmployees)
+{
+    <div class="col-md-6">
+        <div class="line-item-property_____field line-item-property_____computerSkill">
+            <div class="form-group row ml-md-5">
+                <div class="col-md-4">
+                    <label for="computerSkill">Kompyuter bilikləri:</label>
+                </div>
+                <div class="col-md-8">
+                    <input type='text' value='@cm.ComputerSkillToLevels.ComputerSkillsName.Name' readonly class='form-control input-height' />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="line-item-property_____field line-item-property_____level">
+            <div class="form-group row ml-md-5">
+                <div class="col-md-3">
+                    <label for="computerLevel">Bilik səviyyəsi:</label>
+                </div>
+                <div class="col-md-4">
+                    <input type='text' value='@cm.ComputerSkillToLevels.ComputerLevels.Name' readonly class='form-control input-height' />
+                </div>
+                <div class='col-md-2 offset-1'>
+                    <div class='row'>
+                        <button type='button' onclick='modalComputerDelete(@cm.Emplooyee.Id,@cm.ComputerSkillToLevels.ComputerSkillsName.Id)' class='btn btn-danger' style='padding: 0px 12px;'>Sil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+}

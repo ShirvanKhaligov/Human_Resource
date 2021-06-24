@@ -1,0 +1,84 @@
+﻿@model DeptAndSubDeptVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+
+        <br>
+        <br>
+        <a asp-area="Admin" asp-controller="AddSubDep" asp-action="Index" class="col-md-2 btn btn-primary "><i class="fas fa-long-arrow-alt-left"></i>  Geri</a>
+        <div class=" ">
+            <br><br>
+            <form method="post">
+                <div class="form-group row ml-md-4">
+                    <label for="departmentName" class="col-md-2">Şirkətin adı:</label>
+                    <div class="form-group col-md-5">
+                        <select onchange="getDepartment()" id="departmentSelectedId" name="CompanyId" class="form-control">
+                            <option disabled selected>Seç</option>
+                            @foreach (var company in Model.Companiess)
+                            {
+                                <option value="@company.Id">@company.Name</option>
+                            }
+                        </select>
+                        <span class="text-danger" asp-validation-for="@Model.Companies.Name"></span>
+
+                    </div>
+                </div>
+                <div class="form-group row ml-md-4">
+                    <label for="DepartmentName" class="col-md-2">Şöbənin adı:</label>
+                    <div class="form-group col-md-5" id="DepartmentDiv">
+                        <select class="form-control" name="depId">
+                            <option selected disabled>Seç</option>
+                        </select>
+                        <span class="text-danger" asp-validation-for="@Model.Department.Name"></span>
+                    </div>
+                </div>
+
+
+                <div class="form-group row ml-md-4">
+                    <label asp-for="@Model.SubDepartment.Name" for="subdepartmentName" class="col-md-2">Alt şöbənin adı:</label>
+                    <div class="col-md-5">
+                        <input asp-for="@Model.SubDepartment.Name" type="text" style="height: 35px;" class="form-control" id="departmentName">
+                        <span asp-validation-for="@Model.SubDepartment.Name" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mx-auto">
+                        <input style="width: 300px;" class="btn btn-success" type="submit" value="Əlavə et" />
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <!--content-wrapper-->
+</div>
+
+@section scripts{
+    <script>
+        //Create Action.Department load in ajax
+        function getDepartment() {
+                var e = document.getElementById("departmentSelectedId");
+                var selectedDepartment = e.options[e.selectedIndex].value;
+                console.log(selectedDepartment)
+                $.ajax({
+                type: "get",
+                url: "@Url.Action("CreateDepLoad", "AddSubDep")",
+                data: { id: selectedDepartment },
+                success: function (respoonse) {
+                    $("#DepartmentDiv").html(respoonse)
+                    console.log("success")
+                    console.log(respoonse)
+                },
+                error: function (respoonse) {
+                    console.error("error - suceess")
+                    console.error(respoonse)
+                }
+            })
+        }
+    </script>
+}

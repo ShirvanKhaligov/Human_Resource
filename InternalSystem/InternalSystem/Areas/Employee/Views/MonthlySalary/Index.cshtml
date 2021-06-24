@@ -1,0 +1,209 @@
+﻿@model MonthlySalary
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Employee/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<style>
+
+    th.rotate {
+        height: 110px;
+        white-space: nowrap;
+        position: relative;
+    }
+
+        th.rotate > div {
+            transform: translate(25px, 51px) rotate(90deg);
+            position: absolute;
+            width: 0px;
+            top: -52px;
+            left: -10px;
+        }
+
+            th.rotate > div > span {
+                padding: 7px 7px;
+            }
+
+    th {
+        color: blue;
+        font-weight: 100;
+        font-weight: bold;
+    }
+
+    .saturdey {
+        background-color: yellow;
+    }
+
+    .sunday {
+        background-color: green
+    }
+
+    .holiday {
+        background-color: blue
+    }
+
+    .Mezuniyyet {
+        background-color: darkmagenta
+    }
+</style>
+
+
+<!-- Content Wrapper. Contains page content -->
+
+
+<div class="content-wrapper">
+
+    <div class="container-fluid ">
+        <br>
+        <div class="row">
+            <div class="card bg-gray-light">
+                <div class="card-header">
+                    <p style="text-align: center;font-size: 23px;color: green">Əmək haqqı</p>
+                    <ul>
+                        @{
+                            var myday = DateTime.Now.DayOfWeek;
+                            var season = DateTime.Now.Kind;
+
+                            @if (myday == (DayOfWeek)3)
+                            {
+                                <li>
+                                    3 cu gun
+                                </li>
+                            }
+                            @*var nowMonth = DateTime.Now.Month;
+            var selectedMonth = date.Month;*@
+                            var date = DateTime.Now;
+                            @*<li>@DateTime.Now.DayOfWeek</li>*@
+                            var info = TimeZoneInfo.FindSystemTimeZoneById("Azerbaijan Standard Time");
+                            var mydays = DateTime.DaysInMonth(date.Year, date.Month);
+                            List<string> ggg = new List<string>();
+                            var daylisf = DateTime.Now.Month;
+                            for (int i = 1; i <= mydays; i++)
+                            {
+
+                                ggg.Add($"{date.Month}/{i}/{date.Year}");
+                            }
+                        }
+                        <li>@DateTime.Now.ToString("dd/MMMM/yyyy")</li>
+                        <li>@ViewBag.currenthrcompany</li>
+
+                       
+                        @*@foreach (var item in Model.Calendars)
+        {
+            var monthcacle = DateTime.Now.Month;
+            var yearcacle = DateTime.Now.Year;
+            var tren = DateTime.Today;
+        }*@
+                        <li>@ViewBag.Mnths</li>
+                        @*@foreach (var item in DateTime.IsLeapYear)
+        {
+        }*@
+                        @{ }
+                    </ul>
+
+                </div>
+
+                <div class="card-body">
+
+                    <table class="table table-responsive  table-bordered ">
+                        <thead>
+                            <tr>
+                                <th class="rotate">№</th>
+                                <th class="rotate" style="text-align:center">ASA</th>
+                                <th class="rotate"><div><span>Fin kod</span></div></th>
+                                <th class="rotate"><div><span>Vəzifə</span></div></th>
+                                <th><div><span>Əmək haqqı</span></div></th>
+                                <th class="rotate"><div><span>iş saatı</span></div></th>
+                                <th class="rotate"><div><span>Faktiki saat</span></div></th>
+                                <th class="rotate"><div><span>İş günü</span></div></th>
+                                <th class="rotate"><div><span>İşə qəbul</span></div></th>
+                                <th class="rotate"><div><span>Ştat</span></div></th>
+                                <th class="rotate"><div><span>İşdən çıxma</span></div></th>
+                                <th class="rotate"><div><span>Əlavə saat</span></div></th>
+                                <th class="rotate">Hesablanıb</th>
+                                <th class="rotate"><div><span>Overtime</span></div></th>
+                                <th class="rotate"><div><span>Mükafat</span></div></th>
+                                <th><div><span>Məzuniyyət</span></div></th>
+                                <th><div><span>Gəlir vergisi (0 %)</span></div></th>
+                                <th class="rotate"><div><span>Pen Fon - 3%</span></div></th>
+                                <th class="rotate"><div><span>İ.S.H. 0,5%</span></div></th>
+                                <th class="rotate"><div><span>Pen Fondu</span></div></th>
+                                <th class="rotate"><div><span>İ.S.H. 0,5%</span></div></th>
+                                <th class="rotate"><div><span>Tutuldu</span></div></th>
+                                <th class="rotate"><div><span>Ödənilməlidi</span></div></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{ var year = DateTime.Now.Year;
+                                var month = DateTime.Now.Month;
+                                var MonthDayCount = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
+                                //var currentmonth = Model.YearToMonth.Month.MonthNumber;
+                                //var currentyear=Model.YearToMonth.Year.Years;
+                            }
+                            @{ int count = 1;}
+                            @foreach (var Emp in Model.CommandsToEmployees.Take(2))
+                            {
+                                @foreach (var item in Model.Calendars)
+                                {
+                                    if (item.FromDate <= DateTime.Now && DateTime.Now <= item.ToDate)
+                                    {
+                            <tr>
+                                <th>@count</th>
+                                <td>@(Emp.Emplooyee.Lastname+" "+Emp.Emplooyee.FirstName + " "+Emp.Emplooyee.FatherName) @((Emp.Emplooyee.GenderId==1) ? "oğlu" : "qızı")</td>
+                                <td>@Emp.Emplooyee.FinCode</td>
+                                <td>@Emp.Emplooyee.Positions.Name</td>
+                                <td>@Emp.Emplooyee.Salary</td>
+                                <td>@item.GeneralWorkHour.Value</td>
+                                <td>160</td>
+                                <td>@item.NormativeDay</td>
+                                <td>@Emp.CreatedDate.Date.ToString("dd-MMM-yyyyy")</td>
+                                <td>@Emp.Emplooyee.WorkTimeOfType.Name</td>
+                                <td></td>
+
+                                <td>@MonthDayCount</td>
+                                <td>@(Emp.CommandId!=1 ? "isleyir" :"-")</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>@Emp.Emplooyee.Salary</td>
+                                <td>2ee</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>1.63</td>
+                                <td>1.22</td>
+                                <td>5.44</td>
+                               
+                            </tr>
+                                        count++;
+                                    }
+                                }
+
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!--content-wrapper-->
+    </div>
+
+    <!--Wrapper end-->
+</div>
+
+
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+</aside>

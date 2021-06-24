@@ -1,0 +1,129 @@
+﻿@model CalendarVm
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+        <h1 style="text-align:center">Aylar</h1>
+        <form method="post">
+
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Ay :</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" asp-for="CalendarName" class="form-control input-height" />
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="CalendarName"></span>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Tarixdən:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="date" value="" class="form-control input-height"
+                           asp-for="FromDate">
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="FromDate"></span>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Tarixdən :</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="date" value="" class="form-control input-height"
+                           asp-for="ToDate">
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="ToDate"></span>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Iş saatı :</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="number" value="" class="form-control input-height"
+                           asp-for="GeneralWorkHour">
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="GeneralWorkHour"></span>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Gün  :</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="number" value="" class="form-control input-height"
+                           asp-for="NormativeDay">
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="NormativeDay"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <button style="float:left;" class="btn btn-danger col-md-3 mx-auto">
+                    <a href="#" style="padding: 5px 100px;color:white;">İmtina</a>
+                </button>
+                <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">Yadda saxla</button>
+            </div>
+        </form>
+
+
+
+
+        <br><br><br>
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <div>
+                    <table id="dataAllSearch" class="table table-hover table-responsive-md mytable">
+                        <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                            <tr class="All_Index_View_Change_Tr">
+                                <th scope="col">Sıra №</th>
+                                <th scope="col">AY</th>
+                                <th scope="col">Tarixdən</th>
+                                <th scope="col">Tarixədək</th>
+                                <th scope="col">İş Saatı</th>
+                                <th scope="col">İş günü sayı</th>
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center;background:#efefef;" class="All_Index_View_Change_Tbody">
+                            @{ int count = 1; }
+                            @if (Model.Calendars != null)
+                            {
+                                @foreach (var command in Model.Calendars)
+                                {
+                                    <tr>
+                                        <td scope="row">@count</td>
+                                        <td>@(command.CalendarName)</td>
+                                        <td>@command.FromDate.ToString("dd/MM/yyyy")</td>
+
+
+
+                                        <td>@command.ToDate.ToString("dd/MM/yyyy")</td>
+
+                                        <td>@(command.GeneralWorkHour)</td>
+                                        <td>@command.NormativeDay</td>
+
+                                    </tr>
+                                    count++;
+                                }}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+@section scripts{
+    <script>
+        //$('.mytable').dataTable({
+        //    "pageLength": 100
+        //});
+        //                            //$('#dataAllSearch').dataTable({
+                                    //    "pageLenth": [10, 25, 50, 75, 100]
+                                    //});
+    </script>
+}
+

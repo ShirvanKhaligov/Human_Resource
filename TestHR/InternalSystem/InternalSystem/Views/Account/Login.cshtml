@@ -1,0 +1,144 @@
+﻿@model LoginVM
+@{ ViewData["Title"] = "İnsan Resursları"; }
+
+<style>
+    .p-icon-password-eye {
+        position: absolute;
+        top: 11px;
+        right: 10px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+</style>
+<img src="~/4BI.gif" style="position: relative;width:100%;margin-top:-27px;height:964px;" />
+<div class="main-wrapper" style="position: absolute;width:100%;top:0">
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <div class="auth-wrapper d-flex no-block justify-content-center align-items-center ">
+        <div class="auth-box border-top border-secondary" style="background:none;">
+            <div id="loginform">
+                <div class="text-center">
+                    <span class="db"><img src="~/assets/images/logo4.png" alt="logo" /></span>
+                </div><br />
+
+                <!-- Form -->
+                <form class="form-horizontal m-t-20" id="loginform" method="post">
+                    <div class="row p-b-30">
+                        <div class="col-12">
+                            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3 justify-content-end d-flex">
+                                <div class="input-group-prepend" style="min-height: 37%">
+                                    <span class="input-group-text bg-success text-white" id="basic-addon1"><i class="fas fa-user"></i></span>
+                                </div>
+
+                                <input asp-for="Email" type="text" class="form-control form-control-lg" style="width:94%;" placeholder="İstifadəçi adı" id="username">
+                            </div>
+                            <span class="text-danger text-bold" asp-validation-for="Email"></span>
+                            <div class="mb-3 justify-content-end d-flex" style="position:relative;">
+                                <div class="input-group-prepend" style="min-height: 37%">
+                                    <span class="input-group-text bg-warning text-white" id="basic-addon2"><i class="fas fa-pencil-alt"></i></span>
+                                </div>
+                                <input asp-for="Password" type="password" class="form-control form-control-lg" style="width:94%;" placeholder="Şifrə" id="password" aria-label="Password" aria-describedby="basic-addon1">
+
+                                <i id="eyeq" class="fas fa-eye p-icon-password-eye" onclick="showpwq();"></i>
+                            </div>
+                            <p style="display:none;background-color:white;color:red" id="text">CapsLock aktivdir</p>
+                            <span class="text-danger text-bold" asp-validation-for="Password"></span>
+                            @*@if (ViewData["Sent meesage"] == null)
+                                {
+                                    <span class="text-danger text-bold" asp-validation-for="Password"></span>
+                                }*@
+                        </div>
+                    </div>
+                    <div class="row border-top border-secondary">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <div class="p-t-20">
+                                    <button class="btn btn-info" id="to-recover" type="button"><i class="fa fa-lock m-r-5"></i> Parolu unutmusan?</button>
+                                    <button class="btn btn-success float-right" type="submit">Daxil ol</button>
+                                </div>
+                            </div>
+                        </div>
+                        @if (ViewData["notExists"] != null)
+                        {
+            <p class="text-danger text-bold">@ViewData["notExists"]</p>}
+                        @if (ViewData["Sent meesage"] != null)
+                        {
+            <p class="text-success text-bold">@ViewData["Sent meesage"]</p>}
+                        @if (ViewData["successfullyChange"] != null)
+                        {
+            <p class="text-success text-bold">@ViewData["successfullyChange"]</p>}
+                    </div>
+                </form>
+            </div>
+            <div id="recoverform">
+                <div class="text-center">
+                    <span class="text-white">Aşağıdakı e-poçt adresinizi daxil edin və sizə parolunuzu necə bərpa edəcəyinizi göndərəcəyik.</span>
+                </div>
+                <div class="row m-t-20">
+                    <!-- Form -->
+                    <form method="post" asp-controller="Account" asp-action="ForgotPassword" class="col-12">
+                        <!-- email -->
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-danger text-white" id="basic-addon1"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input asp-for="Email" type="text" class="form-control form-control-lg" placeholder="Email ünvanı" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <span class="text-danger text-bold" asp-validation-for="Email"></span>
+                        <!-- pwd -->
+                        <div class="row m-t-20 p-t-20 border-top border-secondary">
+                            <div class="col-12">
+                                <a class="btn btn-success" href="#" id="to-login" name="action">Geri qayıt</a>
+                                <button class="btn btn-info float-right" type="submit" name="action">Bərpa et</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section scripts{
+    <script>
+
+
+
+        var input = document.getElementById("password");
+        var text = document.getElementById("text");
+
+        input.addEventListener("keyup", function (event) {
+
+            if (event.getModifierState("CapsLock")) {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none"
+            }
+        });
+    </script>
+
+    <script>
+
+        var eyeq = document.getElementById("eyeq");
+        function showpwq() {
+            var pw = document.getElementById('password');
+            if (pw.type == "password") {
+                pw.type = "text";
+                eyeq.className = "fas fa-eye-slash p-icon-password-eye";
+            }
+            else {
+                pw.type = "password";
+                eyeq.className = "fas fa-eye p-icon-password-eye";
+            }
+        }
+    </script>
+}
+

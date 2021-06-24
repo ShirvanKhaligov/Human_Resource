@@ -1,0 +1,67 @@
+﻿@model AllModelVM
+@{
+    ViewData["Title"] = "Departamentlər";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+<div class="content-wrapper">
+    <div class="container-fluid ">
+        <h2 style="text-align:center">Şöbələrin Siyahisi</h2>
+        <div class="row pt-4 ml-2 mr-2">
+            @foreach (var item in Model.DepartmentToCompanies)
+            {
+                <div class="col-lg-3 col-6">
+                    <!-- small box -->
+                    <div class="small-box " style="background-color:#2590d3 !important">
+                        <div class="inner">
+
+                            <h6 style="color:white !important">@item.Department.Name</h6>
+                            @if (item.MenegerId != null)
+                            {
+                                <p style="color:white !important">@("Şöbə müdiri: "+item.Meneger.FirstName +" "+ item.Meneger.Lastname)</p>
+                            }
+                            else
+                            {
+                                <p style="color:powderblue">Şöbənin müdiri yoxdur </p>
+                            }
+
+
+
+
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-user"></i>
+                        </div>
+
+                        <a   asp-action="Index" asp-controller="Employee" asp-area="InternalHR" asp-route-id="@item.DepartmentId" class="small-box-footer"> <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            }
+
+        </div>
+
+        <div id="app" class="row mt-3"></div>
+
+    </div>
+</div>

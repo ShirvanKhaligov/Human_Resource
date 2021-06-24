@@ -1,0 +1,116 @@
+﻿@model InformationVM
+@{ ViewData["Title"] = "Information"; }
+
+
+
+
+<div class="row">
+    <div class="col-xl-4 col-lg-6 col-md-6 d-flex">
+        <div class="card flex-fill ctm-border-radius shadow-sm grow">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Əsas Məlumatlarım</h4>
+            </div>
+            <div class="card-body text-center">
+                <p class="card-text mb-3"><span class="text-primary">Adı : </span><b>@Model.AppUser.Emplooyee.FirstName</b></p>
+                <p class="card-text mb-3"><span class="text-primary">Soyad : </span>@Model.AppUser.Emplooyee.Lastname</p>
+                <p class="card-text mb-3"><span class="text-primary">Ata adı : </span>@Model.AppUser.Emplooyee.FatherName</p>
+                <p class="card-text mb-3"><span class="text-primary">Email : </span>@Model.AppUser.Emplooyee.Email</p>
+                <p class="card-text mb-3"><span class="text-primary">Istifadəçi adı :</span>@Model.AppUser.Emplooyee.FirstName</p>
+                <p class="card-text mb-3"><span class="text-primary">Doğum günü :</span>@Model.AppUser.Emplooyee.Birthday.ToString("dd/MM/yyyy") </p>
+                <p class="card-text mb-3"><span class="text-primary">Cinsi : </span>@Model.AppUser.Emplooyee.Gender.Name</p>
+                <p class="card-text mb-3"><span class="text-primary">Ünvan :</span> @Model.AppUser.Emplooyee.LivingAdress</p>
+                <a href="javascript:void(0)" class="btn btn-theme ctm-border-radius text-white btn-sm" data-toggle="modal" data-target="#add_basicInformation"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                <a href="javascript:void(0)" class="btn btn-theme ctm-border-radius text-white btn-sm" data-toggle="modal" data-target="#edit_basicInformation"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    @if (Model.AppUser != null)
+    {
+<div class="col-xl-4 col-lg-6 col-md-6 d-flex">
+    <div class="card flex-fill  ctm-border-radius shadow-sm grow">
+        <div class="card-header">
+            <h4 class="card-title mb-0">Əlavə Məlumatlarım</h4>
+        </div>
+        <div class="card-body text-center">
+
+            @if (Model.AppUser.Emplooyee.Positions != null)
+            {
+                
+                        <p class="card-text mb-3"><span class="text-primary">Vəzifə : </span>@Model.AppUser.Emplooyee.Positions.Name</p>
+                        <p class="card-text mb-3"><span class="text-primary">Alt-departament : </span>@Model.AppUser.Emplooyee.Positions.SubDepartment.Name</p>
+                        <p class="card-text mb-3"><span class="text-primary">Departament : </span>@Model.AppUser.Emplooyee.Positions.SubDepartment.DepartmentToCompany.Department.Name</p>
+                
+               
+
+                                                <p class="card-text mb-3"><span class="text-primary">Maaş : </span>@Model.AppUser.Emplooyee.Salary</p>
+            }
+            else
+            {
+                             <p class="card-text mb-3"><span class="text-primary">Vəzifə : </span>Şöbə Müdiri</p>
+                              <p class="card-text mb-3"><span class="text-primary">Departament : </span>@Model.DepartmentToCompanyy.Department.Name</p>
+                            <p class="card-text mb-3"><span class="text-primary">Maaş : </span>@Model.AppUser.Emplooyee.Salary</p>
+            }
+            <a href="javascript:void(0)" class="btn btn-theme ctm-border-radius text-white btn-sm" data-toggle="modal" data-target="#add_Contact"><i class="fa fa-plus" aria-hidden="true"></i></a>
+            <a href="javascript:void(0)" class="btn btn-theme ctm-border-radius text-white btn-sm" data-toggle="modal" data-target="#edit_Contact"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</div>
+    }
+    
+
+    @if (Model.EducationsToEmployee != null)
+    {
+        foreach (var edu in Model.EducationsToEmployee)
+        {
+<div class="col-xl-4 col-lg-12 col-md-12">
+    <div class="row">
+        <div class="col-xl-12 col-lg-6 col-md-6 d-flex">
+            <div class="card ctm-border-radius shadow-sm grow flex-fill">
+                <div class="card-header">
+                    <h4 class="card-title mb-0">@edu.Education.Profession.UniFaculty.EducationTypeToUniversity.Universities.Name</h4>
+                </div>
+                <div class="card-body text-center">
+                    <p class="card-text mb-3"><span class="text-primary">Fakultə : </span>@edu.Education.Profession.UniFaculty.Name</p>
+                    <p class="card-text mb-3"><span class="text-primary">Ixtisas : </span>@edu.Education.Profession.Name</p>
+                    <p class="card-text mb-3"><span class="text-primary">Qəbul balı : </span>@edu.Education.AcceptHoney</p>
+                    <p class="card-text mb-3"><span class="text-primary">Qəbul tarixi : </span>@edu.Education.EnteringTime.ToString("dd/MM/yyyy")</p>
+                    <p class="card-text mb-3"><span class="text-primary">Bitmə tarixi : </span>@edu.Education.FinishTime.ToString("dd/MM/yyyy")</p>
+
+                    <a href="javascript:void(0)" class="btn btn-theme ctm-border-radius text-white btn-sm" data-toggle="modal" data-target="#edit_Dates"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>}
+}
+    @if (Model.DeviceToEmployees != null)
+    {
+        foreach (var item in Model.DeviceToEmployees)
+        {
+<div class="col-xl-4 col-lg-6 col-md-6 d-flex">
+    <div class="card ctm-border-radius shadow-sm grow flex-fill">
+        <div class="card-header">
+            <h4 class="card-title d-inline-block mb-0">@((item.Device.DevicesType.Name))</h4>
+        </div>
+        <div class="card-body">
+            <div class="input-group mb-3">
+                <input value="@(item.Device.GivingTime.ToString("dd/MM/yyyy")+" - tarixindən")" readonly class="form-control datetimepicker date-enter" type="text" placeholder="Add Start Date">
+                <div class="input-group-append">
+                    <button class="btn btn-theme text-white" type="button"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input value="@((item.Device.Status==true)?"Cari":"Qaytarılıb")" readonly class="form-control " type="text" placeholder="Add Visa Expiry Date">
+                <div class="input-group-append">
+                    <button class="btn btn-theme text-white" type="button"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="javascript:void(0)" class="btn btn-theme ctm-border-radius text-white button-1">*</a>
+            </div>
+        </div>
+    </div>
+</div>}
+
+}
+</div>

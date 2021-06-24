@@ -1,0 +1,111 @@
+﻿@model HrInformationImageVM
+
+@{
+    ViewData["Title"] = "Information";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+<div class="content-wrapper" style="min-height: 100%;background-color:#fff; color:black;">
+    <div class="container-fluid">
+        <br>
+        <br>
+        <div class="">
+            <br><br>
+            <form method="post" enctype="multipart/form-data" style="padding: 0px 50px;">
+                <div class="form-group row ">
+                    <div class="col-md-2">
+                        <label asp-for="AppUser.Name" class="label-font" for="name"> Adı</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input asp-for="AppUser.Name" class="form-control input-height" type="text">
+                        <span class="text-danger" asp-validation-for="AppUser.Name"></span>
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <div class="col-md-2">
+                        <label asp-for="AppUser.Surname" class="label-font" for="name"> Soyadı</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input asp-for="AppUser.Surname" class="form-control input-height" type="text">
+                        <span class="text-danger" asp-validation-for="AppUser.Surname"></span>
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <div class="col-md-2">
+                        <label asp-for="AppUser.FatherName" class="label-font" for="name"> Ata adı</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input asp-for="AppUser.FatherName" class="form-control input-height" type="text">
+                        <span class="text-danger" asp-validation-for="AppUser.FatherName"></span>
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <div class="col-md-2">
+                        <label class="label-font" for="name">Mail</label>
+                    </div>
+                    <div class="col-md-5">
+                        @*<input readonly asp-for="Email" class="form-control input-height">*@
+                        <p>@Model.AppUser.Email</p>
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <div class="col-md-2">
+                        <label class="label-font" for="name">Şəkil</label>
+                    </div>
+                    <div class="col-md-5">
+                        @if (Model.Emplooyee == null)
+                        {
+                            <img src="~/allUserImg/@Model.AppUser.Image" style="width:150px" />
+                        }
+                        else
+                        {
+                            <img src="~/allUserImg/@Model.Emplooyee.Image" style="width:150px" />
+                        }
+                        <input name="Image" type="file" accept="image/*">
+                        @if (ViewData["NoImage"] != null)
+                        {
+                            <p class="text-danger text-bold">@ViewData["NoImage"]</p>
+                        }
+                        @if (ViewData["Image_error"] != null)
+                        {
+                            <p class="text-danger text-bold">@ViewData["Image_error"]</p>
+                        }
+                        @if (ViewData["Image_error_size"] != null)
+                        {
+                            <p class="text-danger text-bold">@ViewData["Image_error_size"]</p>
+                        }
+
+                        <div asp-validation-summary="ModelOnly"></div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-9 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-md btn-success">Dəyiş</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

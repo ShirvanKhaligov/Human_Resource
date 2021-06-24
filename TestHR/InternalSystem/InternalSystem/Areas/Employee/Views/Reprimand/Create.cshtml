@@ -1,0 +1,119 @@
+﻿@model CommandSurnameChangeVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+        <form method="post" enctype="multipart/form-data">
+            <div style="height: 30px"></div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="EmplooyeeId">İşçinin adı:</label>
+                </div>
+                <div class="col-sm-7">
+                    <select style="padding: 0px" class="form-control input-height select2" asp-for="EmplooyeeId">
+                        <option selected disabled>Seçin</option>
+                        @foreach (var emp in Model.Emplooyees)
+                        {
+                            <option value="@emp.Id">@(emp.FirstName+" "+emp.Lastname+" "+emp.FatherName+" qızı") @("Ş/V("+emp.IdCard+")")</option>
+                        }
+                    </select>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="EmplooyeeId"></span>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Sənədin adı:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" value="Töhmət(Əmək intizamının pozulması)" class="form-control input-height" readonly />
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Vaxt:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="date" class="form-control input-height" asp-for="CreateDate">
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="CreateDate"></span>
+                </div>
+            </div>
+
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2 ">
+                    <label style="color:black;">Əmrin skan forması:</label>
+                </div>
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="img-fluid" src="~/dist/img/pdf.png" alt="AdobePdf" />
+                            <input asp-for="Photo" id="pngFile" type="file" accept=".pdf">
+                            <span class="text-danger text-bold" style="font-size:14px; " asp-validation-for="Photo"></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <button style="float:left;" id="removeBtn" class="btn btn-danger col-md-3 mx-auto">
+                    <a asp-controller="Dashboard" asp-action="Index" style="padding: 5px 100px;color:white;">İmtina</a>
+                </button>
+                <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">Yadda saxla</button>
+            </div>
+        </form>
+        <br><br><br>
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <div id="deviceTableDiv">
+                    <table id="dataAllSearch" class="table table-hover table-responsive-md">
+                        <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                            <tr class="All_Index_View_Change_Tr">
+                                <th scope="col">Sıra №</th>
+                                <th scope="col">Soyadı,Adı,Ata adı</th>
+                                <th scope="col">Tarix</th>
+                                <th scope="col">Redaktə et</th>
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center;background:#efefef;" class="All_Index_View_Change_Tbody">
+                            @{
+                                int count = 1;
+                            }
+                            @if (Model.CommandsToEmployees != null)
+                            {
+                                @foreach (var dvc in Model.CommandsToEmployees)
+                                {
+                                    <tr>
+                                        <td scope="row">@count</td>
+                                        <td>@(dvc.Emplooyee.Lastname+" "+ dvc.Emplooyee.FirstName+" "+ dvc.Emplooyee.FatherName + " qızı")</td>
+                                        <td>@dvc.CreatedDate.ToString("dd-MMM-yyyy")</td>
+                                        <td>
+                                            <a class="btn btn-primary" style="padding:6px 18px;color:white;" title="Detal">
+                                                <i class="fas fa-info"></i>
+                                            </a>
+                                            <a asp-area="Employee" asp-controller="Reprimand" asp-action="Edit" asp-route-id="@dvc.Id" class="btn btn-warning" style="color:white;" title="Dəyiş">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+
+                                        </td>
+                                    </tr>
+                                    count++;
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--content-wrapper-->
+</div>
+
+@section scripts{
+    <script>
+        $('.select2').select2();
+    </script>
+
+}

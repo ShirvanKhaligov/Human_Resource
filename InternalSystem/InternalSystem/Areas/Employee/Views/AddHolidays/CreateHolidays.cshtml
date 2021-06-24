@@ -1,0 +1,118 @@
+﻿@model HolidaysOfcalendarVM
+@{
+    ViewData["Title"] = "CreateHolidays";
+}
+
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+        <form method="post">
+
+
+
+            <div style="height: 30px"></div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="EmplooyeeId">Təqvim :</label>
+                </div>
+                <div class="col-sm-7">
+                    <select style="padding: 0px" class="form-control input-height select2" asp-for="CalendarId">
+                        <option selected disabled>Seçin</option>
+
+                        @foreach (var cal in Model.Calendars)
+                        {
+                            <option value="@cal.Id">@(cal.CalendarName +" "+cal.FromDate.ToString("dd/MM/yyyy")+" - dan "+cal.ToDate.ToString("dd/MM/yyyy") + " - dək "+cal.GeneralWorkHour+" saat")</option>
+                        }
+                    </select>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="CalendarId"></span>
+                </div>
+            </div>
+
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Tarix:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="date" value="" class="form-control input-height"
+                           asp-for="HolidayDate">
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="HolidayDate"></span>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Tətilin məzmunu:</label>
+                </div>
+                <div class="col-md-7">
+                    <textarea cols="2" rows="2"
+                              type="text" asp-for="HolidayName"
+                              class="form-control"></textarea>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="HolidayName"></span>
+                </div>
+            </div>
+           
+            <div class="row">
+                <button style="float:left;" class="btn btn-danger col-md-3 mx-auto">
+                    <a href="#" style="padding: 5px 100px;color:white;">İmtina</a>
+                </button>
+                <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">Yadda saxla</button>
+            </div>
+
+
+
+
+        </form>
+        <br><br><br>
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <div>
+                    <table id="dataAllSearch" class="table table-hover table-responsive-md">
+                        <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                            <tr class="All_Index_View_Change_Tr">
+                                <th scope="col">Sıra №</th>
+                                <th scope="col">Bayram adı</th>
+                                <th scope="col"> Tarixdə</th>
+                                <th scope="col">Ay</th>
+                                @*<th scope="col">Gün</th>
+                                <th scope="col">Növ</th>*@
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center;background:#efefef;" class="All_Index_View_Change_Tbody">
+                            @{ int count = 1; }
+                            @if (Model.HolidayOfCalendars != null)
+                            {
+                                @foreach (var command in Model.HolidayOfCalendars)
+                                {
+                                    <tr>
+                                        <td scope="row">@count</td>
+                                        <td>@(command.HolidayName)</td>
+                                        
+                                        <td>@((command.HolidayDate))</td>
+                                        <td>@command.Calendar.CalendarName</td>
+                                       
+
+                                    </tr>
+                                    count++;
+                                }}
+                            else
+                            {
+                                <tr>
+                                    <td>*</td>
+                                    <td>*</td>
+                                    <td>*</td>
+                                    <td>*</td>
+                                    <td>*</td>
+                                    <td>*</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{ 
+<script>
+    $('.select2').select2();
+</script>
+}

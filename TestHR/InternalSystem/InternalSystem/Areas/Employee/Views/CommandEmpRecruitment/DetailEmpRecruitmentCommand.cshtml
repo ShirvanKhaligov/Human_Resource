@@ -1,0 +1,207 @@
+﻿@model CommandEmployeeVM
+@{ ViewData["Title"] = "DetailEmpRecruitmentCommand"; }
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+
+    <div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+        <div class="container-fluid">
+            <div style="height: 30px"></div>
+            <div class="row ml-md-3 mb-4">
+                <button class="btn btn-primary col-md-2">
+                    <a asp-controller="CommandEmpRecruitment" asp-action="CreateEmpRecruitmentCommand" style="padding: 5px 60px;color:white;">Geri</a>
+                </button>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">İşçinin adı:</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="hidden" value="@Model.CommandsToEmployee.EmplooyeeId" id="detailEmpName" />
+                                    <input type="text" value="@(Model.CommandsToEmployee.Emplooyee.FirstName+" "+Model.CommandsToEmployee.Emplooyee.Lastname+" "+Model.CommandsToEmployee.Emplooyee.FatherName) @(Model.CommandsToEmployee.Emplooyee.GenderId==1 ? "oğlu" : "qızı")" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Sənədin adı</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" value="İşə qəbul" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Qəbul vaxtı</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" value="@Model.CommandsToEmployee.CreatedDate.ToString("D")" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;" for="workType">İş vaxtı növü:</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" value="@Model.CommandsToEmployee.Emplooyee.WorkTimeOfType.Name" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;" for="workType">İşin növü:</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    @if (Model.CommandsToEmployee.Emplooyee.WorkPlaceAddition.Name == "Əsas iş yeri")
+                                    {
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <label style="color:#353030;">Əsas iş yeri</label>
+                                <input type="checkbox" style="width:17px;" readonly checked onclick="this.checked=!this.checked;" />
+                            </div>
+                            <div class="offset-1 col-sm-5">
+                                <label style="color:#353030;">Əlavə iş yeri</label>
+                                <input type="checkbox" style="width:17px;" readonly disabled />
+                            </div>
+                        </div> }
+                                    else if (Model.CommandsToEmployee.Emplooyee.WorkPlaceAddition.Name == "Əlavə iş yeri")
+                                    {
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <label style="color:#353030;">Əsas iş yeri</label>
+                                <input type="checkbox" readonly disabled style="width:17px;" />
+                            </div>
+                            <div class="offset-1 col-sm-5">
+                                <label style="color:#353030;">Əlavə iş yeri</label>
+                                <input type="checkbox" style="width:17px;" readonly checked onclick="this.checked=!this.checked;" />
+                            </div>
+                        </div>}
+                                </div>
+                            </div>
+
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;" for="departmentName">Vergi güzəşti:</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" value="@(Model.TaxBreakToEmplooyee != null ? Model.TaxBreakToEmplooyee.TaxBreak.Name : "Yoxdur")" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Əmək k.(№):</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" value="@(Model.CommandsToEmployee.Emplooyee.WorkBookAdditionId != null ? (Model.CommandsToEmployee.Emplooyee.WorkBookAddition.WorkbookNumber != null ? Model.CommandsToEmployee.Emplooyee.WorkBookAddition.WorkbookNumber : "Yoxdur") : "Yoxdur")" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Müqavilə(№):</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" value="@(Model.CommandsToEmployee.Emplooyee.WorkBookAdditionId != null ? (Model.CommandsToEmployee.Emplooyee.WorkBookAddition.ContractNumber != null ? Model.CommandsToEmployee.Emplooyee.WorkBookAddition.ContractNumber : "Yoxdur") : "Yoxdur")" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">SSN:</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" value="@(Model.CommandsToEmployee.Emplooyee.WorkBookAdditionId != null ? (Model.CommandsToEmployee.Emplooyee.WorkBookAddition.SSNNumber != null ? Model.CommandsToEmployee.Emplooyee.WorkBookAddition.SSNNumber : "Yoxdur") : "Yoxdur")" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Şöbənin adı:</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" value="@Model.CommandsToEmployee.Emplooyee.Positions.SubDepartment.DepartmentToCompany.Department.Name" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+                            <div class="form-group row ml-md-2 mt-5">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Alt şöbənin adı:</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" value="@Model.CommandsToEmployee.Emplooyee.Positions.SubDepartment.Name" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+                            <div class="form-group row ml-md-2">
+                                <div class="col-md-2">
+                                    <label style="color:black;">Vəzifənin adı:</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <input type="text" value="@Model.CommandsToEmployee.Emplooyee.Positions.Name" class="form-control input-height" readonly />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div style="text-align:end;margin-right:15px">
+                        <img src="/allUserImg/@Model.CommandsToEmployee.Emplooyee.Image" style="width:166px; height:250px;" alt="@Model.CommandsToEmployee.Emplooyee.FirstName" />
+                    </div>
+                    <div>
+                        <div class="form-group mt-3">
+                            <div class="col-md-6">
+                                <label style="color:black;">Əmrin skan forması:</label>
+                            </div>
+                            <div class="col-md-12">
+                                <div id="showScanPdfinDetail"></div>
+                                <!--Partial view scan-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section scripts{
+        <script>
+        function getEmpScan() {
+            var emplName = document.getElementById("detailEmpName").value;
+            $.ajax({
+                type: "get",
+                url: "@Url.Action("GetScanPdf", "CommandEmpRecruitment")",
+                data: {
+                    empId: emplName
+                },
+                success: function (respoonse) {
+                    $("#showScanPdfinDetail").html(respoonse)
+                },
+                error: function (respoonse) {
+                }
+            })
+        };
+        getEmpScan();
+        </script>
+    }
+

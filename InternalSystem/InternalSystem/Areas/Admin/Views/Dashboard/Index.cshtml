@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="page-wrapper ">
+    <div style="height: 560px" class="container-fluid">
+        <div class="col-md-12 text-center">
+            <div id="clock"></div>
+        </div>
+        <div class="col-md-12 text-center">
+            @if (ViewData["successfullyChange"] != null)
+            {
+                <p>@ViewData["successfullyChange"]</p>
+            }<p>
+        </div>
+    </div>
+</div>
+

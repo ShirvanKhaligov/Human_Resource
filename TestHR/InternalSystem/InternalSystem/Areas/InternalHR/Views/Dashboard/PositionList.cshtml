@@ -1,0 +1,99 @@
+﻿@model DeptAndSubDeptVM
+@{
+    ViewData["Title"] = "PositionList";
+}
+
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+<div class="content-wrapper" >
+    <h1 style="text-align:center;font-size:4.5rem">VƏZİFƏLƏR</h1>
+    <div class="container-fluid">
+        <div class="card">
+            <div class="row">
+
+
+                <div class="col-md-12 mx-auto" id="positionTableDiv">
+                    <table id="dataAllSearch" style="color:blue" class="table table-hover table-responsive-md ">
+                        <thead style="text-align: center" class="thead-light All_Index_View_Change_Thead "  >
+                            <tr class="All_Index_View_Change_Tr">
+                                <th scope="col">Sıra №</th>
+                                <th scope="col">Vəzifə adı</th>
+                                <th scope="col">Alt şöbənin adı</th>
+                                <th scope="col">Şöbənin adı</th>
+                                <th scope="col">Şirkətin adı</th>
+                              @*//  <th scope="col">Redaktə et:</th>*@
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center" class="All_Index_View_Change_Tbody">
+                            @{ var count = 1; }
+                            @if (Model.Positions.Count() != 0)
+                            {
+                                @foreach (var item in Model.Positions)
+                                {
+                                    <tr>
+                                        <th scope="row">@count</th>
+                                        <td>
+                                            @if (item.Name.Length > 50)
+                                            {@(item.Name.Substring(0, 50) + "...") }
+                                            else
+                                            {
+                                                @item.Name}
+                                        </td>
+                                        <td>@item.SubDepartment.Name</td>
+                                        <td>@item.SubDepartment.DepartmentToCompany.Department.Name</td>
+                                        <td>@item.SubDepartment.DepartmentToCompany.Company.Name</td>
+                                        @*<td>
+                                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary" title="Dəyiş"> <i class="fas fa-edit"></i></a>
+                                            <a onclick="confirmationDeleteForPosition(@item.Id)" class="btn btn-danger" title="Sil"> <i class="fas fa-trash"></i></a>
+                                        </td>*@
+                                    </tr>
+                                    count++;
+
+                                } }
+                            else
+                            {
+                                <tr>
+                                    <th scope="row">0</th>
+                                    <td>Siyahı boşdur</td>
+                                    <td>Siyahı boşdur</td>
+                                    <td>Siyahı boşdur</td>
+                                    <td>Siyahı boşdur</td>
+                                    <td>Siyahı boşdur</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a asp-area="InternalHR" asp-controller="Dashboard" asp-action="Index" class="btn btn-primary col-md-12">Geri</a>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+ 

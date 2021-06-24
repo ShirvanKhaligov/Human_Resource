@@ -1,0 +1,114 @@
+﻿@model RewardCommandVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h2>Detail</h2>
+
+
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+
+        <div style="height: 30px"></div>
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row ml-md-2">
+                            <div class="col-md-4">
+                                <label style="color:black;">İşçinin adı:</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="hidden" value="@Model.RewardToEmployee.EmplooyeeId" id="detailEmpName" />
+                                <input type="text" value="@(Model.RewardToEmployee.Emplooyee.FirstName+" "+Model.RewardToEmployee.Emplooyee.Lastname+" "+Model.RewardToEmployee.Emplooyee.FatherName) @(Model.RewardToEmployee.Emplooyee.GenderId==1 ? "oğlu" : "qızı")" class="form-control input-height" readonly />
+                            </div>
+                        </div>
+                        <div class="form-group row ml-md-2">
+                            <div class="col-md-4">
+                                <label style="color:black;">Sənədin adı</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" value="Mükafat" class="form-control input-height" readonly />
+                            </div>
+                        </div>
+                        <div class="form-group row ml-md-2">
+                            <div class="col-md-4">
+                                <label style="color:black;">Qəbul vaxtı</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="text" value="@Model.RewardToEmployee.CreatedDate.ToString("D")" class="form-control input-height" readonly />
+                            </div>
+                        </div>
+
+                        <div class="form-group row ml-md-2">
+                            <div class="col-md-4">
+                                <label style="color:black;">Əmrin skan for.</label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="col-md-2">
+                                    <div class="row" style="width:175px;">
+                                        <img class="img-fluid" src="~/dist/img/pdf.png" alt="AdobePdf" />
+                                        <div id="RewardScanisShowing" style="margin-top: 10px;"></div>
+                                        <!--Partial view scan-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row ml-md-2">
+                            <div class="col-md-4">
+                                <label style="color:black;" for="workType">İş vaxtı növü:</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" value="Little" class="form-control input-height" readonly />
+                            </div>
+                        </div>
+
+                        <div class="form-group row ml-md-2">
+                            <div class="col-md-4">
+                                <label style="color:black;" for="workType">İşin növü:</label>
+                            </div>
+                            <div class="col-sm-8">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <br>
+                <div class="row ml-md-3">
+                    <button class="btn btn-primary col-md-2">
+                        <a asp-controller="Reaward" asp-action="EmployeeReawrd" asp-area="Employee" style="padding: 5px 60px;color:white;">Geri</a>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+@section scripts{
+    <script>
+        function getEmpScan() {
+            var emplName = document.getElementById("detailEmpName").value;
+            $.ajax({
+                type: "get",
+                url: "@Url.Action("GetRewardScan", "Reaward")",
+                data: {
+                    employeeId: emplName
+                },
+                success: function (respoonse) {
+                    $("#RewardScanisShowing").html(respoonse)
+                },
+                error: function (respoonse) {
+                }
+            })
+        };
+        getEmpScan();
+    </script>
+}

@@ -1,0 +1,49 @@
+﻿@model Commands
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="content-wrapper" style="color:black; background-color: #fff; padding:0px 0px 0px 250px">
+    <div class="container-fluid">
+        <br>
+        <br>
+        <a asp-area="Admin" asp-controller="AddCommand" asp-action="Index" class="col-md-2 btn btn-primary "><i class="fas fa-long-arrow-alt-left"></i>  Geri</a>
+        <div class=" ">
+            <br><br>
+            <form method="post">
+                <div class="form-group row ml-md-4">
+                    <label asp-for="Name" for="ComandName" class="col-md-2">Əmrin adı:</label>
+                    <div class="col-md-5">
+                        <input asp-for="Name" type="text" style="height: 35px;" class="form-control" id="ComandName">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                        @if (ViewData["error_exist"] != null)
+                        {
+                            <span class="text-danger">@ViewData["error_exist"]</span>
+                        }
+                    </div>
+                </div>
+                <div class="form-group row ml-md-4">
+                    <label asp-for="Title" for="ComandTitle" class="col-md-2">Əmrin başlığı:</label>
+                    <div class="col-md-5">
+                        <input asp-for="Title" type="text" style="height: 35px;" class="form-control" id="ComandTitle">
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row ml-md-4">
+                    <label asp-for="Description" for="ComandDesc" class="col-md-2">Əmrin məzmunu:</label>
+                    <div class="col-md-5">
+                        <textarea asp-for="Description" type="text" style="height:200px" class="form-control" id="ComandDesc"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mx-auto">
+                        <input style="width: 300px;" class="btn btn-success" type="submit" value="Əlavə et" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--content-wrapper-->
+</div>

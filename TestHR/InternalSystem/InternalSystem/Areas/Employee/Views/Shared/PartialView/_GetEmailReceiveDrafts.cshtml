@@ -1,0 +1,192 @@
+﻿@model List<InternalSystem.Services.EmailMessage>
+@{
+    int count = 1;
+}
+<table class="table table-hover table-striped">
+    <thead style="text-align: center;background-color:#007bff" class="All_Index_View_Change_Thead">
+        <tr class="All_Index_View_Change_Tr">
+            <th scope="col">№</th>
+            <th scope="col">#</th>
+            <th scope="col">#</th>
+            <th scope="col">Mövzu</th>
+            <th scope="col">Tarix</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count() != 0)
+        {
+            @foreach (var item in Model)
+            {
+                <tr style="text-align:center;">
+
+                    <td class="mailbox-star" style="padding:8px;">@count</td>
+                    <td>
+                        @if (item.To.StartsWith('A') == true || item.To.StartsWith('a') == true)
+                        {
+                            <img src="~/mail.ru/a.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('B') == true || item.To.StartsWith('b') == true || item.To.StartsWith('Б') == true || item.To.StartsWith('б') == true)
+                        {
+                            <img src="~/mail.ru/b.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('C') == true || item.To.StartsWith('c') == true)
+                        {
+                            <img src="~/mail.ru/c.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('D') == true || item.To.StartsWith('d') == true || item.To.StartsWith('Д') == true || item.To.StartsWith('д') == true)
+                        {
+                            <img src="~/mail.ru/d.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('E') == true || item.To.StartsWith('e') == true || item.To.StartsWith('Ё') == true || item.To.StartsWith('ё') == true || item.To.StartsWith('Э') == true || item.To.StartsWith('э') == true)
+                        {
+                            <img src="~/mail.ru/e.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('F') == true || item.To.StartsWith('f') == true || item.To.StartsWith('Ф') == true || item.To.StartsWith('ф') == true)
+                        {
+                            <img src="~/mail.ru/f.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('G') == true || item.To.StartsWith('g') == true)
+                        {
+                            <img src="~/mail.ru/g.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('H') == true || item.To.StartsWith('h') == true)
+                        {
+                            <img src="~/mail.ru/h.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('I') == true || item.To.StartsWith('i') == true || item.To.StartsWith('И') == true || item.To.StartsWith('и') == true)
+                        {
+                            <img src="~/mail.ru/i.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('J') == true || item.To.StartsWith('j') == true || item.To.StartsWith('Ж') == true || item.To.StartsWith('ж') == true)
+                        {
+                            <img src="~/mail.ru/j.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('K') == true || item.To.StartsWith('k') == true || item.To.StartsWith('К') == true || item.To.StartsWith('к') == true)
+                        {
+                            <img src="~/mail.ru/k.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('L') == true || item.To.StartsWith('l') == true || item.To.StartsWith('Л') == true || item.To.StartsWith('л') == true)
+                        {
+                            <img src="~/mail.ru/l.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('M') == true || item.To.StartsWith('m') == true || item.To.StartsWith('М') == true || item.To.StartsWith('м') == true)
+                        {
+                            <img src="~/mail.ru/m.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('N') == true || item.To.StartsWith('n') == true || item.To.StartsWith('Н') == true || item.To.StartsWith('н') == true)
+                        {
+                            <img src="~/mail.ru/n.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('O') == true || item.To.StartsWith('o') == true)
+                        {
+                            <img src="~/mail.ru/o.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('P') == true || item.To.StartsWith('p') == true || item.To.StartsWith('П') == true || item.To.StartsWith('п') == true)
+                        {
+                            <img src="~/mail.ru/p.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('Q') == true || item.To.StartsWith('q') == true || item.To.StartsWith('Г') == true || item.To.StartsWith('г') == true)
+                        {
+                            <img src="~/mail.ru/q.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('R') == true || item.To.StartsWith('r') == true)
+                        {
+                            <img src="~/mail.ru/r.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('S') == true || item.To.StartsWith('s') == true)
+                        {
+                            <img src="~/mail.ru/s.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('T') == true || item.To.StartsWith('t') == true || item.To.StartsWith('т') == true)
+                        {
+                            <img src="~/mail.ru/t.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('U') == true || item.To.StartsWith('u') == true)
+                        {
+                            <img src="~/mail.ru/u.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('V') == true || item.To.StartsWith('v') == true || item.To.StartsWith('в') == true)
+                        {
+                            <img src="~/mail.ru/v.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('W') == true || item.To.StartsWith('w') == true)
+                        {
+                            <img src="~/mail.ru/w.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('X') == true || item.To.StartsWith('x') == true)
+                        {
+                            <img src="~/mail.ru/x2.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('Y') == true || item.To.StartsWith('y') == true || item.To.StartsWith('Й') == true || item.To.StartsWith('й') == true)
+                        {
+                            <img src="~/mail.ru/y.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('Z') == true || item.To.StartsWith('z') == true || item.To.StartsWith('З') == true || item.To.StartsWith('з') == true)
+                        {
+                            <img src="~/mail.ru/z.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('Ц') == true || item.To.StartsWith('ц') == true)
+                        {
+                            <img src="~/mail.ru/ц.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('Ч') == true || item.To.StartsWith('ч') == true)
+                        {
+                            <img src="~/mail.ru/Ч.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('Ш') == true || item.To.StartsWith('ш') == true || item.To.StartsWith('Щ') == true || item.To.StartsWith('щ') == true)
+                        {
+                            <img src="~/mail.ru/Ш.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('Ю') == true || item.To.StartsWith('ю') == true)
+                        {
+                            <img src="~/mail.ru/ю.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('Я') == true || item.To.StartsWith('я') == true)
+                        {
+                            <img src="~/mail.ru/Я.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                        @if (item.To.StartsWith('<') == true)
+                        {
+                            <img src="~/mail.ru/images(1).png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                        }
+                    </td>
+                    <td class="mailbox-star">
+                        <a>@item.To</a>
+                    </td>
+                    <td class="mailbox-name">
+                        <a>
+                            @if (item.Subject.Length > 55)
+                            {
+                                <p>@(item.Subject.Substring(0,55)+"...")</p>
+                            }
+                            else
+                            {
+                                @*<p>@Html.DisplayFor(modelItem => item.Subject)</p>*@
+                                <p>@item.Subject</p>
+                            }
+                        </a>
+                    </td>
+                    <td style="width:145px;">
+                        <span>@item.NowDay.ToString("dd.MM.yyyy")</span>
+                    </td>
+                    <td>
+                        <a onclick="deleteEmail('@item.MessageId');" style="background-color: #c9d0d0;" class="btn"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+                count++;
+            }
+        }
+        else
+        {
+            <tr style="text-align:center;">
+                <td>Boş</td>
+                <td>Boş</td>
+                <td>Boş</td>
+                <td>Boş</td>
+                <td>Boş</td>
+                <td>Boş</td>
+            </tr>
+        }
+    </tbody>
+</table>

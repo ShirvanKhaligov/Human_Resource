@@ -1,0 +1,66 @@
+﻿@model CommandsSalaryIncrease
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+        <form method="post">
+            <div style="height: 30px"></div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="EmplooyeeId">İşçinin adı:</label>
+                </div>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control input-height" readonly value="@(Model.CommandsToEmployee.Emplooyee.FirstName+" "+Model.CommandsToEmployee.Emplooyee.Lastname+" "+Model.CommandsToEmployee.Emplooyee.FatherName) @((Model.CommandsToEmployee.Emplooyee.GenderId==1) ? "oğlu" : "qızı")" />
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Sənədin adı:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" value="Maaş artımı" class="form-control input-height" readonly />
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Vaxt:</label>
+                </div>
+                <div class="col-md-7">
+                    @*<input type="date" class="form-control input-height" asp-for="CreateDate">
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="CreateDate"></span>*@
+                    <input type="date" class="form-control input-height" value="@Model.CommandsToEmployee.CreatedDate.ToString("yyyy-MM-dd")"
+                           asp-for="CreateDate">
+                    <span class="text-danger text-bold" asp-validation-for="CreateDate" style="font-size:14px;"></span>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Məzmun:</label>
+                </div>
+                <div class="col-md-7">
+                    <textarea class="form-control input-height" asp-for="@Model.OldSalary.Description" rows="10" style="color:black;"></textarea>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="salary">Maaş:</label>
+                </div>
+                <div class="col-sm-7">
+                    <input asp-for="NewSalary" value="@Model.CommandsToEmployee.Emplooyee.Salary" maxlength="8" class="form-control input-height" type="text">
+                    <span class="text-danger text-bold" style="font-size:14px; " asp-validation-for="NewSalary"></span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <button style="float:left;" id="removeBtn" class="btn btn-danger col-md-3 mx-auto">
+                    <a asp-controller="Dashboard" asp-action="Index" style="padding: 5px 100px;color:white;">İmtina</a>
+                </button>
+                <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">Yadda saxla</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+

@@ -1,0 +1,7 @@
+service almaq lazimdir Sexsiyyet vesiqesi ile 
+fin codla datalar almaq
+customer regiter olmagini deyishsin
+order edende crme dushmesin
+product and providerler tekminleshmelidi
+provide nedi
+tfs tfc 

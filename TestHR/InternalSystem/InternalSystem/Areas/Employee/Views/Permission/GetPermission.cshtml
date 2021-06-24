@@ -1,0 +1,309 @@
+﻿@model PermissionVM
+@{
+    ViewData["Title"] = "GetPermission";
+}
+
+@section css{
+    <style>
+        #dataAllSearc_wrapper {
+            width: 100%;
+        }
+    </style>
+}
+
+<div style="background-color: #e0e0e0" class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div style="background-color: #343a40" class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-10  ">
+                            <p style="color: white;font-size: 25px;text-align: center;" class="text-center"> İcazələrim</p>
+                        </div>
+                        <div class="col-md-2">
+
+                            <div style="" class="alarm-clock">
+                                <div class="date">
+                                    <span class="month"></span>
+                                    <span class="day"></span>,
+                                    <span class="year"></span>
+                                </div>
+
+                                <div class="time">
+                                    <span class="hours"></span>
+                                    <span class="colon">:</span>
+                                    <span class="minutes"></span>
+                                    <span class="colon">:</span>
+                                    <span class="seconds"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    @if (ViewData["fillAllInputs"] != null)
+                    {
+                        <p class="text-danger text-bold">@ViewData["fillAllInputs"]</p>
+                    }
+                    <div class="col-md-12">
+                        <button onclick="myFunction()" class="newCommand btn btn-success ">
+                            <i class="fa fa-plus-circle"
+                               aria-hidden="true"></i>
+                            Icazə al
+                        </button>
+                        <div class="dropdown-content">
+                            <br><br>
+                            <form method="post">
+                                <div class="row">
+                                    <div class="col-md-12 mx-auto">
+                                        <div class="form-group row ml-md-4">
+                                            <label for="typePermission" class="col-md-2">İcazənin növü:</label>
+                                            <div class="col-md-5">
+                                                <select style="padding: 0px" class="form-control input-height" name="PermissionType"
+                                                        id="typePermission">
+                                                    <option value="none">Seçin</option>
+                                                    <option value="One">Saatlıq icazə</option>
+                                                    <option value="Two">Günlük icazə</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div id="showOne" class="myDiv">
+                                            <div class="form-group row ml-md-4">
+                                                <label class="col-md-2" for="fromDate">Hansı tarixdə</label>
+                                                <div class="col-md-2">
+                                                    <input class="form-control input-height" asp-for="FromDateForHour" id="fromDatee" type="time">
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <input class="form-control input-height" asp-for="FromDate" name="FromDate" id="fromDatee" type="date">
+                                                </div>
+                                                @*<div class="col-md-1">
+                                                        <select style="padding: 0" class="form-control input-height" name="Hour" id="time">
+                                                            <option value="0">Seçin</option>
+                                                            <option value="1">1 saat</option>
+                                                            <option value="2">2 saat</option>
+                                                            <option value="3">3 saat</option>
+                                                            <option value="4">4 saat</option>
+                                                            <option value="5">5 saat</option>
+                                                        </select>
+                                                    </div>*@
+                                                <div class="col-md-2">
+                                                    <input class="form-control input-height" asp-for="ToDateForHour" id="toDatee" type="time">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row ml-md-4">
+                                                <label class="col-md-2" for="reason">Səbəb</label>
+                                                <div class="col-md-5">
+                                                    <textarea class="form-control" rows="3" asp-for="ReasonOne" id="reason">
+                                                    </textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="showTwo" class="myDiv">
+                                            <div class="form-group row ml-md-4">
+                                                <label class="col-md-2" for="fromDate1">Hansı tarixdən</label>
+                                                <div class="col-md-5">
+                                                    <input class="form-control input-height" asp-for="FromDateForDay" id="fromDate11" type="date">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row ml-md-4">
+                                                <label class="col-md-2" for="toDate">Hansı tarixədək</label>
+                                                <div class="col-md-5">
+                                                    <input class="form-control input-height" asp-for="ToDateForDay" id="toDatee" type="date">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row ml-md-4">
+                                                <label for="typePermission" class="col-md-2">Səbəb:</label>
+                                                <div class="col-md-5">
+                                                    <textarea class="form-control" asp-for="ReasonTwo" id="reason1" rows="3">
+                                                    </textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row ">
+                                            <div class="col-md-4 mx-auto text-center">
+                                                <a>
+                                                    <button style="width: 300px;font-size: 15px" class="btn btn-success" type="submit">
+                                                        Göndər
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <table id="dataAllSearc" class="table  table-responsive-md" style="background: white;">
+                    <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                        <tr class="All_Index_View_Change_Tr">
+                            <th scope="col">Sıra №</th>
+                            <th scope="col">Soyadı,Adı,Ata adı</th>
+                            <th scope="col">Icazənin növü</th>
+                            <th scope="col">Verilmə tarixi</th>
+                            <th scope="col">Bitmə tarixi</th>
+                            <th scope="col">Səbəb</th>
+                            <th scope="col">Təsdiq</th>
+                        </tr>
+                    </thead>
+                    <tbody style="text-align: center;" class="All_Index_View_Change_Tbody">
+                        @if (Model.Permissions.Count() != 0)
+                        {
+                            int count = 1;
+                            @foreach (var item in Model.Permissions)
+                            {
+                                <tr>
+                                    <th scope="row">@count</th>
+                                    <td style="width: 150px;">@item.Emplooyee.FirstName @item.Emplooyee.Lastname @item.Emplooyee.FatherName</td>
+                                    <td style="width: 100px;">@item.Permission.PermissionType.Name</td>
+                                    <td style="width: 135px;">
+                                        @if (item.Permission.PermissionType.Name == "Günlük")
+                                        {
+                                            <p>@item.Permission.FromDate.Day / @item.Permission.FromDate.Month / @item.Permission.FromDate.Year</p>
+                                        }
+                                        else
+                                        {
+                                            //saatliq
+                                            @if (item.Permission.FromDateForHour.Minute < 10 && item.Permission.FromDateForHour.Minute > 0)
+                                            {
+                                                <span>
+                                                    @item.Permission.FromDateForHour.Hour :0@(item.Permission.FromDateForHour.Minute)
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <span>
+                                                    @item.Permission.FromDateForHour.Hour : @item.Permission.FromDateForHour.Minute
+                                                </span>
+                                            }
+                                            <span>
+                                                (@item.Permission.FromDate.Day / @item.Permission.FromDate.Month / @item.Permission.FromDate.Year)
+                                            </span>
+                                            //saatliq
+                                        }
+                                    </td>
+                                    <td style="width: 135px;">
+                                        @if (item.Permission.PermissionType.Name == "Günlük")
+                                        {
+                                            <p>@item.Permission.ToDate.Day / @item.Permission.ToDate.Month / @item.Permission.ToDate.Year</p>
+                                        }
+                                        else
+                                        {
+                                            //saatliq
+                                            @if (item.Permission.ToDate.Minute < 10 && item.Permission.ToDate.Minute > 0)
+                                            {
+                                                <span>
+                                                    @item.Permission.ToDate.Hour :0@(item.Permission.ToDate.Minute)
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <span>
+                                                    @item.Permission.ToDate.Hour : @item.Permission.ToDate.Minute
+                                                </span>
+                                            }
+                                            <span>
+                                                (@item.Permission.FromDate.Day / @item.Permission.FromDate.Month / @item.Permission.FromDate.Year)
+                                            </span>
+                                            //saatliq
+                                        }
+                                    </td>
+                                    @if (item.Permission.Reason.Length > 20)
+                                    {
+                                        <td>@(item.Permission.Reason.Substring(0,20)+"...")</td>
+                                    }
+                                    else
+                                    {
+                                        <td style="width: 100px;">@item.Permission.Reason</td>
+                                    }
+                                    <td style="width: 140px;">
+                                        @if (item.Permission.Confirm == true)
+                                        {
+                                            <p class="text-bold text-success">Təsdiq olunub</p>
+                                        }
+                                        else if (item.Permission.Cancel == true)
+                                        {
+                                            <p class="text-bold text-danger">İmtina edilib</p>
+                                        }
+                                        else
+                                        {
+                                            <p class="text-bold text-danger">Gözlənilir</p>
+                                        }
+                                    </td>
+                                </tr>
+                                count++;
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td>Boş</td>
+                                <td>Boş</td>
+                                <td>Boş</td>
+                                <td>Boş</td>
+                                <td>Boş</td>
+                                <td>Boş</td>
+                                <td>Boş</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
+
+@section scripts{
+    <script>
+        $(function () {
+            $('#dataAllSearc').DataTable({
+                "paging": true,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+            //$(".timeFromDatehour").timesetter({
+
+            //    hour: {
+            //        value: 0,
+            //        min: 0,
+            //        max: 24,
+            //        step: 1,
+            //        symbol: "h"
+            //    },
+            //    minute: {
+            //        value: 0,
+            //        min: 0,
+            //        max: 60,
+            //        step: 15,
+            //        symbol: "mins"
+            //    },
+
+            //    // increment or decrement
+            //    direction: "increment",
+
+            //    // hour textbox
+            //    inputHourTextbox: null,
+
+            //    // minutes textbox
+            //    inputMinuteTextbox: null,
+
+            //    // text to display after the input fields
+            //    postfixText: "",
+
+            //    // number left padding character ex: 00052
+            //    numberPaddingChar: '0'
+
+            //});
+    </script>
+}
+

@@ -1,0 +1,253 @@
+﻿@model EmployeeDeviceVm
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <form method="post">
+            <div style="height: 30px"></div>
+            @if (ViewData["DeviceNotebook"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DeviceNotebook"]</span>
+            }
+            @if (ViewData["DeviceMonitor"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DeviceMonitor"]</span>
+            }
+            @if (ViewData["DevicePhone"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DevicePhone"]</span>
+            }
+            @if (ViewData["DevicePhoneNumber"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DevicePhoneNumber"]</span>
+            }
+            @if (ViewData["DeviceMouse"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DeviceMouse"]</span>
+            }
+            @if (ViewData["DevicePad"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DevicePad"]</span>
+            }
+            @if (ViewData["DeviceIPPhone"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DeviceIPPhone"]</span>
+            }
+            @if (ViewData["DeviceHeadPhone"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DeviceHeadPhone"]</span>
+            }
+            @if (ViewData["DeviceKeyboard"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DeviceKeyboard"]</span>
+            }
+            @if (ViewData["DeviceMkrFlash"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DeviceMkrFlash"]</span>
+            }
+            @*<div class="form-group row ml-md-5">
+                    <div class="col-md-2">
+                        <label style="color:black;" for="EmplooyeeId">İşçinin adı:</label>
+                    </div>
+                    <div class="col-sm-7">
+                        <select style="padding: 0px" class="form-control input-height select2" asp-for="EmplooyeeId">
+                            <option selected disabled>Seçin</option>
+                            @foreach (var emp in Model.Emplooyees)
+                            {
+                                <option value="@emp.Id">@(emp.FirstName+" "+emp.Lastname+" "+emp.FatherName+" ") @((emp.GenderId ==1) ? "oğlu" : "qızı") @("Ş/V("+emp.IdCard+")")</option>
+                            }
+                        </select>
+                        <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="EmplooyeeId"></span>
+                    </div>
+                </div>*@
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">İşçinin adı:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" value="@Model.DeviceToEmployee.Emplooyee.FirstName @Model.DeviceToEmployee.Emplooyee.Lastname" readonly />
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Qurğu növü:</label>
+                </div>
+                <div class="col-md-7">
+                    @*<input type="text" value="@Model.DeviceToEmployee.Device.DevicesType.Name" asp-for="DeviceTypeId" readonly class="form-control input-height"/>*@
+                    <select style="padding: 0px" class="form-control input-height" asp-for="DeviceTypeId">
+                        @foreach (var dvc in Model.DevicesTypes)
+                        {
+                            @if (Model.DeviceToEmployee.Device.DevicesTypeId == dvc.Id)
+                            {
+                                <option selected value="@dvc.Id">@dvc.Name</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <!--Partial Start-->
+            @if (Model.DeviceToEmployee.Device.DevicesTypeId == 1 || Model.DeviceToEmployee.Device.DevicesTypeId == 2)
+            {
+                <div class="form-group row  ml-md-5">
+                    <div class="col-md-2">
+                        <label style="color:black;">Inventor: </label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" required asp-for="@Model.DeviceToEmployee.Device.InventorCode" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row  ml-md-5">
+                    <div class="col-md-2">
+                        <label style="color:black;">Parametr: </label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" required asp-for="@Model.DeviceToEmployee.Device.Parametr" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group row  ml-md-5">
+                    <div class="col-md-2">
+                        <label style="color:black;">Serial Nömrə: </label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" required asp-for="@Model.DeviceToEmployee.Device.SerialNumber" class="form-control" />
+                    </div>
+                </div>
+            }
+            @if (Model.DeviceToEmployee.Device.DevicesTypeId == 3)
+            {
+                <div class="form-group row  ml-md-5">
+                    <div class="col-md-2">
+                        <label style="color:black;">Parametr: </label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" required asp-for="@Model.DeviceToEmployee.Device.Parametr" class="form-control" />
+                    </div>
+                </div>
+            }
+            @if (Model.DeviceToEmployee.Device.DevicesTypeId == 4)
+            {
+                <div class="form-group row  ml-md-5">
+                    <div class="col-md-2">
+                        <label style="color:black;">Nömrə: </label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" required asp-for="@Model.DeviceToEmployee.Device.PhoneNumber" class="form-control" />
+                    </div>
+                </div>
+            }
+            @if (Model.DeviceToEmployee.Device.DevicesTypeId == 5)
+            {
+                <div class="form-group row  ml-md-5">
+                    <div class="col-md-2">
+                        <label style="color:black;">Say: </label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="number" required asp-for="@Model.DeviceToEmployee.Device.Count" class="form-control" />
+                    </div>
+                </div>
+            }
+            @if (Model.DeviceToEmployee.Device.DevicesTypeId == 6)
+            {
+                <div class="form-group row  ml-md-5">
+                    <div class="col-md-2">
+                        <label style="color:black;">Say: </label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="number" required asp-for="@Model.DeviceToEmployee.Device.Count" class="form-control" />
+                    </div>
+                </div>
+            }
+            @if (Model.DeviceToEmployee.Device.DevicesTypeId == 8)
+            {
+                <div class="form-group row ml-md-5">
+                    <div class="col-md-2">
+                        <label style="color:black;">Nömrə: </label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" required class="form-control input-height" asp-for="DeviceToEmployee.Device.InternalPhoneNumber">
+                    </div>
+                </div>
+
+                <div class="form-group row ml-md-5">
+                    <div class="col-md-2">
+                        <label style="color:black;">Say: </label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="number" required class="form-control input-height" asp-for="DeviceToEmployee.Device.Count">
+                    </div>
+                </div>
+            }
+            @if (Model.DeviceToEmployee.Device.DevicesTypeId == 9)
+            {
+                <div class="form-group row ml-md-5">
+                    <div class="col-md-2">
+                        <label style="color:black;">Say: </label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="number" required class="form-control input-height" asp-for="DeviceToEmployee.Device.Count">
+                        <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="DeviceToEmployee.Device.Count"></span>
+                    </div>
+                </div>
+            }
+            @if (Model.DeviceToEmployee.Device.DevicesTypeId == 10)
+            {
+                <div class="form-group row ml-md-5">
+                    <div class="col-md-2">
+                        <label style="color:black;">Say: </label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="number" required class="form-control input-height" asp-for="DeviceToEmployee.Device.Count">
+                        <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="DeviceToEmployee.Device.Count"></span>
+                    </div>
+                </div>
+            }
+            @if (Model.DeviceToEmployee.Device.DevicesTypeId == 11)
+            {
+                <div class="form-group row ml-md-5">
+                    <div class="col-md-2">
+                        <label style="color:black;">Parametr: </label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" required class="form-control input-height" asp-for="DeviceToEmployee.Device.Parametr">
+                        <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="Device.Parametr"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row ml-md-5">
+                    <div class="col-md-2">
+                        <label style="color:black;">Say: </label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="number" required class="form-control input-height" asp-for="DeviceToEmployee.Device.Count">
+                        <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="Device.Count"></span>
+                    </div>
+                </div>
+            }
+            <!--Partial End-->
+
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Qəbul vaxtı:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="date" required class="form-control input-height" value="@Model.DeviceToEmployee.Device.GivingTime.ToString("yyyy-MM-dd")" asp-for='@Model.Device.GivingTime'>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="@Model.Device.GivingTime"></span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <button style="float:left;" id="removeBtn" class="btn btn-danger col-md-3 mx-auto">
+                    <a asp-controller="EmployeeDevice" asp-action="Detail" asp-route-id="@Model.DeviceToEmployee.EmplooyeeId" style="padding: 5px 100px;color:white;">İmtina</a>
+                </button>
+                <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">Yadda saxla</button>
+            </div>
+        </form>
+
+    </div>
+    <!--content-wrapper-->
+</div>

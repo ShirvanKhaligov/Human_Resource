@@ -1,0 +1,47 @@
+﻿@model AllModelVM
+
+    <table style="color:blue" class="table table-hover table-responsive-md ">
+        <thead style="text-align: center" class="All_Index_View_Change_Thead">
+            <tr class="All_Index_View_Change_Tr">
+                <th scope="col">Sıra №</th>
+                <th scope="col">Şöbənin adı</th>
+                <th scope="col">Redaktə et:</th>
+            </tr>
+        </thead>
+        <tbody style="text-align: center" class="All_Index_View_Change_Tbody">
+            @{
+                var count = 1;
+            }
+            @if (Model.Commands.Count() != 0)
+            {
+
+                @foreach (var item in Model.Commands)
+                {
+                    <tr>
+                        <th scope="row">@count</th>
+                        @if (item.Name.Length > 35)
+                        {
+                            <td>@(item.Name.Substring(0,35)+"...")</td>
+                        }
+                        else
+                        {
+                            <td>@item.Name</td>
+                        }
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary" title="Dəyiş"> <i class="fas fa-edit"></i></a>
+                            <a onclick="confirmationIdCommandForAll(@item.Id)" class="btn btn-danger" title="Sil"> <i class="fas fa-trash"></i></a>
+                        </td>
+                    </tr>
+                            count++;
+                }
+            }
+            else
+            {
+                <tr>
+                    <th scope="row">0</th>
+                    <td>Siyahı boşdur</td>
+                    <td>Siyahı boşdur</td>
+                </tr>
+            }
+        </tbody>
+    </table>

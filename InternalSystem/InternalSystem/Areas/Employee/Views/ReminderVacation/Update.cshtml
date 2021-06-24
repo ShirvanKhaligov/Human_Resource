@@ -1,0 +1,195 @@
+﻿@model ReminderVacationVM
+@{
+    ViewData["Title"] = "Update";
+}
+
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <div>
+                    <table id="dataAllSearch" class="table table-hover table-responsive-md mytable">
+                        <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                            <tr class="All_Index_View_Change_Tr">
+                                <th scope="col">Sıra №</th>
+                                <th scope="col">İşə qəbul</th>
+                                <th scope="col">Soyadı,Adı,Ata adı</th>
+                                <th scope="col">Məzuniyyət qalığı</th>
+                                <th scope="col">Məzuniyyət ili</th>
+                                <th scope="col">MƏZUNİYYƏT GÜNÜ ƏSAS</th>
+                                <th scope="col">Işlədiyi ay</th>
+                                <th scope="col">Şirkət</th>
+                                <th scope="col">Əlavə məzuniyyət</th>
+                                <th scope="col">Neçə gün düşür</th>
+                                <th scope="col">Vəzifəsi</th>
+                                <th scope="col">Əməliyyat</th>
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center;background:#efefef;" class="All_Index_View_Change_Tbody">
+                            @{ int count = 1; }
+                            @if (Model.CommandsToEmployees != null)
+                            {
+                                @foreach (var command in Model.CommandsToEmployees.Take(25))
+                                {
+                                    <tr>
+                                        <td scope="row">@count</td>
+                                        <td scope="row">@command.CreatedDate.ToString("dd/MM/yyyy")</td>
+                                        <td>@(command.Emplooyee.Lastname+" "+command.Emplooyee. FirstName+" "+command .Emplooyee.FatherName) @(command.Emplooyee .GenderId==1 ? "oğlu" : "qızı")</td>
+                                        <td>@command.Emplooyee.ReminderVacationCount</td>
+                                        @{ var month = command.CreatedDate.Month;
+                                            var day = command.CreatedDate.Day;
+                                            var currentyear = DateTime.Now.Year;
+                                            DateTime todaydate = DateTime.Today;
+                                            DateTime firsja = new DateTime(todaydate.Year, 01, 01);
+                                            var nextyear = DateTime.Now.AddYears(1).Year;
+                                            var valid_date_now = day + "." + month + "." + currentyear;
+                                            var valid_date_next = day + "." + month + "." + nextyear;
+                                            //+ "-" + day + "/" + month + "/" + nextyear
+                                            //TimeSpan diff = DateTime.Now - OtherDateTime;
+                                            //int days = (int)Math.Abs(Math.Round(diff.TotalDays));
+                                            //int days = (int)Math.Abs(Math.Round(diff.TotalDays));
+
+                                        }
+                                        @if (DateTime.Parse(valid_date_now) > DateTime.Now)
+                                        {
+                                            <td>@(DateTime.Parse(valid_date_now).AddYears(-1).ToString("dd/MM/yyy")+"-"+(DateTime.Parse(valid_date_now)).ToString("dd/MM/yyyy"))</td>
+                                        }
+                                        else if (command.CreatedDate.Year == DateTime.Now.Year)
+                                        {
+                                            <td> @(command.CreatedDate.ToString("dd/MM/yyyy")+"-"+(command.CreatedDate.AddYears(1).ToString("dd/MM/yyyy")))</td>
+                                        }
+                                        else if (DateTime.Parse(valid_date_now) < DateTime.Now)
+                                        {
+                                            <td>@(DateTime.Parse(valid_date_now).ToString("dd/MM/yyy") + "-"+ (DateTime.Parse(valid_date_now).AddYears(1).ToString("dd/MM/yyy")) )</td>
+                                        }
+                                        else
+                                        {
+                                            <td>b</td>
+                                        }
+                                        @if (command.Emplooyee.Positions.VacationDayCount == 0)
+                                        {
+                                            <td>0</td>
+                                        }
+                                        else
+                                        {
+                                            <td>@command.Emplooyee.Positions.VacationDayCount</td>
+                                        }
+                                        @{
+                                            var ay = ((DateTime.Now - command.CreatedDate).TotalDays) / 30.4;
+                                        }
+
+                                        @if (ay <= 12)
+                                        {
+                                            <td class="btn btn-warning">@(ay.ToString().Substring(0,3))</td>
+                                        }
+                                        else
+                                        {
+                                            <td class="btn btn-primary">12</td>
+                                        }
+                                        <td>@command.Emplooyee.Company.Name</td>
+                                        @if (command.Emplooyee.AdditionalVacationDay == null)
+                                        {
+                                            <td>0</td>
+                                        }
+                                        else
+                                        {
+                                            <td>@command.Emplooyee.AdditionalVacationDay</td>
+
+                                        }
+                                        @if (command.Emplooyee.Positions.VacationDayCount == 30)
+                                        {
+                                            @if (DateTime.Parse(valid_date_now) > DateTime.Now)
+                                            {
+                                                var totalday = (DateTime.Now - DateTime.Parse(valid_date_now).AddYears(-1)).TotalDays;
+                                                int roundday = (int)Math.Abs(Math.Round(totalday));
+                                                var remvac = (roundday / 30.4) * 2.5;
+                                                int roundremvac = (int)Math.Abs(Math.Round(remvac));
+                                                <td>@(roundremvac)</td>
+                                            }
+                                            else if (command.CreatedDate.Year == DateTime.Now.Year)
+                                            {
+                                                var totalday = (DateTime.Now - (command.CreatedDate)).TotalDays;
+                                                int roundtotalday = (int)Math.Abs(Math.Round(totalday));
+                                                var remvac = (roundtotalday / 30.4) * 2.5;
+                                                int roundremvac = (int)Math.Abs(Math.Round(remvac));
+                                                <td> @(roundremvac)</td>
+                                            }
+                                            else if (DateTime.Parse(valid_date_now) < DateTime.Now)
+                                            {
+                                                var totalday = ((DateTime.Now - DateTime.Parse(valid_date_now)).TotalDays);
+                                                int roundtotalday = (int)Math.Abs(Math.Round(totalday));
+
+                                                var remvac = (roundtotalday / 30.4) * 2.5;
+                                                int roundremvac = (int)Math.Abs(Math.Round(remvac));
+
+                                                <td>@(roundremvac) </td>
+                                            }
+                                            else
+                                            {
+                                                <td>b</td>
+                                            }
+
+                                        }
+                                        else
+                                        {
+                                            @if (DateTime.Parse(valid_date_now) > DateTime.Now)
+                                            {
+                                                var totalday = (DateTime.Now - DateTime.Parse(valid_date_now).AddYears(-1)).TotalDays;
+                                                int roundday = (int)Math.Abs(Math.Round(totalday));
+                                                var remvac = (roundday / 30.4) * 1.75;
+                                                int roundremvac = (int)Math.Abs(Math.Round(remvac));
+                                                <td>@(roundremvac)</td>
+
+                                            }
+                                            else if (command.CreatedDate.Year == DateTime.Now.Year)
+                                            {
+                                                var totalday = (DateTime.Now - (command.CreatedDate)).TotalDays;
+                                                int roundtotalday = (int)Math.Abs(Math.Round(totalday));
+                                                var remvac = (roundtotalday / 30.4) * 1.75;
+                                                int roundremvac = (int)Math.Abs(Math.Round(remvac));
+                                                <td> @(roundremvac)</td>
+                                            }
+                                            else if (DateTime.Parse(valid_date_now) < DateTime.Now)
+                                            {
+                                                var totalday = ((DateTime.Now - DateTime.Parse(valid_date_now)).TotalDays);
+                                                int roundtotalday = (int)Math.Abs(Math.Round(totalday));
+                                                var remvac = (roundtotalday / 30.4) * 1.75;
+                                                int roundremvac = (int)Math.Abs(Math.Round(remvac));
+
+                                                <td>@(roundremvac) </td>
+                                            }
+                                            else
+                                            {
+                                                <td>b</td>
+                                            }
+                                        }
+                                        @if (@command.Emplooyee.Positions == null)
+                                        {
+                                            <td>Şöbə Müdiri</td>
+                                        }
+                                        else
+                                        {
+                                            <td>@command.Emplooyee.Positions.Name</td>
+                                        }
+                                        <td><a class="btn btn-warning"href="#"><i class="fas fa-edit"></i></a></td>
+                                    </tr>
+                                    count++;
+                                }}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        $('.mytable').dataTable({
+            "pageLength": 100
+        });
+                                //$('#dataAllSearch').dataTable({
+                                //    "pageLenth": [10, 25, 50, 75, 100]
+                                //});
+    </script>
+}

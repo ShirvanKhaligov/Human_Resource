@@ -1,0 +1,13 @@
+﻿@model CommandEmployeeVM
+
+    @if (Model.Emplooyee.ScanCommand != null)
+    {
+        @*<a href="~/allUserImg/@Model.Emplooyee.ScanCommand" download style="font-size:20px;margin-left:22px;display:grid;"><i class="fas fa-download text-center"></i> Endir</a>*@
+        <embed src="~/allUserImg/@Model.Emplooyee.ScanCommand" style="width:100%;height:300px"/>
+    }
+    else
+    {
+        <p style="font-size:20px;margin-top:15px;display:grid;">Yoxdur</p>
+    }
+
+

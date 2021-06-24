@@ -1,0 +1,37 @@
+﻿@using InternalSystem.Areas.InternalHR.Models.Quiz
+@model List<Exam_Result>
+@{
+    ViewData["Title"] = "GetExamResult";
+}
+
+<h1>GetExamResult</h1>
+
+<div>
+    <table>
+        <thead>
+        <th>
+            #
+        </th>
+        <th>
+            User
+        </th>
+        <th>
+            Quiz Exam
+        </th>
+        <th>
+            Score
+        </th>
+        </thead>
+        @{ int i = 0;}
+        @foreach (InternalSystem.Areas.InternalHR.Models.Quiz.Exam_Result exam in (List<InternalSystem.Areas.InternalHR.Models.Quiz.Exam_Result>)(Model))
+        {
+            <tr>
+                <td>@(i = i + 1)</td>
+                <td>@exam.FullName</td>
+                <td>@exam.QuizName</td>
+                <td>@exam.Score</td>
+            </tr>
+        }
+    </table>
+</div>
+

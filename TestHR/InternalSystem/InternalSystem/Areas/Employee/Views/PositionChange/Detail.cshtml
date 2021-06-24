@@ -1,0 +1,149 @@
+﻿@model CommandEmpPositionChVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="content-wrapper mb-3" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+        <div style="height: 30px"></div>
+        <div class="row ml-md-3 mb-4">
+            <button class="btn btn-primary col-md-2">
+                <a asp-controller="PositionChange" asp-action="Create" style="padding: 5px 60px;color:white;">Geri</a>
+            </button>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row ml-md-2">
+                            <div class="col-md-3">
+                                <label class="detailEmpRecruitLabel" style="color:black;">İşçinin adı:</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="detailEmpRecruit">
+                                    @(Model.CommandsToEmployee.Emplooyee.FirstName+" "+Model.CommandsToEmployee.Emplooyee.Lastname+" "+Model.CommandsToEmployee.Emplooyee.FatherName) @(Model.CommandsToEmployee.Emplooyee.GenderId==1 ? "oğlu" : "qızı")
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row ml-md-2">
+                            <div class="col-md-3">
+                                <label class="detailEmpRecruitLabel">Sənədin adı</label>
+                            </div>
+                            <div class="col-md-9">
+                                <p class="detailEmpRecruit">
+                                    Vəzifə dəyişikliyi
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row ml-md-2">
+                            <div class="col-md-3">
+                                <label class="detailEmpRecruitLabel">Qəbul vaxtı</label>
+                            </div>
+                            <div class="col-md-9">
+                                <p class="detailEmpRecruit">
+                                    @Model.CommandsToEmployee.CreatedDate.ToString("D")
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row ml-md-2">
+                            <div class="col-md-3">
+                                <label class="detailEmpRecruitLabel">İş vaxtı növü:</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="detailEmpRecruit">
+                                    @Model.CommandsToEmployee.Emplooyee.WorkTimeOfType.Name
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row ml-md-2">
+                            <div class="col-md-3">
+                                <label class="detailEmpRecruitLabel">İşin növü:</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="detailEmpRecruit">
+                                    @Model.CommandsToEmployee.Emplooyee.WorkPlaceAddition.Name
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row ml-md-2">
+                            <div class="col-md-3">
+                                <label class="detailEmpRecruitLabel">Şöbənin adı:</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="detailEmpRecruit">
+                                    @Model.CommandsToEmployee.Emplooyee.Positions.SubDepartment.DepartmentToCompany.Department.Name
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row ml-md-2">
+                            <div class="col-md-3">
+                                <label class="detailEmpRecruitLabel">Alt şöbənin adı:</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="detailEmpRecruit">
+                                    @Model.CommandsToEmployee.Emplooyee.Positions.SubDepartment.Name
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row ml-md-2">
+                            <div class="col-md-3">
+                                <label class="detailEmpRecruitLabel">Vəzifənin adı:</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="detailEmpRecruit">
+                                    @Model.CommandsToEmployee.Emplooyee.Positions.Name
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row ml-md-2">
+                            <div class="col-md-3">
+                                <label class="detailEmpRecruitLabel">Maaş:</label>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="detailEmpRecruit">
+                                    @(Model.CommandsToEmployee.Emplooyee.Salary+ " ₼")
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div style="text-align:end;margin-right:15px">
+                    <img src="/allUserImg/@Model.CommandsToEmployee.Emplooyee.Image" style="width:166px; height:250px;" alt="@(Model.CommandsToEmployee.Emplooyee.FirstName+" "+Model.CommandsToEmployee.Emplooyee.Lastname)" />
+                </div>
+                <div>
+                    <div class="form-group mt-3">
+                        <div class="col-md-6">
+                            <label style="color:black;">Əmrin skan forması:</label>
+                        </div>
+                        <div class="col-md-12">
+                            @if (Model.ScanPdfCommands != null)
+                            {
+                                @if (Model.ScanPdfCommands.Pdf != null)
+                                {
+                                    <embed src="~/allUserImg/@Model.ScanPdfCommands.Pdf" style="width:100%;height:300px" />
+                                }
+                                else
+                                {
+                                    <p style="font-size:20px;margin-top:15px;display:grid;">Yoxdur</p>
+                                }
+                            }
+                            else
+                            {
+                                <p style="font-size:20px;margin-top:15px;display:grid;">Yoxdur</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

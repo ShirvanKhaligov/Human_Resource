@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ContactBetweenDepartmentsSent>
+<table class="table table-responsive-md ">
+    <thead style="text-align: center" class="All_Index_View_Change_Thead">
+        <tr class="All_Index_View_Change_Tr">
+            <th scope="col">Sıra №</th>
+            <th scope="col">Kimə</th>
+            <th scope="col"> Mövzu</th>
+            <th scope="col"> Mesaj</th>
+            <th scope="col"> Tarix</th>
+            <th scope="col"> Sil</th>
+        </tr>
+    </thead>
+    <tbody style="text-align: center;background: white;">
+        @if (Model.Count() != 0)
+        {
+            int count = 1;
+            foreach (var sended in Model)
+            {
+
+                <tr>
+                    <th scope="row">@count</th>
+                    <td>@sended.To</td>
+                    <td>@sended.Subject</td>
+                    <td>@sended.Message</td>
+                    <td>@sended.CreatedDate</td>
+                    <td>
+                        <a onclick="deleteConfirmation(@sended.Id)" class="btn btn-danger">Sil</a>
+                    </td>
+                </tr>
+
+                count++;
+            }
+        }
+        else
+        {
+
+            <tr>
+                <th>Boş</th>
+                <td>Boş</td>
+                <td>Boş</td>
+                <td>Boş</td>
+                <td>Boş</td>
+                <td>Boş</td>
+            </tr>
+
+        }
+    </tbody>
+</table>

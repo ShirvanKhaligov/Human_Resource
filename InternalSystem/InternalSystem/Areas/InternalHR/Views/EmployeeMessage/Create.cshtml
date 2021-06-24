@@ -1,0 +1,112 @@
+﻿@model MessageForEmployeeVM
+@{
+    ViewData["Title"] = "Create";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+@section styless{
+    <style>
+        .ck-content {
+            height: 130px;
+        }
+    </style>
+}
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <div class="row mt-4">
+            <div class="col-md-12 mb-4 mt-4">
+                <a asp-area="InternalHR" asp-controller="EmployeeMessage" asp-action="Index" class="col-md-2 btn btn-primary "><i class="fas fa-long-arrow-alt-left"></i> Geri</a>
+            </div>
+            <div class="col-md-12">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="card card-outline card-info" style="height:540px;">
+                        <div class="card-header">
+                            <div class="card-title">Yeni mesaj</div>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip"
+                                        title="Collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <div class="form-group">
+                                    <label asp-for="Photo">Şəkil:</label>
+                                    <br />
+                                    <img src="~/dist/img/photo.png" class="img-fluid" />
+                                    <br />
+                                    <div class="btn btn-file" style="background-color: #f8f9fa;border-color: #ddd;color: #444;">
+                                        <i class="fas fa-paperclip"></i>Şəkil seç
+                                        <input type="file" asp-for="Photo" />
+                                    </div>
+                                    <br />
+                                    <span asp-validation-for="Photo" class="text-danger text-bold" style="font-size:14px;"></span>
+                                </div>
+                                <div class="form-group">
+                                    @*<div id="toolbar-container"></div>*@
+                                    <label asp-for="Description">Mətn:</label>
+                                    <textarea asp-for="Description" id="editor" rows="5"></textarea>
+                                    <span asp-validation-for="Description" class="text-danger text-bold" style="font-size:14px;"></span>
+                                </div>
+                            </div>
+                            <div class="row ml-3">
+                                <a asp-controller="EmployeeMessage" asp-action="Index" style=" padding: 0px 24px; align-items: center; display: flex;" class="btn btn-danger">
+                                    İmtina
+                                </a>
+                                <button class="btn btn-primary ml-4">
+                                    <i class="far fa-envelope" style="margin-right: 5px;"></i>Göndər
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ./row -->
+</div>
+
+@section scripts{
+    <script>
+        //DecoupledEditor
+        //    .create(document.querySelector('#editor'))
+        //    .then(editor => {
+        //        const toolbarContainer = document.querySelector('#toolbar-container');
+
+        //        toolbarContainer.appendChild(editor.ui.view.toolbar.element);
+        //    })
+        //    .catch(error => {
+        //        console.error(error);
+        //    });
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            })
+    </script>
+}

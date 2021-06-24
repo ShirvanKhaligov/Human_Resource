@@ -1,0 +1,29 @@
+﻿@model  IEnumerable<UniFaculty>
+<table class="table table-hover table-responsive-md ">
+    <thead style="text-align: center" class="thead-dark ">
+        <tr>
+            <th scope="col"> Sıra№</th>
+            <th scope="col">Fakültənin adı</th>
+            <th scope="col">Universitetin adı</th>
+            <th scope="col">Redaktə et</th>
+        </tr>
+    </thead>
+    <tbody style="text-align: center; color:blue">
+        @{
+            int count = 1;
+        }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@count</th>
+                <td>@item.Name</td>
+                <td>@item.EducationTypeToUniversity.Universities.Name (@item.EducationTypeToUniversity.EducationType.Name)</td>
+                <td>
+                    <a asp-action="EditFaculty" asp-controller="Faculty" asp-route-id="@item.Id" class="btn btn-primary" title="Dəyiş"> <i class="fas fa-edit"></i></a>
+                    <a onclick="confirmationDeleteForFacatulty(@item.Id)" href="#" class="btn btn-danger" title="Sil"> <i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+            count++;
+        }
+    </tbody>
+</table>

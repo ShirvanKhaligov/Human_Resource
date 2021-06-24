@@ -1,0 +1,63 @@
+﻿@model InternalSystem.Areas.InternalHR.Models.Quiz.Choice
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+<h1>Create</h1>
+
+<h4>Choice</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create"  enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ChoiceText" class="control-label"></label>
+                @*<input asp-for="ChoiceText" class="form-control" />*@
+                <input type="file" class="form-control" name="ChoiceFile" />
+                <span asp-validation-for="ChoiceText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Question" class="control-label"></label>
+                <select asp-for="QuestionID" class ="form-control" asp-items="ViewBag.QuestionID"></select>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsTrue" /> @Html.DisplayNameFor(model => model.IsTrue)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

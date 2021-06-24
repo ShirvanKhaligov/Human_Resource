@@ -1,0 +1,76 @@
+﻿@model InternalSystem.Areas.InternalHR.Models.Quiz.Question
+@{
+    ViewData["Title"] = "GetQuizQestion";
+}
+@*<h1>@ViewBag.TotalQuestions</h1>
+    <h1>@ViewBag.CurrentQuestion</h1>*@
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<style>
+    div#test {
+        border: #000 1px solid;
+        padding: 10px 40px 40px 40px;
+        text-align: center
+    }
+</style>
+
+<div>Quesion @ViewBag.CurrentQuestion of @ViewBag.TotalQuestions</div>
+<label id="ShowTime"></label>
+<h2 id="test_status"></h2>
+@*<div id="countdown" style="background-color:aqua"></div>*@
+
+<div id="test" class="row">
+    <img src="~/QuesPic/@Model.QuestionText" />
+    <div class="row">
+        @for (int i = 0; i < @Model.Choices.Count(); i++)
+        {
+            @*<input type="radio" name="@Model.QuestionID" value='@Model.Choices.ToList()[i].ChoiceText' /> <img src="~/QuesPic/@Model.Choices.ToList()[i].ChoiceText" />*@
+            <a href="@Url.Action("GetQuizQestion", "quiz", new { quizId=Model.QuizID ,@qno = Convert.ToInt32(Model.QuestionNo), questionID=Convert.ToInt32(Model.QuestionID), choiceID=Convert.ToInt32(Model.Choices.ToList()[i].ChoiceID)})"><img src="~/QuesPic/@Model.Choices.ToList()[i].ChoiceText" /></a>
+            @*<br />*@
+        }
+    </div>
+</div>
+
+<script>
+    $(document)
+        .ready(function () {
+            ShowTime();
+        });
+
+    function ShowTime() {
+        debugger;
+        a = setInterval(function () {
+            const showTimeEl = document.getElementById("ShowTime");
+            @*var startTime = new Date('@Model.StartTime');*@
+            var startTime = new Date('12/18/2020 12:15:52 PM');
+            var dateNow = new Date();
+            //var t = d.getTime();
+            //var tt = d.toLocaleTimeString();
+            var seconds = Math.floor((dateNow.getTime() - startTime.getTime()) / 1000);
+            var minutes = Math.floor(seconds / 60); 
+            var tt = seconds % 60;
+            debugger;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            tt = tt < 10 ? '0' + tt : tt;
+            //if (seconds >= 59) {
+            //    minutes += 1;
+            //    seconds = 00;
+            //}
+            showTimeEl.innerHTML = `${minutes}:${tt}`;
+            //alert("Hi");
+            if (minutes == 00 && tt == 59) {
+                clearInterval(a);
+                alert("Exam time is finished!");
+                window.location.href = "/Quiz/SelectQuizz"
+            }
+            //af = af - 1;
+            //if (af == 0) {
+            //    clearInterval(a);
+            //}
+            //console.log(af);
+        }, 1000);
+    }
+</script>
+
+
+

@@ -1,0 +1,103 @@
+﻿@model MessageForEmployeeVM
+@{
+    ViewData["Title"] = "Edit";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <div class="row mt-4">
+            <div class="col-md-12 mb-4 mt-4">
+                <a asp-area="InternalHR" asp-controller="EmployeeMessage" asp-action="Index" class="col-md-2 btn btn-primary "><i class="fas fa-long-arrow-alt-left"></i> Geri</a>
+            </div>
+
+            <div class="col-md-12">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="card card-outline card-info" style="height:500px;">
+                        <div class="card-header">
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool btn-sm" data-card-widget="collapse" data-toggle="tooltip"
+                                        title="Collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <div class="form-group">
+                                    <label asp-for="PhotoUpd">Şəkil:</label>
+                                    <br />
+                                    <img src="~/dist/img/photo.png" class="img-fluid" />
+                                    <br />
+                                    <input type="file" asp-for="PhotoUpd" />
+                                    <br />
+                                    <span asp-validation-for="PhotoUpd" class="text-danger text-bold" style="font-size:14px;"></span>
+                                </div>
+                                <div class="form-group">
+                                    @*<div id="toolbar-container"></div>*@
+                                    <label asp-for="@Model.MessageForEmployee.Description">Mətn:</label>
+                                    <textarea id="editor" asp-for="@Model.MessageForEmployee.Description" style="width: 100%; height: 200px;border:1px solid var(--ck-color-toolbar-border)"></textarea>
+                                    <span asp-validation-for="@Model.MessageForEmployee.Description" class="text-danger text-bold" style="font-size:14px;"></span>
+                                </div>
+
+                            </div>
+                            <br>
+                            <div class="row">
+                                <a asp-controller="EmployeeMessage" asp-action="Index" style="float:left;" class="btn btn-danger col-md-3 mx-auto">
+                                    İmtina
+                                </a>
+                                <button style="float: right" class="btn btn-success col-md-3 mx-auto">Yadda saxla</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ./row -->
+</div>
+
+@section scripts{
+    <script>
+        //DecoupledEditor
+        //    .create(document.querySelector('#editor'))
+        //    .then(editor => {
+        //        const toolbarContainer = document.querySelector('#toolbar-container');
+
+        //        toolbarContainer.appendChild(editor.ui.view.toolbar.element);
+        //    })
+        //    .catch(error => {
+        //        console.error(error);
+        //    });
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            })
+    </script>
+}
+

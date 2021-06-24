@@ -1,0 +1,176 @@
+﻿@model AdminVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+    .p-icon-password-eye {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+</style>
+<div class="page-wrapper">
+    <div class="container-fluid bg-white">
+        <div style="margin-top: 30px"></div>
+        <form method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-8 ml-md-5">
+                    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                    <div class="form-group row ">
+                        <div class="col-md-2">
+                            <label class="label-font" for="companyName"> Şirkətin adı</label>
+                        </div>
+                        <div class="col-md-5">
+                            <select name="companyName" style="padding: 0;" class="form-control input-height" id="companyName">
+                                <option selected disabled>Secin</option>
+                                @foreach (var item in Model.Companies)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                            @if (ViewData["error_select_company"] != null)
+                            {
+                                <span class="text-danger">@ViewData["error_select_company"]</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="form-group row ">
+                        <div class="col-md-2">
+                            <label asp-for="@Model.Name" class="label-font" for="name"> Adı</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input asp-for="@Model.Name" id="name" class="form-control input-height"
+                                   type="text">
+                            <span class="text-danger" asp-validation-for="@Model.Name"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row ">
+                        <div class="col-md-2">
+                            <label asp-for="@Model.Surname" class="label-font" for="surname"> Soyadı</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input asp-for="@Model.Surname" id="surname" class="form-control input-height"
+                                   type="text">
+                            <span class="text-danger" asp-validation-for="@Model.Surname"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row ">
+                        <div class="col-md-2">
+                            <label asp-for="@Model.FatherName" class="label-font" for="fatherName"> Ata adı</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input asp-for="@Model.FatherName" id="fatherName" class="form-control input-height"
+                                   type="text">
+                            <span class="text-danger" asp-validation-for="@Model.FatherName"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row ">
+                        <div class="col-md-2">
+                            <label asp-for="@Model.PhoneNumber" class="label-font" for="mobileNumber">Mobil nömrə</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input asp-for="@Model.PhoneNumber" id="mobileNumber" class="form-control input-height"
+                                   type="text">
+                            <span class="text-danger" asp-validation-for="@Model.PhoneNumber"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row ">
+                        <div class="col-md-2">
+                            <label asp-for="@Model.UserName" class="label-font" for="username">İstifadəçi adı</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input asp-for="@Model.UserName" id="username" class="form-control input-height"
+                                   type="text">
+                            <span class="text-danger" asp-validation-for="@Model.UserName"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row ">
+                        <div class="col-md-2">
+                            <label asp-for="@Model.Email" class="label-font" for="email">Email ünvanı</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input asp-for="@Model.Email" id="email" class="form-control input-height"
+                                   type="text">
+                            <span class="text-danger" asp-validation-for="@Model.Email"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row ">
+                        <div class="col-md-2">
+                            <label asp-for="@Model.Password" class="label-font" for="password">Şifrə</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input asp-for="@Model.Password" id="password" class="form-control input-height"
+                                   type="password">
+                            <i class="fas fa-eye-slash p-icon-password-eye" onclick="showpw();"></i>
+                            <span class="text-danger" asp-validation-for="@Model.Password"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row ">
+                        <div class="col-md-2">
+                            <label asp-for="@Model.ConfirmPassword" class="label-font" for="rePassword">Təkrar şifrə</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input asp-for="@Model.ConfirmPassword" id="rePassword" class="form-control input-height"
+                                   type="password">
+                            <i class="fas fa-eye-slash p-icon-password-eye" onclick="showpww();"></i>
+                            <span class="text-danger" asp-validation-for="@Model.ConfirmPassword"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3  ">
+                    <div class="avatar-upload">
+                        <div class="avatar-edit">
+                            <input asp-for="@Model.Photo" accept="image/*" id="imageUpload" />
+
+                            <span class="text-danger" asp-validation-for="@Model.Photo"></span>
+                        </div>
+                        <div style="margin-top: -50px" class="avatar-preview">
+                            <div id="imagePreview" style="background-image: url(~/SuperAdminPage/dist/img/user.png)"></div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <button asp-controller="Adminn" asp-action="Index" style="float:left;" id="removeBtn" class="btn btn-danger col-md-3 mx-auto" type="submit">
+                    İmtina
+                </button>
+                <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">
+                    Yadda saxla
+                </button>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        function showpw() {
+            var pw = document.getElementById('password');
+            if (pw.type == "text")
+                pw.type = "password";
+            else
+                pw.type = "text";
+        }
+        function showpww() {
+            var pw = document.getElementById('rePassword');
+            if (pw.type == "text")
+                pw.type = "password";
+            else
+                pw.type = "text";
+        }
+    </script>
+}

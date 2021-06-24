@@ -1,0 +1,237 @@
+﻿@model EmployeeDeviceVm
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <form method="post">
+            <div style="height: 30px"></div>
+            @if (ViewData["DeviceNotebook"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DeviceNotebook"]</span>
+            }
+            @if (ViewData["DeviceMonitor"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DeviceMonitor"]</span>
+            }
+            @if (ViewData["DevicePhone"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DevicePhone"]</span>
+            }
+            @if (ViewData["DevicePhoneNumber"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DevicePhoneNumber"]</span>
+            }
+            @if (ViewData["DeviceMouse"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DeviceMouse"]</span>
+            }
+            @if (ViewData["DevicePad"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DevicePad"]</span>
+            }
+            @if (ViewData["DeviceIPPhone"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DeviceIPPhone"]</span>
+            }
+            @if (ViewData["DeviceHeadPhone"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DeviceHeadPhone"]</span>
+            }
+            @if (ViewData["DeviceKeyboard"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DeviceKeyboard"]</span>
+            }
+            @if (ViewData["DeviceMkrFlash"] != null)
+            {
+                <span class="row ml-md-5 mb-2 text-danger" style="font-size: 14px; font-weight: 600;">@ViewData["DeviceMkrFlash"]</span>
+            }
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="EmplooyeeId">İşçinin adı:</label>
+                </div>
+                <div class="col-sm-7">
+                    <select style="padding: 0px" class="form-control input-height select2" asp-for="EmplooyeeId">
+                        <option selected disabled>Seçin</option>
+                        @foreach (var emp in Model.Emplooyees)
+                        {
+                            <option value="@emp.Id">@(emp.FirstName+" "+emp.Lastname+" "+emp.FatherName+" ") @((emp.GenderId ==1) ? "oğlu" : "qızı") @("Ş/V("+emp.IdCard+")")</option>
+                        }
+                    </select>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="EmplooyeeId"></span>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Qurğu növü:</label>
+
+                </div>
+                <div class="col-md-7">
+                    <select onchange="changeDeviceTyp()" style="padding: 0px" class="form-control input-height" asp-for="DeviceTypeId">
+                        <option selected disabled>Seçin</option>
+                        @foreach (var dvc in Model.DevicesTypes)
+                        {
+                            <option value="@dvc.Id">@dvc.Name</option>
+                        }
+                    </select>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="DeviceTypeId"></span>
+                </div>
+            </div>
+            <div id="changeBodyDeviceType">
+                <!--Partial-->
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Qəbul vaxtı:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="date" required class="form-control input-height" asp-for="Device.GivingTime">
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="Device.GivingTime"></span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <button style="float:left; background-color:#f6822d" id="removeBtn" class="btn   col-md-3 mx-auto">
+                    <a asp-controller="Dashboard" asp-action="Index" style="padding: 5px 100px;color:white;">İmtina</a>
+                </button>
+                <button style="float: right;background-color:#17a2b8" class="btn   col-md-3 mx-auto" type="submit">Yadda saxla</button>
+            </div>
+        </form>
+        <br><br><br>
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <div id="deviceTableDiv">
+                    <table id="dataAllSearch" class="table table-hover table-responsive-md">
+                        <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                            <tr class="All_Index_View_Change_Tr">
+                                <th scope="col">Sıra №</th>
+                                <th scope="col">#</th>
+                                <th scope="col">Soyadı,Adı,Ata adı</th>
+                                <th scope="col">Vəzifə</th>
+                                <th scope="col">Redaktə et</th>
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center;background:#efefef;" class="All_Index_View_Change_Tbody">
+                            @{
+                                int count = 1;
+                            }
+                            @foreach (var dvc in Model.DeviceToEmployees)
+                            {
+                                <tr>
+                                    <td scope="row">@count</td>
+                                    <td>
+                                        <img src="~/allUserImg/@dvc.Emplooyee.Image" alt="img" style=" width: 45px; height: 45px; border-radius: 50%;" />
+                                    </td>
+                                    <td>@(dvc.Emplooyee.Lastname+" "+ dvc.Emplooyee.FirstName+" "+ dvc.Emplooyee.FatherName) @(dvc.Emplooyee.GenderId==1 ? "oğlu" : "qızı")</td>
+                                    @if (dvc.Emplooyee.PositionsId != null)
+                                    {
+                                        <td>@dvc.Emplooyee.Positions.Name</td>
+                                    }
+                                    else
+                                    {
+                                        <td>Şöbə müdiri</td>
+                                    }
+                                    <td>
+                                        <a asp-area="Employee" asp-controller="EmployeeDevice" asp-action="Detail" asp-route-id="@dvc.EmplooyeeId" class="btn btn-info" style="color: white;padding-left: 16px;padding-right: 16px;" title="Bax">
+                                            <i >Bax</i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                count++;
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--content-wrapper-->
+</div>
+
+<!--Confirmation Modal Delete-->
+<div class="modal" tabindex="-1" id="confirmationModalForDevice" role="dialog">
+    <input type="hidden" id="hiddenModal" name="name" value="" />
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="height:150px;">
+            <div class="modal-header" style=" padding-top: 5px;padding-bottom:5px;">
+                <h5 style="color:black;font-size:1rem;" class="modal-title">Qurğunu qaytar</h5>
+                <button type="button" onclick="closeConfirmationIdDeviceForAll()" class="close" data-dismiss="modal" aria-label="Close" style="padding:0px;margin-top:0px;margin-right:0px;">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="padding: 17px;">
+                <p style="color:red;font-size: 18px;margin:0;">Qaytarılmasına əminsiniz?</p>
+            </div>
+            <div class="modal-footer" style="padding:3px;">
+                @*<button type="button" onclick="deleteDevice($('#hiddenModal').val())" class="btn btn-success" data-dismiss="modal">Bəli</button>*@
+                <button type="button" onclick="DeleteForDeviceModal($('#hiddenModal').val())" class="btn btn-success" data-dismiss="modal">Bəli</button>
+                <button type="button" onclick="closeConfirmationIdDeviceForAll()" id="confirmationModalForPosition" class="btn btn-primary">Xeyr</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal Device Delete-->
+<div class="modal" id="DeleteForDeviceModall" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <input type="hidden" id="hiddenModalDelete" name="name" value="" />
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Qaytarılma zamanı</h5>
+                <button type="button" onclick="closeDeviceForAll()" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group row">
+                    <label style="color:black;">Qaytarılma vaxtı: </label>
+                    <input type="date" asp-for="Device.ReturnDate" class="form-control input-height" />
+                    @if (ViewData["error_time_device"] != null)
+                    {
+                        <span class="text-danger text-bold" style="font-size:14px;font-weight:700;">@ViewData["error_time_device"]</span>
+                    }
+                    <span asp-validation-for="Device.ReturnDate" class="text-danger text-bold" style="font-size:14px;font-weight:700;"></span>
+                </div>
+                <div class="form-group row">
+                    <label style="color:black;">Səbəb: </label>
+                    <textarea type="text" asp-for="Device.Reason" class="form-control input-height" rows="3" style="resize:none;"></textarea>
+                    @if (ViewData["error_reason_device"] != null)
+                    {
+                        <span class="text-danger text-bold" style="font-size:14px;font-weight:700;">@ViewData["error_reason_device"]</span>
+                    }
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="deleteDevice($('#hiddenModalDelete').val(),$('#Device_ReturnDate').val(),$('#Device_Reason').val())" class="btn btn-success" data-dismiss="modal">Yadda saxla</button>
+                <button type="button" onclick="closeDeviceForAll()" class="btn btn-danger">İmtina</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts{
+    <script>
+        $('.select2').select2();
+        function changeDeviceTyp() {
+            var DeviceTypeId = document.getElementById("DeviceTypeId");
+            var selectedEduc = DeviceTypeId.options[DeviceTypeId.selectedIndex].value;
+                  $.ajax({
+                    type: "get",
+                    url: "@Url.Action("GetDeviceType", "EmployeeDevice")",
+                      data: { id: selectedEduc },
+                      success: function (respoonse) {
+                              $('#changeBodyDeviceType').html(respoonse);
+                    },
+                    error: function (respoonse) {
+                    }
+                  })
+        };
+
+
+    </script>
+}

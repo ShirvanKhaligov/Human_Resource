@@ -1,0 +1,179 @@
+﻿@model EmployeeDeviceVm
+@{
+    ViewData["Title"] = "Edit";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+        <br>
+        <br>
+        <a asp-area="InternalHR" asp-controller="EmployeeDevice" asp-action="Index" class="col-md-2 btn btn-primary "><i class="fas fa-long-arrow-alt-left"></i>  Geri</a>
+        <div class=" ">
+            <br><br>
+            <form method="post">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="form-group">
+                                    <div class="col-12">
+                                        <div class="row" style=" justify-content: center;">
+                                            <div class="col-2" style=" text-align: end;">
+                                                <label style="color:black" for="employe">İşçilər:</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <select disabled style="padding: 0px" class="form-control input-height"
+                                                        id="employe" name="employe">
+                                                    @foreach (var emp in Model.Emplooyees)
+                                                    {
+                                                        <option selected disabled value="@emp.Id">@(emp.FirstName+" "+emp.Lastname+" "+emp.FatherName+" Ş/V("+(emp.IdCard)+")")</option>
+                                                    }
+                                                </select>
+                                                @if (ViewData["error_empId"] != null)
+                                                {
+                                                    <span class="text-danger">@ViewData["error_empId"]</span>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <div class="col-12">
+                                        <div class="row" style=" justify-content: center;">
+                                            <div class="col-2" style=" text-align: end;">
+                                                <label style="color:black" for="devType">Qurğular:</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <select style="padding: 0px" class="form-control input-height"
+                                                        id="devType" name="devType">
+                                                    @foreach (var devtype in Model.DevicesTypes)
+                                                    {
+                                                        @if (Model.DeviceToEmployee.Device.DevicesTypeId == devtype.Id)
+                                                        {
+                                                            <option selected value="@devtype.Id">@devtype.Name</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="@devtype.Id">@devtype.Name</option>
+                                                        }
+
+                                                    }
+                                                </select>
+                                                @if (ViewData["error_devId"] != null)
+                                                {
+                                                    <span class="text-danger">@ViewData["error_devId"]</span>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="form-group">
+                                    <div class="col-12">
+                                        <div class="row" style=" justify-content: center;">
+                                            <div class="col-2" style="text-align: end;">
+                                                <label style="color:black;">Qurğunun kodu:</label>
+                                            </div>
+                                            @*<div class="col-8">
+                                                <input asp-for="@Model.DeviceToEmployee.Device.Name" type="text" style="height: 35px;" class="form-control input-height" id="">
+                                                <span asp-validation-for="@Model.DeviceToEmployee.Device.Name" class="text-danger"></span>
+                                                @if (ViewData["error_check"] != null)
+                                                {
+                                                    <span class="text-danger">@ViewData["error_check"]</span>
+                                                }
+                                            </div>*@
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <div class="col-12">
+                                        <div class="row" style=" justify-content: center;">
+                                            <div class="col-2" style=" text-align: end;">
+                                                <label style="color:black" name="GivingTime">Verilmə tarixi:</label>
+                                            </div>
+                                            @*<div class="col-8">
+                                                <input readonly type="text" value="@Model.DeviceToEmployee.Device.GivingTime.ToString("MM/dd/yyyy")" class="form-control input-height" />
+                                            </div>*@
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-4 offset-8">
+                                <div class="form-group">
+                                    <div class="col-12">
+                                        <div class="row" style=" justify-content: center;">
+                                            <div class="col-2" style=" text-align: end;">
+                                                <label style="color:black" name="GivingTime">Tarixi yenilə:</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="date" class="form-control input-height" name="GivingTime" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-4 mx-auto">
+                        <input style="width: 300px;" class="btn btn-success" type="submit" value="Əlavə et" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--content-wrapper-->
+</div>
+

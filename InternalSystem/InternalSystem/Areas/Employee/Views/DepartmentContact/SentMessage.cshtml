@@ -1,0 +1,82 @@
+﻿@model DepContactVM
+@{
+    ViewData["Title"] = "SentMessage";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+<div class="content-wrapper" style="background:#e0e0e0">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0 text-dark"></h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-area="Employee" asp-controller="Dashboard" asp-action="Index">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Şöbə müdirləri ilə əlaqə</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <div class="">
+            @*<div class="card-header All_Index_View_Change_Card_Header">
+                    <p class="All_Index_View_Change_P">Əlaqə</p>
+                </div>*@
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12 mx-auto">
+                        <form style="color:black" method="post">
+                            <div class="form-group row">
+                                <label class="col-xl-2 col-lg-2 col-md-12" for="departmentBoss" style="color:#343a40;font-family:'Segoe UI Emoji'">Şöbə Müdürləri</label>
+                                <select asp-for="DepBossId" class="form-control col-xl-6 col-lg-6 col-md-12" id="departmentBoss">
+                                    <option>Seçin</option>
+                                    @foreach (var boss in Model.DepartmentBoss)
+                                    {
+                                        <option value="@boss.Meneger.Id">@boss.Meneger.FirstName @boss.Meneger.Lastname</option>
+                                    }
+                                </select>
+                                <span class="col-xl-12 col-lg-12 col-md-12 text-danger text-bold" asp-validation-for="DepBossId"></span>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-xl-2 col-lg-2 col-md-12" for="departmentBoss" style="color:#343a40;font-family:'Segoe UI Emoji'">Mövzu</label>
+                                <input asp-for="Subject" placeholder="Başlıq" class="form-control col-xl-6 col-lg-6 col-md-12" id="subjectId" />
+                                <span class="text-danger text-bold col-xl-12 col-lg-12 col-md-12" asp-validation-for="Subject"></span>
+                            </div>
+                            <div class="input-group row">
+                                <label class="col-xl-2 col-lg-2 col-md-12" for="departmentBoss" style="color:#343a40;font-family:'Segoe UI Emoji'">Mesaj</label>
+                                <textarea asp-for="Message" class="form-control col-xl-6 col-lg-6 col-md-12" id="mesajId"></textarea>
+                                <span class="text-danger text-bold col-xl-12 col-lg-12 col-md-12" asp-validation-for="Message"></span>
+                            </div>
+                            <div class="button row mt-3">
+                                <button class="btn btn-success" type="submit">Göndər</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

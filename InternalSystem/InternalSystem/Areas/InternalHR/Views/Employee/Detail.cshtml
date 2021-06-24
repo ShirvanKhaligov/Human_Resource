@@ -1,0 +1,299 @@
+﻿@model EmployeeAllDataDetailVM
+@{
+    ViewData["Title"] = "Detail";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+    p{
+       
+
+    }
+</style>
+<div class="content-wrapper">
+    <div style="background-color: #f4f6f9" class="card All_Index_View_Change_Card">
+
+        <div class="container-fluid" style="background:white;height:auto;">
+            <div class="row ml-md-3 mb-4 mt-4">
+                <button class="btn btn-primary col-md-2">
+                    <a asp-controller="Employee" asp-action="AllEmployee" style="padding: 5px 60px;color:whitesmoke;">Geri</a>
+                </button>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2 ml-md-3">
+                    @if (Model.PhoneNumberToEmployee.Emplooyee.Image != null)
+                    {
+                        @*<div class="image_size" style="width:225px;height:250px;">*@
+                        <img src="~/allUserImg/@Model.PhoneNumberToEmployee.Emplooyee.Image" style="width:190px;height:250px;" alt="Şəkil yoxdur" />
+                        @*</div>*@
+                    }
+                    else
+                    {
+                        <div class="image_size" style="width:225px;height:250px;margin-left:90px;">
+                            <img src="~/allUserImg/" style="width:100%;height:100%" alt="Şəkil yoxdur" />
+                        </div>
+                    }
+                </div>
+                <div class="col-md-9 ml-md-5">
+                    <div class="row">
+                        <p style="font-size: 26px;font-family: serif;margin:0;">@Model.PhoneNumberToEmployee.Emplooyee.FirstName @Model.PhoneNumberToEmployee.Emplooyee.Lastname</p>
+                        <small style="margin-left: 10px;margin-top: 10px;">Üzvdür  @(Model.CommandsToEmployee.CreatedDate.ToString("MMM").Substring(0, 1).ToUpper()+Model.CommandsToEmployee.CreatedDate.ToString("MMM").Substring(1,2).ToLower()).@Model.CommandsToEmployee.CreatedDate.ToString("yyyy")</small>
+                    </div>
+                    <div class="row">
+                        <div class="basedetails" style="background:#65a0c2;width:100%;height:200px;border-radius:6px;padding:3px;">
+                            <div class="row mt-1">
+                                <div class="col-md-3" style="padding-left:25px;">
+                                    <h6>Mobil nömrə</h6>
+                                    <p>@Model.PhoneNumberToEmployee.PhoneNumber.PhoneNumber</p>
+                                </div>
+                                <div class="col-md-3" style="padding-left: 0px;">
+                                    <h6>Ev nömrə</h6>
+                                    @if (Model.PhoneNumberToEmployee.PhoneNumber.HomeNumber != null)
+                                    {
+                                        <p>@Model.PhoneNumberToEmployee.PhoneNumber.HomeNumber</p>
+                                    }
+                                    else
+                                    {
+                                        <p>Yoxdur</p>
+                                    }
+                                </div>
+                                <div class="col-md-4" style="padding-left: 0px;">
+                                    <h6>E-poçt</h6>
+                                    <p>@Model.PhoneNumberToEmployee.Emplooyee.Email</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <h6>Ş/v(S.nömrə)</h6>
+                                    <p>@Model.PhoneNumberToEmployee.Emplooyee.IdCard</p>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-3" style="padding-left:25px;">
+                                    <h6>Doğum tarix</h6>
+                                    <p>@Model.PhoneNumberToEmployee.Emplooyee.Birthday.ToString("dd/MM/yyyy")</p>
+                                </div>
+                                <div class="col-md-3" style="padding-left: 0px;">
+                                    <h6>Yaşadığı ünvan</h6>
+                                    <p>@Model.PhoneNumberToEmployee.Emplooyee.LivingAdress</p>
+                                </div>
+                                <div class="col-md-4" style="padding-left: 0px;">
+                                    <h6>Vəzifə</h6>
+                                    @if (Model.PhoneNumberToEmployee.Emplooyee.PositionsId != null)
+                                    {
+                                        <p>@Model.PhoneNumberToEmployee.Emplooyee.Positions.Name</p>
+                                    }
+                                    else
+                                    {
+                                        <p>Şöbə müdiri</p>
+                                    }
+                                </div>
+                                <div class="col-md-2">
+                                    <h6>Şöbə</h6>
+                                    @if (Model.PhoneNumberToEmployee.Emplooyee.PositionsId != null)
+                                    {
+                                        <p>@Model.PhoneNumberToEmployee.Emplooyee.Positions.SubDepartment.DepartmentToCompany.Department.Name</p>
+                                    }
+                                    else
+                                    {
+                                        <p>@Model.DepartmentToCompany.Department.Name</p>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-11 ml-md-3">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" style="width:194px;text-align:center;">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" style="font-weight:600;">Təhsil</a>
+                        </li>
+                        <li class="nav-item" style="width:194px;text-align:center;">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false" style="font-weight:600;">Dil biliyi</a>
+                        </li>
+                        <li class="nav-item" style="width:194px;text-align:center;">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false" style="font-weight:600;">Kompüter biliyi</a>
+                        </li>
+                        <li class="nav-item" style="width:194px;text-align:center;">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#family" role="tab" aria-controls="family" aria-selected="false" style="font-weight:600;">Ailə üzvləri</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="myTabContent">
+                        <!--Education-->
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="padding:10px;">
+                            <div class="container-fluid">
+                                @if (Model.EducationsToEmployees.Count() != 0)
+                                {
+                                    @foreach (var edu in Model.EducationsToEmployees)
+                                    {
+                                        <div class="row">
+                                            <div class="row w-100">
+                                                <p  for="name" class="col-md-2" style="font-size:17px;font-family:revert; color:black !important">Dərəcə:</p>
+                                                <p style="font-size:18px;font-family: ui-sans-serif;color:black!important">@edu.Education.Profession.UniFaculty.EducationTypeToUniversity.EducationType.Name</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="row w-100">
+                                                <p for="name" class="col-md-2" style="font-size:17px;font-family:revert; color:black !important">Universitet:</p>
+                                                <p style="font-size:18px;font-family: ui-sans-serif; color:black !important">@edu.Education.Profession.UniFaculty.EducationTypeToUniversity.Universities.Name</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="row w-100">
+                                                <p for="name" class="col-md-2" style="font-size:17px;font-family:revert; color:black !important">Fakultə:</p>
+                                                <p style="font-size:18px;font-family: ui-sans-serif; color:black !important">@edu.Education.Profession.UniFaculty.Name</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="row w-100">
+                                                <p for="name" class="col-md-2" style="font-size:17px;font-family:revert; color:black !important">İxtisas:</p>
+                                                <p style="font-size:18px;font-family: ui-sans-serif; color:black !important">@edu.Education.Profession.Name</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="row w-100">
+                                                <p for="name" class="col-md-2" style="font-size:17px;font-family:revert; color:black !important">Təhsil aldığı illər:</p>
+                                                <p style="font-size:18px;font-family: ui-sans-serif; color:black !important">@edu.Education.EnteringTime.Year / @edu.Education.FinishTime.Year</p>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                    }
+                                }
+                                @if (Model.School != null)
+                                {
+                                    <div class="row">
+                                        <div class="row w-100">
+                                            <p for="name" class="col-md-2" style="font-size:17px;font-family:revert; color:black !important">Orta məktəb:</p>
+                                            <p style="font-size:18px;font-family: ui-sans-serif; color:black !important">@Model.School.Name</p>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <!--Language-->
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab" style="padding:10px;">
+                            <div class="container-fluid">
+                                @if (Model.LanguageToEmployees.Count() != 0)
+                                {
+                                    @foreach (var lg in Model.LanguageToEmployees)
+                                    {
+                                        <div class="row">
+                                            <div class="row w-100">
+                                                <p for="name" class="col-md-2" style="font-size:17px;font-family:revert; color:black !important">Bilik səviyyəsi:</p>
+                                                <p style="font-size:18px;font-family: ui-sans-serif; color:black !important">@lg.LanguageToLanguageLevel.LanguageLevel.Name</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="row w-100">
+                                                <p for="name" class="col-md-2" style="font-size:17px;font-family:revert; color:black !important">Dil:</p>
+                                                <p style="font-size:18px;font-family: ui-sans-serif; color:black !important">@lg.LanguageToLanguageLevel.Language.Name</p>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                    }
+                                }
+                                else
+                                {
+                                    <div class="row">
+                                        <div class="row w-100">
+                                            <p for="name" class="col-md-2" style="font-size:17px;font-family:revert; color:black !important">Yoxdur</p>
+                                        </div>
+                                    </div>
+                                }
+
+                            </div>
+                        </div>
+                        <!--Computer-->
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab" style="padding:10px;">
+                            <div class="container-fluid">
+                                @if (Model.ComputerToEmployees.Count() != 0)
+                                {
+                                    @foreach (var cmp in Model.ComputerToEmployees)
+                                    {
+                                        <div class="row">
+                                            <div class="row w-100">
+                                                <p for="name" class="col-md-2" style="font-size:17px;font-family:revert; color:black !important">Bilik səviyyəsi:</p>
+                                                <p style="font-size:18px;font-family: ui-sans-serif; color:black !important">@cmp.ComputerSkillToLevels.ComputerLevels.Name</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="row w-100">
+                                                <p for="name" class="col-md-2" style="font-size:17px;font-family:revert; color:black !important">Dil:</p>
+                                                <p style="font-size:18px;font-family: ui-sans-serif; color:black !important">@cmp.ComputerSkillToLevels.ComputerSkillsName.Name</p>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                    }
+                                }
+                                else
+                                {
+                                    <div class="row">
+                                        <div class="row w-100">
+                                            <p for="name" class="col-md-2" style="font-size:17px;font-family:revert; color:black !important">Yoxdur</p>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <!--Family-->
+                        <div class="tab-pane fade" id="family" role="tabpanel" aria-labelledby="contact-tab" style="padding:10px;">
+                            <div class="container-fluid">
+                                @if (Model.RelationToEmployees.Count() != 0)
+                                {
+                                    @foreach (var fm in Model.RelationToEmployees)
+                                    {
+                                        <div class="row">
+                                            <div class="row w-100">
+                                                <p for="name" class="col-md-2" style="font-size:17px;font-family:ui-sans-serif; color:black !important">@fm.Relation.RelationType.Name: <br /> @(fm.Relation.Name +" "+ fm.Relation.Surname)</p>
+                                                <p for="name" class="col-md-2" style="font-size:17px;font-family:ui-sans-serif; color:black !important">Mob nömrə: <br /> @fm.Relation.Number</p>
+                                                <p for="name" class="col-md-2" style="font-size:18px;font-family: ui-sans-serif; color:black !important">Ünvan: <br /> @fm.Relation.Adress</p>
+                                                <p for="name" class="col-md-2" style="font-size:18px;font-family: ui-sans-serif; color:black !important">İş yeri: <br /> @fm.Relation.WorkPlaceName</p>
+                                            </div>
+                                        </div>
+
+                                        <hr />
+
+                                    }
+                                }
+                                else
+                                {
+                                    <div class="row">
+                                        <div class="row w-100">
+                                            <p for="name" class="col-md-2" style="font-size:17px;font-family:revert; color:black !important">Yoxdur</p>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

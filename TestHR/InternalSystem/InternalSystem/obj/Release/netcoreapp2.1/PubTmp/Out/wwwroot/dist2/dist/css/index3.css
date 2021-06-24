@@ -1,0 +1,95 @@
+.input-height{
+  height: 27px;
+}
+label{
+  color: black !important;
+}
+.newCommand{
+
+  width: 200px;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+}
+.dropdown-content {
+  display: none;
+}
+
+.myDiv{
+  display: none;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+
+.alarm-clock {
+  position: relative;
+  padding: 13px;
+  border-radius: 10px;
+
+}
+.alarm-clock .date {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  color: white;
+  font-size: 11px;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  z-index: 9;
+}
+.alarm-clock .time {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px 15px;
+  background-color: #343a40;
+  border-radius: 10px;
+
+  font-size: 25px;
+}
+.alarm-clock .time span {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #e74c3c;
+  text-shadow: 0 0 15px rgba(231, 76, 60, 0.4);
+  line-height: 1.75;
+}
+.alarm-clock .time span:nth-of-type(5) {
+
+}
+.alarm-clock .time span.colon {
+  width: 12px;
+  text-align: center;
+  animation: blink 2s infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*@media only screen and (max-width: 768px) {*/
+  .text1 {
+    width: auto;
+  }
+

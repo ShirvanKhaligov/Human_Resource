@@ -1,0 +1,156 @@
+﻿@model CompanyVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="page-wrapper">
+    <div class="container-fluid bg-white">
+        <div style="margin-top: 30px"></div>
+        <form method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-8 ml-md-5">
+                    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                    <div class="form-group row ">
+                        <div class="col-md-3">
+                            <label style="font-size: 16px" for="companyName">Şirkətin adı</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input style="height: 27px" id="companyName" name="Name" class="form-control"
+                                   type="text">
+                            <span class="text-danger" asp-validation-for="Name"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <label asp-for="Company.TaxId" style="font-size: 16px" for="taxpayer">VÖEN</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input asp-for="Company.TaxId" style="height: 27px" id="taxpayer" name="TaxId" class="form-control"
+                                   type="text">
+                            <span class="text-danger" asp-validation-for="TaxId"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <label asp-for="Company.RegistrationNumber" style="font-size: 16px" for="registrationNumber">Qeydiyyat nömrəsi</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input asp-for="Company.RegistrationNumber" style="height: 27px" id="registrationNumber" name="RegistrationNumber"
+                                   class="form-control"
+                                   type="text">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <label asp-for="Company.Website" style="font-size: 16px" for="website">İnternet səhifəsi</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input asp-for="Company.Website" style="height: 27px" id="website" name="Website" class="form-control"
+                                   type="text">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <label asp-for="Company.ZipCode" style="font-size: 16px" for="zipCode">Poçt ünvanı</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input asp-for="Company.ZipCode" style="height: 27px" id="zipCode" name="ZipCode" class="form-control"
+                                   type="text">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <label asp-for="Company.Address" style="font-size: 16px" for="address">Ünvan</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input asp-for="Company.Address" style="height: 27px" id="address" name="Address" class="form-control"
+                                   type="text">
+                            <span class="text-danger" asp-validation-for="Address"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <label asp-for="Company.City.CountriesId" style="font-size: 16px" for="country">Ölkə</label>
+                        </div>
+                        <div class="col-md-5">
+                            <select asp-for="Company.City.CountriesId" onchange="getCities()" style="height: 27px;padding: 0px" class="form-control" name="CountriesId"
+                                    id="CountriesId">
+                                <option selected disabled>Seç</option>
+                                @foreach (var item in Model.Countries)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <label asp-for="Company.CityId" style="font-size: 16px" for="city">Şəhər</label>
+                        </div>
+                        <div class="col-md-5" id="citySelectListId">
+                            <select asp-for="Company.CityId" style="height: 27px;padding: 0px" class="form-control" name="CityId" id="CityId">
+                                <option selected disabled>Seç</option>
+                            </select>
+                            @if (ViewData["SelectCityOrCountry"] != null)
+                            {
+                                <p class="text-danger">@ViewData["SelectCityOrCountry"]</p>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3  ">
+                    <div class="avatar-upload">
+                        <div class="avatar-edit">
+                            <input name="Image" type="file" accept="image/*" id="imageUpload" />
+                            @if (ViewData["nonSelectedImage"] != null)
+                            {
+                                <p class="text-danger text-bold">@ViewData["nonSelectedImage"]</p>
+                            }
+                        </div>
+                        <div style="margin-top: -50px" class="avatar-preview">
+                            <div id="imagePreview" style="background-image: url(~/SuperAdminPage/dist/img/user.png)"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <button style="float:left;" asp-controller="Company" asp-action="Index" id="removeBtn" class="btn btn-danger col-md-3 mx-auto" type="submit">
+                    İmtina
+                </button>
+                <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">
+                    Yadda saxla
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        function getCities() {
+            var e = document.getElementById("CountriesId");
+            var selectedCountry = e.options[e.selectedIndex].value;
+            $.ajax({
+                type: "get",
+                url: "@Url.Action("GetCities","Company")",
+                data: { countryId: selectedCountry },
+                success: function (respoonse) {
+                    $("#citySelectListId").html(respoonse)
+                    console.log(respoonse)
+                },
+                error: function (response) {
+                    console.error("error - suceess")
+                    console.error(response)
+                }
+            })
+        }
+    </script>
+
+}

@@ -1,0 +1,113 @@
+﻿@model IEnumerable<PhoneNumberToEmployee>
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+
+
+
+    .btn-success {
+        background-color: #f6822d !important;
+        border-color: #f6822d !important;
+    }
+
+    .btn-primary {
+        background-color: #f6822d !important;
+        border-color: #f6822d  !important;
+    }
+
+    .btn-warning {
+        background-color: #f6822d !important;
+        border-color: #f6822d !important;
+    }
+
+    .btn-danger {
+        background-color: #f6822d !important;
+        border-color: #f6822d !important;
+    }
+    .btn-info {
+        background-color: #f6822d !important;
+        border-color: #f6822d !important;
+    }
+</style>
+
+<div class="content-wrapper">
+    <div class="">
+        <div style="background-color: #f4f6f9" class="card All_Index_View_Change_Card">
+            <div class="card-header All_Index_View_Change_Card_Header">
+                <p style="color:#f6822d" class="All_Index_View_Change_P">Namizədlərin siyahısı</p>
+            </div>
+            <div class="card-body ">
+                <div class="row ml-md-3">
+                    <div class="col-md-12">
+                        <a asp-action="Create" asp-controller="Practitioner" asp-area="InternalHR" class="btn btn-success mr-md-1" style="width: 200px;float: right"> <i class="fa fa-plus-circle" aria-hidden="true"></i>  Təcrübəçi əlavə et</a>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12 mx-auto">
+                        <div style="height:600px;overflow-y:scroll;" class="table-responsive">
+                            <table class="table table-hover table-responsive-md">
+                                <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                                    <tr class="All_Index_View_Change_Tr">
+                                        <th scope="col">Sıra №</th>
+                                        <th scope="col">Soyadı,Adı,Ata adı</th>
+                                        <th scope="col"> Email</th>
+                                        <th scope="col"> Mobil nömrə</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="text-align: center;" class="All_Index_View_Change_Tbody">
+                                    @if (Model.Count() != 0)
+                                    {
+                                        int count = 1;
+                                        @foreach (var candidatesAndNumber in Model)
+                                        {
+                                            <tr>
+                                                <td scope="row">@count</td>
+                                                <td>@(candidatesAndNumber.Emplooyee.Lastname+" "+candidatesAndNumber.Emplooyee.FirstName+" "+candidatesAndNumber.Emplooyee.FatherName)</td>
+                                                @if (candidatesAndNumber.Emplooyee.Email.Length > 22)
+                                                {
+                                                    <td>@(candidatesAndNumber.Emplooyee.Email.Substring(0,20)+"...")</td>
+                                                }
+                                                else
+                                                {
+                                                    <td>@candidatesAndNumber.Emplooyee.Email</td>
+                                                }
+                                                @if (candidatesAndNumber.PhoneNumber.PhoneNumber.Length > 15)
+                                                {
+                                                    <td>@(candidatesAndNumber.PhoneNumber.PhoneNumber.Substring(0,15)+"...")</td>
+                                                }
+                                                else
+                                                {
+                                                    <td>@candidatesAndNumber.PhoneNumber.PhoneNumber</td>
+                                                }
+                                            </tr>
+                                            count++;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <td scope="row">0</td>
+                                            <td>Boş</td>
+                                            <td>Boş</td>
+                                            <td>Boş</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @if (Model.Count() != 0)
+            {
+                <div class="card-footer">
+                    <a asp-area="InternalHR" asp-controller="Practitioner" asp-action="AllPractitioner" class="btn All_Index_View_Change_Cart_Footer_A col-md-12">Bütün namizədlərin siyahısı</a>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+

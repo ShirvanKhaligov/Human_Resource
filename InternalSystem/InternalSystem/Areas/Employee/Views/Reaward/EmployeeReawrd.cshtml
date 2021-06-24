@@ -1,0 +1,196 @@
+﻿
+
+
+
+@model RewardCommandVM
+@{
+    ViewData["Title"] = "EmployeeReawrd";
+}
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+        <form method="post" enctype="multipart/form-data">
+            <div style="height: 30px"></div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="EmplooyeeId">İşçinin adı:</label>
+                </div>
+                <div class="col-sm-7">
+                    <select style="padding: 0px" class="form-control input-height" asp-for="EmplooyeeId">
+                        <option selected disabled>Seçin</option>
+                        @foreach (var emp in Model.Emplooyees)
+                        {
+                            <option value="@emp.Id">@(emp.FirstName+" "+emp.Lastname+" "+emp.FatherName+" ") @((emp.GenderId ==1) ? "oğlu" : "qızı") @("Ş/V("+emp.IdCard+")") @(emp.PositionsId!=null ? emp.Positions.Name : "Şöbə Müdiri")</option>
+                        }
+                    </select>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="EmplooyeeId"></span>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Sənədin adı:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" value="MUKAFAT" class="form-control input-height" readonly />
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2 ">
+                    <label style="color:black;">Əmrin skan forması:</label>
+                </div>
+                <div class="col-md-7">
+                    <div class="col-md-2">
+                        <div class="row" style="width:175px;">
+                            <img class="img-fluid mb-3" src="~/dist/img/pdf.png" alt="AdobePdf" />
+                            <input asp-for="ScanRward" type="file" accept=".pdf">
+                            <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="ScanRward"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Verilmə vaxtı:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="date" class="form-control input-height"
+                           asp-for="CreatedDate">
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="CreatedDate"></span>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Məbləğ:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" class="form-control input-height"
+                           asp-for="Money">
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="Money"></span>
+                </div>
+            </div>
+
+
+
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="EmplooyeeId">Əsasən:</label>
+                </div>
+                <div class="col-sm-7">
+                    <select style="padding: 0px" class="form-control input-height" asp-for="Reason">
+                        <option selected disabled>Seçin</option>
+                        <option>69 b </option>
+                        <option>77 d</option>
+                        <option>32 b </option>
+                        <option>435 d</option>
+                        <option>63 b </option>
+                        <option>17 d</option>
+                        <option>29 b </option>
+                        <option>47 d</option>
+                        <option>59 b </option>
+                        <option>76 d</option>
+                        <option>64 b </option>
+                        <option>7 d</option>
+                    </select>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="Reason"></span>
+                </div>
+            </div>
+
+
+
+            
+            <br />
+            <div class="row">
+                <button style="float:left;" class="btn btn-danger col-md-3 mx-auto">
+                    <a asp-controller="Dashboard" asp-action="Index" style="padding: 5px 100px;color:white;">İmtina</a>
+                </button>
+                <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">Yadda saxla</button>
+            </div>
+        </form>
+        <br><br><br>
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <div>
+                    <table id="dataAllSearch" class="table table-hover table-responsive-md">
+                        <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                            <tr class="All_Index_View_Change_Tr">
+                                <th scope="col">Sıra №</th>
+                                <th scope="col">Soyadı,Adı,Ata adı</th>
+                                <th scope="col"> Verilmə tarixi</th>
+                                <th scope="col">Mükafat</th>
+                                <th scope="col">Bax</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center;background:#efefef;" class="All_Index_View_Change_Tbody">
+                            @{
+                                int count = 1;
+                            }
+                            @if (Model.RewardToEmployees != null)
+                            {
+                                @foreach (var command in Model.RewardToEmployees.OrderByDescending(x=>x.TimeOfExecution))
+                                {
+                                    <tr>
+                                        <td scope="row">@count</td>
+                                        <td>@(command.Emplooyee.Lastname+" "+command.Emplooyee.FirstName+" "+command.Emplooyee.FatherName) @(command.Emplooyee.GenderId==1 ? "oğlu" : "qızı")</td>
+                                        <td>@command.CreatedDate.ToString("dd/MM/yyyy")</td>
+                                        <td>@command.Money</td>
+                                        <td>
+                                            <a asp-area="Employee" asp-controller="Reaward" asp-action="Detail" asp-route-id="@command.Id" class="btn btn-primary">
+                                                <i class="fas fa-info"></i>
+                                            </a>
+
+
+                                            <a asp-area="Employee" asp-controller="Reaward" asp-action="DeleteReawrd" asp-route-id="@command.Id" class="btn btn-danger">
+                                                <i class="fas fa-times"></i>
+                                            </a>
+                                            <a asp-area="Employee" asp-controller="Reaward" asp-action="Edit" asp-route-id="@command.Id" class="btn btn-success">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+
+                                        </td>
+                                    </tr>
+                                    count++;
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts{
+    <script>
+
+        function toastSuccessCommand(word) {
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "2000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr["success"](word);
+        }
+         $(function () {
+            var a = '@TempData["quitEmpMsg"]';
+             if (a != '')
+                 toastSuccessCommand("MÜKAFAT əlavə olundu");
+        })
+    </script>
+}
+

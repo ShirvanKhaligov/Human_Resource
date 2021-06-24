@@ -1,0 +1,182 @@
+﻿@model EmployeeDeviceVm
+@{
+    ViewData["Title"] = "AllEmpDevice";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+<div class="content-wrapper">
+    <div class="">
+        <div class="card All_Index_View_Change_Card" style="padding:7px;overflow-x:scroll">
+            <div class="row">
+                <div class="modal" tabindex="-1" id="confirmationModalForDevice" role="dialog">
+                    <input type="hidden" id="hiddenModal" name="name" value="" />
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 style="color:black;font-size:1rem;" class="modal-title">Qaurğunu qaytar</h5>
+                                <button type="button" onclick="closeConfirmationIdDeviceForAll()" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" style="padding-bottom: 0;">
+                                <p style="color:#2590d3 !important;;font-size: 1.3rem;">Qaytarılmasına əminsiniz?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" onclick="deleteDevice($('#hiddenModal').val())" class="btn btn-secondary" data-dismiss="modal">Bəli</button>
+                                <button type="button" onclick="closeConfirmationIdDeviceForAll()" id="confirmationModalForPosition" class="btn btn-primary">Xeyr</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mx-auto" id="deviceTableDiv">
+                    <table style="color:blue;width:1250px" class="table table-hover table-responsive-md ">
+                        <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                            <tr class="All_Index_View_Change_Tr">
+                                <th scope="col"> Sıra №</th>
+                                <th scope="col"> Soyadı,Adı,Ata adı</th>
+                                <th scope="col"> Ş\V seriyası</th>
+                                <th scope="col"> Vəzifəsi</th>
+                                <th scope="col"> Qurğunun növü</th>
+                                <th scope="col"> Qurğunun kodu</th>
+                                <th scope="col"> Verilmə tarixi</th>
+                                <th scope="col"> Qaytarılma tarixi</th>
+                                <th scope="col"> Redaktə et</th>
+                            </tr>
+                        </thead>
+                        @*<tbody style="text-align: center" class="All_Index_View_Change_Tbody">
+                            @{ var count = 1; }
+                            @if (Model.DeviceToEmployees.Count() != 0)
+                            {
+                                @foreach (var devEmp in Model.DeviceToEmployees)
+                                {
+                                    <tr>
+                                        <th scope="row">@count</th>
+                                        <td>@(devEmp.Emplooyee.Lastname+" "+ devEmp.Emplooyee.FirstName+" "+devEmp.Emplooyee.FatherName)</td>
+                                        <td>@devEmp.Emplooyee.IdCard</td>
+                                        @if (devEmp.Emplooyee.Positions.Name.Length > 20)
+                                        {
+                                            <td>@(devEmp.Emplooyee.Positions.Name.Substring(0, 20)+"...")</td>
+                                        }
+                                        else
+                                        {
+                                            <td>@devEmp.Emplooyee.Positions.Name</td>
+                                        }
+                                        @if (devEmp.Device.DevicesType.Name.Length > 15)
+                                        {
+                                            <td>@(devEmp.Device.DevicesType.Name.Substring(0, 15)+"...")</td>
+                                        }
+                                        else
+                                        {
+                                            <td>@devEmp.Device.DevicesType.Name</td>
+                                        }
+                                        @if (devEmp.Device.Name.Length > 15)
+                                        {
+                                            <td>@(devEmp.Device.Name.Substring(0, 15)+"...")</td>
+                                        }
+                                        else
+                                        {
+                                            <td>@devEmp.Device.Name</td>
+                                        }
+                                        <td>@devEmp.Device.GivingTime.ToString("MM/dd/yyyy")</td>
+                                        @if (@devEmp.Device.ReturnDate == null)
+                                        {
+                                            <td>------</td>
+                                        }
+                                        else
+                                        {
+                                            <td>@devEmp.Device.ReturnDate</td>
+                                        }
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@devEmp.Id" class="btn btn-primary" title="Dəyiş"> <i class="fas fa-edit"></i></a>
+                                            @if (devEmp.Device.Status != false)
+                                            {
+                                                <a onclick="confirmationDeleteForDevice(@devEmp.Id)" class="btn btn-success" title="Qaytar" style="color:white;padding:.375rem 1.3rem;">Qaytar</a>
+                                            }
+                                            else
+                                            {
+                                                <a style="color:white;pointer-events:none" class="btn btn-danger" title="Qaytar">Qaytarıldı</a>
+                                            }
+                                        </td>
+                                    </tr>
+                                    count++;
+                                }
+
+                            }
+                            else
+                            {
+                                <tr>
+                                    <th scope="row">0</th>
+                                    <td>Boşdur</td>
+                                    <td>Boşdur</td>
+                                    <td>Boşdur</td>
+                                    <td>Boşdur</td>
+                                    <td>Boşdur</td>
+                                    <td>Boşdur</td>
+                                    <td>Boşdur</td>
+                                    <td>Boşdur</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>*@
+                </div>
+            </div>
+            <div class="card-footer" style="width:1250px">
+                <a asp-area="InternalHR" asp-controller="EmployeeDevice" asp-action="Index" class="btn All_Index_View_Change_Cart_Footer_A col-md-12">Geri</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+            function deleteDevice(Id) {
+                   $.ajax({
+                       type: 'post',
+                       url: '@Url.Action("Delete", "EmployeeDevice")',
+                       data: { DeviceId: Id},
+                       success: function (response) {
+                           console.log(response)
+                           $("#confirmationModalForDevice").hide()
+                           $("#deviceTableDiv").html(response)
+                       },
+                       error: function (response) {
+                           console.error(response)
+                       }
+                   })
+            }
+
+            //////////////open modul
+            function confirmationDeleteForDevice(Id) {
+                $("#confirmationModalForDevice").show()
+                $("#hiddenModal").val(Id);
+            }
+            //close modul//
+            function closeConfirmationIdDeviceForAll() {
+                $("#confirmationModalForDevice").hide()
+            }
+
+    </script>
+
+}
+

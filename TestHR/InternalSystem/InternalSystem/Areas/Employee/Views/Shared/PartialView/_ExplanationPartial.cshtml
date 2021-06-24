@@ -1,0 +1,120 @@
+﻿@model EXPLANANTIONVM
+@if (Model.Explanations.Count() != 0)
+{
+    int count = 1;
+    @foreach (var item in Model.Explanations)
+    {
+        <tr>
+            <th style="width: 100px;" scope="row">@count</th>
+            <td style="width: 220px;">@item.Emplooyee.FirstName @item.Emplooyee.Lastname @item.Emplooyee.FatherName</td>
+            <td style="width: 100px;">@item.Explanation.PermissionType.Name</td>
+            <td style="width: 140px;">
+                @if (item.Explanation.PermissionType.Name == "Günlük")
+                {
+                    <p>@item.Explanation.FromDate.Day / @item.Explanation.FromDate.Month / @item.Explanation.FromDate.Year</p>
+                }
+                else
+                {
+                    //saatliq
+                    @if (item.Explanation.FromDateForHour.Minute < 10 && item.Explanation.FromDateForHour.Minute > 0)
+                    {
+                        <span>
+                            @item.Explanation.FromDateForHour.Hour :0@(item.Explanation.FromDateForHour.Minute)
+                        </span>
+                    }
+                    else
+                    {
+                        <span>
+                            @item.Explanation.FromDateForHour.Hour : @item.Explanation.FromDateForHour.Minute
+                        </span>
+                    }
+                    <span>
+                        (@item.Explanation.FromDate.Day / @item.Explanation.FromDate.Month / @item.Explanation.FromDate.Year)
+                    </span>
+                    //saatliq
+                }
+            </td>
+            <td style="width:140px;">
+                @if (item.Explanation.PermissionType.Name == "Günlük")
+                {
+                    <p>@item.Explanation.ToDate.Day / @item.Explanation.ToDate.Month / @item.Explanation.ToDate.Year</p>
+                }
+                else
+                {
+                    //saatliq
+                    @if (item.Explanation.ToDate.Minute < 10 && item.Explanation.ToDate.Minute > 0)
+                    {
+                        <span>
+                            @item.Explanation.ToDate.Hour :0@(item.Explanation.ToDate.Minute)
+                        </span>
+                    }
+                    else
+                    {
+                        <span>
+                            @item.Explanation.ToDate.Hour : @item.Explanation.ToDate.Minute
+                        </span>
+                    }
+                    <span>
+                        (@item.Explanation.FromDate.Day / @item.Explanation.FromDate.Month / @item.Explanation.FromDate.Year)
+                    </span>
+                    //saatliq
+                }
+            </td>
+            @if (item.Explanation.Reason.Length > 20)
+            {
+                <td>@(item.Explanation.Reason.Substring(0,20)+"...")</td>
+            }
+            else
+            {
+                <td>@item.Explanation.Reason</td>
+            }
+            @if (item.Explanation.Description == null)
+            {
+                <td>şərh yoxdur</td>
+            }
+            else
+            {
+                @if (item.Explanation.Description.Length > 20)
+                {
+                    <td>
+                        @(item.Explanation.Description.Substring(0,20)+"...")
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        @item.Explanation.Description
+                    </td>
+
+                }
+            }
+            <td style="width: 136px;">
+                @item.Emplooyee.Positions.SubDepartment.DepartmentToCompany.Department.Name
+            </td>
+            <td style="width: 136px;">
+                @item.Emplooyee.Positions.Name
+            </td>
+            <td style="width: 136px;">
+                <a class="btn btn-success" asp-controller="PermissionForHr" asp-action="Index" asp-area="InternalHR" asp-route-id="@item.Id"><i class="fas fa-info"></i></a>
+            </td>
+        </tr>
+        count++;
+    }
+}
+else
+{
+    <tr>
+        <td style="width:100px;">Boş</td>
+        <td style="width:220px;">Boş</td>
+        <td style="width:100px;">Boş</td>
+        <td style="width:140px;">Boş</td>
+        <td style="width:140px;">Boş</td>
+        <td style="width:100px;">Boş</td>
+        <td style="width:136px;">Boş</td>
+        <td style="width:136px;">Boş</td>
+        <td style="width:136px;">Boş</td>
+        <td style="width:136px;">Boş</td>
+
+    </tr>
+
+}

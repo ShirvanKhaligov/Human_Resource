@@ -1,0 +1,72 @@
+﻿@model CommandSurnameChangeVM
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid" style="padding-bottom:100px;">
+        <form method="post" enctype="multipart/form-data">
+            <div style="height: 30px"></div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="EmplooyeeId">İşçinin adı:</label>
+                </div>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control input-height" readonly value="@(Model.CommandsToEmployee.Emplooyee.FirstName+" "+Model.CommandsToEmployee.Emplooyee.Lastname+" "+Model.CommandsToEmployee.Emplooyee.FatherName +" qızı")" />
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Sənədin adı:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" value="Soyad dəyişikliyi" class="form-control input-height" readonly />
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Vaxt:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="date" class="form-control input-height" value="@Model.CommandsToEmployee.CreatedDate.ToString("yyyy-MM-dd")"
+                           asp-for="CreateDate">
+                    <span class="text-danger text-bold" asp-validation-for="CreateDate" style="font-size:14px;"></span>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2 ">
+                    <label style="color:black;">Əmrin skan forması:</label>
+                </div>
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img class="img-fluid" src="~/dist/img/pdf.png" alt="AdobePdf" />
+                            <input asp-for="PhotoUpd" id="pngFile" type="file" accept=".pdf">
+                            <span class="text-danger text-bold" style="font-size:14px; " asp-validation-for="PhotoUpd"></span>
+                        </div>
+                        <div class="col-md-10">
+                            <embed src="~/allUserImg/@Model.AllCommandsHistory.Pdf" style="width:100%;height:300px" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="salary">Yeni soyad:</label>
+                </div>
+                <div class="col-sm-7">
+                    <input asp-for="NewSurname" value="@Model.CommandsToEmployee.Emplooyee.Lastname" class="form-control input-height" type="text">
+                    <span class="text-danger text-bold" style="font-size:14px; " asp-validation-for="NewSurname"></span>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <button style="float:left;" id="removeBtn" class="btn btn-danger col-md-3 mx-auto">
+                    <a asp-controller="SurnameChange" asp-action="Create" style="padding: 5px 100px;color:white;">İmtina</a>
+                </button>
+                <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">Yadda saxla</button>
+            </div>
+        </form>
+    </div>
+</div>
+

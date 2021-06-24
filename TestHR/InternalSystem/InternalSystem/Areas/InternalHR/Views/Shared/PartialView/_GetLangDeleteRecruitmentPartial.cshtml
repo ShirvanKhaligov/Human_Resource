@@ -1,0 +1,31 @@
+﻿@model RecruitmentCandidateVM
+@foreach (var lg in Model.LanguageToEmployees)
+{
+<div class="form-group row">
+    <div class="col-md-3 offset-3">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="language">Dilin adı:</label>
+            </div>
+            <div class="col-sm-8">
+                <input type='text' value='@lg.LanguageToLanguageLevel.Language.Name' readonly class='form-control input-height' />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="row">
+            <div class="col-md-5">
+                <label for="languageLevel">Bilik səviyyəsi:</label>
+            </div>
+            <div class="col-md-7">
+                <input type='text' value='@lg.LanguageToLanguageLevel.LanguageLevel.Name' readonly class='form-control input-height' />
+            </div>
+        </div>
+    </div>
+    <div class='col-md-2 offset-1'>
+      <div class='row'>
+        <button type='button' onclick='modalLanguageDelete(@lg.Emplooyee.Id,@lg.LanguageToLanguageLevel.Id)' class='btn btn-danger' style='padding: 0px 12px;'>Sil</button>
+      </div>
+    </div>
+</div>
+}

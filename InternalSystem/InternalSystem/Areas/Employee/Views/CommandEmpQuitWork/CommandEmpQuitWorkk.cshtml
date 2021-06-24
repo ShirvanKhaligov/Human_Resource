@@ -1,0 +1,209 @@
+﻿@model CommandEmployeeVM
+@{ ViewData["Title"] = "CommandEmpQuitWorkk"; }
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+
+
+<div class="content-wrapper" style="color: black; background-color: rgb(255, 255, 255);">
+    <div class="container-fluid">
+        <form method="post" enctype="multipart/form-data">
+            <div style="height: 30px"></div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;" for="EmplooyeeId">İşçinin adı:</label>
+                </div>
+                <div class="col-sm-7">
+                    <select style="padding: 0px" class="form-control input-height select2" asp-for="EmplooyeeId">
+                        <option selected disabled>Seçin</option>
+                        @foreach (var emp in Model.Emplooyees)
+                        {
+            <option value="@emp.Id">@(emp.FirstName+" "+emp.Lastname+" "+emp.FatherName+" ") @((emp.GenderId ==1) ? "oğlu" : "qızı") @("Ş/V("+emp.IdCard+")") @emp.Positions.SubDepartment.DepartmentToCompany.Company.Name</option>}
+                    </select>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="EmplooyeeId"></span>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Sənədin adı:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" value="Xitam" class="form-control input-height" readonly />
+                </div>
+            </div>
+            <div class="form-group row ml-md-5">
+                <div class="col-md-2 ">
+                    <label style="color:black;">Əmrin skan forması:</label>
+                </div>
+                <div class="col-md-7">
+                    <div class="col-md-2">
+                        <div class="row" style="width:175px;">
+                            <img class="img-fluid mb-3" src="~/dist/img/pdf.png" alt="AdobePdf" />
+                            <input asp-for="PdfScanQuitWork" type="file" accept=".pdf">
+                            <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="PdfScanQuitWork"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Çıxış vaxtı:</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="date" class="form-control input-height"
+                           asp-for="CreatedDate">
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="CreatedDate"></span>
+                </div>
+            </div>
+            <div class="form-group row  ml-md-5">
+                <div class="col-md-2">
+                    <label style="color:black;">Səbəb:</label>
+                </div>
+                @*<div class="col-md-7">
+                        <textarea cols="2" rows="2"
+                                  type="text" asp-for="Reason"
+                                  class="form-control"></textarea>
+                        <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="Reason"></span>
+                    </div>*@
+                <div class="col-sm-7">
+                    @*<select style="padding: 0px" class="form-control input-height select2" asp-for="Reason">
+                            <option selected disabled>Seçin</option>
+
+
+                            <option data-limit='37' value="68.2.a) tərəflərdən birinin təşəbbüsü">68.2.a) tərəflərdən birinin təşəbbüsü</option>
+                            <option data-limit='37' value="68.2.b) əmək müqaviləsinin müddətinin qurtarması">68.2.b) əmək müqaviləsinin müddətinin qurtarması</option>
+                            <option data-limit='37' value="68.2.c) əmək şəraitinin şərtlərinin dəyişdirilməsi">68.2.c) əmək şəraitinin şərtlərinin dəyişdirilməsi</option>
+                            <option data-limit='37' value="68.2.ç) müəssisənin mülkiyyətçisinin dəyişməsi ilə əlaqədar (bu Məcəllənin 63-cü maddəsinin ikinci hissəsində göstərilən işçilər)">68.2.ç) müəssisənin mülkiyyətçisinin dəyişməsi ilə əlaqədar (bu Məcəllənin 63-cü maddəsinin ikinci hissəsində göstərilən işçilər)</option>
+                            <option data-limit='37' value="68.2.d) tərəflərin iradəsindən asılı olmayan hallar">68.2.d) tərəflərin iradəsindən asılı olmayan hallar</option>
+                            <option data-limit='37' value="68.2.e) tərəflərin əmək müqaviləsində müəyyən etdiyi hallar">68.2.e) tərəflərin əmək müqaviləsində müəyyən etdiyi hallar</option>
+                            <option data-limit='37' value="69.1) İşçi bir təqvim ayı qabaqcadan işəgötürəni yazılı ərizəsi ilə xəbərdar etməklə əmək müqaviləsini ləğv edə bilər">69.1) İşçi bir təqvim ayı qabaqcadan işəgötürəni yazılı ərizəsi ilə xəbərdar etməklə əmək müqaviləsini ləğv edə bilər</option>
+                            <option data-limit='37' value="69.2) Ərizə verildiyi gündən bir təqvim ayı bitdikdən sonra işçi işə çıxmamaq və son haqq-hesabının aparılmasını tələb etmək hüququna malikdir. Bu halda işəgötürən işçinin tələblərini yerinə yetirməyə borcludur">69.2) Ərizə verildiyi gündən bir təqvim ayı bitdikdən sonra işçi işə çıxmamaq və son haqq-hesabının aparılmasını tələb etmək hüququna malikdir. Bu halda işəgötürən işçinin tələblərini yerinə yetirməyə borcludur</option>
+                            <option data-limit='37' value="69.3) İşçi yaşa, əlilliyə görə təqaüdə çıxdıqda, təhsilini davam etdirmək üçün müvafiq təhsil müəssisəsinə daxil olduqda, yeni yaşayış yerinə köçdükdə, başqa işəgötürənlə əmək müqaviləsi bağladıqda, seksual qısnamaya məruz qaldıqda və qanunvericilikdə nəzərdə tutulmuş digər hallarda ərizəsində göstərdiyi gün əmək müqaviləsi ləğv edilə bilər">69.3) İşçi yaşa, əlilliyə görə təqaüdə çıxdıqda, təhsilini davam etdirmək üçün müvafiq təhsil müəssisəsinə daxil olduqda, yeni yaşayış yerinə köçdükdə, başqa işəgötürənlə əmək müqaviləsi bağladıqda, seksual qısnamaya məruz qaldıqda və qanunvericilikdə nəzərdə tutulmuş digər hallarda ərizəsində göstərdiyi gün əmək müqaviləsi ləğv edilə bilər</option>
+
+
+                        </select>*@
+
+
+                    <select style="padding: 0px" class="form-control input-height select2" asp-for="ItemId">
+                        <option selected disabled>Seçin</option>
+                        @foreach (var item in Model.Items)
+                        {
+                    @if (item.ItemName.Length > 330)
+                    {
+                    <option value="@item.Id">@(item.ItemName.Substring(0,330)+".")</option> }
+                                    else
+                                    {
+                                        <option value="@item.Id">@item.ItemName</option>
+                                    }}
+                    </select>
+                    <span class="text-danger text-bold" style="font-size:14px;" asp-validation-for="Item"></span>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <button style="float:left;" class="btn btn-danger col-md-3 mx-auto">
+                    <a asp-controller="Dashboard" asp-action="Index" style="padding: 5px 100px;color:white;">İmtina</a>
+                </button>
+                <button style="float: right" class="btn btn-success col-md-3 mx-auto" type="submit">Yadda saxla</button>
+            </div>
+        </form>
+        <br><br><br>
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <div>
+                    <table id="dataAllSearch" class="table table-hover table-responsive-md">
+                        <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                            <tr class="All_Index_View_Change_Tr">
+                                <th scope="col">Sıra №</th>
+                                <th scope="col">Soyadı,Adı,Ata adı</th>
+                                <th scope="col"> Verilmə tarixi</th>
+                                <th scope="col"> Əmrin növu</th>
+                                <th scope="col"> Maddə</th>
+
+                             
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center;background:#efefef;" class="All_Index_View_Change_Tbody">
+                            @{ int count = 1; }
+                            @if (Model.CommandsToEmployees != null)
+                            {
+                @foreach (var command in Model.CommandsToEmployees)
+                {
+                            <tr>
+                                <td scope="row">@count</td>
+                                <td>@(command.Emplooyee.Lastname+" "+command.Emplooyee.FirstName+" "+command.Emplooyee.FatherName) @(command.Emplooyee.GenderId==1 ? "oğlu" : "qızı")</td>
+                                <td>@command.CreatedDate.ToString("dd/MM/yyyy")</td>
+                                <td>@command.Command.Title</td>
+                                @if (command.Item.ItemName.Length > 29)
+                                {
+                                    <td>@command.Item.ItemName.Substring(0,29)</td>
+                                }
+                                else
+                                {
+                                <td>@command.Item.ItemName</td>
+
+                                }
+                               
+                            </tr>count++;
+                }}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section scripts{
+    <script>
+        $('.select2').select2();
+        function toastSuccessCommand(word) {
+            toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "2000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+            toastr["success"](word);
+        }
+         $(function () {
+            var a = '@TempData["quitEmpMsg"]';
+             if (a != '')
+                 toastSuccessCommand("Xitam əlavə olundu");
+        })
+    </script>
+}
+

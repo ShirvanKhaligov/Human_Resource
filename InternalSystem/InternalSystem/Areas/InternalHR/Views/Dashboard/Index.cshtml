@@ -1,0 +1,167 @@
+﻿@model AllModelVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+<div class="content-wrapper">
+    <div class="container-fluid ">
+        <div class="row pt-4 ml-2 mr-2">
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3>@Model.EmpCount</h3>
+
+                        <p>İşçi sayı</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <a asp-area="InternalHR" asp-controller="Employee" asp-action="AllEmployee" class="small-box-footer">Siyahı <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-success">
+                    <div class="inner">
+                        <h3>@Model.MenCount</h3>
+
+                        <p>Kişilər</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <a asp-area="InternalHR" asp-controller="Employee" asp-action="AllEmployeeMen" class="small-box-footer">Siyahı <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-primary">
+                    <div class="inner">
+                        <h3>@Model.WomenCount</h3>
+
+                        <p>Qadinlar</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <a asp-area="InternalHR" asp-controller="Employee" asp-action="AllEmployeeWomans" class="small-box-footer">Siyahı <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-secondary">
+                    <div class="inner">
+                        <h3>85<sup style="font-size: 20px">%</sup></h3>
+
+                        <p>İşə vaxtında gəlmə</p>
+                    </div>
+                    <div class="icon">
+                        <i class=""></i>
+                    </div>
+                    <a href="#" class="small-box-footer"><i class="fas fa-close"> </i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-white">
+                    <div class="inner">
+                        <h3>@Model.PositionCount</h3>
+
+                        <p>Ümumi vəzifələrin sayı</p>
+                    </div>
+                    <div class="icon">
+                        <i class=""></i>
+                    </div>
+                    <a asp-area="InternalHR" asp-controller="Dashboard" asp-action="PositionList" class="small-box-footer">Siyahı<i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-dark">
+                    <div class="inner">
+                        <h3>@Model.DepCount</h3>
+
+                        <p> Ümumi departament sayı</p>
+                    </div>
+                    <div class="icon">
+                        <i class=""></i>
+                    </div>
+                    <a asp-area="InternalHR" asp-controller="Dashboard" asp-action="Departamentlər" class="small-box-footer">Siyahı<i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-warning">
+                    <div class="inner">
+                        <h3>2</h3>
+
+                        <p>Məzuniyyətdə olanlar</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">Siyahı <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                @*small box*@
+                <div class="small-box bg-danger">
+                    <div class="inner">
+                        <h3>@Model.EmpCount</h3>
+
+                        <p>Unique Visitors</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-pie-graph"></i>
+                    </div>
+                    <a asp-area="InternalHR" asp-controller="Employee" asp-action="AllEmployee" class="small-box-footer">Siyahı <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            @*<div class="col-lg-12 col-12">*@
+                @*small box*@
+                @*<div class="small-box bg-success">
+                    <div class="inner">
+                        <h3>@Model.EmpCount</h3>
+
+                        <p>Unique Visitors</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-pie-graph"></i>
+                    </div>
+                    <a asp-area="InternalHR" asp-controller="Employee" asp-action="AllEmployee" class="small-box-footer">Siyahı <i class="fas fa-arrow-circle-right"></i></a>
+                </div>*@
+            @*</div>*@
+            <!-- ./col -->
+        </div>
+
+        <div id="app" class="row mt-3"></div>
+
+    </div>
+</div>

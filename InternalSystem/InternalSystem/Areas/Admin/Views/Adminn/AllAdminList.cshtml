@@ -1,0 +1,84 @@
+﻿@model AdminVM
+@{
+    ViewData["Title"] = "AllAdminList";
+}
+
+<div style="background-color: white" class="page-wrapper">
+
+    <div class="container-fluid">
+
+        <div class="card">
+            <div class="card-header">
+                <p style="color: green;text-align: center;font-size: 25px">Adminlərin siyahısı</p>
+            </div>
+            <div class="card-body" style="overflow-x:scroll">
+                <div class="row">
+                    <div class="col-md-12" id="AdminTableDiv">
+                        <table style="width:1500px" class="table table-bordered table-responsive-md text-center">
+                            <thead class=" table-dark">
+                                <tr>
+                                    <th scope="col">Sıra №</th>
+                                    <th scope="col">Şəkil</th>
+                                    <th scope="col">Şirkətin adı</th>
+                                    <th scope="col">Adminin adı</th>
+                                    <th scope="col">Soyadı</th>
+                                    <th scope="col">Atasının adı</th>
+                                    <th scope="col">Tel nömrəsi</th>
+                                    <th scope="col">İstifadəçi adı</th>
+                                    <th scope="col">Poçt ünvanı</th>
+                                    <th scope="col">Redaktə et</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                @if (Model.Companies.Count() != 0)
+                                {
+                                    int count = 1;
+                                    @foreach (var item in Model.AppUsers.Where(a => a.Status != false))
+                                    {
+                                        <tr>
+                                            <th scope="row">@count</th>
+                                            <td>
+                                                <img src="~/allUserImg/@item.Image" style="width:100px" />
+                                            </td>
+                                            <td>@item.Companies.Name</td>
+                                            <td>@item.Name</td>
+                                            <td>@item.Surname</td>
+                                            <td>@item.FatherName</td>
+                                            <td>@item.PhoneNumber</td>
+                                            <td>@item.UserName</td>
+                                            <td>@item.Email</td>
+                                            <th class="text-white">
+                                                <div class="d-flex w-100 justify-content-center">
+                                                    @*<a asp-action="Edit" asp-controller="Adminn" class="btn btn-primary" title="Dəyiş"> <i class="fas fa-edit"></i></a>*@
+                                                    <a asp-controller="Adminn" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger ml-1" title="Sil"> <i class="fas fa-trash"></i></a>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                        count++;
+                                    }
+                                }
+                                else
+                                {
+                                    <tr class="text-danger text-center">
+                                        <th scope="row">0</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a asp-area="Admin" asp-controller="Adminn" asp-action="Index" class="btn btn-primary col-md-12">Geri</a>
+            </div>
+        </div>
+    </div>
+</div>

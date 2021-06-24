@@ -1,0 +1,82 @@
+﻿@model AdminVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div style="background-color: white" class="page-wrapper">
+
+    <div class="container-fluid">
+
+        <div class="card">
+            <div class="card-header">
+                <p style="color: green;text-align: center;font-size: 25px">Adminlərin siyahısı</p>
+            </div>
+            <div class="card-body" style="overflow-x:scroll">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table style="width:1500px" class="table table-bordered table-responsive-md text-center">
+                            <thead class=" table-dark">
+                                <tr>
+                                    <th scope="col">Sıra №</th>
+                                    <th scope="col">Şəkil</th>
+                                    <th scope="col">Şirkətin adı</th>
+                                    <th scope="col">Adminin adı</th>
+                                    <th scope="col">Soyadı</th>
+                                    <th scope="col">Atasının adı</th>
+                                    <th scope="col">Tel nömrəsi</th>
+                                    <th scope="col">İstifadəçi adı</th>
+                                    <th scope="col">Poçt ünvanı</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                @if (Model.AppUsers.Count() != 0)
+                                {
+                                    int count = 1;
+                                    @foreach (var item in Model.AppUsers.Where(a => a.Status != false).Take(5))
+                                    {
+                                        <tr>
+                                            <th scope="row">@count</th>
+                                            <th>
+                                                <img src="~/allUserImg/@item.Image" style="width:100px" />
+                                            </th>
+                                            <th>@item.Companies.Name</th>
+                                            <th>@item.Name</th>
+                                            <td>@item.Surname</td>
+                                            <td>@item.FatherName</td>
+                                            <td>@item.PhoneNumber</td>
+                                            <td>@item.UserName</td>
+                                            <td>@item.Email</td>
+                                        </tr>
+                                        count++;
+                                    }
+                                }
+                                else
+                                {
+                                    <tr class="text-danger text-center">
+                                        <th scope="row">0</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            @if (Model.AppUsers.Count() != 0)
+            {
+                <div class="card-footer">
+                    <a asp-area="Admin" asp-controller="Adminn" asp-action="AllAdminList" class="btn btn-primary col-md-12">Bütün adminlərin siyahısı</a>
+                </div>
+            }
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,51 @@
+﻿@model UniFaculty
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="content-wrapper" style="padding:0px 0px 0px 250px">
+    <div class="container-fluid">
+        <br>
+        <br>
+        <a asp-area="Admin" asp-controller="AddFaculty" asp-action="Index" class="col-md-2 btn btn-primary "><i class="fas fa-long-arrow-alt-left"></i> Geri</a>
+        <div class="">
+            <br><br>
+            <form method="post">
+                <div class="form-group row ml-md-4">
+                    <label for="universityName" class="col-md-2">Universitetin adı:</label>
+                    <div class="col-md-5">
+                        <select style="padding: 0px" class="form-control" name="EducationTypeToUniversityId"
+                                id="universityName">
+                            <option>Seç</option>
+                            @foreach (var item in ViewData["universityList"] as List<InternalSystem.Areas.InternalHR.Models.Education.EducationTypeToUnivercity>)
+                            {
+                                <option value="@item.Id">@item.Universities.Name (@item.EducationType.Name)</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row ml-md-4">
+                    <label for="facultyName" class="col-md-2">Fakültənin adı:</label>
+                    <div class="col-md-5">
+                        <input asp-for="Name" value="@if (Model!=null) {@Model.Name } " class="form-control" id="facultyName" name="Name" type="text">
+                        @if (ViewData["universityList"] != null)
+                        {
+                            <p class="text-danger">@ViewData["noneUniversity"]</p>}
+                        @if (ViewData["existsFaculty"] != null)
+                        {
+                            <p class="text-danger">@ViewData["existsFaculty"]</p>}
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="col-md-4 mx-auto">
+                        <button style="width: 300px; " class="btn btn-success" type="submit">Əlavə et</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--content-wrapper-->
+</div>
+

@@ -1,0 +1,53 @@
+﻿@model EducationTypeToUnivercity
+@{
+    ViewData["Title"] = "EditUniversity";
+}
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <br>
+        <br>
+        <a asp-area="InternalHR" asp-controller="University" asp-action="Index" class="col-md-2 btn btn-primary "><i class="fas fa-long-arrow-alt-left"></i> Geri</a>
+        <div class="">
+            <br><br>
+            <form asp-controller="University" asp-action="EditUniversitySubmit" method="post">
+                <div class="form-group">
+                    <label for="Name">Universitetin adı</label>
+                    <input type="text" class="form-control" name="UniversityName" value="@if(ViewData["UniName"] != null){@ViewData["UniName"]}" placeholder="Ad daxil edin">
+                    @if (ViewData["emptyName"] != null)
+                    {
+                        <p class="text-danger">@ViewData["emptyName"]</p>
+                    }
+                    <input id="hiddenUniversityId" name="UniversityId" type="hidden" value="@if(ViewData["UniId"]!= null){@ViewData["UniId"]}">
+                </div>
+                <div class="form-group">
+                    <label for="EducationType">Təhsilin növü</label>
+                    <select style="padding: 0px" class="form-control input-height" name="EducationTypeId" id="EducationTypeId">
+                        @foreach (var item in ViewData["EducationTypes"] as List<EducationType>)
+                        {
+                            if (Model.EducationTypeId == item.Id)
+                            {
+                                <option value="@item.Id" selected>@item.Name</option>
+                            }
+                            else
+                            {
+                                <option value="@item.Id">@item.Name</option>
+                            }
+                        }
+                    </select>
+                    @if (ViewData["exitUniversity"] != null)
+                    {
+                        <p class="text-danger">@ViewData["exitUniversity"]</p>
+                    }
+                </div>
+                <div class="row ">
+                    <div class="col-md-4 mx-auto">
+                        <button style="width: 300px; " class="btn btn-success" type="submit">Redaktə et</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--content-wrapper-->
+</div>
+

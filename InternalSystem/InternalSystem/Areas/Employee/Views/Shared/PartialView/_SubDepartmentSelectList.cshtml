@@ -1,0 +1,8 @@
+﻿@model IEnumerable<SubDepartment>
+<select onchange="getPosition()" style="padding: 0px" class="form-control input-height" name="SubdepartmentName" id="SubdepartmentName">
+    <option selected disabled>Seçin</option>
+    @foreach (var subDep in Model)
+    {
+        <option value="@subDep.Id">@subDep.Name</option>
+    }
+</select>

@@ -1,0 +1,119 @@
+﻿@model Profession
+@{
+    ViewData["Title"] = "EditProfession";
+}
+
+<div class="content-wrapper" style="padding:0px 0px 0px 250px">
+    <div class="container-fluid">
+        <br>
+        <br>
+        <a asp-area="Admin" asp-controller="AddProfession" asp-action="Index" class="col-md-2 btn btn-primary "><i class="fas fa-long-arrow-alt-left"></i> Geri</a>
+        <div class="">
+            <br><br>
+            <form asp-action="EditProfession" asp-controller="AddProfession" method="post">
+                <div class="form-group row ml-md-4">
+                    <label for="universityName" class="col-md-2">Universitetin adı:</label>
+                    <div class="col-md-5">
+                        <select onchange="selectUniversity()" id="universityId" style="padding: 0px" class="form-control" name="EducationTypeToUnivercityId">
+                            @foreach (var item in ViewData["allUniversities"] as List<EducationTypeToUnivercity>)
+                            {
+                                if (Model.UniFaculty.EducationTypeToUniversityId == item.Id)
+                                {
+                                    <option selected value="@item.Id">@item.Universities.Name (@item.EducationType.Name)</option>
+                                }
+                                else
+                                {
+                                    <option value="@item.Id">@item.Universities.Name (@item.EducationType.Name)</option>
+                                }
+                            }
+                        </select>
+                        @if (ViewData["nonUniversity"] != null)
+                        {
+                            <p class="text-danger">@ViewData["nonUniversity"]</p>}
+                    </div>
+                </div>
+                <div class="form-group row ml-md-4">
+                    <label for="facultyName" class="col-md-2">Fakültənin adı:</label>
+                    <div class="col-md-5" id="facultySelectDiv">
+                        <select style="padding: 0px" class="form-control" name="UniFacultyId" id="facultyName">
+                            @foreach (var item in ViewData["allFaculties"] as List<UniFaculty>)
+                            {
+                                if (ViewData["keepFacultyId"] != null)
+                                {
+                                    if (item.Id == (int)ViewData["keepFacultyId"])
+                                    {
+                                        <option selected value="@item.Id">@item.Name</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@item.Id">@item.Name</option>
+                                    }
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row ml-md-4">
+                    <label for="specialityName" class="col-md-2">İxtisasin adı:</label>
+                    <div class="col-md-5">
+                        <input class="form-control" id="specialityName" name="Name" value="@if (Model != null) {@Model.Name} " type="text">
+                        <input name="Id" value="@if (Model != null) {@Model.Id} " type="hidden">
+                        <span class="text-danger" asp-validation-for="Name"></span>
+                        @if (ViewData["existsProfession"] != null)
+                        {
+                            <p class="text-danger">@ViewData["existsProfession"]</p>}
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-4 mx-auto">
+                        <button style="width: 300px; " class="btn btn-success" type="submit">Redaktə et</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            var e = document.getElementById("universityId");
+            var selectedUniversity = e.options[e.selectedIndex].value;
+            $.ajax({
+                type: "get",
+                url: "@Url.Action("GetFaculties","AddProfession")",
+                data: { educaEducationTypeToUnivercityId: selectedUniversity },
+                success: function (respoonse) {
+                    $("#facultySelectDiv").html(respoonse)
+                    console.log("success")
+                    console.log(respoonse)
+                },
+                error: function (response) {
+                    console.error("error - suceess")
+                    console.error(respoonse)
+                }
+
+            })
+        });
+        function selectUniversity() {
+            var e = document.getElementById("universityId");
+            var selectedUniversity = e.options[e.selectedIndex].value;
+            $.ajax({
+                type: "get",
+                url: "@Url.Action("GetFaculties","AddProfession")",
+                data: { educaEducationTypeToUnivercityId: selectedUniversity },
+                success: function (respoonse) {
+                    $("#facultySelectDiv").html(respoonse)
+                    console.log("success")
+                    console.log(respoonse)
+                },
+                error: function (response) {
+                    console.error("error - suceess")
+                    console.error(respoonse)
+                }
+
+            })
+        }
+    </script>
+}
+

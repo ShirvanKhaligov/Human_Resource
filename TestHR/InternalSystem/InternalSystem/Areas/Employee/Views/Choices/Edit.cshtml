@@ -1,0 +1,66 @@
+﻿@model InternalSystem.Areas.InternalHR.Models.Quiz.Choice
+
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+<h1>
+    Create
+    <h4>Choice</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="ChoiceID" />
+                <div class="form-group">
+                    <label asp-for="ChoiceText" class="control-label"></label>
+                    <img src="~/QuesPic/@Model.ChoiceText" />
+                    <input type="file" class="form-control" name="QuestionFile" />
+                    <span asp-validation-for="ChoiceText" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="QuestionID" class="control-label"></label>
+                    <select asp-for="QuestionID" class="form-control" asp-items="ViewBag.QuestionID"></select>
+                    <span asp-validation-for="QuestionID" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="IsTrue" /> @Html.DisplayNameFor(model => model.IsTrue)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>

@@ -1,0 +1,84 @@
+﻿@model AppUser
+@{
+    ViewData["Title"] = "Information";
+}
+
+@section styles{
+    <style>
+        .email_p {
+            text-align: start;
+            font-weight: bold;
+            font-size: 16px;
+        }
+    </style>
+}
+
+<div class="page-wrapper ">
+    <div style="height: 560px" class="container-fluid">
+        <div class="col-md-12 text-center">
+            <form method="post" enctype="multipart/form-data">
+                <div class="form-group row ">
+                    <div class="col-md-2">
+                        <label asp-for="Name" class="label-font" for="name"> Adı</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input asp-for="Name" class="form-control input-height" type="text">
+                        <span class="text-danger" asp-validation-for="Name"></span>
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <div class="col-md-2">
+                        <label asp-for="Surname" class="label-font" for="name"> Soyadı</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input asp-for="Surname" class="form-control input-height" type="text">
+                        <span class="text-danger" asp-validation-for="Surname"></span>
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <div class="col-md-2">
+                        <label asp-for="FatherName" class="label-font" for="name"> Ata adı</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input asp-for="FatherName" class="form-control input-height" type="text">
+                        <span class="text-danger" asp-validation-for="FatherName"></span>
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <div class="col-md-2">
+                        <label class="label-font" for="name">Mail</label>
+                    </div>
+                    <div class="col-md-5">
+                        <p class="email_p">@Model.Email</p>
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <div class="col-md-2">
+                        <label class="label-font" for="name">Şəkil</label>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="~/allUserImg/@Model.Image" style="width:150px" />
+                        <input name="Image" type="file" accept="image/*" />
+                        <span name="Image"></span>
+                        @if (ViewData["error_image"] != null)
+                        {
+                            <p class="text-danger text-bold">@ViewData["error_image"]</p>
+                        }
+                        @if (ViewData["error_image_size"] != null)
+                        {
+                            <p class="text-danger text-bold">@ViewData["error_image_size"]</p>
+                        }
+                        <div asp-validation-summary="ModelOnly"></div>
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-md btn-success">Dəyiş</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

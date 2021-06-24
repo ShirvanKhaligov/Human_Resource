@@ -1,0 +1,418 @@
+﻿@model PractitionerVM
+@{
+    ViewData["Title"] = "Editt";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+<div class="content-wrapper" style="color:black; background-color: #fff;">
+    <div class="container-fluid pb-5">
+        <br>
+        <br>
+        <a asp-area="InternalHR" asp-controller="Practitioner" asp-action="Index" class="col-md-2 btn btn-primary "><i class="fas fa-long-arrow-alt-left"></i> Geri</a>
+        <div class="">
+            <br><br>
+            <form method="post">
+                <div class="row">
+                    <!--first col-md-5 start-->
+                    <div class="col-md-6 ml-md-4">
+                        <div class="form-group row ">
+                            <label for="name" class="col-md-4">Adı:</label>
+                            <div class="col-md-6">
+                                <input required type="text" class="form-control input-height" id="name" value="@Model.PhoneNumberToEmployee.Emplooyee.FirstName" asp-for           ="Emplooyee.FirstName">
+                                <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="Emplooyee.FirstName"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="surname" class="col-md-4 ">Soyadı:</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control input-height" id="surname" value="@Model.PhoneNumberToEmployee.Emplooyee.Lastname" asp-for="Emplooyee.Lastname">
+                                <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="Emplooyee.Lastname"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="fatherName" class="col-md-4 ">Ata adı:</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control input-height" id="fatherName" value="@Model.PhoneNumberToEmployee.Emplooyee.FatherName" asp-for="Emplooyee.FatherName">
+                                <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="Emplooyee.FatherName"></span>
+                            </div>
+                        </div>
+                        @if (Model.School != null)
+                        {
+                            <div class="form-group row">
+                                <label for="education" class="col-md-4 ">Təhsilin dərəcəsi:</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control input-height" readonly value="Orta" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-md-4" for="schoolName">Orta təhsil:</label>
+                                <div class="col-sm-6">
+                                    <input type="text" required asp-for="School.Name" class="form-control input-height" value="@Model.School.Name" />
+                                </div>
+                            </div>
+                        }
+
+                        @if (Model.EducationsToEmployee != null)
+                        {
+                            <div class="form-group row">
+                                <label for="education" class="col-md-4 ">Təhsilin dərəcəsi:</label>
+                                <div class="col-md-6">
+                                    <select onchange="getUniversity()" required style="padding: 0px; " class="form-control input-height" id="EducationTypeId" asp-for="EduTypeId">
+                                        <option disabled>Seç</option>
+                                        @foreach (var item in Model.EducationTypes)
+                                        {
+                                            if ((int)ViewData["EducationTypeIdd"] == item.Id)
+                                            {
+                                                <option selected value="@item.Id">@item.Name</option>
+                                            }
+                                            else
+                                            {
+                                                if (item.Name == "Orta")
+                                                {
+                                                    <option style="display:none;" value="@item.Id">@item.Name</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@item.Id">@item.Name</option>
+                                                }
+                                            }
+                                        }
+                                    </select>
+                                    <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="EduTypeId"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="universityName" class="col-md-4 ">Universitetin adı:</label>
+                                <div class="col-md-6" id="universitySelecListtDiv">
+                                    <select onchange="getFaculties()" style="padding: 0" required class="form-control input-height" id="universityId" asp-for="UniId">
+                                        <option disabled>Seç</option>
+                                        @foreach (var item in ViewData["UniversityAboutEducationType"] as List<EducationTypeToUnivercity>)
+                                        {
+                                            if ((int)ViewData["UniversityId"] == item.UniversitiesId)
+                                            {
+                                                <option selected value="@item.UniversitiesId">@item.Universities.Name</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@item.UniversitiesId">@item.Universities.Name</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="facultyName" class="col-md-4 ">Fakültənin adı:</label>
+                                <div class="col-md-6" id="facultySelecListtDiv">
+                                    <select onchange="getProfession()" style="padding: 0" required class="form-control input-height" id="facultyId" asp-for="FacId">
+                                        <option disabled>Seç</option>
+                                        @foreach (var item in ViewData["AllFacultyAboutUniId"] as List<UniFaculty>)
+                                        {
+                                            if ((int)ViewData["FacultyId"] == item.Id)
+                                            {
+                                                <option selected value="@item.Id">@item.Name</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@item.Id">@item.Name</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="facultyName" class="col-md-4 ">İxtisasın adı:</label>
+                                <div class="col-md-6" id="professionSelectListDiv">
+                                    <select style="padding: 0" required class="form-control input-height" id="ProfessionId" asp-for="ProfId">
+                                        <option disabled>Seç</option>
+                                        @foreach (var item in ViewData["AllProfessionAboutFacultyId"] as List<Profession>)
+                                        {
+                                            if ((int)ViewData["ProfessionId"] == item.Id)
+                                            {
+                                                <option selected value="@item.Id">@item.Name</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@item.Id">@item.Name</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="accepthoneyy" class="col-md-4 ">Qəbul balı:</label>
+                                <div class="col-md-6">
+                                    <input type="number" class="form-control input-height" value="@Model.EducationsToEmployee.Education.AcceptHoney"
+                                           asp-for="Education.AcceptHoney">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="dateOfIssue" class="col-md-4 ">Başlama tarixi:</label>
+                                <div class="col-md-6">
+                                    <input type="date" required class="form-control input-height" value="@Model.EducationsToEmployee.Education.EnteringTime.ToString("yyyy-MM-dd")"
+                                           asp-for="Education.EnteringTime">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="endDate" class="col-sm-4 ">Bitmə tarixi:</label>
+                                <div class="col-sm-6">
+                                    <input type="date" required class="form-control input-height" value="@Model.EducationsToEmployee.Education.FinishTime.ToString("yyyy-MM-dd")"
+                                           asp-for="Education.FinishTime">
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    <div class="col-md-5 ml-md-4">
+                        <div class="form-group row">
+                            <label for="maritalStatus" class="col-md-5 ">Ailə vəziyyəti:</label>
+                            <div class="col-md-7">
+                                <select style="padding: 0px; " class="form-control input-height" required
+                                        id="maritalStatus" asp-for="MarialStatusId">
+                                    <option disabled>Seçin</option>
+                                    @foreach (var marialStatus in Model.MarialStatuses)
+                                    {
+                                        if (Model.PhoneNumberToEmployee.Emplooyee.MarialstatusId == marialStatus.Id)
+                                        {
+                                            <option selected value="@marialStatus.Id">@marialStatus.Name</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@marialStatus.Id">@marialStatus.Name</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="gender" class="col-md-5 ">Cinsi:</label>
+                            <div class="col-sm-7">
+                                <select style="padding: 0px;" required class="form-control input-height"
+                                        id="gender" asp-for="GenderId">
+                                    <option disabled>Seçin</option>
+                                    @foreach (var gender in Model.Genders)
+                                    {
+                                        if (Model.PhoneNumberToEmployee.Emplooyee.GenderId == gender.Id)
+                                        {
+                                            <option selected value="@gender.Id">@gender.Name</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@gender.Id">@gender.Name</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="dateOfBirth" class="col-md-5">Doğum günü:</label>
+                            <div class="col-sm-7">
+                                <input type="date" class="form-control input-height" value="@Model.PhoneNumberToEmployee.Emplooyee.Birthday.ToString("yyyy-MM-dd")"
+                                       asp-for="Emplooyee.Birthday">
+                                <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="Emplooyee.Birthday"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="homeTelephone" class="col-md-5 ">Ev telefonu:</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control input-height" value="@Model.PhoneNumberToEmployee.PhoneNumber.HomeNumber" id="homeTelephone"
+                                       asp-for="PhoneNumbers.HomeNumber">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="numberType" class="col-md-5 ">Mobil(şəxsi):</label>
+                            <div class="col-md-7">
+                                <input type="text" class="form-control input-height" value="@Model.PhoneNumberToEmployee.PhoneNumber.PhoneNumber" id="mobileNumber"
+                                       asp-for="PhoneNumbers.PhoneNumber">
+                                <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="PhoneNumbers.PhoneNumber"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-md-5 ">Email:</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control input-height" id="email" value="@Model.PhoneNumberToEmployee.Emplooyee.Email"
+                                       asp-for="Emplooyee.Email">
+                                <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="Emplooyee.Email"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="username" class="col-md-5 ">İstifadəçi adı:</label>
+                            <div class="col-sm-7">
+                                <input type="text" required class="form-control input-height" id="username" name="Email" value="@Model.PhoneNumberToEmployee.Emplooyee.Email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="registrationAddress" class="col-md-5">Qeydiyyat ünvanı:</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control input-height" id="BirthPlace" value="@Model.PhoneNumberToEmployee.Emplooyee.BirthPlace"
+                                       asp-for="Emplooyee.BirthPlace">
+                                <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="Emplooyee.BirthPlace"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="actualAddress" class="col-md-5 ">Faktiki ünvanı:</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control input-height" id="actualAddress" value="@Model.PhoneNumberToEmployee.Emplooyee.LivingAdress"
+                                       asp-for="Emplooyee.LivingAdress">
+                                <span class="text-danger text-bold" style="font-size:13px;" asp-validation-for="Emplooyee.LivingAdress"></span>
+                            </div>
+                        </div>
+                        <!--second col-md-5 end-->
+                    </div>
+                    <!--row end-->
+                </div>
+
+                <br>
+                <div class="row">
+                    <button style="float:left;" class="btn btn-danger col-md-3 mx-auto">
+                        <a asp-controller="Practitioner" asp-action="Index" style="padding: 5px 100px;color:white;">İmtina</a>
+                    </button>
+                    <button style="float: right" class="btn btn-success col-md-3 mx-auto">Yadda saxla</button>
+                </div>
+
+                <!--FORM END-->
+            </form>
+            <!--conatiner fluid end-->
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <script>
+        function getUniversity() {
+            var e = document.getElementById("EducationTypeId");
+            var selectedEducationTypeId = e.options[e.selectedIndex].value;
+            console.log(selectedEducationTypeId);
+            $.ajax({
+                type: "get",
+                url: "@Url.Action("GetUniversities", "Practitioner")",
+                data: { id: selectedEducationTypeId },
+                success: function (respoonse) {
+                    $("#universitySelecListtDiv").html(respoonse)
+                    $("#facultyId").html(
+                        " <select style='padding:0px;' class='form-control input-height' required>" +
+                        "<option selected diasbled>Seçin</option>"+
+                        "</select > "
+                    )
+                    $("#ProfessionId").html(
+                        " <select style='padding:0px;' class='form-control input-height' required>" +
+                        "<option selected diasbled>Seçin</option>" +
+                        "</select>"
+                    )
+                },
+                error: function (response) {
+                    console.error(respoonse)
+                }
+
+            })
+        }
+        function getFaculties() {
+            var e = document.getElementById("universityId");
+            var selectedUniversityId = e.options[e.selectedIndex].value;
+            $.ajax({
+                type: "get",
+                url: "@Url.Action("GetFaculties", "Practitioner")",
+                data: { id: selectedUniversityId },
+                success: function (respoonse) {
+                    $("#facultySelecListtDiv").html(respoonse)
+                    $("#ProfessionId").html(
+                        " <select style='padding:0px;' class='form-control input-height' required>" +
+                        "<option selected diasbled>Seçin</option>" +
+                        "</select>"
+                    )
+                },
+                error: function (response) {
+                    console.error(respoonse)
+                }
+
+            })
+        }
+        function getProfession() {
+            var e = document.getElementById("facultyId");
+            var selectedfacultyId = e.options[e.selectedIndex].value;
+            console.log(selectedfacultyId)
+            $.ajax({
+                type: "get",
+                url: "@Url.Action("GetProfessions", "Practitioner")",
+                data: { id: selectedfacultyId },
+                success: function (respoonse) {
+                    $("#professionSelectListDiv").html(respoonse)
+                },
+                error: function (response) {
+                    console.error(respoonse)
+                }
+            })
+        }
+
+        //Checked PhoneNumber
+        $("#homeTelephone").keypress(function (e) {
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                return false;
+            }
+            var curchr = this.value.length;
+            var curval = $(this).val();
+            if (curchr == 3 && curval.indexOf("(") <= -1) {
+                $(this).val("(" + curval + ")" + "-");
+            } else if (curchr == 4 && curval.indexOf("(") > -1) {
+                $(this).val(curval + ")-");
+            } else if (curchr == 5 && curval.indexOf(")") > -1) {
+                $(this).val(curval + "-");
+            } else if (curchr == 9) {
+                $(this).val(curval + "-");
+                $(this).attr('maxlength', '14');
+                $(this).attr('minlength', '14');
+
+            }
+        });
+
+        //Checked HomeNumber
+        $("#mobileNumber").keypress(function (e) {
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                return false;
+            }
+            var curchr = this.value.length;
+            var curval = $(this).val();
+            if (curchr == 3 && curval.indexOf("(") <= -1) {
+                $(this).val("(" + curval + ")" + "-");
+            } else if (curchr == 4 && curval.indexOf("(") > -1) {
+                $(this).val(curval + ")-");
+            } else if (curchr == 5 && curval.indexOf(")") > -1) {
+                $(this).val(curval + "-");
+            } else if (curchr == 9) {
+                $(this).val(curval + "-");
+                $(this).attr('maxlength', '14');
+                $(this).attr('minlength', '14');
+
+            }
+        });
+    </script>
+
+}
+

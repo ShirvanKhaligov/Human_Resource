@@ -1,0 +1,112 @@
+﻿@model IEnumerable<Emplooyee>
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+    .btn-info {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+<div class="content-wrapper">
+    <div class="">
+        <div class="card All_Index_View_Change_Card" style="background-color: #f4f6f9;">
+            <div class="card-header All_Index_View_Change_Card_Header">
+                <p class="All_Index_View_Change_P">İşçilərin siyahısı</p>
+            </div>
+            <div class="card-body" style="overflow-x:scroll;">
+                @*<a href="#" download onclick="exportF(this)">content</a>*@
+                <div class="row">
+                    <div class="col-md-12 mx-auto">
+                        <table id="dataAllSearch" class="table table-responsive-md" @*id="employeeList"*@>
+                            <thead style="text-align: center;" class="All_Index_View_Change_Thead">
+                                <tr class="All_Index_View_Change_Tr">
+                                    <th scope="col">Sıra №</th>
+                                    <th scope="col">Şirkət</th>
+                                    <th scope="col">Şəkil</th>
+                                    <th scope="col">Soyad,Ad,Ata adı</th>
+                                    <th scope="col">Vəzifəsi</th>
+                                    <th scope="col">Ş\V seriyası</th>
+                                    <th scope="col">Redaktə et</th>
+                                </tr>
+                            </thead>
+                            <tbody style="text-align: center;" class="All_Index_View_Change_Tbody">
+                                @{ int count = 1;}
+                                @if (Model.Count() != 0)
+                                {
+                                    @foreach (var emp in Model)
+                                    {
+                                        <tr>
+                                            <td scope="row">@count</td>
+                                            <td>@emp.Company.Name</td>
+                                            <td>
+                                                <img src="~/allUserImg/@emp.Image" alt="@emp.FirstName" style="width:50px;height:50px;border-radius:50%;" />
+                                            </td>
+                                            <td>@((emp.FirstName+emp.Lastname+emp.FatherName).Length>42 ? (emp.Lastname+" "+emp.FirstName+" "+emp.FatherName).Substring(0,42)+"..." : emp.Lastname + " " + emp.FirstName + " " + emp.FatherName)</td>
+                                            @if (emp.Positions == null)
+                                            {
+                                                <td>Şöbə müdiri</td>
+                                            }
+                                            else
+                                            {
+                                                <td style="width:250px;">@(emp.Positions.Name.Length>50 ? emp.Positions.Name.Substring(0,49)+"..." : emp.Positions.Name)</td>
+                                            }
+                                            <td>@emp.IdCard</td>
+                                            <td>
+                                                <button type="submit" class="btn" style="padding-left:0px;padding-right:0px;"><a class="btn btn-primary" asp-area="InternalHR" asp-controller="Employee" asp-action="Edit" asp-route-id="@emp.Id" asp-route-DepId="@ViewData["DepId"]" title="Redaktə et"><i class="fas fa-edit"></i></a></button>
+                                                <button type="submit" class="btn" style="padding-left:0px;padding-right:0px;"><a style="padding-left: 15px;padding-right: 15px;" class="btn btn-info" asp-area="InternalHR" asp-controller="Employee" asp-action="Detail" asp-route-id="@emp.Id"  title="Detallar"><i class="fas fa-info"></i></a></button>
+                                                <button type="submit" class="btn" style="padding-left:0px;padding-right:0px;"><a class="btn btn-warning" asp-area="InternalHR" asp-controller="Practitioner" asp-action="AllLastWorks" asp-route-id="@emp.Id" title="Köhnə iş yeri"><i class="fas fa-briefcase"></i></a></button>
+                                            </td>
+                                        </tr>
+                                        count++;
+                                    }
+
+                                }
+                                else
+                                {
+
+                                    <tr>
+                                        <th style="width: 100px;">Boş</th>
+                                        <th style="width: 110px;">Boş</th>
+                                        <th style="width: 240px;">Boş</th>
+                                        <th style="width: 110px;">Boş</th>
+                                        <th style="width: 110px;">Boş</th>
+                                        <th style="width: 110px;">Boş</th>
+                                        <th style="width: 110px;">Boş</th>
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--content-wrapper-->
+</div>
+

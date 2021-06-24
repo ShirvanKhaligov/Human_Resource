@@ -1,0 +1,340 @@
+﻿@using InternalSystem.ViewModels
+@model HeaderBioVM
+<style>
+
+
+    ul li a {
+        font-family: 'Source Sans Pro' !important;
+    }
+
+    p {
+        font-family: 'Source Sans Pro' !important;
+        color:white !important;
+    }
+    ul li a i{
+        margin-right:7px !important;
+    }
+
+</style>
+        <!-- Navbar -->
+<nav class="main-header navbar navbar-expand" style="background: #2590d3;">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link text-white" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item text-white" style="width:140px;">
+            <a class="nav-link">Insan Resurları</a>
+        </li>
+    </ul>
+
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <ul class="navbar-nav navbar-logout">
+
+
+            <li class="nav-item dropdown" style="display:flex;">
+                <a class="nav-link dropdown-toggle text-white" href="#"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-th-large"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right user-dd animated">
+                    <a asp-action="Information" asp-controller="Auth" asp-area="InternalHR" class="dropdown-item">
+                        <i class="fa fa-user m-r-5 m-l-5"></i>
+                        Məlumatlarım
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a asp-action="ChangePassword" asp-controller="Auth" asp-area="InternalHR" class="dropdown-item">
+                        <i class="fas fa-balance-scale m-r-5 m-l-5"></i>
+                        Tənzimləmələr
+                    </a>
+
+                    @if (User.IsInRole("Member"))
+                    {
+                        <div class="dropdown-divider"></div>
+                        <a style="color:#2590d3" asp-action="Index" asp-controller="Dashboard" asp-area="Employee" class="dropdown-item">
+                            <i class="fas fa-cog m-r-5 m-l-5"></i>
+                            İşçi kimi
+                        </a>
+                    }
+                    <div class="dropdown-divider"></div>
+                    <a asp-action="LogOutsSec" asp-controller="Account" asp-area="" class="dropdown-item">
+                        <i class="fa fa-power-off m-r-5 m-l-5"></i> Çıxmaq
+                    </a>
+                </div>
+            </li>
+
+        </ul>
+    }
+</nav>
+<!-- /.navbar -->
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="        background: #222d32;">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link text-center">
+        <img style="width: 200px;height:60px;" src="~/allUserImg/@Model.AppUser.Companies.Image" alt="HR Logo">
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                <div class="image">
+                    <img src="~/allUserImg/@(Model.AppUser.Emplooyee !=null ? Model.AppUser.Emplooyee.Image : "")" style="width:3rem;height:3rem;" class="img-circle elevation-2" alt="User Image">
+                </div>
+                <div class="info d-flex align-items-center pl-4">
+                    <p class="d-block m-0">@(Model.AppUser.Emplooyee !=null ? Model.AppUser.Emplooyee.Lastname.Substring(0, 1) + ". " + Model.AppUser.Emplooyee.FirstName : "işçi kimi işə götürülün")</p>
+                </div>
+            </div>
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item menu-open">
+                    <a style="background-color:#2590d3" asp-area="InternalHR" asp-controller="Dashboard" asp-action="Index" class="nav-link active ">
+                        <i style="color: #2590d3" class="fa fa-home" aria-hidden="true"></i>
+                        <p style="color:black;">
+                            Dashboard
+                        </p>
+                    </a>
+                </li>
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item menu-open">
+                        <a asp-area="InternalHR" asp-controller="Auth" asp-action="LoginSec" class="nav-link active">
+                            <i class="fa fa-home" aria-hidden="true" style="color: #2590d3"></i>
+                            <p style="color:black;">
+                                Daxil ol
+                            </p>
+                        </a>
+                    </li>
+                }
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item has-treeview menu-open">
+                        <a href="#" class="nav-link ">
+                            <i class="fa fa-users" aria-hidden="true" style="color: #2590d3"></i>
+                            <p style="color:black;">
+                                İşçilər
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a asp-area="InternalHR" asp-controller="Practitioner" asp-action="Index" class="nav-link">
+                                    <i class="fa fa-list" aria-hidden="true" style="color: #2590d3"></i>
+
+                                    <p style="color:black;">Təcrübəçilərin siyahısı</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a asp-action="DetailCommand" asp-controller="Command" asp-area="InternalHR" class="nav-link">
+                                    <i class="fa fa-user-plus" aria-hidden="true" style="color: #2590d3"></i>
+                                    <p style="color:black;">Əmrlərə bax</p>
+
+                                </a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a asp-action="AllEmployee" asp-controller="Employee" asp-area="InternalHR" class="nav-link">
+                                    <i class="fa fa-users" aria-hidden="true" style="color: #2590d3"></i>
+                                    <p style="color:black;">
+                                        İşçilərin siyahısı
+                                        <i class="fas fa-angle-left right"></i>
+                                    </p>
+                                </a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a asp-area="InternalHR" asp-controller="EmployeeDevice" asp-action="Index" class="nav-link">
+                                    <i class="fa fa-users" aria-hidden="true" style="color: #2590d3"></i>
+                                    <p style="color:black;">İşçilərin qurğuları</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                            <i class="fa fa-plus-circle" aria-hidden="true" style="color: #2590d3"></i>
+                            <p style="color:black;">
+                                Davamiyyət
+                                <i class="fas fa-angle-left right">
+
+                                </i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa fa-sun-o" aria-hidden="true" style="color: #2590d3"></i>
+                                    <p style="color:black;">Günlük davamiyyət</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa fa-list-alt" aria-hidden="true" style="color: #2590d3"></i>
+                                    <p style="color:black;">Aylıq davamiyyət</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                            <i class="fa fa-plus-circle" aria-hidden="true" style="color: #2590d3"></i>
+                            <p style="color:black;">
+                                Siyahılar
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a asp-area="InternalHR" asp-controller="Command" asp-action="Index" class="nav-link">
+                                    <i class="fa fa-plus-square" aria-hidden="true" style="color: #2590d3"></i>
+                                    <p style="color:black;">Əmrlərin siyahısı</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    @*<li class="nav-item">
+                            <a asp-action="AllPermitionsForHR" asp-controller="PermissionForHr" asp-area="InternalHR" class="nav-link">
+                                <i class="fa fa-user-plus" aria-hidden="true" style="color: #2590d3"></i>
+                                <p style="color:black;">Shirvan</p>
+
+                            </a>
+                        </li>*@
+
+
+
+
+
+                    <li class="nav-item has-treeview folderActive">
+                        <a href="#" class="nav-link">
+                            @*<i class="fa fa-users" aria-hidden="true" style="color: #2590d3"></i>*@
+                            <i class="fas fa-folder" style="color: #2590d3"></i>
+                            <p style="color:black;font-family:emoji;">
+                                İşçilər (şöbə üzrə)
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            @foreach (var dept in Model.DepartmentToCompanies)
+                            {
+                                <li class="nav-item">
+                                    <a asp-action="Index" asp-controller="Employee" asp-area="InternalHR" asp-route-id="@dept.DepartmentId" class="nav-link">
+                                        <i class="fa fa-list" aria-hidden="true" style="color: #2590d3"></i>
+                                        <p style="color:black;">@dept.Department.Name</p>
+                                    </a>
+                                </li>
+                            }
+
+                        </ul>
+                    </li>
+
+                    <li style="background-color:#dadada" class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                            <i class="fa fa-plus-circle" aria-hidden="true" style="color: #2590d3"></i>
+                            <p style="color:black;">
+                                İcazələr
+                                <i class="fas fa-angle-left right"></i>
+
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+
+                            <li class="nav-item">
+                                <a asp-action="AllPermitionsForHR" asp-controller="PermissionForHr" asp-area="InternalHR" class="nav-link">
+                                    <i class="fas fa-list" aria-hidden="true" style="color: #2590d3"></i>
+                                    <p style="color:black;">İcazə alanların siyahısı</p>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a asp-action="AllExplanationForHr" asp-controller="PermissionForHr" asp-area="InternalHR" class="nav-link">
+                                    <i class="fa fa-plus-square" aria-hidden="true" style="color: #2590d3"></i>
+                                    <p style="color:black;">Izahat yazanlarin siyahisi</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Auth" asp-action="Information" asp-area="InternalHR" class="nav-link">
+                            <i class="fa fa-user" aria-hidden="true" style="color: #2590d3"></i>
+                            <p style="color:black;">Melumatlarım</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Auth" asp-action="ChangePassword" asp-area="InternalHR" class="nav-link">
+                            <i class="fas fa-balance-scale" aria-hidden="true" style="color: #2590d3"></i>
+                            <p style="color:black;">Tənzimləmələr</p>
+                        </a>
+                    </li>
+                    @if (User.IsInRole("Member"))
+                    {
+                        <li class="nav-item">
+                            <div class="dropdown-divider"></div>
+                            <a asp-action="Index" asp-controller="Dashboard" asp-area="Employee" class="nav-link">
+                                <i class="fas fa-cog m-r-5 m-l-5" style="color: #2590d3"></i>
+                                <p style="color:black;">İşçi kimi</p>
+                            </a>
+                        </li>
+                    }
+                    <li class="nav-item has-treeview">
+
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon far fa-envelope" style="color: #2590d3"></i>
+                            <p style="color:black;">
+                                Mesaj qutusu
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+
+
+                        <ul class="nav nav-treeview">
+
+                            <li class="nav-item">
+                                <a asp-area="InternalHR" asp-controller="EmployeeMessage" asp-action="Index" class="nav-link">
+                                    <i class="fa fa-envelope" aria-hidden="true" style="color: #2590d3"></i>
+                                    <p style="color:black;">İşçi heyətinə mesajlar</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="mailbox.html" class="nav-link">
+                                    <i class="fa fa-envelope" aria-hidden="true" style="color: #2590d3"></i>
+                                    <p style="color:black;">Gələn qutusu</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="compose.html" class="nav-link">
+                                    <i class="fa fa-plus-circle" aria-hidden="true" style="color: #2590d3"></i>
+                                    <p style="color:black;">Yeni mesaj</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="read-mail.html" class="nav-link">
+                                    <i class="fa fa-minus" aria-hidden="true" style="color: #2590d3"></i>
+                                    <p style="color:black;">Oxunmuş</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-area="" asp-controller="Account" asp-action="LogOutsSec" class="nav-link">
+                            <i class="fa fa-power-off" aria-hidden="true" style="color:#2590d3"></i>
+                            <p style="color:black;">Çıx</p>
+                        </a>
+                    </li>
+                }
+
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>

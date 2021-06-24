@@ -1,0 +1,86 @@
+﻿@model CompanyVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div style="background-color: white" class="page-wrapper">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header">
+                <p style="color: green;text-align: center;font-size: 25px">Şirkətlərin siyahısı</p>
+            </div>
+            <div class="card-body" style="overflow-x:scroll">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table style="width:1500px" class="table table-bordered table-responsive-md">
+                            <thead class=" table-dark text-center">
+                                <tr>
+                                    <th scope="col">Sıra №</th>
+                                    <th scope="col">Şəkil</th>
+                                    <th scope="col">Şirkətin adı</th>
+                                    <th scope="col">VÖEN</th>
+                                    <th scope="col">Qeydiyyat nömrəsi</th>
+                                    <th scope="col">Ünvan</th>
+                                    <th scope="col">İnternet səhifəsi</th>
+                                    <th scope="col">Poçt ünvanı</th>
+                                    <th scope="col">Şəhər</th>
+                                    <th scope="col">Ölkə</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                @if (Model.Companies.Count() != 0)
+                                {
+                                    int count = 1;
+                                    @foreach (var item in Model.Companies)
+                                    {
+                                        <tr>
+                                            <th scope="row">@count</th>
+                                            <th>
+                                                @if (item.Image != null)
+                                                {
+                                                    <img src="~/allUserImg/@item.Image" style="width:100px" />
+                                                }
+                                            </th>
+                                            <th>@item.Name</th>
+                                            <td>@item.TaxId</td>
+                                            <td>@item.RegistrationNumber</td>
+                                            <td>@item.Address</td>
+                                            <td><a target="_blank" href="https://www.@item.Website">@item.Website</a></td>
+                                            <td>@item.ZipCode</td>
+                                            <td>@item.City.Name</td>
+                                            <td>@item.City.Countries.Name</td>
+                                        </tr>
+                                        count++;
+                                    }
+                                }
+                                else
+                                {
+                                    <tr class="text-danger text-center">
+                                        <th scope="row">0</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                        <th>Boş</th>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            @if (Model.Companies.Count() != 0)
+            {
+                <div class="card-footer">
+                    <a asp-area="Admin" asp-controller="Company" asp-action="AllCompanies" class="btn btn-primary col-md-12">Bütün şirkətlətin siyahısı</a>
+                </div>
+            }
+
+        </div>
+
+    </div>
+</div>

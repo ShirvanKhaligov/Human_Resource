@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Profession>
+<select required style="padding: 0px" class="form-control input-height"
+        id="professionId_@ViewData["keepId"]">
+    <option selected disabled value="">Seç</option>
+    @foreach (var pro in Model)
+    {
+        <option value="@pro.Id">@pro.Name</option>
+    }
+</select>

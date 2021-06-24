@@ -1,0 +1,288 @@
+﻿@model IEnumerable<InternalSystem.Services.EmailMessage>
+@{
+    ViewData["Title"] = "DetailSend";
+}
+
+<div class="content-wrapper" style="background: #e0e0e0 !important">
+    <div class="col-md-12">
+        <div style="background-color:#e0e0e0;">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-dark"></h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a asp-area="Employee" asp-controller="Dashboard" asp-action="Index" style="text-decoration:none;">Dashboard</a></li>
+                                <li class="breadcrumb-item active">E-poçt</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="content">
+                <div class="row">
+                    <div class="col-md-12 justify-content-end d-flex">
+                        <a asp-controller="Email" asp-action="Inbox" class="btn btn-primary col-md-2 btn-block mb-3"><i class="fas fa-long-arrow-alt-left"></i> Geri</a>
+                    </div>
+                </div>
+                <div class="card card-primary card-outline">
+                    <div class="card-header">
+                        @foreach (var item in Model)
+                        {
+
+                            if (item.Subject.Length > 100)
+                            {
+                                <h3 class="card-title">@(item.Subject.Substring(0,100)+"...")</h3>
+                            }
+                            else
+                            {
+                                <h3 class="card-title">@item.Subject</h3>
+                            }
+
+                        }
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="mailbox-read-info" style="padding: 20px;border:none;">
+                            <div class="row" style="padding-left: 6px;">
+                                <div style="align-items: center; display: flex;">
+                                    @foreach (var item in Model)
+                                    {
+                                        @if (item.From.StartsWith('A') == true || item.From.StartsWith('a') == true)
+                                        {
+                                            <img src="~/mail.ru/a.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('B') == true || item.From.StartsWith('b') == true || item.From.StartsWith('Б') == true || item.From.StartsWith('б') == true)
+                                        {
+                                            <img src="~/mail.ru/b.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('C') == true || item.From.StartsWith('c') == true)
+                                        {
+                                            <img src="~/mail.ru/c.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('D') == true || item.From.StartsWith('d') == true || item.From.StartsWith('Д') == true || item.From.StartsWith('д') == true)
+                                        {
+                                            <img src="~/mail.ru/d.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('E') == true || item.From.StartsWith('e') == true || item.From.StartsWith('Ё') == true || item.From.StartsWith('ё') == true || item.From.StartsWith('Э') == true || item.From.StartsWith('э') == true)
+                                        {
+                                            <img src="~/mail.ru/e.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('F') == true || item.From.StartsWith('f') == true || item.From.StartsWith('Ф') == true || item.From.StartsWith('ф') == true)
+                                        {
+                                            <img src="~/mail.ru/f.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('G') == true || item.From.StartsWith('g') == true)
+                                        {
+                                            <img src="~/mail.ru/g.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('H') == true || item.From.StartsWith('h') == true)
+                                        {
+                                            <img src="~/mail.ru/h.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('I') == true || item.From.StartsWith('i') == true || item.From.StartsWith('И') == true || item.From.StartsWith('и') == true)
+                                        {
+                                            <img src="~/mail.ru/i.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('J') == true || item.From.StartsWith('j') == true || item.From.StartsWith('Ж') == true || item.From.StartsWith('ж') == true)
+                                        {
+                                            <img src="~/mail.ru/j.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('K') == true || item.From.StartsWith('k') == true || item.From.StartsWith('К') == true || item.From.StartsWith('к') == true)
+                                        {
+                                            <img src="~/mail.ru/k.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('L') == true || item.From.StartsWith('l') == true || item.From.StartsWith('Л') == true || item.From.StartsWith('л') == true)
+                                        {
+                                            <img src="~/mail.ru/l.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('M') == true || item.From.StartsWith('m') == true || item.From.StartsWith('М') == true || item.From.StartsWith('м') == true)
+                                        {
+                                            <img src="~/mail.ru/m.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('N') == true || item.From.StartsWith('n') == true || item.From.StartsWith('Н') == true || item.From.StartsWith('н') == true)
+                                        {
+                                            <img src="~/mail.ru/n.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('O') == true || item.From.StartsWith('o') == true)
+                                        {
+                                            <img src="~/mail.ru/o.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('P') == true || item.From.StartsWith('p') == true || item.From.StartsWith('П') == true || item.From.StartsWith('п') == true)
+                                        {
+                                            <img src="~/mail.ru/p.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('Q') == true || item.From.StartsWith('q') == true || item.From.StartsWith('Г') == true || item.From.StartsWith('г') == true)
+                                        {
+                                            <img src="~/mail.ru/q.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('R') == true || item.From.StartsWith('r') == true)
+                                        {
+                                            <img src="~/mail.ru/r.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('S') == true || item.From.StartsWith('s') == true)
+                                        {
+                                            <img src="~/mail.ru/s.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('T') == true || item.From.StartsWith('t') == true || item.From.StartsWith('т') == true)
+                                        {
+                                            <img src="~/mail.ru/t.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('U') == true || item.From.StartsWith('u') == true)
+                                        {
+                                            <img src="~/mail.ru/u.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('V') == true || item.From.StartsWith('v') == true || item.From.StartsWith('в') == true)
+                                        {
+                                            <img src="~/mail.ru/v.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('W') == true || item.From.StartsWith('w') == true)
+                                        {
+                                            <img src="~/mail.ru/w.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('X') == true || item.From.StartsWith('x') == true)
+                                        {
+                                            <img src="~/mail.ru/x2.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('Y') == true || item.From.StartsWith('y') == true || item.From.StartsWith('Й') == true || item.From.StartsWith('й') == true)
+                                        {
+                                            <img src="~/mail.ru/y.png" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('Z') == true || item.From.StartsWith('z') == true || item.From.StartsWith('З') == true || item.From.StartsWith('з') == true)
+                                        {
+                                            <img src="~/mail.ru/z.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('Ц') == true || item.From.StartsWith('ц') == true)
+                                        {
+                                            <img src="~/mail.ru/ц.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('Ч') == true || item.From.StartsWith('ч') == true)
+                                        {
+                                            <img src="~/mail.ru/Ч.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('Ш') == true || item.From.StartsWith('ш') == true || item.From.StartsWith('Щ') == true || item.From.StartsWith('щ') == true)
+                                        {
+                                            <img src="~/mail.ru/Ш.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('Ю') == true || item.From.StartsWith('ю') == true)
+                                        {
+                                            <img src="~/mail.ru/ю.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                        @if (item.From.StartsWith('Я') == true || item.From.StartsWith('я') == true)
+                                        {
+                                            <img src="~/mail.ru/Я.jpg" alt="no" style=" width: 32px; height: 32px;border-radius:50%;display:block!important;">
+                                        }
+                                    }
+                                </div>
+                                <div style="padding-left: 16px;">
+                                    @foreach (var item in Model)
+                                    {
+                                        <h6>@item.From <span class="mailbox-read-time ml-2">@item.NowDay.ToString("dd MMMM yyyy, HH:mm")</span></h6>
+                                    }
+                                    @foreach (var item in Model)
+                                    {
+                                        <h6 style="color:#93969b">
+                                            Kimə: @item.To
+                                        </h6>
+                                    }
+
+                                </div>
+                            </div>
+                        </div>
+                        @if (Model.FirstOrDefault().Attachments != null)
+                        {
+                            <div class="mailbox-address-att">
+                                <ul style="list-style-type:none;">
+                                    @foreach (var item in Model)
+                                    {
+                                        //video
+                                        @if (item.Attachments.MimeType == "video/mp4" || item.Attachments.MimeType == "video/mpeg" || item.Attachments.MimeType == "video/ogg" || item.Attachments.MimeType == "video/quicktime" ||
+                                        item.Attachments.MimeType == "video/x-msvideo")
+                                        {
+                                            <li>
+                                                <div class="b-thumb__content"
+                                                     style="width:232px;height:174px;background: #f0f0f0;color: #333333;border: none;border-radius: 12px;display:inline-block;position:relative;padding:12px;">
+                                                    @if (item.Attachments.Name.Length > 22)
+                                                    {
+                                                        <p>@(item.Attachments.Name.Substring(0,22)+"...")</p>
+                                                    }
+                                                    <div class="b-thumb__icon_video" style="width:92px;height:92px;position: absolute;top: 25%;left: 30%;">
+                                                        <img src="~/mail.ru/video.svg" alt="no" />
+                                                    </div>
+                                                    @*<a style="position: absolute; bottom: 8%; left: 8%;"><i class="fas fa-download"></i></a>*@
+                                                </div>
+
+                                            </li>
+                                        }
+                                        //img
+                                        @if (item.Attachments.MimeType == "image/gif" || item.Attachments.MimeType == "image/jpeg" || item.Attachments.MimeType == "image/png" || item.Attachments.MimeType == "image/tiff" ||
+                                      item.Attachments.MimeType == "image/vnd.wap.wbmp" || item.Attachments.MimeType == "image/x-ms-bmp")
+                                        {
+                                            <li>
+                                                <div class="b-thumb__content"
+                                                     style="width:232px;height:174px;color: #333333;border: none;border-radius: 12px;display:inline-block;position:relative;padding:12px;">
+
+                                                    <div class="b-thumb__icon_video">
+                                                        <img src="~/mail.ru/images.png" alt="no" style="width:100%;" />
+                                                    </div>
+                                                    @*<a style="position: absolute; bottom: 8%; left: 8%;"><i class="fas fa-download"></i></a>*@
+                                                </div>
+
+                                            </li>
+                                        }
+                                        //word,excel bla bla
+                                        @if (item.Attachments.MimeType == "application/msword" || item.Attachments.MimeType == "application/pdf" || item.Attachments.MimeType == "application/rss+xml" || item.Attachments.MimeType == "application/vnd.google-earth.kml+xml" ||
+                                   item.Attachments.MimeType == "application/vnd.google-earth.kmz" || item.Attachments.MimeType == "application/vnd.ms-excel" || item.Attachments.MimeType == "application/vnd.ms-powerpoint" || item.Attachments.MimeType == "application/x-gzip" ||
+                                   item.Attachments.MimeType == "application/zip" || item.Attachments.MimeType == "application/octet-stream" || item.Attachments.MimeType == "application/vnd.openxmlformats-officedocument.wordprocessingml.document" || item.Attachments.MimeType == "application/vnd.openxmlformats-officedocument.wordprocessingml.template" ||
+                                   item.Attachments.MimeType == "application/vnd.ms-word.document.macroEnabled.12" || item.Attachments.MimeType == "application/vnd.ms-word.template.macroEnabled.12" || item.Attachments.MimeType == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+                                        {
+                                            <li>
+                                                <div class="b-thumb__content"
+                                                     style="width:232px;height:174px;background: #f0f0f0;color: #333333;border: none;border-radius: 12px;display:inline-block;position:relative;padding:12px;">
+                                                    @if (item.Attachments.Name.Length > 22)
+                                                    {
+                                                        <p style="margin:0;">@(item.Attachments.Name.Substring(0,22)+"...")</p>
+                                                    }
+                                                    else
+                                                    {
+                                                        <p style="margin:0;">@item.Attachments.Name</p>
+                                                    }
+                                                    <div class="b-thumb__icon_video">
+                                                        <img src="~/mail.ru/office.png" alt="no" style=" width: 100%;" />
+                                                    </div>
+                                                    @*<a style="position: absolute; bottom: 0%; left: 8%;"><i class="fas fa-download"></i></a>*@
+                                                </div>
+
+                                            </li>
+                                        }
+
+                                    }
+                                </ul>
+                            </div>
+                        }
+                        <div class="mailbox-read-message">
+                            @foreach (var item in Model)
+                            {
+                                <p>@Html.Raw(item.Content)</p>
+                            }
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+@section scripts{
+    <script>
+        //$('table').each(function () {
+        //    $("table img").remove();
+        //});
+    </script>
+}
+

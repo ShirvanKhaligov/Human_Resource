@@ -1,0 +1,8 @@
+﻿@model PractitionerVM
+<select onchange="getFaculties()" required style="padding: 0px" class="form-control input-height" id="universityId" asp-for="UniId">
+    <option selected disabled value="">Seçin</option>
+    @foreach (var uni in Model.EducationTypeToUnivercities)
+    {
+        <option value="@uni.Universities.Id">@uni.Universities.Name</option>
+    }
+</select>

@@ -1,0 +1,9 @@
+﻿@model IEnumerable<UniFaculty>
+<select onchange="getProfessionRecruitment(@ViewData["keepId"])" required style="padding: 0px" class="form-control input-height"
+        id="facultyId_@ViewData["keepId"]">
+    <option selected disabled value="">Seçin</option>
+    @foreach (var fac in Model)
+    {
+       <option value="@fac.Id">@fac.Name</option>
+    }
+</select>

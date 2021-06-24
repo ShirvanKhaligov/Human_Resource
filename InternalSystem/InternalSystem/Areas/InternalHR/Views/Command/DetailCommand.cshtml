@@ -1,0 +1,67 @@
+﻿@model CommandVM
+
+@{
+    ViewData["Title"] = "DetailCommand";
+}
+<style>
+
+
+    .btn-success {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-primary {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-warning {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+
+    .btn-danger {
+        background-color: #2590d3 !important;
+        border-color: #2590d3 !important;
+    }
+</style>
+<div class="content-wrapper" style="color: black;background-color: #f4f6f9;">
+    <div class="container-fluid " id="divForCommand">
+        <br><br><br>
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <div>
+                    <table id="dataAllSearch" class="table table-hover table-responsive-md ">
+                        <thead style="text-align: center" class="All_Index_View_Change_Thead">
+                            <tr class="All_Index_View_Change_Tr">
+                                <th scope="col">Sıra №</th>
+                                <th scope="col">Soyadı,Adı,Ata adı</th>
+                                <th scope="col"> Verilmə tarixi</th>
+                                <th scope="col"> Əmrin növu</th>
+                            </tr>
+                        </thead>
+                        <tbody style="text-align: center;" class="All_Index_View_Change_Tbody">
+                            @{ int count = 1;}
+                            @if (Model.CommandsToEmployees != null)
+                            {
+                                @foreach (var command in Model.CommandsToEmployees)
+                                {
+                                    <tr>
+                                        <td scope="row">@count</td>
+                                        <td>@(command.Emplooyee.Lastname+" "+command.Emplooyee.FirstName+" "+command.Emplooyee.FatherName)</td>
+                                        <td scope="row">@command.CreatedDate.ToString("dd-MMM-yyyy")</td>
+                                        <td>@command.Command.Title</td>
+                                    </tr>
+                                    count++;
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
